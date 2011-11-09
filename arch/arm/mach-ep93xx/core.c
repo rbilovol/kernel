@@ -415,7 +415,7 @@ static struct resource ep93xx_eth_resource[] = {
 		.start	= IRQ_EP93XX_ETHERNET,
 		.end	= IRQ_EP93XX_ETHERNET,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static u64 ep93xx_eth_dma_mask = DMA_BIT_MASK(32);

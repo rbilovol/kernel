@@ -54,7 +54,7 @@ static struct map_desc ts72xx_io_desc[] __initdata = {
 		.pfn		= __phys_to_pfn(TS72XX_RTC_DATA_PHYS_BASE),
 		.length		= TS72XX_RTC_DATA_SIZE,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 static void __init ts72xx_map_io(void)
