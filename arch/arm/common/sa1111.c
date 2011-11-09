@@ -133,7 +133,7 @@ static struct sa1111_dev_info sa1111_devices[] = {
 			IRQ_HCIBUFFACC,
 			IRQ_HCIRMTWKP,
 			IRQ_NHCIMFCIR,
-			IRQ_USB_PORT_RESUME
+			IRQ_USB_PORT_RESUME,
 		},
 	},
 	{
@@ -144,7 +144,7 @@ static struct sa1111_dev_info sa1111_devices[] = {
 			AUDXMTDMADONEA,
 			AUDXMTDMADONEB,
 			AUDRCVDMADONEA,
-			AUDRCVDMADONEB
+			AUDRCVDMADONEB,
 		},
 	},
 	{
@@ -158,7 +158,7 @@ static struct sa1111_dev_info sa1111_devices[] = {
 		.devid		= SA1111_DEVID_PS2,
 		.irq = {
 			IRQ_TPRXINT,
-			IRQ_TPTXINT
+			IRQ_TPTXINT,
 		},
 	},
 	{
@@ -167,7 +167,7 @@ static struct sa1111_dev_info sa1111_devices[] = {
 		.devid		= SA1111_DEVID_PS2,
 		.irq = {
 			IRQ_MSRXINT,
-			IRQ_MSTXINT
+			IRQ_MSTXINT,
 		},
 	},
 	{
