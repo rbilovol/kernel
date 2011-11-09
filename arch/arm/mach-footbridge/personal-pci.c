@@ -15,7 +15,7 @@
 
 static int irqmap_personal_server[] __initdata = {
 	IRQ_IN0, IRQ_IN1, IRQ_IN2, IRQ_IN3, 0, 0, 0,
-	IRQ_DOORBELLHOST, IRQ_DMA1, IRQ_DMA2, IRQ_PCI
+	IRQ_DOORBELLHOST, IRQ_DMA1, IRQ_DMA2, IRQ_PCI,
 };
 
 static int __init personal_server_map_irq(const struct pci_dev *dev, u8 slot,

@@ -25,7 +25,7 @@ static struct resource rtc_resources[] = {
 		.start	= IRQ_ISA_RTC_ALARM,
 		.end	= IRQ_ISA_RTC_ALARM,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device rtc_device = {
