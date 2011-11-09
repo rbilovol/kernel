@@ -95,7 +95,7 @@ static struct mtd_partition ttc_dkb_onenand_partitions[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_32M + SZ_16M,
 		.mask_flags	= 0,
-	}
+	},
 };
 
 static struct onenand_platform_data ttc_dkb_onenand_info = {

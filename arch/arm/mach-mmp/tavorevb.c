@@ -74,7 +74,7 @@ static struct resource smc91x_resources[] = {
 		.start	= gpio_to_irq(80),
 		.end	= gpio_to_irq(80),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct platform_device smc91x_device = {

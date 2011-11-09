@@ -123,7 +123,7 @@ static struct resource smc91x_resources[] = {
 		.start	= gpio_to_irq(27),
 		.end	= gpio_to_irq(27),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct platform_device smc91x_device = {
@@ -162,7 +162,7 @@ static struct mtd_partition aspenite_nand_partitions[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_32M + SZ_16M,
 		.mask_flags	= 0,
-	}
+	},
 };
 
 static struct pxa3xx_nand_platform_data aspenite_nand_info = {

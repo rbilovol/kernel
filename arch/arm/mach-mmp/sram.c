@@ -147,7 +147,7 @@ static int __devexit sram_remove(struct platform_device *pdev)
 static const struct platform_device_id sram_id_table[] = {
 	{ "asram", MMP_ASRAM },
 	{ "isram", MMP_ISRAM },
-	{ }
+	{ },
 };
 
 static struct platform_driver sram_driver = {

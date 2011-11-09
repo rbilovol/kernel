@@ -123,14 +123,14 @@ static unsigned long gplugd_pin_config[] __initdata = {
 	/* I2S */
 	GPIO114_I2S_FRM,
 	GPIO115_I2S_BCLK,
-	GPIO116_I2S_TXD
+	GPIO116_I2S_TXD,
 };
 
 static struct i2c_board_info gplugd_i2c_board_info[] = {
 	{
 		.type = "isl1208",
 		.addr = 0x6F,
-	}
+	},
 };
 
 /* Bring PHY out of reset by setting GPIO 104 */
