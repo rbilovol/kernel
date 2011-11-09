@@ -160,13 +160,13 @@ static int kgdb_compiled_brk_fn(struct pt_regs *regs, unsigned int instr)
 static struct undef_hook kgdb_brkpt_hook = {
 	.instr_mask		= 0xffffffff,
 	.instr_val		= KGDB_BREAKINST,
-	.fn			= kgdb_brk_fn
+	.fn			= kgdb_brk_fn,
 };
 
 static struct undef_hook kgdb_compiled_brkpt_hook = {
 	.instr_mask		= 0xffffffff,
 	.instr_val		= KGDB_COMPILED_BREAK,
-	.fn			= kgdb_compiled_brk_fn
+	.fn			= kgdb_compiled_brk_fn,
 };
 
 static void kgdb_call_nmi_hook(void *ignored)

@@ -346,7 +346,7 @@ static const union decode_item t32_table_1110_100x_x0xx[] = {
 	/* LDMDB		1110 1001 00x1 xxxx xxxx xxxx xxxx xxxx */
 	DECODE_CUSTOM	(0xfe400000, 0xe8000000, t32_decode_ldmstm),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1110_100x_x1xx[] = {
@@ -374,7 +374,7 @@ static const union decode_item t32_table_1110_100x_x1xx[] = {
 	/* LDREXH		1110 1000 1101 xxxx xxxx xxxx 0101 xxxx */
 	/* LDREXD		1110 1000 1101 xxxx xxxx xxxx 0111 xxxx */
 	/* And unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1110_101x[] = {
@@ -434,7 +434,7 @@ static const union decode_item t32_table_1110_101x[] = {
 	DECODE_EMULATEX	(0xfe000000, 0xea000000, t32_emulate_rd8rn16rm0_rwflags,
 						 REGS(NOSPPC, 0, NOSPPC, 0, NOSPPC)),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_0x0x___0[] = {
@@ -486,7 +486,7 @@ static const union decode_item t32_table_1111_0x0x___0[] = {
 	DECODE_EMULATEX	(0xfa008000, 0xf0000000, t32_emulate_rd8rn16rm0_rwflags,
 						 REGS(NOSPPC, 0, NOSPPC, 0, 0)),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_0x1x___0[] = {
@@ -535,7 +535,7 @@ static const union decode_item t32_table_1111_0x1x___0[] = {
 	DECODE_EMULATEX	(0xfbf08000, 0xf3600000, t32_emulate_rd8rn16_noflags,
 						 REGS(NOSPPCX, 0, NOSPPC, 0, 0)),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_0xxx___1[] = {
@@ -581,7 +581,7 @@ static const union decode_item t32_table_1111_0xxx___1[] = {
 	/* BL			1111 0xxx xxxx xxxx 11x1 xxxx xxxx xxxx */
 	DECODE_SIMULATE	(0xf8009000, 0xf0009000, t32_simulate_branch),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_100x_x0x1__1111[] = {
@@ -608,7 +608,7 @@ static const union decode_item t32_table_1111_100x_x0x1__1111[] = {
 						 REGS(NOPCX, 0, 0, 0, NOSPPC)),
 
 	/* Other unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_100x[] = {
@@ -689,7 +689,7 @@ static const union decode_item t32_table_1111_100x[] = {
 						 REGS(NOPCX, NOSPPCX, 0, 0, NOSPPC)),
 
 	/* Other unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_1010___1111[] = {
@@ -791,7 +791,7 @@ static const union decode_item t32_table_1111_1010___1111[] = {
 						 REGS(NOSPPC, 0, NOSPPC, 0, SAMEAS16)),
 
 	/* Other unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_1011_0[] = {
@@ -830,7 +830,7 @@ static const union decode_item t32_table_1111_1011_0[] = {
 						 REGS(NOSPPC, NOSPPCX, NOSPPC, 0, NOSPPC)),
 
 	/* Other unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item t32_table_1111_1011_1[] = {
@@ -853,7 +853,7 @@ static const union decode_item t32_table_1111_1011_1[] = {
 	/* SDIV			1111 1011 1001 xxxx xxxx xxxx 1111 xxxx */
 	/* UDIV			1111 1011 1011 xxxx xxxx xxxx 1111 xxxx */
 	/* Other unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 const union decode_item kprobe_decode_thumb32_table[] = {
@@ -942,7 +942,7 @@ const union decode_item kprobe_decode_thumb32_table[] = {
 	 * Coprocessor instructions
 	 *			1111 11xx xxxx xxxx xxxx xxxx xxxx xxxx
 	 */
-	DECODE_END
+	DECODE_END,
 };
 #ifdef CONFIG_ARM_KPROBES_TEST_MODULE
 EXPORT_SYMBOL_GPL(kprobe_decode_thumb32_table);
@@ -1288,7 +1288,7 @@ static const union decode_item t16_table_1011[] = {
 	/* CPS				1011 0110 011x xxxx */
 	/* BKPT				1011 1110 xxxx xxxx */
 	/* And unallocated instructions...		    */
-	DECODE_END
+	DECODE_END,
 };
 
 const union decode_item kprobe_decode_thumb16_table[] = {
@@ -1425,7 +1425,7 @@ const union decode_item kprobe_decode_thumb16_table[] = {
 	 */
 	DECODE_SIMULATE	(0xf800, 0xe000, t16_simulate_branch),
 
-	DECODE_END
+	DECODE_END,
 };
 #ifdef CONFIG_ARM_KPROBES_TEST_MODULE
 EXPORT_SYMBOL_GPL(kprobe_decode_thumb16_table);

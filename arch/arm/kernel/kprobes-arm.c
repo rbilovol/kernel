@@ -426,7 +426,7 @@ static const union decode_item arm_1111_table[] = {
 	/* MRC2			1111 1110 xxx1 xxxx xxxx xxxx xxx1 xxxx */
 
 	/* Other unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item arm_cccc_0001_0xx0____0xxx_table[] = {
@@ -460,7 +460,7 @@ static const union decode_item arm_cccc_0001_0xx0____0xxx_table[] = {
 	/* BKPT			1110 0001 0010 xxxx xxxx xxxx 0111 xxxx */
 	/* SMC			cccc 0001 0110 xxxx xxxx xxxx 0111 xxxx */
 	/* And unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item arm_cccc_0001_0xx0____1xx0_table[] = {
@@ -482,7 +482,7 @@ static const union decode_item arm_cccc_0001_0xx0____1xx0_table[] = {
 	DECODE_EMULATEX	(0x0ff000b0, 0x01200080, emulate_rd16rn12rm0rs8_rwflags_nopc,
 						 REGS(NOPC, NOPC, NOPC, 0, NOPC)),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item arm_cccc_0000_____1001_table[] = {
@@ -513,7 +513,7 @@ static const union decode_item arm_cccc_0000_____1001_table[] = {
 	DECODE_EMULATEX	(0x0f8000f0, 0x00800090, emulate_rdlo12rdhi16rn0rm8_rwflags_nopc,
 						 REGS(NOPC, NOPC, NOPC, 0, NOPC)),
 
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item arm_cccc_0001_____1001_table[] = {
@@ -525,7 +525,7 @@ static const union decode_item arm_cccc_0001_____1001_table[] = {
 
 	/* LDREX/STREX{,D,B,H}	cccc 0001 1xxx xxxx xxxx xxxx 1001 xxxx */
 	/* And unallocated instructions...				*/
-	DECODE_END
+	DECODE_END,
 };
 
 static const union decode_item arm_cccc_000x_____1xx1_table[] = {

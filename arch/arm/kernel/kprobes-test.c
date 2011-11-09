@@ -315,7 +315,7 @@ static void __kprobes post_handler(struct kprobe *p, struct pt_regs *regs,
 static struct kprobe the_kprobe = {
 	.addr		= 0,
 	.pre_handler	= pre_handler,
-	.post_handler	= post_handler
+	.post_handler	= post_handler,
 };
 
 static int test_kprobe(long (*func)(long, long))
@@ -569,7 +569,7 @@ static int kprobe_benchmark(void(*fn)(void), unsigned offset)
 	ret = benchmark(fn);
 
 	unregister_kprobe(&k);
-	return ret;
+	return ret;,
 };
 
 struct benchmarks {
@@ -628,7 +628,7 @@ static const int decode_struct_sizes[NUM_DECODE_TYPES] = {
 	[DECODE_TYPE_SIMULATE]	= sizeof(struct decode_simulate),
 	[DECODE_TYPE_EMULATE]	= sizeof(struct decode_emulate),
 	[DECODE_TYPE_OR]	= sizeof(struct decode_or),
-	[DECODE_TYPE_REJECT]	= sizeof(struct decode_reject)
+	[DECODE_TYPE_REJECT]	= sizeof(struct decode_reject),
 };
 
 static int table_iter(const union decode_item *table,

@@ -85,7 +85,7 @@ static unsigned int have_expmask;
  * identification, or chunk directories containing a description.
  */
 static struct expcard_blacklist __initdata blacklist[] = {
-	{ MANU_ACORN, PROD_ACORN_ETHER1, "Acorn Ether1" }
+	{ MANU_ACORN, PROD_ACORN_ETHER1, "Acorn Ether1" },
 };
 
 asmlinkage extern int
@@ -434,7 +434,7 @@ static expansioncard_ops_t ecard_default_ops = {
 	ecard_def_irq_pending,
 	ecard_def_fiq_enable,
 	ecard_def_fiq_disable,
-	ecard_def_fiq_pending
+	ecard_def_fiq_pending,
 };
 
 /*

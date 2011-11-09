@@ -746,7 +746,7 @@ static const struct user_regset arm_regsets[] = {
 		.size = sizeof(u32),
 		.align = sizeof(u32),
 		.get = gpr_get,
-		.set = gpr_set
+		.set = gpr_set,
 	},
 	[REGSET_FPR] = {
 		/*
@@ -758,7 +758,7 @@ static const struct user_regset arm_regsets[] = {
 		.size = sizeof(u32),
 		.align = sizeof(u32),
 		.get = fpa_get,
-		.set = fpa_set
+		.set = fpa_set,
 	},
 #ifdef CONFIG_VFP
 	[REGSET_VFP] = {
@@ -771,14 +771,14 @@ static const struct user_regset arm_regsets[] = {
 		.size = sizeof(u32),
 		.align = sizeof(u32),
 		.get = vfp_get,
-		.set = vfp_set
+		.set = vfp_set,
 	},
 #endif /* CONFIG_VFP */
 };
 
 static const struct user_regset_view user_arm_view = {
 	.name = "arm", .e_machine = ELF_ARCH, .ei_osabi = ELF_OSABI,
-	.regsets = arm_regsets, .n = ARRAY_SIZE(arm_regsets)
+	.regsets = arm_regsets, .n = ARRAY_SIZE(arm_regsets),
 };
 
 const struct user_regset_view *task_user_regset_view(struct task_struct *task)

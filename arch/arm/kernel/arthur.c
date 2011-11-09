@@ -40,7 +40,7 @@ static unsigned long arthur_to_linux_signals[32] = {
 	0,	1,	2,	3,	4,	5,	6,	7,
 	8,	9,	10,	11,	12,	13,	14,	15,
 	16,	17,	18,	19,	20,	21,	22,	23,
-	24,	25,	26,	27,	28,	29,	30,	31
+	24,	25,	26,	27,	28,	29,	30,	31,
 };
 
 static unsigned long linux_to_arthur_signals[32] = {
@@ -51,7 +51,7 @@ static unsigned long linux_to_arthur_signals[32] = {
 	16,		17,		18,		19,
 	20,		21,		22,		23,
 	24,		25,		26,		27,
-	28,		29,		30,		31
+	28,		29,		30,		31,
 };
 
 static void arthur_lcall7(int nr, struct pt_regs *regs)

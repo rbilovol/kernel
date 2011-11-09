@@ -168,7 +168,7 @@ kprobe_check_cc * const kprobe_condition_checks[16] = {
 	&__check_eq, &__check_ne, &__check_cs, &__check_cc,
 	&__check_mi, &__check_pl, &__check_vs, &__check_vc,
 	&__check_hi, &__check_ls, &__check_ge, &__check_lt,
-	&__check_gt, &__check_le, &__check_al, &__check_al
+	&__check_gt, &__check_le, &__check_al, &__check_al,
 };
 
 
@@ -467,7 +467,7 @@ static const int decode_struct_sizes[NUM_DECODE_TYPES] = {
 	[DECODE_TYPE_SIMULATE]	= sizeof(struct decode_simulate),
 	[DECODE_TYPE_EMULATE]	= sizeof(struct decode_emulate),
 	[DECODE_TYPE_OR]	= sizeof(struct decode_or),
-	[DECODE_TYPE_REJECT]	= sizeof(struct decode_reject)
+	[DECODE_TYPE_REJECT]	= sizeof(struct decode_reject),
 };
 
 /*

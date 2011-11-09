@@ -39,7 +39,7 @@ static ctl_table ctl_isa_vars[4] = {
 		.maxlen		= sizeof(isa_portshift),
 		.mode		= 0444,
 		.proc_handler	= proc_dointvec,
-	}, {}
+	}, {},
 };
 
 static struct ctl_table_header *isa_sysctl_header;
@@ -49,7 +49,7 @@ static ctl_table ctl_isa[2] = {
 		.procname	= "isa",
 		.mode		= 0555,
 		.child		= ctl_isa_vars,
-	}, {}
+	}, {},
 };
 
 static ctl_table ctl_bus[2] = {
@@ -57,7 +57,7 @@ static ctl_table ctl_bus[2] = {
 		.procname	= "bus",
 		.mode		= 0555,
 		.child		= ctl_isa,
-	}, {}
+	}, {},
 };
 
 void __init

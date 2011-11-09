@@ -238,7 +238,7 @@ static struct undef_hook swp_hook = {
 	.instr_val  = 0x01000090,
 	.cpsr_mask  = MODE_MASK | PSR_T_BIT | PSR_J_BIT,
 	.cpsr_val   = USR_MODE,
-	.fn	    = swp_handler
+	.fn	    = swp_handler,
 };
 
 /*

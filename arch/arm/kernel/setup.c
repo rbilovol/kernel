@@ -155,20 +155,20 @@ static struct resource mem_res[] = {
 		.name = "Video RAM",
 		.start = 0,
 		.end = 0,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	{
 		.name = "Kernel text",
 		.start = 0,
 		.end = 0,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	{
 		.name = "Kernel data",
 		.start = 0,
 		.end = 0,
-		.flags = IORESOURCE_MEM
-	}
+		.flags = IORESOURCE_MEM,
+	},
 };
 
 #define video_ram   mem_res[0]
@@ -180,20 +180,20 @@ static struct resource io_res[] = {
 		.name = "reserved",
 		.start = 0x3bc,
 		.end = 0x3be,
-		.flags = IORESOURCE_IO | IORESOURCE_BUSY
+		.flags = IORESOURCE_IO | IORESOURCE_BUSY,
 	},
 	{
 		.name = "reserved",
 		.start = 0x378,
 		.end = 0x37f,
-		.flags = IORESOURCE_IO | IORESOURCE_BUSY
+		.flags = IORESOURCE_IO | IORESOURCE_BUSY,
 	},
 	{
 		.name = "reserved",
 		.start = 0x278,
 		.end = 0x27f,
-		.flags = IORESOURCE_IO | IORESOURCE_BUSY
-	}
+		.flags = IORESOURCE_IO | IORESOURCE_BUSY,
+	},
 };
 
 #define lp0 io_res[0]
@@ -645,7 +645,7 @@ struct screen_info screen_info = {
  .orig_video_mode	= 0,
  .orig_video_ega_bx	= 0,
  .orig_video_isVGA	= 1,
- .orig_video_points	= 8
+ .orig_video_points	= 8,
 };
 
 static int __init parse_tag_videotext(const struct tag *tag)
@@ -755,7 +755,7 @@ static struct init_tags {
 	{ 1, PAGE_SIZE, 0xff },
 	{ tag_size(tag_mem32), ATAG_MEM },
 	{ MEM_SIZE },
-	{ 0, ATAG_NONE }
+	{ 0, ATAG_NONE },
 };
 
 static int __init customize_machine(void)
@@ -1003,7 +1003,7 @@ static const char *hwcap_str[] = {
 	"vfpv4",
 	"idiva",
 	"idivt",
-	NULL
+	NULL,
 };
 
 static int c_show(struct seq_file *m, void *v)
@@ -1088,5 +1088,5 @@ const struct seq_operations cpuinfo_op = {
 	.start	= c_start,
 	.next	= c_next,
 	.stop	= c_stop,
-	.show	= c_show
+	.show	= c_show,
 };
