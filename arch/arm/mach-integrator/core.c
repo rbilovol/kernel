@@ -145,7 +145,7 @@ static struct clk_lookup lookups[] = {
 	}, {	/* MMCI - IntegratorCP */
 		.dev_id		= "mb:1c",
 		.clk		= &uartclk,
-	}
+	},
 };
 
 void __init integrator_init_early(void)

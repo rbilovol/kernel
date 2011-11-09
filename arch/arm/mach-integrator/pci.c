@@ -88,7 +88,7 @@ static u8 __init integrator_swizzle(struct pci_dev *dev, u8 *pinp)
 }
 
 static int irq_tab[4] __initdata = {
-	IRQ_AP_PCIINT0,	IRQ_AP_PCIINT1,	IRQ_AP_PCIINT2,	IRQ_AP_PCIINT3
+	IRQ_AP_PCIINT0,	IRQ_AP_PCIINT1,	IRQ_AP_PCIINT2,	IRQ_AP_PCIINT3,
 };
 
 /*

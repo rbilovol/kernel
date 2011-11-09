@@ -341,7 +341,7 @@ static struct impd1_device impd1_devs[] = {
 		.irq	= { 11 },
 		.id	= 0x00041110,
 		.platform_data = &impd1_clcd_data,
-	}
+	},
 };
 
 static struct clk fixed_14745600 = {
