@@ -90,7 +90,7 @@ static struct cachepolicy cache_policies[] __initdata = {
 		.cr_mask	= 0,
 		.pmd		= PMD_SECT_WBWA,
 		.pte		= L_PTE_MT_WRITEALLOC,
-	}
+	},
 };
 
 /*

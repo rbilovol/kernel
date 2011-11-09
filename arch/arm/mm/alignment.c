@@ -120,7 +120,7 @@ static const char *usermode_action[] = {
 	"fixup",
 	"fixup+warn",
 	"signal",
-	"signal+warn"
+	"signal+warn",
 };
 
 static int alignment_proc_show(struct seq_file *m, void *v)

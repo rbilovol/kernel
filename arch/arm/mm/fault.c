@@ -535,7 +535,7 @@ static struct fsr_info {
 	{ do_bad,		SIGBUS,  0,		"unknown 28"			   },
 	{ do_bad,		SIGBUS,  0,		"unknown 29"			   },
 	{ do_bad,		SIGBUS,  0,		"unknown 30"			   },
-	{ do_bad,		SIGBUS,  0,		"unknown 31"			   }
+	{ do_bad,		SIGBUS,  0,		"unknown 31"			   },
 };
 
 void __init

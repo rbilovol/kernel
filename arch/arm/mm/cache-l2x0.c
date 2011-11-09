@@ -545,7 +545,7 @@ static const struct of_device_id l2x0_ids[] __initconst = {
 	{ .compatible = "arm,pl310-cache", .data = (void *)&pl310_data },
 	{ .compatible = "arm,l220-cache", .data = (void *)&l2x0_data },
 	{ .compatible = "arm,l210-cache", .data = (void *)&l2x0_data },
-	{}
+	{},
 };
 
 int __init l2x0_of_init(__u32 aux_val, __u32 aux_mask)
