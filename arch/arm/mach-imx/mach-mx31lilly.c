@@ -66,7 +66,7 @@ static struct resource smsc91x_resources[] = {
 		.start	= IOMUX_TO_IRQ(MX31_PIN_GPIO1_0),
 		.end	= IOMUX_TO_IRQ(MX31_PIN_GPIO1_0),
 		.flags	= IORESOURCE_IRQ | IRQF_TRIGGER_FALLING,
-	}
+	},
 };
 
 static struct smsc911x_platform_config smsc911x_config = {
@@ -85,7 +85,7 @@ static struct platform_device smsc91x_device = {
 	.resource	= smsc91x_resources,
 	.dev		= {
 		.platform_data = &smsc911x_config,
-	}
+	},
 };
 
 /* NOR flash */

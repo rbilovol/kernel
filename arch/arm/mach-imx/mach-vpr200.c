@@ -84,7 +84,7 @@ static const struct fb_videomode fb_modedb[] = {
 		.sync		= FB_SYNC_CLK_IDLE_EN | FB_SYNC_OE_ACT_HIGH,
 		.vmode		= FB_VMODE_NONINTERLACED,
 		.flag		= 0,
-	}
+	},
 };
 
 static const struct ipu_platform_data mx3_ipu_data __initconst = {
@@ -163,7 +163,7 @@ static struct i2c_board_info vpr200_i2c_devices[] = {
 		I2C_BOARD_INFO("mc13892", 0x08),
 		.platform_data = &vpr200_pmic,
 		.irq = IMX_GPIO_TO_IRQ(GPIO_PMIC_INT),
-	}
+	},
 };
 
 static iomux_v3_cfg_t vpr200_pads[] = {

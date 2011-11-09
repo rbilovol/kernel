@@ -526,7 +526,7 @@ static unsigned long _clk_fclk_get_rate(struct clk *clk)
 
 static struct clk fclk_clk = {
 	.parent = &mpll_clk,
-	.get_rate = _clk_fclk_get_rate
+	.get_rate = _clk_fclk_get_rate,
 };
 
 static unsigned long get_spll_clk(struct clk *clk)
@@ -873,7 +873,7 @@ static struct clk usb_clk[] = {
 		.enable_reg = CCM_PCCR_HCLK_USBOTG_REG,
 		.enable_shift = CCM_PCCR_HCLK_USBOTG_OFFSET,
 		.disable = _clk_disable,
-	}
+	},
 };
 
 static struct clk ssi_ipg_clk[];
@@ -965,7 +965,7 @@ static struct clk emma_clk[] = {
 		.enable_reg = CCM_PCCR_HCLK_EMMA_REG,
 		.enable_shift = CCM_PCCR_HCLK_EMMA_OFFSET,
 		.disable = _clk_disable,
-	}
+	},
 };
 
 static struct clk slcdc_clk[] = {
@@ -981,7 +981,7 @@ static struct clk slcdc_clk[] = {
 		.enable_reg = CCM_PCCR_HCLK_SLCDC_REG,
 		.enable_shift = CCM_PCCR_HCLK_SLCDC_OFFSET,
 		.disable = _clk_disable,
-	}
+	},
 };
 
 static struct clk wdog_clk = {
@@ -1190,7 +1190,7 @@ static struct clk_lookup lookups[] = {
 	_REGISTER_CLOCK("imx-i2c.0", NULL, i2c_clk)
 	_REGISTER_CLOCK("mxc-keypad", NULL, kpp_clk)
 	_REGISTER_CLOCK(NULL, "owire", owire_clk)
-	_REGISTER_CLOCK(NULL, "rtc", rtc_clk)
+	_REGISTER_CLOCK(NULL, "rtc", rtc_clk),
 };
 
 /*

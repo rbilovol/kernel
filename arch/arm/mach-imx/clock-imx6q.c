@@ -1220,7 +1220,7 @@ static struct multiplexer axi_mux = {
 		&periph_clk,
 		&pll2_pfd_400m,
 		&pll3_pfd_540m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1232,7 +1232,7 @@ static struct multiplexer periph_mux = {
 	.parents = {
 		&periph_pre_clk,
 		&periph_clk2_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1246,7 +1246,7 @@ static struct multiplexer periph_pre_mux = {
 		&pll2_pfd_400m,
 		&pll2_pfd_352m,
 		&pll2_200m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1258,7 +1258,7 @@ static struct multiplexer periph_clk2_mux = {
 	.parents = {
 		&pll3_usb_otg,
 		&osc_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1270,7 +1270,7 @@ static struct multiplexer periph2_mux = {
 	.parents = {
 		&periph2_pre_clk,
 		&periph2_clk2_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1284,7 +1284,7 @@ static struct multiplexer periph2_pre_mux = {
 		&pll2_pfd_400m,
 		&pll2_pfd_352m,
 		&pll2_200m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1296,7 +1296,7 @@ static struct multiplexer periph2_clk2_mux = {
 	.parents = {
 		&pll3_usb_otg,
 		&osc_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1308,7 +1308,7 @@ static struct multiplexer gpu2d_axi_mux = {
 	.parents = {
 		&axi_clk,
 		&ahb_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1320,7 +1320,7 @@ static struct multiplexer gpu3d_axi_mux = {
 	.parents = {
 		&axi_clk,
 		&ahb_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1334,7 +1334,7 @@ static struct multiplexer gpu3d_core_mux = {
 		&pll3_usb_otg,
 		&pll2_pfd_594m,
 		&pll2_pfd_400m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1348,7 +1348,7 @@ static struct multiplexer gpu3d_shader_mux = {
 		&pll3_usb_otg,
 		&pll2_pfd_594m,
 		&pll3_pfd_720m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1360,7 +1360,7 @@ static struct multiplexer pcie_axi_mux = {
 	.parents = {
 		&axi_clk,
 		&ahb_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1372,7 +1372,7 @@ static struct multiplexer vdo_axi_mux = {
 	.parents = {
 		&axi_clk,
 		&ahb_clk,
-		NULL
+		NULL,
 	},
 };
 
@@ -1385,7 +1385,7 @@ static struct multiplexer vpu_axi_mux = {
 		&axi_clk,
 		&pll2_pfd_400m,
 		&pll2_pfd_352m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1399,7 +1399,7 @@ static struct multiplexer gpu2d_core_mux = {
 		&pll3_usb_otg,
 		&pll2_pfd_352m,
 		&pll2_pfd_400m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1449,7 +1449,7 @@ static struct multiplexer emi_mux = {
 		&pll3_usb_otg,
 		&pll2_pfd_400m,
 		&pll2_pfd_352m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1463,7 +1463,7 @@ static struct multiplexer emi_slow_mux = {
 		&pll3_usb_otg,
 		&pll2_pfd_400m,
 		&pll2_pfd_352m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1477,7 +1477,7 @@ static struct multiplexer esai_mux = {
 		&pll3_pfd_508m,
 		&pll3_pfd_454m,
 		&pll3_usb_otg,
-		NULL
+		NULL,
 	},
 };
 
@@ -1510,7 +1510,7 @@ static struct multiplexer enfc_mux = {
 		&pll2_bus,
 		&pll3_usb_otg,
 		&pll2_pfd_400m,
-		NULL
+		NULL,
 	},
 };
 
@@ -1524,7 +1524,7 @@ static struct multiplexer spdif_mux = {
 		&pll3_pfd_508m,
 		&pll3_pfd_454m,
 		&pll3_usb_otg,
-		NULL
+		NULL,
 	},
 };
 
@@ -1538,7 +1538,7 @@ static struct multiplexer asrc_serial_mux = {
 		&pll3_pfd_508m,
 		&pll3_pfd_454m,
 		&pll3_usb_otg,
-		NULL
+		NULL,
 	},
 };
 
@@ -1550,7 +1550,7 @@ static struct multiplexer hsi_tx_mux = {
 	.parents = {
 		&pll3_120m,
 		&pll2_pfd_400m,
-		NULL
+		NULL,
 	},
 };
 

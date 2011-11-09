@@ -199,7 +199,7 @@ static struct i2c_board_info pcm038_i2c_devices[] = {
 		I2C_BOARD_INFO("pcf8563", 0x51),
 	}, {
 		I2C_BOARD_INFO("lm75", 0x4a),
-	}
+	},
 };
 
 static int pcm038_spi_cs[] = {GPIO_PORTD + 28};
@@ -280,7 +280,7 @@ static struct spi_board_info pcm038_spi_board_info[] __initdata = {
 		.chip_select = 0,
 		.platform_data = &pcm038_pmic,
 		.mode = SPI_CS_HIGH,
-	}
+	},
 };
 
 static int pcm038_usbh2_init(struct platform_device *pdev)

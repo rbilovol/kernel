@@ -173,7 +173,7 @@ static const struct gpio_led litekit_leds[] __initconst = {
 		.gpio           = IOMUX_TO_GPIO(MX31_PIN_CAPTURE),
 		.active_low     = 1,
 		.default_state  = LEDS_GPIO_DEFSTATE_OFF,
-	}
+	},
 };
 
 static const struct gpio_led_platform_data

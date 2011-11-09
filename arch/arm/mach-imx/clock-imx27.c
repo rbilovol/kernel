@@ -676,7 +676,7 @@ static struct clk_lookup lookups[] = {
 	_REGISTER_CLOCK(NULL, "kpp", kpp_clk)
 	_REGISTER_CLOCK("mxc_w1.0", NULL, owire_clk)
 	_REGISTER_CLOCK(NULL, "rtc", rtc_clk)
-	_REGISTER_CLOCK(NULL, "scc", scc_clk)
+	_REGISTER_CLOCK(NULL, "scc", scc_clk),
 };
 
 /* Adjust the clock path for TO2 and later */

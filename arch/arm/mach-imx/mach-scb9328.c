@@ -91,7 +91,7 @@ static struct platform_device dm9000x_device = {
 	.resource	= dm9000x_resources,
 	.dev		= {
 		.platform_data = &dm9000_platdata,
-	}
+	},
 };
 
 static const int mxc_uart1_pins[] = {

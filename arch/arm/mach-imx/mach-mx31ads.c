@@ -114,7 +114,7 @@ static unsigned int uart_pins[] = {
 	MX31_PIN_CTS1__CTS1,
 	MX31_PIN_RTS1__RTS1,
 	MX31_PIN_TXD1__TXD1,
-	MX31_PIN_RXD1__RXD1
+	MX31_PIN_RXD1__RXD1,
 };
 
 static inline void mxc_init_imx_uart(void)
@@ -218,7 +218,7 @@ static void __init mx31ads_init_expio(void)
 static struct regulator_consumer_supply sw1a_consumers[] = {
 	{
 		.supply = "cpu_vcc",
-	}
+	},
 };
 
 static struct regulator_init_data sw1a_data = {
@@ -498,7 +498,7 @@ static struct map_desc mx31ads_io_desc[] __initdata = {
 		.virtual	= MX31_CS4_BASE_ADDR_VIRT,
 		.pfn		= __phys_to_pfn(MX31_CS4_BASE_ADDR),
 		.length		= MX31_CS4_SIZE / 2,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

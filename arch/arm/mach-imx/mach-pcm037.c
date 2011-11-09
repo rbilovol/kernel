@@ -320,7 +320,7 @@ static struct i2c_board_info pcm037_i2c_devices[] = {
 		.platform_data = &board_eeprom,
 	}, {
 		I2C_BOARD_INFO("pcf8563", 0x51),
-	}
+	},
 };
 
 static struct platform_device pcm037_mt9t031 = {

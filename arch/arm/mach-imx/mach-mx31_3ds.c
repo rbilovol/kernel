@@ -390,7 +390,7 @@ static struct regulator_init_data gpo_init = {
 	.constraints = {
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_consumer_supply vmmc2_consumers[] = {

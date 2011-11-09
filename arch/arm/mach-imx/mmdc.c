@@ -53,7 +53,7 @@ static int __devinit imx_mmdc_probe(struct platform_device *pdev)
 
 static struct of_device_id imx_mmdc_dt_ids[] = {
 	{ .compatible = "fsl,imx6q-mmdc", },
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static struct platform_driver imx_mmdc_driver = {

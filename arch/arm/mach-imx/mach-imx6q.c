@@ -49,7 +49,7 @@ static void __init imx6q_gpio_add_irq_domain(struct device_node *np,
 static const struct of_device_id imx6q_irq_match[] __initconst = {
 	{ .compatible = "arm,cortex-a9-gic", .data = gic_of_init, },
 	{ .compatible = "fsl,imx6q-gpio", .data = imx6q_gpio_add_irq_domain, },
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static void __init imx6q_init_irq(void)

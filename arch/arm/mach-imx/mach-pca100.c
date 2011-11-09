@@ -183,7 +183,7 @@ static struct i2c_board_info pca100_i2c_devices[] = {
 		I2C_BOARD_INFO("pcf8563", 0x51),
 	}, {
 		I2C_BOARD_INFO("lm75", 0x4a),
-	}
+	},
 };
 
 static struct spi_eeprom at25320 = {

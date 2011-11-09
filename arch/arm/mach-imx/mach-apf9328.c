@@ -70,7 +70,7 @@ static struct platform_device apf9328_flash_device = {
  * APF9328 has a DM9000 Ethernet controller
  */
 static struct dm9000_plat_data dm9000_setup = {
-	.flags          = DM9000_PLATF_16BITONLY
+	.flags          = DM9000_PLATF_16BITONLY,
 };
 
 static struct resource dm9000_resources[] = {
@@ -96,7 +96,7 @@ static struct platform_device dm9000x_device = {
 	.resource	= dm9000_resources,
 	.dev		= {
 		.platform_data = &dm9000_setup,
-	}
+	},
 };
 
 static const struct imxuart_platform_data uart1_pdata __initconst = {

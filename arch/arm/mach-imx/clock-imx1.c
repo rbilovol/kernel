@@ -443,7 +443,7 @@ static struct clk perclk[] = {
 		.get_rate = perclk3_get_rate,
 		.round_rate = perclk3_round_rate,
 		.set_rate = perclk3_set_rate,
-	}
+	},
 };
 
 static const struct clk *clko_clocks[] = {
@@ -597,7 +597,7 @@ static struct clk_lookup lookups[] __initdata = {
 	_REGISTER_CLOCK("imx-fb.0", NULL, lcdc_clk)
 	_REGISTER_CLOCK(NULL, "mshc", mshc_clk)
 	_REGISTER_CLOCK(NULL, "ssi", ssi_clk)
-	_REGISTER_CLOCK("mxc_rtc.0", NULL, rtc_clk)
+	_REGISTER_CLOCK("mxc_rtc.0", NULL, rtc_clk),
 };
 
 int __init mx1_clocks_init(unsigned long fref)

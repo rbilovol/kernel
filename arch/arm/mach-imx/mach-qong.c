@@ -61,7 +61,7 @@ static int uart_pins[] = {
 	MX31_PIN_CTS1__CTS1,
 	MX31_PIN_RTS1__RTS1,
 	MX31_PIN_TXD1__TXD1,
-	MX31_PIN_RXD1__RXD1
+	MX31_PIN_RXD1__RXD1,
 };
 
 static inline void __init mxc_init_imx_uart(void)
@@ -168,7 +168,7 @@ static struct platform_nand_data qong_nand_data = {
 		.cmd_ctrl		= qong_nand_cmd_ctrl,
 		.dev_ready		= qong_nand_device_ready,
 		.select_chip		= qong_nand_select_chip,
-	}
+	},
 };
 
 static struct resource qong_nand_resource = {

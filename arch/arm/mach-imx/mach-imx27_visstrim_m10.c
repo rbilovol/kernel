@@ -127,7 +127,7 @@ static struct gpio_keys_button visstrim_gpio_keys[] = {
 		.desc   = "Stop",
 		.active_low = 0,
 		.wakeup = 1,
-	}
+	},
 };
 
 static const struct gpio_keys_platform_data
@@ -216,7 +216,7 @@ static struct i2c_board_info visstrim_m10_i2c_devices[] = {
 	{
 		I2C_BOARD_INFO("tlv320aic32x4", 0x18),
 		.platform_data = &visstrim_m10_aic32x4_pdata,
-	}
+	},
 };
 
 /* USB OTG */

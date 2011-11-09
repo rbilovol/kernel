@@ -273,7 +273,7 @@ static struct gpio_keys_button armadillo5x0_buttons[] = {
 		.active_low	= 1,
 		.desc		= "back",
 		.wakeup		= 1,
-	}
+	},
 };
 
 static const struct gpio_keys_platform_data

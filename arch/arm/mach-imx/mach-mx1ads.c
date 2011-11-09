@@ -86,7 +86,7 @@ static struct pcf857x_platform_data pcf857x_data[] = {
 		.gpio_base = 4 * 32,
 	}, {
 		.gpio_base = 4 * 32 + 16,
-	}
+	},
 };
 
 static const struct imxi2c_platform_data mx1ads_i2c_data __initconst = {

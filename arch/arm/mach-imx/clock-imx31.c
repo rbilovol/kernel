@@ -572,7 +572,7 @@ static struct clk_lookup lookups[] = {
 	_REGISTER_CLOCK(NULL, "scc", scc_clk)
 	_REGISTER_CLOCK(NULL, "iim", iim_clk)
 	_REGISTER_CLOCK(NULL, "mpeg4", mpeg4_clk)
-	_REGISTER_CLOCK(NULL, "mbx", mbx_clk)
+	_REGISTER_CLOCK(NULL, "mbx", mbx_clk),
 };
 
 int __init mx31_clocks_init(unsigned long fref)

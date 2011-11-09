@@ -243,13 +243,13 @@ static struct map_desc kzm_io_desc[] __initdata = {
 		.virtual	= MX31_CS4_BASE_ADDR_VIRT,
 		.pfn		= __phys_to_pfn(MX31_CS4_BASE_ADDR),
 		.length		= MX31_CS4_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= MX31_CS5_BASE_ADDR_VIRT,
 		.pfn		= __phys_to_pfn(MX31_CS5_BASE_ADDR),
 		.length		= MX31_CS5_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

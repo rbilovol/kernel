@@ -435,7 +435,7 @@ static struct clk nfc_clk = {
 	.get_rate	= get_rate_nfc,
 	.set_rate	= NULL, /* set_rate_nfc, */
 	.enable		= clk_dummy_enable,
-	.disable	= clk_dummy_disable
+	.disable	= clk_dummy_disable,
 };
 
 #define _REGISTER_CLOCK(d, n, c)	\
@@ -502,7 +502,7 @@ static struct clk_lookup lookups[] = {
 	_REGISTER_CLOCK(NULL, "csi", csi_clk)
 	_REGISTER_CLOCK(NULL, "iim", iim_clk)
 	_REGISTER_CLOCK(NULL, "gpu2d", gpu2d_clk)
-	_REGISTER_CLOCK("mxc_nand.0", NULL, nfc_clk)
+	_REGISTER_CLOCK("mxc_nand.0", NULL, nfc_clk),
 };
 
 int __init mx35_clocks_init()
