@@ -57,7 +57,7 @@ static struct map_desc glantank_io_desc[] __initdata = {
 		.virtual	= GLANTANK_UART,
 		.pfn		= __phys_to_pfn(GLANTANK_UART),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

@@ -63,7 +63,7 @@ static struct map_desc n2100_io_desc[] __initdata = {
 		.virtual	= N2100_UART,
 		.pfn		= __phys_to_pfn(N2100_UART),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
