@@ -45,7 +45,7 @@ struct amba_device uart_device[] = {
 			.flags = IORESOURCE_MEM,
 		},
 		.irq = {IRQ_UART_1, NO_IRQ},
-	}
+	},
 };
 
 /* gpio device registration */
@@ -96,7 +96,7 @@ struct amba_device gpio_device[] = {
 			.flags = IORESOURCE_MEM,
 		},
 		.irq = {IRQ_APPL_GPIO, NO_IRQ},
-	}
+	},
 };
 
 /* This will add devices, and do machine specific tasks */
@@ -118,27 +118,27 @@ static struct map_desc spear6xx_io_desc[] __initdata = {
 		.virtual	= VA_SPEAR6XX_ICM1_UART0_BASE,
 		.pfn		= __phys_to_pfn(SPEAR6XX_ICM1_UART0_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= VA_SPEAR6XX_CPU_VIC_PRI_BASE,
 		.pfn		= __phys_to_pfn(SPEAR6XX_CPU_VIC_PRI_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= VA_SPEAR6XX_CPU_VIC_SEC_BASE,
 		.pfn		= __phys_to_pfn(SPEAR6XX_CPU_VIC_SEC_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= VA_SPEAR6XX_ICM3_SYS_CTRL_BASE,
 		.pfn		= __phys_to_pfn(SPEAR6XX_ICM3_SYS_CTRL_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= VA_SPEAR6XX_ICM3_MISC_REG_BASE,
 		.pfn		= __phys_to_pfn(SPEAR6XX_ICM3_MISC_REG_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
