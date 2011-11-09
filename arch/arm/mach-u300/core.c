@@ -345,7 +345,7 @@ static struct resource wdog_resources[] = {
 		.start = IRQ_U300_WDOG,
 		.end   = IRQ_U300_WDOG,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource dma_resource[] = {
@@ -358,7 +358,7 @@ static struct resource dma_resource[] = {
 		.start = IRQ_U300_DMA,
 		.end = IRQ_U300_DMA,
 		.flags =  IORESOURCE_IRQ,
-	}
+	},
 };
 
 #ifdef CONFIG_MACH_U300_BS335
@@ -1752,7 +1752,7 @@ static struct db_chip db_chips[] __initdata = {
 	{
 		.chipid = 0x0000, /* List terminator */
 		.name = NULL,
-	}
+	},
 };
 
 static void __init u300_init_check_chip(void)
