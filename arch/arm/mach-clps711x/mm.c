@@ -38,8 +38,8 @@ static struct map_desc clps711x_io_desc[] __initdata = {
 		.virtual	= CLPS7111_VIRT_BASE,
 		.pfn		= __phys_to_pfn(CLPS7111_PHYS_BASE),
 		.length		= SZ_1M,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 void __init clps711x_map_io(void)

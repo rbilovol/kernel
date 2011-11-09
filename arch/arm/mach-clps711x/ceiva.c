@@ -42,8 +42,8 @@ static struct map_desc ceiva_io_desc[] __initdata = {
 		.virtual	= CEIVA_VIRT_SED1355,
 		.pfn		= __phys_to_pfn(CEIVA_PHYS_SED1355),
 		.length		= SZ_2M,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 

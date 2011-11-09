@@ -46,13 +46,13 @@ static struct map_desc p720t_io_desc[] __initdata = {
 		.virtual	= SYSPLD_VIRT_BASE,
 		.pfn		= __phys_to_pfn(SYSPLD_PHYS_BASE),
 		.length		= SZ_1M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= 0xfe400000,
 		.pfn		= __phys_to_pfn(0x10400000),
 		.length		= SZ_1M,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init

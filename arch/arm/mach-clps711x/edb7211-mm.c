@@ -70,7 +70,7 @@ static struct map_desc edb7211_io_desc[] __initdata = {
 		.pfn		= __phys_to_pfn(EP7211_PHYS_FLASH2),
 		.length		= SZ_8M,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 void __init edb7211_map_io(void)

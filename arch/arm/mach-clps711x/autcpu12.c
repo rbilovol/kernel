@@ -52,8 +52,8 @@ static struct map_desc autcpu12_io_desc[] __initdata = {
 		.virtual	= AUTCPU12_VIRT_CS8900A,
 		.pfn		= __phys_to_pfn(AUTCPU12_PHYS_CS8900A),
 		.length		= SZ_1M,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 void __init autcpu12_map_io(void)
