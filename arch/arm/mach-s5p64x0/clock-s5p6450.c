@@ -274,7 +274,7 @@ static struct clk init_clocks_off[] = {
 		.parent		= &clk_pclk.clk,
 		.enable		= s5p64x0_pclk_ctrl,
 		.ctrlbit	= (1 << 30),
-	}
+	},
 };
 
 /*

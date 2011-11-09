@@ -44,7 +44,7 @@ static u32 epll_div[][5] = {
 	{ 45158000,	6903,	30, 1, 3 },
 	{ 49152000,	50332,	32, 1, 3 },
 	{ 67738000,	10398,	45, 1, 3 },
-	{ 73728000,	9961,	49, 1, 3 }
+	{ 73728000,	9961,	49, 1, 3 },
 };
 
 static int s5p6440_epll_set_rate(struct clk *clk, unsigned long rate)
@@ -139,7 +139,7 @@ static struct clk init_clocks_off[] = {
 		.name		= "post",
 		.parent		= &clk_hclk_low.clk,
 		.enable		= s5p64x0_hclk0_ctrl,
-		.ctrlbit	= (1 << 5)
+		.ctrlbit	= (1 << 5),
 	}, {
 		.name		= "2d",
 		.parent		= &clk_hclk.clk,
@@ -173,7 +173,7 @@ static struct clk init_clocks_off[] = {
 		.name		= "otg",
 		.parent		= &clk_hclk_low.clk,
 		.enable		= s5p64x0_hclk0_ctrl,
-		.ctrlbit	= (1 << 20)
+		.ctrlbit	= (1 << 20),
 	}, {
 		.name		= "irom",
 		.parent		= &clk_hclk.clk,
