@@ -40,7 +40,7 @@ static struct __initdata map_desc ks8695_io_desc[] = {
 		.pfn		= __phys_to_pfn(KS8695_IO_PA),
 		.length		= KS8695_IO_SIZE,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 static void __init ks8695_processor_info(void)

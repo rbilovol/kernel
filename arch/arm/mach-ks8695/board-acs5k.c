@@ -127,7 +127,7 @@ static struct mtd_partition acs5k_nor_partitions[] = {
 		.name	= "Data",
 		.size	= SZ_16M + SZ_4M + SZ_2M + SZ_512K, /* 22.5 MB */
 		.offset	= SZ_256K + SZ_8M + SZ_1M,
-	}
+	},
 };
 
 static struct physmap_flash_data acs5k_nor_pdata = {
@@ -148,7 +148,7 @@ static struct resource acs5k_nor_resource[] = {
 		.start = SZ_32M + SZ_16M,
 		.end   = SZ_32M + SZ_32M - SZ_256K - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device acs5k_device_nor = {

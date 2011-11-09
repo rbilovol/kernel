@@ -82,7 +82,7 @@ static struct resource dsm320_nor_resource[] = {
 				  */
 		.end   = SZ_32M + SZ_4M - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device dsm320_device_nor = {
