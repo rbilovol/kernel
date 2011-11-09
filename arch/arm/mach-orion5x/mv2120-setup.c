@@ -56,7 +56,7 @@ static struct mtd_partition mv2120_partitions[] = {
 static struct physmap_flash_data mv2120_nor_flash_data = {
 	.width		= 1,
 	.parts		= mv2120_partitions,
-	.nr_parts	= ARRAY_SIZE(mv2120_partitions)
+	.nr_parts	= ARRAY_SIZE(mv2120_partitions),
 };
 
 static struct resource mv2120_nor_flash_resource = {
@@ -177,7 +177,7 @@ static struct platform_device mv2120_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &mv2120_led_data,
-	}
+	},
 };
 
 static void mv2120_power_off(void)

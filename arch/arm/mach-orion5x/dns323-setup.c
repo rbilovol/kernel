@@ -145,7 +145,7 @@ static struct mtd_partition dns323_partitions[] = {
 static struct physmap_flash_data dns323_nor_flash_data = {
 	.width		= 1,
 	.parts		= dns323_partitions,
-	.nr_parts	= ARRAY_SIZE(dns323_partitions)
+	.nr_parts	= ARRAY_SIZE(dns323_partitions),
 };
 
 static struct resource dns323_nor_flash_resource = {

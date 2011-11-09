@@ -265,7 +265,7 @@ static struct mtd_partition ts78xx_ts_nand_parts[] = {
 		.name		= "rootfs",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct platform_nand_data ts78xx_ts_nand_data = {
