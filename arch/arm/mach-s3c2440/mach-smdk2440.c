@@ -70,7 +70,7 @@ static struct map_desc smdk2440_iodesc[] __initdata = {
 		.pfn		= __phys_to_pfn(S3C2410_CS2 + (1<<24)),
 		.length		= SZ_4M,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 #define UCON S3C2410_UCON_DEFAULT | S3C2410_UCON_UCLK
@@ -99,7 +99,7 @@ static struct s3c2410_uartcfg smdk2440_uartcfgs[] __initdata = {
 		.ucon	     = 0x3c5,
 		.ulcon	     = 0x43,
 		.ufcon	     = 0x51,
-	}
+	},
 };
 
 /* LCD driver info */

@@ -76,7 +76,7 @@ static struct s3c2410_uartcfg nexcoder_uartcfgs[] __initdata = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 /* NOR Flash on NexVision NexCoder 2440 board */
@@ -86,7 +86,7 @@ static struct resource nexcoder_nor_resource[] = {
 		.start = S3C2410_CS0,
 		.end   = S3C2410_CS0 + (8*1024*1024) - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct map_info nexcoder_nor_map = {
@@ -101,7 +101,7 @@ static struct platform_device nexcoder_device_nor = {
 	.dev =
 	{
 		.platform_data = &nexcoder_nor_map,
-	}
+	},
 };
 
 /* Standard Nexcoder devices */

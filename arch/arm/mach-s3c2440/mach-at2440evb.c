@@ -69,7 +69,7 @@ static struct s3c24xx_uart_clksrc at2440evb_serial_clocks[] = {
 		.divisor	= 1,
 		.min_baud	= 0,
 		.max_baud	= 0,
-	}
+	},
 };
 
 
@@ -137,18 +137,18 @@ static struct resource at2440evb_dm9k_resource[] = {
 	[0] = {
 		.start = S3C2410_CS3,
 		.end   = S3C2410_CS3 + 3,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = S3C2410_CS3 + 4,
 		.end   = S3C2410_CS3 + 7,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[2] = {
 		.start = IRQ_EINT7,
 		.end   = IRQ_EINT7,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct dm9000_plat_data at2440evb_dm9k_pdata = {

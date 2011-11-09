@@ -114,7 +114,7 @@ static struct map_desc gta02_iodesc[] __initdata = {
 		.virtual	= 0xe0000000,
 		.pfn		= __phys_to_pfn(S3C2410_CS3 + 0x01000000),
 		.length		= SZ_1M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

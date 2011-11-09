@@ -172,7 +172,7 @@ static struct sleep_save s3c244x_sleep[] = {
 	SAVE_ITEM(S3C2440_DSC1),
 	SAVE_ITEM(S3C2440_GPJDAT),
 	SAVE_ITEM(S3C2440_GPJCON),
-	SAVE_ITEM(S3C2440_GPJUP)
+	SAVE_ITEM(S3C2440_GPJUP),
 };
 
 static int s3c244x_suspend(void)

@@ -112,7 +112,7 @@ static struct s3c24xx_uart_clksrc osiris_serial_clocks[] = {
 		.divisor	= 1,
 		.min_baud	= 0,
 		.max_baud	= 0,
-	}
+	},
 };
 
 static struct s3c2410_uartcfg osiris_uartcfgs[] __initdata = {
@@ -142,7 +142,7 @@ static struct s3c2410_uartcfg osiris_uartcfgs[] __initdata = {
 		.ufcon	     = UFCON,
 		.clocks	     = osiris_serial_clocks,
 		.clocks_size = ARRAY_SIZE(osiris_serial_clocks),
-	}
+	},
 };
 
 /* NAND Flash on Osiris board */
@@ -171,7 +171,7 @@ static struct mtd_partition __initdata osiris_default_nand_part[] = {
 		.name	= "user2",
 		.offset	= SZ_32M,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct mtd_partition __initdata osiris_default_nand_part_large[] = {
@@ -194,7 +194,7 @@ static struct mtd_partition __initdata osiris_default_nand_part_large[] = {
 		.name	= "user2",
 		.offset	= SZ_32M,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 /* the Osiris has 3 selectable slots for nand-flash, the two
@@ -269,7 +269,7 @@ static struct resource osiris_pcmcia_resource[] = {
 		.start	= 0x0c000000,
 		.end	= 0x0c100000,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device osiris_pcmcia = {

@@ -74,7 +74,7 @@ static struct s3c24xx_uart_clksrc rx3715_serial_clocks[] = {
 		.divisor	= 0,
 		.min_baud	= 0,
 		.max_baud	= 0,
-	}
+	},
 };
 
 static struct s3c2410_uartcfg rx3715_uartcfgs[] = {
@@ -105,7 +105,7 @@ static struct s3c2410_uartcfg rx3715_uartcfgs[] = {
 		.ufcon	     = 0x51,
 		.clocks	     = rx3715_serial_clocks,
 		.clocks_size = ARRAY_SIZE(rx3715_serial_clocks),
-	}
+	},
 };
 
 /* framebuffer lcd controller information */
@@ -156,7 +156,7 @@ static struct mtd_partition __initdata rx3715_nand_part[] = {
 		.offset		= 0,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= MTD_WRITEABLE,
-	}
+	},
 };
 
 static struct s3c2410_nand_set __initdata rx3715_nand_sets[] = {

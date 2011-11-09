@@ -150,7 +150,7 @@ static void power_supply_exit(struct device *dev)
 }
 
 static char *rx1950_supplicants[] = {
-	"main-battery"
+	"main-battery",
 };
 
 static struct pda_power_pdata power_supply_info = {
@@ -696,7 +696,7 @@ static struct gpio_keys_button rx1950_gpio_keys_table[] = {
 		.code		= KEY_ENTER,
 		.gpio		= S3C2410_GPG(9),
 		.active_low	= 1,
-		.desc		= "Ok button"
+		.desc		= "Ok button",
 	},
 };
 

@@ -108,7 +108,7 @@ static struct s3c24xx_uart_clksrc anubis_serial_clocks[] = {
 		.divisor	= 1,
 		.min_baud	= 0,
 		.max_baud	= 0,
-	}
+	},
 };
 
 
@@ -159,7 +159,7 @@ static struct mtd_partition __initdata anubis_default_nand_part[] = {
 		.name	= "user2",
 		.offset	= SZ_32M,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct mtd_partition __initdata anubis_default_nand_part_large[] = {
@@ -182,7 +182,7 @@ static struct mtd_partition __initdata anubis_default_nand_part_large[] = {
 		.name	= "user2",
 		.offset	= SZ_32M,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 /* the Anubis has 3 selectable slots for nand-flash, the two
@@ -316,13 +316,13 @@ static struct resource anubis_asix_resource[] = {
 	[0] = {
 		.start = S3C2410_CS5,
 		.end   = S3C2410_CS5 + (0x20 * 0x20) -1,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = IRQ_ASIX,
 		.end   = IRQ_ASIX,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct platform_device anubis_device_asix = {
@@ -332,7 +332,7 @@ static struct platform_device anubis_device_asix = {
 	.resource	= anubis_asix_resource,
 	.dev		= {
 		.platform_data = &anubis_asix_platdata,
-	}
+	},
 };
 
 /* SM501 */
@@ -435,7 +435,7 @@ static struct i2c_board_info anubis_i2c_devs[] __initdata = {
 	{
 		I2C_BOARD_INFO("tps65011", 0x48),
 		.irq	= IRQ_EINT20,
-	}
+	},
 };
 
 /* Audio setup */

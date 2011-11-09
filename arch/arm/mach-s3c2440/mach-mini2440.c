@@ -275,18 +275,18 @@ static struct resource mini2440_dm9k_resource[] = {
 	[0] = {
 		.start = MACH_MINI2440_DM9K_BASE,
 		.end   = MACH_MINI2440_DM9K_BASE + 3,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = MACH_MINI2440_DM9K_BASE + 4,
 		.end   = MACH_MINI2440_DM9K_BASE + 7,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[2] = {
 		.start = IRQ_EINT7,
 		.end   = IRQ_EINT7,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 /*
@@ -377,7 +377,7 @@ static struct platform_device mini2440_button_device = {
 	.id		= -1,
 	.dev		= {
 		.platform_data	= &mini2440_button_data,
-	}
+	},
 };
 
 /* LEDS */
@@ -462,7 +462,7 @@ static struct s3c24xx_uda134x_platform_data mini2440_audio_pins = {
 	.l3_clk = S3C2410_GPB(4),
 	.l3_mode = S3C2410_GPB(2),
 	.l3_data = S3C2410_GPB(3),
-	.model = UDA134X_UDA1341
+	.model = UDA134X_UDA1341,
 };
 
 static struct platform_device mini2440_audio = {
