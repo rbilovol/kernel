@@ -191,11 +191,11 @@ static struct i2c_board_info smdk4x12_i2c_devs0[] __initdata = {
 	{
 		I2C_BOARD_INFO("max8997", 0x66),
 		.platform_data	= &smdk4x12_max8997_pdata,
-	}
+	},
 };
 
 static struct i2c_board_info smdk4x12_i2c_devs1[] __initdata = {
-	{ I2C_BOARD_INFO("wm8994", 0x1a), }
+	{ I2C_BOARD_INFO("wm8994", 0x1a), },
 };
 
 static struct i2c_board_info smdk4x12_i2c_devs3[] __initdata = {
@@ -219,7 +219,7 @@ static struct platform_pwm_backlight_data smdk4x12_bl_data = {
 static uint32_t smdk4x12_keymap[] __initdata = {
 	/* KEY(row, col, keycode) */
 	KEY(1, 0, KEY_D), KEY(1, 1, KEY_A), KEY(1, 2, KEY_B),
-	KEY(1, 3, KEY_E), KEY(1, 4, KEY_C)
+	KEY(1, 3, KEY_E), KEY(1, 4, KEY_C),
 };
 
 static struct matrix_keymap_data smdk4x12_keymap_data __initdata = {

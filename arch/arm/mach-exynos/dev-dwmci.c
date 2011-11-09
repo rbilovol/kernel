@@ -42,7 +42,7 @@ static struct resource exynos4_dwmci_resource[] = {
 		.start	= IRQ_DWMCI,
 		.end	= IRQ_DWMCI,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct dw_mci_board exynos4_dwci_pdata = {

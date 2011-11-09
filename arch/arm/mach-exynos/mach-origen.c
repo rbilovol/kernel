@@ -381,7 +381,7 @@ static struct regulator_init_data __initdata max8997_buck7_data = {
 		.apply_uV	= 1,
 		.valid_ops_mask	= REGULATOR_CHANGE_STATUS,
 		.state_mem	= {
-			.disabled	= 1
+			.disabled	= 1,
 		},
 	},
 	.num_consumer_supplies	= ARRAY_SIZE(buck7_consumer),

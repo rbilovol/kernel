@@ -1149,7 +1149,7 @@ static struct regulator_init_data cam_8m_12v_reg_init_data = {
 	.num_consumer_supplies	= 1,
 	.consumer_supplies	= &camera_8m_12v_supply,
 	.constraints = {
-		.valid_ops_mask = REGULATOR_CHANGE_STATUS
+		.valid_ops_mask = REGULATOR_CHANGE_STATUS,
 	},
 };
 

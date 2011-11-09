@@ -741,7 +741,7 @@ static struct clk init_clocks_off[] = {
 		.name		= "SYSMMU_MFC_R",
 		.enable		= exynos4_clk_ip_mfc_ctrl,
 		.ctrlbit	= (1 << 2),
-	}
+	},
 };
 
 static struct clk init_clocks[] = {
@@ -775,7 +775,7 @@ static struct clk init_clocks[] = {
 		.devname	= "s5pv210-uart.5",
 		.enable		= exynos4_clk_ip_peril_ctrl,
 		.ctrlbit	= (1 << 5),
-	}
+	},
 };
 
 struct clk *clkset_group_list[] = {
@@ -1234,7 +1234,7 @@ static struct clksrc_clk clksrcs[] = {
 			.ctrlbit	= (1 << 16),
 		},
 		.reg_div = { .reg = S5P_CLKDIV_FSYS3, .shift = 8, .size = 8 },
-	}
+	},
 };
 
 /* Clock initialization code */
