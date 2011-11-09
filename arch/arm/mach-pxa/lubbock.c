@@ -334,7 +334,7 @@ static struct mtd_partition lubbock_partitions[] = {
 		.name =		"Bootloader",
 		.size =		0x00040000,
 		.offset =	0,
-		.mask_flags =	MTD_WRITEABLE  /* force read-only */
+		.mask_flags =	MTD_WRITEABLE,  /* force read-only */
 	},{
 		.name =		"Kernel",
 		.size =		0x00100000,
@@ -342,8 +342,8 @@ static struct mtd_partition lubbock_partitions[] = {
 	},{
 		.name =		"Filesystem",
 		.size =		MTDPART_SIZ_FULL,
-		.offset =	0x00140000
-	}
+		.offset =	0x00140000,
+	},
 };
 
 static struct flash_platform_data lubbock_flash_data[2] = {
@@ -355,7 +355,7 @@ static struct flash_platform_data lubbock_flash_data[2] = {
 		.map_name	= "cfi_probe",
 		.parts		= NULL,
 		.nr_parts	= 0,
-	}
+	},
 };
 
 static struct platform_device lubbock_flash_device[2] = {
@@ -536,8 +536,8 @@ static struct map_desc lubbock_io_desc[] __initdata = {
 		.virtual	=  LUBBOCK_FPGA_VIRT,
 		.pfn		= __phys_to_pfn(LUBBOCK_FPGA_PHYS),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init lubbock_map_io(void)

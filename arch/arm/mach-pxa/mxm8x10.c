@@ -318,7 +318,7 @@ static mfp_cfg_t mfp_cfg[] __initdata = {
 	GPIO78_GPIO | MFP_LPM_EDGE_RISE, /* EXT_IRQ5 */
 	GPIO79_GPIO | MFP_LPM_EDGE_RISE, /* EXT_IRQ6 */
 	GPIO80_GPIO | MFP_LPM_EDGE_RISE, /* EXT_IRQ7 */
-	GPIO81_GPIO | MFP_LPM_EDGE_RISE  /* EXT_IRQ8 */
+	GPIO81_GPIO | MFP_LPM_EDGE_RISE,  /* EXT_IRQ8 */
 };
 
 /* MMC/MCI Support */
@@ -328,7 +328,7 @@ static struct pxamci_platform_data mxm_8x10_mci_platform_data = {
 	.detect_delay_ms = 10,
 	.gpio_card_detect = MXM_8X10_SD_nCD,
 	.gpio_card_ro = MXM_8X10_SD_WP,
-	.gpio_power = -1
+	.gpio_power = -1,
 };
 
 void __init mxm_8x10_mmc_init(void)
@@ -340,7 +340,7 @@ void __init mxm_8x10_mmc_init(void)
 /* USB Open Host Controller Interface */
 static struct pxaohci_platform_data mxm_8x10_ohci_platform_data = {
 	.port_mode = PMM_NPS_MODE,
-	.flags = ENABLE_PORT_ALL
+	.flags = ENABLE_PORT_ALL,
 };
 
 void __init mxm_8x10_usb_host_init(void)
@@ -350,7 +350,7 @@ void __init mxm_8x10_usb_host_init(void)
 
 /* AC97 Sound Support */
 static struct platform_device mxm_8x10_ac97_device = {
-	.name = "pxa2xx-ac97"
+	.name = "pxa2xx-ac97",
 };
 
 void __init mxm_8x10_ac97_init(void)
@@ -367,25 +367,25 @@ static struct mtd_partition mxm_8x10_nand_partitions[] = {
 	       .name = "boot",
 	       .size = NB(0x002),
 	       .offset = NB(0x000),
-	       .mask_flags = MTD_WRITEABLE
+	       .mask_flags = MTD_WRITEABLE,
 	},
 	[1] = {
 	       .name = "kernel",
 	       .size = NB(0x010),
 	       .offset = NB(0x002),
-	       .mask_flags = MTD_WRITEABLE
+	       .mask_flags = MTD_WRITEABLE,
 	},
 	[2] = {
 	       .name = "root",
 	       .size = NB(0x36c),
-	       .offset = NB(0x012)
+	       .offset = NB(0x012),
 	},
 	[3] = {
 	       .name = "bbt",
 	       .size = NB(0x082),
 	       .offset = NB(0x37e),
-	       .mask_flags = MTD_WRITEABLE
-	}
+	       .mask_flags = MTD_WRITEABLE,
+	},
 };
 
 static struct pxa3xx_nand_platform_data mxm_8x10_nand_info = {
@@ -393,7 +393,7 @@ static struct pxa3xx_nand_platform_data mxm_8x10_nand_info = {
 	.keep_config	= 1,
 	.num_cs		= 1,
 	.parts[0]	= mxm_8x10_nand_partitions,
-	.nr_parts[0]	= ARRAY_SIZE(mxm_8x10_nand_partitions)
+	.nr_parts[0]	= ARRAY_SIZE(mxm_8x10_nand_partitions),
 };
 
 static void __init mxm_8x10_nand_init(void)
@@ -409,22 +409,22 @@ static struct resource dm9k_resources[] = {
 	[0] = {
 	       .start = MXM_8X10_ETH_PHYS + 0x300,
 	       .end = MXM_8X10_ETH_PHYS + 0x300,
-	       .flags = IORESOURCE_MEM
+	       .flags = IORESOURCE_MEM,
 	},
 	[1] = {
 	       .start = MXM_8X10_ETH_PHYS + 0x308,
 	       .end = MXM_8X10_ETH_PHYS + 0x308,
-	       .flags = IORESOURCE_MEM
+	       .flags = IORESOURCE_MEM,
 	},
 	[2] = {
 	       .start = gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO9)),
 	       .end = gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO9)),
-	       .flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE
-	}
+	       .flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
+	},
 };
 
 static struct dm9000_plat_data dm9k_plat_data = {
-	.flags = DM9000_PLATF_16BITONLY
+	.flags = DM9000_PLATF_16BITONLY,
 };
 
 static struct platform_device dm9k_device = {
@@ -433,8 +433,8 @@ static struct platform_device dm9k_device = {
 	.num_resources = ARRAY_SIZE(dm9k_resources),
 	.resource = dm9k_resources,
 	.dev = {
-		.platform_data = &dm9k_plat_data
-	}
+		.platform_data = &dm9k_plat_data,
+	},
 };
 
 static void __init mxm_8x10_ethernet_init(void)
@@ -453,8 +453,8 @@ static void __init mxm_8x10_uarts_init(void)
 /* I2C and Real Time Clock */
 static struct i2c_board_info __initdata mxm_8x10_i2c_devices[] = {
 	{
-		I2C_BOARD_INFO("ds1337", 0x68)
-	}
+		I2C_BOARD_INFO("ds1337", 0x68),
+	},
 };
 
 static void __init mxm_8x10_i2c_init(void)

@@ -431,7 +431,7 @@ void __init palm27x_power_init(int ac, int usb)
 static struct regulator_consumer_supply palm27x_max1587a_consumers[] = {
 	{
 		.supply	= "vcc_core",
-	}
+	},
 };
 
 static struct regulator_init_data palm27x_max1587a_v3_info = {
@@ -451,7 +451,7 @@ static struct max1586_subdev_data palm27x_max1587a_subdevs[] = {
 		.name		= "vcc_core",
 		.id		= MAX1586_V3,
 		.platform_data	= &palm27x_max1587a_v3_info,
-	}
+	},
 };
 
 static struct max1586_platform_data palm27x_max1587a_info = {

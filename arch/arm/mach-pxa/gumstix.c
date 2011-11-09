@@ -62,8 +62,8 @@ static struct mtd_partition gumstix_partitions[] = {
 	} , {
 		.name =		"rootfs",
 		.size =		MTDPART_SIZ_FULL,
-		.offset =	MTDPART_OFS_APPEND
-	}
+		.offset =	MTDPART_OFS_APPEND,
+	},
 };
 
 static struct flash_platform_data gumstix_flash_data = {

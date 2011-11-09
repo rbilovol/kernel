@@ -130,15 +130,15 @@ static struct mtd_partition balloon3_nor_partitions[] = {
 		.name		= "Flash",
 		.offset		= 0x00000000,
 		.size		= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct physmap_flash_data balloon3_flash_data[] = {
 	{
 		.width		= 2,	/* bankwidth in bytes */
 		.parts		= balloon3_nor_partitions,
-		.nr_parts	= ARRAY_SIZE(balloon3_nor_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(balloon3_nor_partitions),
+	},
 };
 
 static struct resource balloon3_flash_resource = {
@@ -410,7 +410,7 @@ static struct platform_device balloon3_leds = {
 	.id	= 0,
 	.dev	= {
 		.platform_data	= &balloon3_gpio_led_info,
-	}
+	},
 };
 
 struct gpio_led balloon3_pcf_gpio_leds[] = {
@@ -459,7 +459,7 @@ static struct platform_device balloon3_pcf_leds = {
 	.id	= 1,
 	.dev	= {
 		.platform_data	= &balloon3_pcf_gpio_led_info,
-	}
+	},
 };
 
 static void __init balloon3_leds_init(void)
@@ -674,7 +674,7 @@ static struct mtd_partition balloon3_partition_info[] = {
 	[1] = {
 		.name	= "RootFS",
 		.offset	= MTDPART_OFS_APPEND,
-		.size	= MTDPART_SIZ_FULL
+		.size	= MTDPART_SIZ_FULL,
 	},
 };
 
@@ -714,7 +714,7 @@ static struct platform_device balloon3_nand = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &balloon3_nand_pdata,
-	}
+	},
 };
 
 static void __init balloon3_nand_init(void)
@@ -733,7 +733,7 @@ static inline void balloon3_nand_init(void) {}
 static struct regulator_consumer_supply balloon3_max1587a_consumers[] = {
 	{
 		.supply	= "vcc_core",
-	}
+	},
 };
 
 static struct regulator_init_data balloon3_max1587a_v3_info = {
@@ -753,7 +753,7 @@ static struct max1586_subdev_data balloon3_max1587a_subdevs[] = {
 		.name		= "vcc_core",
 		.id		= MAX1586_V3,
 		.platform_data	= &balloon3_max1587a_v3_info,
-	}
+	},
 };
 
 static struct max1586_platform_data balloon3_max1587a_info = {

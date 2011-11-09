@@ -306,12 +306,12 @@ static struct mtd_partition stargate2flash_partitions[] = {
 		.name = "Kernel",
 		.size = 0x00200000,
 		.offset = 0x00040000,
-		.mask_flags = 0
+		.mask_flags = 0,
 	}, {
 		.name = "Filesystem",
 		.size = 0x01DC0000,
 		.offset = 0x00240000,
-		.mask_flags = 0
+		.mask_flags = 0,
 	},
 };
 
@@ -664,7 +664,7 @@ static struct resource smc91x_resources[] = {
 		.start = IRQ_GPIO(40),
 		.end = IRQ_GPIO(40),
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct smc91x_platdata stargate2_smc91x_info = {

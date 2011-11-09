@@ -136,16 +136,16 @@ static struct mtd_partition palmtx_partitions[] = {
 		.name		= "Flash",
 		.offset		= 0x00000000,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data palmtx_flash_data[] = {
 	{
 		.width		= 2,			/* bankwidth in bytes */
 		.parts		= palmtx_partitions,
-		.nr_parts	= ARRAY_SIZE(palmtx_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(palmtx_partitions),
+	},
 };
 
 static struct resource palmtx_flash_resource = {
@@ -264,7 +264,7 @@ static struct mtd_partition palmtx_partition_info[] = {
 	[0] = {
 		.name	= "palmtx-0",
 		.offset	= 0,
-		.size	= MTDPART_SIZ_FULL
+		.size	= MTDPART_SIZ_FULL,
 	},
 };
 
@@ -299,7 +299,7 @@ static struct platform_device palmtx_nand = {
 	.id		= -1,
 	.dev		= {
 		.platform_data	= &palmtx_nand_platdata,
-	}
+	},
 };
 
 static void __init palmtx_nand_init(void)
@@ -329,7 +329,7 @@ static struct map_desc palmtx_io_desc[] __initdata = {
 	.pfn		= __phys_to_pfn(PALMTX_NAND_CLE_PHYS),
 	.length		= SZ_1M,
 	.type		= MT_DEVICE,
-}
+},
 };
 
 static void __init palmtx_map_io(void)

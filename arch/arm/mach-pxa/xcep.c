@@ -50,12 +50,12 @@ static struct mtd_partition xcep_partitions[] = {
 		.name =		"Bootloader",
 		.size =		0x00040000,
 		.offset =	0,
-		.mask_flags =	MTD_WRITEABLE
+		.mask_flags =	MTD_WRITEABLE,
 	}, {
 		.name =		"Bootloader ENV",
 		.size =		0x00040000,
 		.offset =	0x00040000,
-		.mask_flags =	MTD_WRITEABLE
+		.mask_flags =	MTD_WRITEABLE,
 	}, {
 		.name =		"Kernel",
 		.size =		0x00100000,
@@ -67,16 +67,16 @@ static struct mtd_partition xcep_partitions[] = {
 	}, {
 		.name =		"Filesystem",
 		.size =		MTDPART_SIZ_FULL,
-		.offset =	0x00400000
-	}
+		.offset =	0x00400000,
+	},
 };
 
 static struct physmap_flash_data xcep_flash_data[] = {
 	{
 		.width		= 4,		/* bankwidth in bytes */
 		.parts		= xcep_partitions,
-		.nr_parts	= ARRAY_SIZE(xcep_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(xcep_partitions),
+	},
 };
 
 static struct resource flash_resource = {
@@ -144,7 +144,7 @@ static struct platform_device *devices[] __initdata = {
  * Drivers for HWMON verify capabilities of the adapter when loading and
  * refuse to attach if the adapter doesn't support HWMON class of devices. */
 static struct i2c_pxa_platform_data xcep_i2c_platform_data  = {
-	.class = I2C_CLASS_HWMON
+	.class = I2C_CLASS_HWMON,
 };
 
 
@@ -156,7 +156,7 @@ static mfp_cfg_t xcep_pin_config[] __initdata = {
 	GPIO24_SSP1_SFRM,
 	GPIO25_SSP1_TXD,
 	GPIO26_SSP1_RXD,
-	GPIO27_SSP1_EXTCLK
+	GPIO27_SSP1_EXTCLK,
 };
 
 static void __init xcep_init(void)

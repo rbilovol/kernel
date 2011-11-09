@@ -722,7 +722,7 @@ static struct nand_bbt_descr tosa_tc6393xb_nand_bbt = {
 	.options	= 0,
 	.offs		= 4,
 	.len		= 2,
-	.pattern	= scan_ff_pattern
+	.pattern	= scan_ff_pattern,
 };
 
 static struct tmio_nand_data tosa_tc6393xb_nand_config = {
@@ -782,7 +782,7 @@ static struct fb_videomode tosa_tc6393xb_lcd_mode[] = {
 		.vsync_len = 0x0001,
 		.sync = FB_SYNC_HOR_HIGH_ACT | FB_SYNC_VERT_HIGH_ACT,
 		.vmode = FB_VMODE_NONINTERLACED,
-	}
+	},
 };
 
 static struct tmio_fb_data tosa_tc6393xb_fb_config = {

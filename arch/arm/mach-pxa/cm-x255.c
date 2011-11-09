@@ -139,16 +139,16 @@ static struct mtd_partition cmx255_nor_partitions[] = {
 	} , {
 		.name		= "ramdisk",
 		.size		= MTDPART_SIZ_FULL,
-		.offset		= MTDPART_OFS_APPEND
-	}
+		.offset		= MTDPART_OFS_APPEND,
+	},
 };
 
 static struct physmap_flash_data cmx255_nor_flash_data[] = {
 	{
 		.width		= 2,	/* bankwidth in bytes */
 		.parts		= cmx255_nor_partitions,
-		.nr_parts	= ARRAY_SIZE(cmx255_nor_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(cmx255_nor_partitions),
+	},
 };
 
 static struct resource cmx255_nor_resource = {
@@ -215,7 +215,7 @@ static struct platform_device cmx255_nand = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &cmx255_nand_platdata,
-	}
+	},
 };
 
 static void __init cmx255_init_nand(void)

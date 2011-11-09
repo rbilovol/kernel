@@ -488,13 +488,13 @@ static struct map_desc pcm990_io_desc[] __initdata = {
 		.virtual	= PCM990_CTRL_BASE,
 		.pfn		= __phys_to_pfn(PCM990_CTRL_PHYS),
 		.length		= PCM990_CTRL_SIZE,
-		.type		= MT_DEVICE	/* CPLD */
+		.type		= MT_DEVICE,	/* CPLD */
 	}, {
 		.virtual	= PCM990_CF_PLD_BASE,
 		.pfn		= __phys_to_pfn(PCM990_CF_PLD_PHYS),
 		.length		= PCM990_CF_PLD_SIZE,
-		.type		= MT_DEVICE	/* CPLD */
-	}
+		.type		= MT_DEVICE,	/* CPLD */
+	},
 };
 
 /*

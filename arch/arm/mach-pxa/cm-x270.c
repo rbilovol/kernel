@@ -145,7 +145,7 @@ static struct platform_device cmx270_rtc_device = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &cmx270_v3020_pdata,
-	}
+	},
 };
 
 static void __init cmx270_init_rtc(void)

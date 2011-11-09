@@ -99,7 +99,7 @@ static struct resource smc91x_resources[] = {
 		.start	= gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO97)),
 		.end	= gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO97)),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct smc91x_platdata saar_smc91x_info = {
@@ -542,7 +542,7 @@ static struct mtd_partition saar_onenand_partitions[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_32M + SZ_16M,
 		.mask_flags	= 0,
-	}
+	},
 };
 
 static struct onenand_platform_data saar_onenand_info = {

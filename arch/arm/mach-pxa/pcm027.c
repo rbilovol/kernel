@@ -119,7 +119,7 @@ static struct resource smc91x_resources[] = {
 		.end	= PCM027_ETH_IRQ,
 		/* note: smc91x's driver doesn't use the trigger bits yet */
 		.flags	= IORESOURCE_IRQ | PCM027_ETH_IRQ_EDGE,
-	}
+	},
 };
 
 static struct platform_device smc91x_device = {
@@ -180,17 +180,17 @@ static struct platform_device pcm027_flash = {
 static struct gpio_led pcm027_led[] = {
 	{
 		.name = "led0:red",	/* FIXME */
-		.gpio = PCM027_LED_CPU
+		.gpio = PCM027_LED_CPU,
 	},
 	{
 		.name = "led1:green",	/* FIXME */
-		.gpio = PCM027_LED_HEARD_BEAT
+		.gpio = PCM027_LED_HEARD_BEAT,
 	},
 };
 
 static struct gpio_led_platform_data pcm027_led_data = {
 	.num_leds	= ARRAY_SIZE(pcm027_led),
-	.leds		= pcm027_led
+	.leds		= pcm027_led,
 };
 
 static struct platform_device pcm027_led_dev = {

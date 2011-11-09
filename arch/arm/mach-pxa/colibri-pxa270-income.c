@@ -96,7 +96,7 @@ struct gpio_led income_gpio_leds[] = {
 		.default_trigger	= "none",
 		.gpio			= GPIO55_INCOME_LED_B,
 		.active_low		= 1,
-	}
+	},
 };
 
 static struct gpio_led_platform_data income_gpio_led_info = {
@@ -109,7 +109,7 @@ static struct platform_device income_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &income_gpio_led_info,
-	}
+	},
 };
 
 static void __init income_led_init(void)

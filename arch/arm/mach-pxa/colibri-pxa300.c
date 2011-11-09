@@ -81,7 +81,7 @@ static struct resource colibri_asix_resource[] = {
 		.start = gpio_to_irq(COLIBRI_ETH_IRQ_GPIO),
 		.end   = gpio_to_irq(COLIBRI_ETH_IRQ_GPIO),
 		.flags = IORESOURCE_IRQ | IRQF_TRIGGER_FALLING,
-	}
+	},
 };
 
 static struct platform_device asix_device = {
@@ -90,13 +90,13 @@ static struct platform_device asix_device = {
 	.num_resources 	= ARRAY_SIZE(colibri_asix_resource),
 	.resource	= colibri_asix_resource,
 	.dev		= {
-		.platform_data = &colibri_asix_platdata
-	}
+		.platform_data = &colibri_asix_platdata,
+	},
 };
 
 static mfp_cfg_t colibri_pxa300_eth_pin_config[] __initdata = {
 	GPIO1_nCS2,			/* AX88796 chip select */
-	GPIO26_GPIO | MFP_PULL_HIGH	/* AX88796 IRQ */
+	GPIO26_GPIO | MFP_PULL_HIGH,	/* AX88796 IRQ */
 };
 
 static void __init colibri_pxa300_init_eth(void)
@@ -153,7 +153,7 @@ static mfp_cfg_t colibri_pxa310_ac97_pin_config[] __initdata = {
 	GPIO25_AC97_SDATA_IN_0,
 	GPIO27_AC97_SDATA_OUT,
 	GPIO28_AC97_SYNC,
-	GPIO29_AC97_BITCLK
+	GPIO29_AC97_BITCLK,
 };
 
 static inline void __init colibri_pxa310_init_ac97(void)

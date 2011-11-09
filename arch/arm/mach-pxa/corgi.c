@@ -581,7 +581,7 @@ static struct nand_bbt_descr sharpsl_bbt = {
 	.options = 0,
 	.offs = 4,
 	.len = 2,
-	.pattern = scan_ff_pattern
+	.pattern = scan_ff_pattern,
 };
 
 static struct sharpsl_nand_platform_data sharpsl_nand_platform_data = {

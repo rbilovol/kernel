@@ -144,13 +144,13 @@ static struct mtd_partition csb726_flash_partitions[] = {
 		.name		= "Bootloader",
 		.offset		= 0,
 		.size		= CSB726_FLASH_uMON,
-		.mask_flags	= MTD_WRITEABLE  /* force read-only */
+		.mask_flags	= MTD_WRITEABLE,  /* force read-only */
 	},
 	{
 		.name		= "root",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct physmap_flash_data csb726_flash_data = {
@@ -164,7 +164,7 @@ static struct resource csb726_flash_resources[] = {
 		.start          = PXA_CS0_PHYS,
 		.end            = PXA_CS0_PHYS + CSB726_FLASH_SIZE - 1 ,
 		.flags          = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device csb726_flash = {

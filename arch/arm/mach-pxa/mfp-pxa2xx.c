@@ -243,7 +243,7 @@ static inline void pxa25x_mfp_init(void) {}
 #ifdef CONFIG_PXA27x
 static int pxa27x_pkwr_gpio[] = {
 	13, 16, 17, 34, 36, 37, 38, 39, 90, 91, 93, 94,
-	95, 96, 97, 98, 99, 100, 101, 102
+	95, 96, 97, 98, 99, 100, 101, 102,
 };
 
 int keypad_set_wake(unsigned int on)

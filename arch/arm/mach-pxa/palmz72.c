@@ -195,7 +195,7 @@ static struct platform_device palmz72_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &gpio_led_info,
-	}
+	},
 };
 
 static void __init palmz72_leds_init(void)
@@ -287,7 +287,7 @@ static struct pxacamera_platform_data palmz72_pxacamera_platform_data = {
 static struct i2c_board_info palmz72_i2c_device[] = {
 	{
 		I2C_BOARD_INFO("ov9640", 0x30),
-	}
+	},
 };
 
 static int palmz72_camera_power(struct device *dev, int power)
@@ -328,7 +328,7 @@ static struct platform_device palmz72_i2c_bus_device = {
 	.id		= 0, /* we use this as a replacement for i2c-pxa */
 	.dev		= {
 		.platform_data	= &palmz72_i2c_bus_data,
-	}
+	},
 };
 
 static struct platform_device palmz72_camera = {

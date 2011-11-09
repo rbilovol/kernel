@@ -381,7 +381,7 @@ static struct platform_device palmtreo_leds = {
 	.id     = -1,
 	.dev    = {
 		.platform_data  = &treo680_gpio_led_info,
-	}
+	},
 };
 
 static void __init palmtreo_leds_init(void)

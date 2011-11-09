@@ -120,7 +120,7 @@ struct platform_device pxa25x_device_udc = {
 	.dev		=  {
 		.platform_data	= &pxa_udc_info,
 		.dma_mask	= &udc_dma_mask,
-	}
+	},
 };
 
 struct platform_device pxa27x_device_udc = {
@@ -131,7 +131,7 @@ struct platform_device pxa27x_device_udc = {
 	.dev		=  {
 		.platform_data	= &pxa_udc_info,
 		.dma_mask	= &udc_dma_mask,
-	}
+	},
 };
 
 #ifdef CONFIG_PXA3xx
@@ -202,7 +202,7 @@ static struct resource pxa_resource_ffuart[] = {
 		.start	= IRQ_FFUART,
 		.end	= IRQ_FFUART,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 struct platform_device pxa_device_ffuart = {
@@ -226,7 +226,7 @@ static struct resource pxa_resource_btuart[] = {
 		.start	= IRQ_BTUART,
 		.end	= IRQ_BTUART,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 struct platform_device pxa_device_btuart = {
@@ -250,7 +250,7 @@ static struct resource pxa_resource_stuart[] = {
 		.start	= IRQ_STUART,
 		.end	= IRQ_STUART,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 struct platform_device pxa_device_stuart = {
@@ -274,7 +274,7 @@ static struct resource pxa_resource_hwuart[] = {
 		.start	= IRQ_HWUART,
 		.end	= IRQ_HWUART,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 struct platform_device pxa_device_hwuart = {

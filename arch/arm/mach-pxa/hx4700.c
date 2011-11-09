@@ -619,7 +619,7 @@ static void power_supply_exit(struct device *dev)
 }
 
 static char *hx4700_supplicants[] = {
-	"ds2760-battery.0", "backup-battery"
+	"ds2760-battery.0", "backup-battery",
 };
 
 static struct pda_power_pdata power_supply_info = {

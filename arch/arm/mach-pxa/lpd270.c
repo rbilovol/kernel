@@ -218,7 +218,7 @@ static struct mtd_partition lpd270_flash0_partitions[] = {
 		.name =		"Bootloader",
 		.size =		0x00040000,
 		.offset =	0,
-		.mask_flags =	MTD_WRITEABLE  /* force read-only */
+		.mask_flags =	MTD_WRITEABLE,  /* force read-only */
 	}, {
 		.name =		"Kernel",
 		.size =		0x00400000,
@@ -226,7 +226,7 @@ static struct mtd_partition lpd270_flash0_partitions[] = {
 	}, {
 		.name =		"Filesystem",
 		.size =		MTDPART_SIZ_FULL,
-		.offset =	0x00440000
+		.offset =	0x00440000,
 	},
 };
 
@@ -241,7 +241,7 @@ static struct flash_platform_data lpd270_flash_data[2] = {
 		.map_name	= "cfi_probe",
 		.parts		= NULL,
 		.nr_parts	= 0,
-	}
+	},
 };
 
 static struct platform_device lpd270_flash_device[2] = {

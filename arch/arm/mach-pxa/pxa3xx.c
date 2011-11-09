@@ -396,8 +396,8 @@ static struct map_desc pxa3xx_io_desc[] __initdata = {
 		.virtual	= (unsigned long)SMEMC_VIRT,
 		.pfn		= __phys_to_pfn(PXA3XX_SMEMC_BASE),
 		.length		= 0x00200000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 void __init pxa3xx_map_io(void)

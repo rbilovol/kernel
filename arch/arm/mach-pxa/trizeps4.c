@@ -151,7 +151,7 @@ static struct mtd_partition trizeps4_partitions[] = {
 		.name =		"Bootloader",
 		.offset =	0x00000000,
 		.size =		0x00040000,
-		.mask_flags =	MTD_WRITEABLE  /* force read-only */
+		.mask_flags =	MTD_WRITEABLE,  /* force read-only */
 	}, {
 		.name =		"Backup",
 		.offset =	0x00040000,
@@ -168,15 +168,15 @@ static struct mtd_partition trizeps4_partitions[] = {
 		.name =		"Registry",
 		.offset =	0x01f00000,
 		.size =		MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct physmap_flash_data trizeps4_flash_data[] = {
 	{
 		.width		= 4,			/* bankwidth in bytes */
 		.parts		= trizeps4_partitions,
-		.nr_parts	= ARRAY_SIZE(trizeps4_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(trizeps4_partitions),
+	},
 };
 
 static struct resource flash_resource = {
@@ -227,7 +227,7 @@ static struct platform_device dm9000_device = {
 	.resource	= dm9000_resources,
 	.dev		= {
 		.platform_data = &tri_dm9000_platdata,
-	}
+	},
 };
 
 /****************************************************************************
@@ -320,7 +320,7 @@ static void board_backlight_power(int on)
 
 /* a I2C based RTC is known on CONXS board */
 static struct i2c_board_info trizeps4_i2c_devices[] __initdata = {
-	{ I2C_BOARD_INFO("rtc-pcf8593", 0x51) }
+	{ I2C_BOARD_INFO("rtc-pcf8593", 0x51) },
 };
 
 /****************************************************************************
@@ -423,32 +423,32 @@ static struct map_desc trizeps4_io_desc[] __initdata = {
 		.virtual	= TRIZEPS4_CFSR_VIRT,
 		.pfn		= __phys_to_pfn(TRIZEPS4_CFSR_PHYS),
 		.length		= 0x00001000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{	/* ConXS BCR */
 		.virtual	= TRIZEPS4_BOCR_VIRT,
 		.pfn		= __phys_to_pfn(TRIZEPS4_BOCR_PHYS),
 		.length		= 0x00001000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{ 	/* ConXS IRCR */
 		.virtual	= TRIZEPS4_IRCR_VIRT,
 		.pfn		= __phys_to_pfn(TRIZEPS4_IRCR_PHYS),
 		.length		= 0x00001000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{	/* ConXS DCR */
 		.virtual	= TRIZEPS4_DICR_VIRT,
 		.pfn		= __phys_to_pfn(TRIZEPS4_DICR_PHYS),
 		.length		= 0x00001000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{	/* ConXS UPSR */
 		.virtual	= TRIZEPS4_UPSR_VIRT,
 		.pfn		= __phys_to_pfn(TRIZEPS4_UPSR_PHYS),
 		.length		= 0x00001000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static struct pxafb_mode_info sharp_lcd_mode = {

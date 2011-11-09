@@ -313,12 +313,12 @@ static struct resource zeus_dm9k0_resource[] = {
 	[0] = {
 		.start = ZEUS_ETH0_PHYS,
 		.end   = ZEUS_ETH0_PHYS + 1,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = ZEUS_ETH0_PHYS + 2,
 		.end   = ZEUS_ETH0_PHYS + 3,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[2] = {
 		.start = gpio_to_irq(ZEUS_ETH0_GPIO),
@@ -331,7 +331,7 @@ static struct resource zeus_dm9k1_resource[] = {
 	[0] = {
 		.start = ZEUS_ETH1_PHYS,
 		.end   = ZEUS_ETH1_PHYS + 1,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = ZEUS_ETH1_PHYS + 2,
@@ -356,7 +356,7 @@ static struct platform_device zeus_dm9k0_device = {
 	.resource	= zeus_dm9k0_resource,
 	.dev		= {
 		.platform_data = &zeus_dm9k_platdata,
-	}
+	},
 };
 
 static struct platform_device zeus_dm9k1_device = {
@@ -366,7 +366,7 @@ static struct platform_device zeus_dm9k1_device = {
 	.resource	= zeus_dm9k1_resource,
 	.dev		= {
 		.platform_data = &zeus_dm9k_platdata,
-	}
+	},
 };
 
 /* External SRAM */
@@ -647,7 +647,7 @@ static struct pxamci_platform_data zeus_mci_platform_data = {
 	.gpio_card_detect       = ZEUS_MMC_CD_GPIO,
 	.gpio_card_ro           = ZEUS_MMC_WP_GPIO,
 	.gpio_card_ro_invert	= 1,
-	.gpio_power             = -1
+	.gpio_power             = -1,
 };
 
 /*

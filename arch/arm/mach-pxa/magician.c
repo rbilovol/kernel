@@ -471,7 +471,7 @@ static struct resource pasic3_resources[] = {
 		.start  = gpio_to_irq(GPIO107_MAGICIAN_DS1WM_IRQ),
 		.end    = gpio_to_irq(GPIO107_MAGICIAN_DS1WM_IRQ),
 		.flags  = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct pasic3_platform_data pasic3_platform_data = {
@@ -534,7 +534,7 @@ static void power_supply_exit(struct device *dev)
 }
 
 static char *magician_supplicants[] = {
-	"ds2760-battery.0", "backup-battery"
+	"ds2760-battery.0", "backup-battery",
 };
 
 static struct pda_power_pdata power_supply_info = {

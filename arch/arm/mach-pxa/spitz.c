@@ -756,7 +756,7 @@ static struct nand_bbt_descr spitz_nand_bbt = {
 	.options	= 0,
 	.offs		= 4,
 	.len		= 2,
-	.pattern	= scan_ff_pattern
+	.pattern	= scan_ff_pattern,
 };
 
 static struct nand_ecclayout akita_oobinfo = {
@@ -790,7 +790,7 @@ static struct platform_device spitz_nand_device = {
 	.num_resources	= ARRAY_SIZE(spitz_nand_resources),
 	.dev		= {
 		.platform_data	= &spitz_nand_pdata,
-	}
+	},
 };
 
 static void __init spitz_nand_init(void)
@@ -879,7 +879,7 @@ static struct i2c_board_info spitz_i2c_devs[] = {
 static struct regulator_consumer_supply isl6271a_consumers[] = {
 	{
 		.supply	= "vcc_core",
-	}
+	},
 };
 
 static struct regulator_init_data isl6271a_info[] = {
@@ -893,7 +893,7 @@ static struct regulator_init_data isl6271a_info[] = {
 		},
 	.consumer_supplies	= isl6271a_consumers,
 	.num_consumer_supplies	= ARRAY_SIZE(isl6271a_consumers),
-	}
+	},
 };
 
 static struct i2c_board_info spitz_pi2c_devs[] = {

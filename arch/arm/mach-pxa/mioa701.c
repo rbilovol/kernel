@@ -229,7 +229,7 @@ static unsigned int mioa701_matrix_keys[] = {
 	KEY(1, 2, KEY_CONNECT),	/* GPS key */
 	KEY(2, 0, KEY_LEFT),
 	KEY(2, 1, KEY_PHONE),	/* Phone Green key */
-	KEY(2, 2, KEY_CAMERA)	/* Camera key */
+	KEY(2, 2, KEY_CAMERA),	/* Camera key */
 };
 static struct pxa27x_keypad_platform_data mioa701_keypad_info = {
 	.matrix_key_rows = 3,
@@ -248,7 +248,7 @@ static struct gpio_keys_button mioa701_button_table[] = {
 	MIO_KEY(KEY_EXIT, GPIO0_KEY_POWER, "Power button", 1),
 	MIO_KEY(KEY_VOLUMEUP, GPIO93_KEY_VOLUME_UP, "Volume up", 0),
 	MIO_KEY(KEY_VOLUMEDOWN, GPIO94_KEY_VOLUME_DOWN, "Volume down", 0),
-	MIO_KEY(KEY_HP, GPIO12_HPJACK_INSERT, "HP jack detect", 0)
+	MIO_KEY(KEY_HP, GPIO12_HPJACK_INSERT, "HP jack detect", 0),
 };
 
 static struct gpio_keys_platform_data mioa701_gpio_keys_data = {
@@ -266,7 +266,7 @@ static struct gpio_led gpio_leds[] = {
 	ONE_LED(GPIO97_LED_nBlue, "mioa701:blue"),
 	ONE_LED(GPIO98_LED_nOrange, "mioa701:orange"),
 	ONE_LED(GPIO82_LED_nVibra, "mioa701:vibra"),
-	ONE_LED(GPIO115_LED_nKeyboard, "mioa701:keyboard")
+	ONE_LED(GPIO115_LED_nKeyboard, "mioa701:keyboard"),
 };
 
 static struct gpio_led_platform_data gpio_led_info = {
@@ -517,7 +517,7 @@ static void bootstrap_exit(void)
  * Power Supply
  */
 static char *supplicants[] = {
-	"mioa701_battery"
+	"mioa701_battery",
 };
 
 static int is_ac_connected(void)
@@ -587,7 +587,7 @@ static struct wm97xx_pdata mioa701_wm97xx_pdata = {
 static struct regulator_consumer_supply max1586_consumers[] = {
 	{
 		.supply = "vcc_core",
-	}
+	},
 };
 
 static struct regulator_init_data max1586_v3_info = {

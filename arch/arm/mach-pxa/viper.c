@@ -297,7 +297,7 @@ static struct irq_chip viper_irq_chip = {
 	.name		= "ISA",
 	.irq_ack	= viper_ack_irq,
 	.irq_mask	= viper_mask_irq,
-	.irq_unmask	= viper_unmask_irq
+	.irq_unmask	= viper_unmask_irq,
 };
 
 static void __init viper_init_irq(void)
@@ -463,7 +463,7 @@ static struct platform_device i2c_bus_device = {
 	.id		= 1, /* pxa2xx-i2c is bus 0, so start at 1 */
 	.dev = {
 		.platform_data = &i2c_bus_data,
-	}
+	},
 };
 
 static struct i2c_board_info __initdata viper_i2c_devices[] = {
@@ -896,7 +896,7 @@ static int viper_cpufreq_notifier(struct notifier_block *nb,
 }
 
 static struct notifier_block viper_cpufreq_notifier_block = {
-	.notifier_call  = viper_cpufreq_notifier
+	.notifier_call  = viper_cpufreq_notifier,
 };
 
 static void __init viper_init_cpufreq(void)

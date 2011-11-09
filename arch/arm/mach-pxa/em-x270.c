@@ -213,7 +213,7 @@ static struct resource em_x270_dm9000_resource[] = {
 		.start = EM_X270_ETHIRQ,
 		.end   = EM_X270_ETHIRQ,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct dm9000_plat_data em_x270_dm9000_platdata = {
@@ -227,7 +227,7 @@ static struct platform_device em_x270_dm9000 = {
 	.resource	= em_x270_dm9000_resource,
 	.dev		= {
 		.platform_data = &em_x270_dm9000_platdata,
-	}
+	},
 };
 
 static void __init em_x270_init_dm9000(void)
@@ -260,7 +260,7 @@ static struct platform_device em_x270_rtc = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &em_x270_v3020_platdata,
-	}
+	},
 };
 
 static void __init em_x270_init_rtc(void)
@@ -334,7 +334,7 @@ static struct mtd_partition em_x270_partition_info[] = {
 	[1] = {
 		.name	= "em_x270-1",
 		.offset	= MTDPART_OFS_APPEND,
-		.size	= MTDPART_SIZ_FULL
+		.size	= MTDPART_SIZ_FULL,
 	},
 };
 
@@ -372,7 +372,7 @@ static struct platform_device em_x270_nand = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &em_x270_nand_platdata,
-	}
+	},
 };
 
 static void __init em_x270_init_nand(void)
@@ -408,7 +408,7 @@ static struct mtd_partition em_x270_nor_parts[] = {
 		.name =		"Bootloader",
 		.offset =	0x00000000,
 		.size =		0x00050000,
-		.mask_flags =	MTD_WRITEABLE  /* force read-only */
+		.mask_flags =	MTD_WRITEABLE,  /* force read-only */
 	}, {
 		.name =		"Environment",
 		.offset =	0x00050000,
@@ -417,12 +417,12 @@ static struct mtd_partition em_x270_nor_parts[] = {
 		.name =		"Reserved",
 		.offset =	0x00060000,
 		.size =		0x00050000,
-		.mask_flags =	MTD_WRITEABLE  /* force read-only */
+		.mask_flags =	MTD_WRITEABLE,  /* force read-only */
 	}, {
 		.name =		"Splashscreen",
 		.offset =	0x000b0000,
 		.size =		0x00050000,
-	}
+	},
 };
 
 static struct physmap_flash_data em_x270_nor_data[] = {
@@ -1061,7 +1061,7 @@ static struct regulator_bulk_data em_x270_gprs_consumer_supply = {
 static struct regulator_userspace_consumer_data em_x270_gprs_consumer_data = {
 	.name		= "vcc gprs",
 	.num_supplies	= 1,
-	.supplies	= &em_x270_gprs_consumer_supply
+	.supplies	= &em_x270_gprs_consumer_supply,
 };
 
 static struct platform_device em_x270_gprs_userspace_consumer = {
@@ -1069,7 +1069,7 @@ static struct platform_device em_x270_gprs_userspace_consumer = {
 	.id		= 1,
 	.dev		= {
 		.platform_data = &em_x270_gprs_consumer_data,
-	}
+	},
 };
 
 static struct platform_device *em_x270_userspace_consumers[] = {

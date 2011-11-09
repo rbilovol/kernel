@@ -83,13 +83,13 @@ static struct map_desc common_io_desc[] __initdata = {
 		.virtual	=  0xf2000000,
 		.pfn		= __phys_to_pfn(0x40000000),
 		.length		= 0x02000000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* UNCACHED_PHYS_0 */
 		.virtual	= 0xff000000,
 		.pfn		= __phys_to_pfn(0x00000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 void __init pxa_map_io(void)

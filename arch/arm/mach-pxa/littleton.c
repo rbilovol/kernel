@@ -127,7 +127,7 @@ static struct resource smc91x_resources[] = {
 		.start	= IRQ_GPIO(mfp_to_gpio(MFP_PIN_GPIO90)),
 		.end	= IRQ_GPIO(mfp_to_gpio(MFP_PIN_GPIO90)),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_LOWEDGE,
-	}
+	},
 };
 
 static struct smc91x_platdata littleton_smc91x_info = {

@@ -35,25 +35,25 @@
 
 /* IDE (PATA) Support */
 static struct pata_platform_info pata_platform_data = {
-	.ioport_shift = 1
+	.ioport_shift = 1,
 };
 
 static struct resource capc7117_ide_resources[] = {
 	[0] = {
 	       .start = 0x11000020,
 	       .end = 0x1100003f,
-	       .flags = IORESOURCE_MEM
+	       .flags = IORESOURCE_MEM,
 	},
 	[1] = {
 	       .start = 0x1100001c,
 	       .end = 0x1100001c,
-	       .flags = IORESOURCE_MEM
+	       .flags = IORESOURCE_MEM,
 	},
 	[2] = {
 	       .start = gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO76)),
 	       .end = gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO76)),
-	       .flags = IORESOURCE_IRQ | IRQF_TRIGGER_RISING
-	}
+	       .flags = IORESOURCE_IRQ | IRQF_TRIGGER_RISING,
+	},
 };
 
 static struct platform_device capc7117_ide_device = {
@@ -62,8 +62,8 @@ static struct platform_device capc7117_ide_device = {
 	.resource = capc7117_ide_resources,
 	.dev = {
 		.platform_data = &pata_platform_data,
-		.coherent_dma_mask = ~0		/* grumble */
-	}
+		.coherent_dma_mask = ~0,		/* grumble */
+	},
 };
 
 static void __init capc7117_ide_init(void)
@@ -85,7 +85,7 @@ static struct plat_serial8250_port ti16c752_platform_data[] = {
 	       .flags = TI16C752_FLAGS,
 	       .iotype = UPIO_MEM,
 	       .regshift = 1,
-	       .uartclk = TI16C752_UARTCLK
+	       .uartclk = TI16C752_UARTCLK,
 	},
 	[1] = {
 	       .mapbase = 0x14000040,
@@ -94,7 +94,7 @@ static struct plat_serial8250_port ti16c752_platform_data[] = {
 	       .flags = TI16C752_FLAGS,
 	       .iotype = UPIO_MEM,
 	       .regshift = 1,
-	       .uartclk = TI16C752_UARTCLK
+	       .uartclk = TI16C752_UARTCLK,
 	},
 	[2] = {
 	       .mapbase = 0x14000080,
@@ -103,7 +103,7 @@ static struct plat_serial8250_port ti16c752_platform_data[] = {
 	       .flags = TI16C752_FLAGS,
 	       .iotype = UPIO_MEM,
 	       .regshift = 1,
-	       .uartclk = TI16C752_UARTCLK
+	       .uartclk = TI16C752_UARTCLK,
 	},
 	[3] = {
 	       .mapbase = 0x140000c0,
@@ -112,19 +112,19 @@ static struct plat_serial8250_port ti16c752_platform_data[] = {
 	       .flags = TI16C752_FLAGS,
 	       .iotype = UPIO_MEM,
 	       .regshift = 1,
-	       .uartclk = TI16C752_UARTCLK
+	       .uartclk = TI16C752_UARTCLK,
 	},
 	[4] = {
 	       /* end of array */
-	}
+	},
 };
 
 static struct platform_device ti16c752_device = {
 	.name = "serial8250",
 	.id = PLAT8250_DEV_PLATFORM,
 	.dev = {
-		.platform_data = ti16c752_platform_data
-	}
+		.platform_data = ti16c752_platform_data,
+	},
 };
 
 static void __init capc7117_uarts_init(void)

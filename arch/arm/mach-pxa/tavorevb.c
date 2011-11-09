@@ -88,7 +88,7 @@ static struct resource smc91x_resources[] = {
 		.start	= gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO47)),
 		.end	= gpio_to_irq(mfp_to_gpio(MFP_PIN_GPIO47)),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct smc91x_platdata tavorevb_smc91x_info = {

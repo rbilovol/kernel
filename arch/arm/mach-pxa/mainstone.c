@@ -216,7 +216,7 @@ static struct resource smc91x_resources[] = {
 		.start	= MAINSTONE_IRQ(3),
 		.end	= MAINSTONE_IRQ(3),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct smc91x_platdata mainstone_smc91x_info = {
@@ -285,7 +285,7 @@ static struct mtd_partition mainstoneflash0_partitions[] = {
 		.name =		"Bootloader",
 		.size =		0x00040000,
 		.offset =	0,
-		.mask_flags =	MTD_WRITEABLE  /* force read-only */
+		.mask_flags =	MTD_WRITEABLE,  /* force read-only */
 	},{
 		.name =		"Kernel",
 		.size =		0x00400000,
@@ -293,8 +293,8 @@ static struct mtd_partition mainstoneflash0_partitions[] = {
 	},{
 		.name =		"Filesystem",
 		.size =		MTDPART_SIZ_FULL,
-		.offset =	0x00440000
-	}
+		.offset =	0x00440000,
+	},
 };
 
 static struct flash_platform_data mst_flash_data[2] = {
@@ -306,7 +306,7 @@ static struct flash_platform_data mst_flash_data[2] = {
 		.map_name	= "cfi_probe",
 		.parts		= NULL,
 		.nr_parts	= 0,
-	}
+	},
 };
 
 static struct platform_device mst_flash_device[2] = {
@@ -599,8 +599,8 @@ static struct map_desc mainstone_io_desc[] __initdata = {
 		.virtual	=  MST_FPGA_VIRT,
 		.pfn		= __phys_to_pfn(MST_FPGA_PHYS),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init mainstone_map_io(void)

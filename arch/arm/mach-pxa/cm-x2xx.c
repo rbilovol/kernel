@@ -77,7 +77,7 @@ static struct resource cmx255_dm9000_resource[] = {
 		.start = CMX255_ETHIRQ,
 		.end   = CMX255_ETHIRQ,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct resource cmx270_dm9000_resource[] = {
@@ -95,7 +95,7 @@ static struct resource cmx270_dm9000_resource[] = {
 		.start = CMX270_ETHIRQ,
 		.end   = CMX270_ETHIRQ,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct dm9000_plat_data cmx270_dm9000_platdata = {
@@ -108,7 +108,7 @@ static struct platform_device cmx2xx_dm9000_device = {
 	.num_resources	= ARRAY_SIZE(cmx270_dm9000_resource),
 	.dev		= {
 		.platform_data = &cmx270_dm9000_platdata,
-	}
+	},
 };
 
 static void __init cmx2xx_init_dm9000(void)
@@ -485,7 +485,7 @@ static struct map_desc cmx2xx_io_desc[] __initdata = {
 		.virtual	= (unsigned long)CMX2XX_IT8152_VIRT,
 		.pfn		= __phys_to_pfn(PXA_CS4_PHYS),
 		.length		= SZ_64M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

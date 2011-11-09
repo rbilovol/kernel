@@ -330,7 +330,7 @@ static struct platform_device z2_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &z2_gpio_led_info,
-	}
+	},
 };
 
 static void __init z2_leds_init(void)
@@ -617,7 +617,7 @@ static inline void z2_spi_init(void) {}
 static struct regulator_consumer_supply z2_tps65021_consumers[] = {
 	{
 		.supply	= "vcc_core",
-	}
+	},
 };
 
 static struct regulator_init_data z2_tps65021_info[] = {
@@ -659,7 +659,7 @@ static struct regulator_init_data z2_tps65021_info[] = {
 			.max_uV		= 3300000,
 			.always_on	= 1,
 		},
-	}
+	},
 };
 
 static struct i2c_board_info __initdata z2_pi2c_board_info[] = {

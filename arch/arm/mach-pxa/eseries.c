@@ -54,7 +54,7 @@ void __init eseries_fixup(struct tag *tags, char **cmdline, struct meminfo *mi)
 struct gpio_vbus_mach_info e7xx_udc_info = {
 	.gpio_vbus   = GPIO_E7XX_USB_DISC,
 	.gpio_pullup = GPIO_E7XX_USB_PULLUP,
-	.gpio_pullup_inverted = 1
+	.gpio_pullup_inverted = 1,
 };
 
 static struct platform_device e7xx_gpio_vbus = {
@@ -311,7 +311,7 @@ static struct nand_bbt_descr e400_t7l66xb_nand_bbt = {
 	.options = 0,
 	.offs = 4,
 	.len = 2,
-	.pattern = scan_ff_pattern
+	.pattern = scan_ff_pattern,
 };
 
 static struct tmio_nand_data e400_t7l66xb_nand_config = {
@@ -819,7 +819,7 @@ static struct w100_mode e800_lcd_mode[2] = {
 		.pixclk_src     = CLK_SRC_PLL,
 		.sysclk_divider  = 0,
 		.sysclk_src     = CLK_SRC_PLL,
-	}
+	},
 };
 
 
@@ -889,7 +889,7 @@ static struct platform_device e800_fb_device = {
 static struct gpio_vbus_mach_info e800_udc_info = {
 	.gpio_vbus   = GPIO_E800_USB_DISC,
 	.gpio_pullup = GPIO_E800_USB_PULLUP,
-	.gpio_pullup_inverted = 1
+	.gpio_pullup_inverted = 1,
 };
 
 static struct platform_device e800_gpio_vbus = {

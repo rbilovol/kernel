@@ -156,26 +156,26 @@ static struct mtd_partition colibri_partitions[] = {
 		.name =		"Bootloader",
 		.offset =	0x00000000,
 		.size =		0x00040000,
-		.mask_flags =	MTD_WRITEABLE	/* force read-only */
+		.mask_flags =	MTD_WRITEABLE,	/* force read-only */
 	}, {
 		.name =		"Kernel",
 		.offset =	0x00040000,
 		.size =		0x00400000,
-		.mask_flags =	0
+		.mask_flags =	0,
 	}, {
 		.name =		"Rootfs",
 		.offset =	0x00440000,
 		.size =		MTDPART_SIZ_FULL,
-		.mask_flags =	0
-	}
+		.mask_flags =	0,
+	},
 };
 
 static struct physmap_flash_data colibri_flash_data[] = {
 	{
 		.width		= 4,			/* bankwidth in bytes */
 		.parts		= colibri_partitions,
-		.nr_parts	= ARRAY_SIZE(colibri_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(colibri_partitions),
+	},
 };
 
 static struct resource colibri_pxa270_flash_resource = {

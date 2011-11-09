@@ -78,7 +78,7 @@ static struct resource smc91x_resources[] = {
 		.start	= IRQ_GPIO(4),
 		.end	= IRQ_GPIO(4),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct platform_device smc91x_device = {
@@ -146,7 +146,7 @@ static struct pxafb_mach_info sharp_lm8v31 = {
 	.lcd_conn	= LCD_COLOR_DSTN_16BPP | LCD_PCLK_EDGE_FALL |
 			  LCD_AC_BIAS_FREQ(255),
 	.pxafb_backlight_power = &idp_backlight_power,
-	.pxafb_lcd_power = &idp_lcd_power
+	.pxafb_lcd_power = &idp_lcd_power,
 };
 
 static struct pxamci_platform_data idp_mci_platform_data = {
@@ -176,13 +176,13 @@ static struct map_desc idp_io_desc[] __initdata = {
 		.virtual	=  IDP_COREVOLT_VIRT,
 		.pfn		= __phys_to_pfn(IDP_COREVOLT_PHYS),
 		.length		= IDP_COREVOLT_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  IDP_CPLD_VIRT,
 		.pfn		= __phys_to_pfn(IDP_CPLD_PHYS),
 		.length		= IDP_CPLD_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init idp_map_io(void)

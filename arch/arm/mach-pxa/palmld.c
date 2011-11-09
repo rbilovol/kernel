@@ -133,16 +133,16 @@ static struct mtd_partition palmld_partitions[] = {
 		.name		= "Flash",
 		.offset		= 0x00000000,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data palmld_flash_data[] = {
 	{
 		.width		= 2,			/* bankwidth in bytes */
 		.parts		= palmld_partitions,
-		.nr_parts	= ARRAY_SIZE(palmld_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(palmld_partitions),
+	},
 };
 
 static struct resource palmld_flash_resource = {
@@ -264,7 +264,7 @@ static struct platform_device palmld_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &gpio_led_info,
-	}
+	},
 };
 
 static void __init palmld_leds_init(void)
@@ -300,13 +300,13 @@ static struct map_desc palmld_io_desc[] __initdata = {
 	.virtual	= PALMLD_IDE_VIRT,
 	.pfn		= __phys_to_pfn(PALMLD_IDE_PHYS),
 	.length		= PALMLD_IDE_SIZE,
-	.type		= MT_DEVICE
+	.type		= MT_DEVICE,
 },
 {
 	.virtual	= PALMLD_USB_VIRT,
 	.pfn		= __phys_to_pfn(PALMLD_USB_PHYS),
 	.length		= PALMLD_USB_SIZE,
-	.type		= MT_DEVICE
+	.type		= MT_DEVICE,
 },
 };
 

@@ -295,7 +295,7 @@ static struct resource smc91x_resources[] = {
 		.start	= gpio_to_irq(GPIO_ETH_IRQ),
 		.end	= gpio_to_irq(GPIO_ETH_IRQ),
 		.flags	= IORESOURCE_IRQ | IRQF_TRIGGER_FALLING,
-	}
+	},
 };
 
 static struct smsc911x_platform_config raumfeld_smsc911x_config = {
@@ -312,7 +312,7 @@ static struct platform_device smc91x_device = {
 	.resource	= smc91x_resources,
 	.dev		= {
 		.platform_data = &raumfeld_smsc911x_config,
-	}
+	},
 };
 
 /**
@@ -379,7 +379,7 @@ static struct platform_device rotary_encoder_device = {
 	.id		= 0,
 	.dev		= {
 		.platform_data = &raumfeld_rotary_encoder_info,
-	}
+	},
 };
 
 /**
@@ -454,7 +454,7 @@ static struct platform_device raumfeld_gpio_keys_device = {
 	.id	= -1,
 	.dev 	= {
 		.platform_data	= &gpio_keys_platform_data,
-	}
+	},
 };
 
 /**
@@ -473,7 +473,7 @@ static struct gpio_led raumfeld_leds[] = {
 		.gpio		= GPIO_LED2,
 		.active_low	= 0,
 		.default_state	= LEDS_GPIO_DEFSTATE_OFF,
-	}
+	},
 };
 
 static struct gpio_led_platform_data raumfeld_led_platform_data = {
@@ -508,8 +508,8 @@ static struct w1_gpio_platform_data w1_gpio_platform_data = {
 struct platform_device raumfeld_w1_gpio_device = {
 	.name	= "w1-gpio",
 	.dev	= {
-		.platform_data = &w1_gpio_platform_data
-	}
+		.platform_data = &w1_gpio_platform_data,
+	},
 };
 
 static void __init raumfeld_w1_init(void)
@@ -543,7 +543,7 @@ static struct platform_device raumfeld_pwm_backlight_device = {
 	.dev	= {
 		.parent		= &pxa27x_device_pwm0.dev,
 		.platform_data	= &raumfeld_pwm_backlight_data,
-	}
+	},
 };
 
 /* LT3593 controlled backlight */
@@ -638,7 +638,7 @@ static struct platform_device raumfeld_spi_device = {
 	.id	= 0,
 	.dev 	= {
 		.platform_data	= &raumfeld_spi_platform_data,
-	}
+	},
 };
 
 static struct lis3lv02d_platform_data lis3_pdata = {

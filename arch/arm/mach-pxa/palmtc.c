@@ -301,11 +301,11 @@ const struct matrix_keymap_data palmtc_keymap_data = {
 };
 
 static const unsigned int palmtc_keypad_row_gpios[] = {
-	0, 9, 10, 11
+	0, 9, 10, 11,
 };
 
 static const unsigned int palmtc_keypad_col_gpios[] = {
-	18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 79, 80
+	18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 79, 80,
 };
 
 static struct matrix_keypad_platform_data palmtc_keypad_platform_data = {
@@ -409,7 +409,7 @@ static struct platform_device palmtc_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &palmtc_gpio_led_info,
-	}
+	},
 };
 
 static void __init palmtc_leds_init(void)

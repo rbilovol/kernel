@@ -44,7 +44,7 @@ static struct pxa2xx_spi_chip mcp251x_chip_info1 = {
 	.rx_threshold   = 128,
 	.dma_burst_size = 8,
 	.timeout        = 235,
-	.gpio_cs        = ICONTROL_MCP251x_nCS1
+	.gpio_cs        = ICONTROL_MCP251x_nCS1,
 };
 
 static struct pxa2xx_spi_chip mcp251x_chip_info2 = {
@@ -52,7 +52,7 @@ static struct pxa2xx_spi_chip mcp251x_chip_info2 = {
 	.rx_threshold   = 128,
 	.dma_burst_size = 8,
 	.timeout        = 235,
-	.gpio_cs        = ICONTROL_MCP251x_nCS2
+	.gpio_cs        = ICONTROL_MCP251x_nCS2,
 };
 
 static struct pxa2xx_spi_chip mcp251x_chip_info3 = {
@@ -60,7 +60,7 @@ static struct pxa2xx_spi_chip mcp251x_chip_info3 = {
 	.rx_threshold   = 128,
 	.dma_burst_size = 8,
 	.timeout        = 235,
-	.gpio_cs        = ICONTROL_MCP251x_nCS3
+	.gpio_cs        = ICONTROL_MCP251x_nCS3,
 };
 
 static struct pxa2xx_spi_chip mcp251x_chip_info4 = {
@@ -68,14 +68,14 @@ static struct pxa2xx_spi_chip mcp251x_chip_info4 = {
 	.rx_threshold   = 128,
 	.dma_burst_size = 8,
 	.timeout        = 235,
-	.gpio_cs        = ICONTROL_MCP251x_nCS4
+	.gpio_cs        = ICONTROL_MCP251x_nCS4,
 };
 
 static struct mcp251x_platform_data mcp251x_info = {
 	.oscillator_frequency = 16E6,
 	.board_specific_setup = NULL,
 	.power_enable         = NULL,
-	.transceiver_enable   = NULL
+	.transceiver_enable   = NULL,
 };
 
 static struct spi_board_info mcp251x_board_info[] = {
@@ -86,7 +86,7 @@ static struct spi_board_info mcp251x_board_info[] = {
 		.chip_select     = 0,
 		.platform_data   = &mcp251x_info,
 		.controller_data = &mcp251x_chip_info1,
-		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ1)
+		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ1),
 	},
 	{
 		.modalias        = "mcp2515",
@@ -95,7 +95,7 @@ static struct spi_board_info mcp251x_board_info[] = {
 		.chip_select     = 1,
 		.platform_data   = &mcp251x_info,
 		.controller_data = &mcp251x_chip_info2,
-		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ2)
+		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ2),
 	},
 	{
 		.modalias        = "mcp2515",
@@ -104,7 +104,7 @@ static struct spi_board_info mcp251x_board_info[] = {
 		.chip_select     = 0,
 		.platform_data   = &mcp251x_info,
 		.controller_data = &mcp251x_chip_info3,
-		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ3)
+		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ3),
 	},
 	{
 		.modalias        = "mcp2515",
@@ -113,20 +113,20 @@ static struct spi_board_info mcp251x_board_info[] = {
 		.chip_select     = 1,
 		.platform_data   = &mcp251x_info,
 		.controller_data = &mcp251x_chip_info4,
-		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ4)
-	}
+		.irq             = gpio_to_irq(ICONTROL_MCP251x_nIRQ4),
+	},
 };
 
 static struct pxa2xx_spi_master pxa_ssp3_spi_master_info = {
 	.clock_enable   = CKEN_SSP3,
 	.num_chipselect = 2,
-	.enable_dma     = 1
+	.enable_dma     = 1,
 };
 
 static struct pxa2xx_spi_master pxa_ssp4_spi_master_info = {
 	.clock_enable   = CKEN_SSP4,
 	.num_chipselect = 2,
-	.enable_dma     = 1
+	.enable_dma     = 1,
 };
 
 struct platform_device pxa_spi_ssp3 = {
@@ -134,7 +134,7 @@ struct platform_device pxa_spi_ssp3 = {
 	.id            = 3,
 	.dev           = {
 		.platform_data = &pxa_ssp3_spi_master_info,
-	}
+	},
 };
 
 struct platform_device pxa_spi_ssp4 = {
@@ -142,7 +142,7 @@ struct platform_device pxa_spi_ssp4 = {
 	.id            = 4,
 	.dev           = {
 		.platform_data = &pxa_ssp4_spi_master_info,
-	}
+	},
 };
 
 static struct platform_device *icontrol_spi_devices[] __initdata = {
@@ -171,7 +171,7 @@ static mfp_cfg_t mfp_can_cfg[] __initdata = {
 	GPIO74_GPIO | MFP_LPM_EDGE_RISE,
 	GPIO75_GPIO | MFP_LPM_EDGE_RISE,
 	GPIO76_GPIO | MFP_LPM_EDGE_RISE,
-	GPIO77_GPIO | MFP_LPM_EDGE_RISE
+	GPIO77_GPIO | MFP_LPM_EDGE_RISE,
 };
 
 static void __init icontrol_can_init(void)

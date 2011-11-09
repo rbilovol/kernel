@@ -232,7 +232,7 @@ static struct resource dm9000_resources[] = {
 		.start	= IRQ_GPIO(mfp_to_gpio(MFP_PIN_GPIO99)),
 		.end	= IRQ_GPIO(mfp_to_gpio(MFP_PIN_GPIO99)),
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct dm9000_plat_data cm_x300_dm9000_platdata = {
@@ -652,7 +652,7 @@ static struct platform_device cm_x300_rtc_device = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &cm_x300_v3020_pdata,
-	}
+	},
 };
 
 static void __init cm_x300_init_rtc(void)

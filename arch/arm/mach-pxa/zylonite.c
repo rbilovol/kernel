@@ -65,7 +65,7 @@ static struct resource smc91x_resources[] = {
 		.start	= -1,	/* for run-time assignment */
 		.end	= -1,
 		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct smc91x_platdata zylonite_smc91x_info = {
@@ -105,7 +105,7 @@ static struct platform_device zylonite_device_leds = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &zylonite_debug_leds_info,
-	}
+	},
 };
 
 static void __init zylonite_init_leds(void)

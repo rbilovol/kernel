@@ -155,15 +155,15 @@ static struct mtd_partition vpac270_nor_partitions[] = {
 		.name		= "Flash",
 		.offset		= 0x00000000,
 		.size		= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct physmap_flash_data vpac270_flash_data[] = {
 	{
 		.width		= 2,	/* bankwidth in bytes */
 		.parts		= vpac270_nor_partitions,
-		.nr_parts	= ARRAY_SIZE(vpac270_nor_partitions)
-	}
+		.nr_parts	= ARRAY_SIZE(vpac270_nor_partitions),
+	},
 };
 
 static struct resource vpac270_flash_resource = {
@@ -198,7 +198,7 @@ static struct mtd_partition vpac270_onenand_partitions[] = {
 		.name		= "Flash",
 		.offset		= 0x00000000,
 		.size		= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct onenand_platform_data vpac270_onenand_info = {
@@ -291,7 +291,7 @@ struct gpio_led vpac270_gpio_leds[] = {
 	.default_trigger	= "none",
 	.gpio			= GPIO15_VPAC270_LED_ORANGE,
 	.active_low		= 1,
-}
+},
 };
 
 static struct gpio_led_platform_data vpac270_gpio_led_info = {
@@ -304,7 +304,7 @@ static struct platform_device vpac270_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &vpac270_gpio_led_info,
-	}
+	},
 };
 
 static void __init vpac270_leds_init(void)
@@ -412,7 +412,7 @@ static struct platform_device vpac270_dm9000_device = {
 	.resource	= vpac270_dm9000_resources,
 	.dev		= {
 		.platform_data = &vpac270_dm9000_platdata,
-	}
+	},
 };
 
 static void __init vpac270_eth_init(void)
@@ -540,7 +540,7 @@ static struct pxafb_mode_info vpac270_lcd_modes[] = {
 	.vsync_len	= 1,
 
 	.sync		= FB_SYNC_HOR_HIGH_ACT | FB_SYNC_VERT_HIGH_ACT,
-}
+},
 };
 
 static struct pxafb_mach_info vpac270_lcd_screen = {
@@ -597,23 +597,23 @@ static struct resource vpac270_ide_resources[] = {
 	[0] = {	/* I/O Base address */
 	       .start	= PXA_CS3_PHYS + 0x120,
 	       .end	= PXA_CS3_PHYS + 0x13f,
-	       .flags	= IORESOURCE_MEM
+	       .flags	= IORESOURCE_MEM,
 	},
 	[1] = {	/* CTL Base address */
 	       .start	= PXA_CS3_PHYS + 0x15c,
 	       .end	= PXA_CS3_PHYS + 0x15f,
-	       .flags	= IORESOURCE_MEM
+	       .flags	= IORESOURCE_MEM,
 	},
 	[2] = {	/* DMA Base address */
 	       .start	= PXA_CS3_PHYS + 0x20,
 	       .end	= PXA_CS3_PHYS + 0x2f,
-	       .flags	= IORESOURCE_DMA
+	       .flags	= IORESOURCE_DMA,
 	},
 	[3] = {	/* IDE IRQ pin */
 	       .start	= gpio_to_irq(GPIO36_VPAC270_IDE_IRQ),
 	       .end	= gpio_to_irq(GPIO36_VPAC270_IDE_IRQ),
-	       .flags	= IORESOURCE_IRQ
-	}
+	       .flags	= IORESOURCE_IRQ,
+	},
 };
 
 static struct platform_device vpac270_ide_device = {
@@ -623,7 +623,7 @@ static struct platform_device vpac270_ide_device = {
 	.dev		= {
 		.platform_data	= &vpac270_pata_pdata,
 		.coherent_dma_mask	= 0xffffffff,
-	}
+	},
 };
 
 static void __init vpac270_ide_init(void)
@@ -642,7 +642,7 @@ static inline void vpac270_ide_init(void) {}
 static struct regulator_consumer_supply vpac270_max1587a_consumers[] = {
 	{
 		.supply	= "vcc_core",
-	}
+	},
 };
 
 static struct regulator_init_data vpac270_max1587a_v3_info = {
@@ -662,7 +662,7 @@ static struct max1586_subdev_data vpac270_max1587a_subdevs[] = {
 		.name		= "vcc_core",
 		.id		= MAX1586_V3,
 		.platform_data	= &vpac270_max1587a_v3_info,
-	}
+	},
 };
 
 static struct max1586_platform_data vpac270_max1587a_info = {
