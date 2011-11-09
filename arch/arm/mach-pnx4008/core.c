@@ -71,7 +71,7 @@ struct resource spipnx_1_resources[] = {
 		.flags = IORESOURCE_IRQ,
 	}, {
 		.flags = 0,
-	}
+	},
 };
 
 static struct spi_board_info spi_board_info[] __initdata = {
@@ -122,7 +122,7 @@ static struct plat_serial8250_port platform_serial_ports[] = {
 		.iotype = UPIO_MEM,
 		.flags = UPF_BOOT_AUTOCONF | UPF_BUGGY_UART | UPF_SKIP_TEST,
 	 },
-	{}
+	{},
 };
 
 static struct platform_device serial_device = {
@@ -179,7 +179,7 @@ static struct platform_device rgbfb_device = {
 	.id = 0,
 	.dev = {
 		.coherent_dma_mask = 0xffffffff,
-	}
+	},
 };
 
 struct resource watchdog_resources[] = {
