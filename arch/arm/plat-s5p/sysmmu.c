@@ -32,7 +32,7 @@ static unsigned short fault_reg_offset[SYSMMU_FAULTS_NUM] = {
 	S5P_AR_FAULT_ADDR,
 	S5P_AR_FAULT_ADDR,
 	S5P_AW_FAULT_ADDR,
-	S5P_AW_FAULT_ADDR
+	S5P_AW_FAULT_ADDR,
 };
 
 static char *sysmmu_fault_name[SYSMMU_FAULTS_NUM] = {
@@ -43,7 +43,7 @@ static char *sysmmu_fault_name[SYSMMU_FAULTS_NUM] = {
 	"AR SECURITY PROTECTION FAULT",
 	"AR ACCESS PROTECTION FAULT",
 	"AW SECURITY PROTECTION FAULT",
-	"AW ACCESS PROTECTION FAULT"
+	"AW ACCESS PROTECTION FAULT",
 };
 
 static int (*fault_handlers[S5P_SYSMMU_TOTAL_IPNUM])(
@@ -302,7 +302,7 @@ static struct platform_driver s5p_sysmmu_driver = {
 		.owner		= THIS_MODULE,
 		.name		= "s5p-sysmmu",
 		.pm		= &s5p_sysmmu_pm_ops,
-	}
+	},
 };
 
 static int __init s5p_sysmmu_init(void)
