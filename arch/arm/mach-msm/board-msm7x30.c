@@ -60,7 +60,7 @@ static void __init msm7x30_reserve(void)
 static int hsusb_phy_init_seq[] = {
 	0x30, 0x32,	/* Enable and set Pre-Emphasis Depth to 20% */
 	0x02, 0x36,	/* Disable CDR Auto Reset feature */
-	-1
+	-1,
 };
 
 static struct msm_otg_platform_data msm_otg_pdata = {

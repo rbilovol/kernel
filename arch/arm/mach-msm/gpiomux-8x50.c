@@ -41,11 +41,11 @@ struct msm_gpiomux_config msm_gpiomux_configs[GPIOMUX_NGPIOS] = {
 	/* SDC1 data[3:0] & CMD */
 	[51 ... 55] = {
 		.active = SDCC_DAT_0_3_CMD_ACTV_CFG,
-		.suspended = SDC1_SUSPEND_CONFIG
+		.suspended = SDC1_SUSPEND_CONFIG,
 	},
 	/* SDC1 CLK */
 	[56] = {
 		.active = SDCC_CLK_ACTV_CFG,
-		.suspended = SDC1_SUSPEND_CONFIG
+		.suspended = SDC1_SUSPEND_CONFIG,
 	},
 };

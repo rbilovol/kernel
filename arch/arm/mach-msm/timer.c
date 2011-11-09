@@ -194,7 +194,7 @@ static struct msm_clock msm_clocks[] = {
 		.irq = INT_DEBUG_TIMER_EXP,
 		.freq = DGT_HZ >> MSM_DGT_SHIFT,
 		.shift = MSM_DGT_SHIFT,
-	}
+	},
 };
 
 static void __init msm_timer_init(void)
@@ -325,5 +325,5 @@ void local_timer_stop(struct clock_event_device *evt)
 #endif
 
 struct sys_timer msm_timer = {
-	.init = msm_timer_init
+	.init = msm_timer_init,
 };

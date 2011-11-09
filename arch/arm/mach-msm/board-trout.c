@@ -75,8 +75,8 @@ static struct map_desc trout_io_desc[] __initdata = {
 		.virtual = TROUT_CPLD_BASE,
 		.pfn     = __phys_to_pfn(TROUT_CPLD_START),
 		.length  = TROUT_CPLD_SIZE,
-		.type    = MT_DEVICE_NONSHARED
-	}
+		.type    = MT_DEVICE_NONSHARED,
+	},
 };
 
 static void __init trout_map_io(void)

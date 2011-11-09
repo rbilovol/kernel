@@ -43,7 +43,7 @@ static struct resource resources_uart2[] = {
 		.start	= MSM_UART2_PHYS,
 		.end	= MSM_UART2_PHYS + MSM_UART2_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-		.name  = "uart_resource"
+		.name  = "uart_resource",
 	},
 };
 

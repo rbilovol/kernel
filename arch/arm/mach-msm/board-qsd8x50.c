@@ -81,7 +81,7 @@ module_init(msm_init_smc91x);
 static int hsusb_phy_init_seq[] = {
 	0x08, 0x31,	/* Increase HS Driver Amplitude */
 	0x20, 0x32,	/* Enable and set Pre-Emphasis Depth to 10% */
-	-1
+	-1,
 };
 
 static struct msm_otg_platform_data msm_otg_pdata = {
@@ -104,7 +104,7 @@ static struct msm_mmc_gpio sdc1_gpio_cfg[] = {
 	{53, "sdc1_dat_1"},
 	{54, "sdc1_dat_0"},
 	{55, "sdc1_cmd"},
-	{56, "sdc1_clk"}
+	{56, "sdc1_clk"},
 };
 
 static struct vreg *vreg_mmc;

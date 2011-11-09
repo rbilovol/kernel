@@ -461,128 +461,128 @@ struct platform_device msm_device_iommu_gfx2d1 = {
 static struct msm_iommu_ctx_dev jpegd_src_ctx = {
 	.name = "jpegd_src",
 	.num = 0,
-	.mids = {0, -1}
+	.mids = {0, -1},
 };
 
 static struct msm_iommu_ctx_dev jpegd_dst_ctx = {
 	.name = "jpegd_dst",
 	.num = 1,
-	.mids = {1, -1}
+	.mids = {1, -1},
 };
 
 static struct msm_iommu_ctx_dev vpe_src_ctx = {
 	.name = "vpe_src",
 	.num = 0,
-	.mids = {0, -1}
+	.mids = {0, -1},
 };
 
 static struct msm_iommu_ctx_dev vpe_dst_ctx = {
 	.name = "vpe_dst",
 	.num = 1,
-	.mids = {1, -1}
+	.mids = {1, -1},
 };
 
 static struct msm_iommu_ctx_dev mdp_vg1_ctx = {
 	.name = "mdp_vg1",
 	.num = 0,
-	.mids = {0, 2, -1}
+	.mids = {0, 2, -1},
 };
 
 static struct msm_iommu_ctx_dev mdp_rgb1_ctx = {
 	.name = "mdp_rgb1",
 	.num = 1,
-	.mids = {1, 3, 4, 5, 6, 7, 8, 9, 10, -1}
+	.mids = {1, 3, 4, 5, 6, 7, 8, 9, 10, -1},
 };
 
 static struct msm_iommu_ctx_dev mdp_vg2_ctx = {
 	.name = "mdp_vg2",
 	.num = 0,
-	.mids = {0, 2, -1}
+	.mids = {0, 2, -1},
 };
 
 static struct msm_iommu_ctx_dev mdp_rgb2_ctx = {
 	.name = "mdp_rgb2",
 	.num = 1,
-	.mids = {1, 3, 4, 5, 6, 7, 8, 9, 10, -1}
+	.mids = {1, 3, 4, 5, 6, 7, 8, 9, 10, -1},
 };
 
 static struct msm_iommu_ctx_dev rot_src_ctx = {
 	.name = "rot_src",
 	.num = 0,
-	.mids = {0, -1}
+	.mids = {0, -1},
 };
 
 static struct msm_iommu_ctx_dev rot_dst_ctx = {
 	.name = "rot_dst",
 	.num = 1,
-	.mids = {1, -1}
+	.mids = {1, -1},
 };
 
 static struct msm_iommu_ctx_dev ijpeg_src_ctx = {
 	.name = "ijpeg_src",
 	.num = 0,
-	.mids = {0, -1}
+	.mids = {0, -1},
 };
 
 static struct msm_iommu_ctx_dev ijpeg_dst_ctx = {
 	.name = "ijpeg_dst",
 	.num = 1,
-	.mids = {1, -1}
+	.mids = {1, -1},
 };
 
 static struct msm_iommu_ctx_dev vfe_imgwr_ctx = {
 	.name = "vfe_imgwr",
 	.num = 0,
-	.mids = {2, 3, 4, 5, 6, 7, 8, -1}
+	.mids = {2, 3, 4, 5, 6, 7, 8, -1},
 };
 
 static struct msm_iommu_ctx_dev vfe_misc_ctx = {
 	.name = "vfe_misc",
 	.num = 1,
-	.mids = {0, 1, 9, -1}
+	.mids = {0, 1, 9, -1},
 };
 
 static struct msm_iommu_ctx_dev vcodec_a_stream_ctx = {
 	.name = "vcodec_a_stream",
 	.num = 0,
-	.mids = {2, 5, -1}
+	.mids = {2, 5, -1},
 };
 
 static struct msm_iommu_ctx_dev vcodec_a_mm1_ctx = {
 	.name = "vcodec_a_mm1",
 	.num = 1,
-	.mids = {0, 1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1}
+	.mids = {0, 1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1},
 };
 
 static struct msm_iommu_ctx_dev vcodec_b_mm2_ctx = {
 	.name = "vcodec_b_mm2",
 	.num = 0,
-	.mids = {0, 1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1}
+	.mids = {0, 1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1},
 };
 
 static struct msm_iommu_ctx_dev gfx3d_user_ctx = {
 	.name = "gfx3d_user",
 	.num = 0,
-	.mids = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1}
+	.mids = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1},
 };
 
 static struct msm_iommu_ctx_dev gfx3d_priv_ctx = {
 	.name = "gfx3d_priv",
 	.num = 1,
 	.mids = {16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-		 31, -1}
+		 31, -1},
 };
 
 static struct msm_iommu_ctx_dev gfx2d0_2d0_ctx = {
 	.name = "gfx2d0_2d0",
 	.num = 0,
-	.mids = {0, 1, 2, 3, 4, 5, 6, 7, -1}
+	.mids = {0, 1, 2, 3, 4, 5, 6, 7, -1},
 };
 
 static struct msm_iommu_ctx_dev gfx2d1_2d1_ctx = {
 	.name = "gfx2d1_2d1",
 	.num = 0,
-	.mids = {0, 1, 2, 3, 4, 5, 6, 7, -1}
+	.mids = {0, 1, 2, 3, 4, 5, 6, 7, -1},
 };
 
 static struct platform_device msm_device_jpegd_src_ctx = {

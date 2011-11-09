@@ -37,7 +37,7 @@ static struct sirc_cascade_regs sirc_reg_table[] = {
 	{
 		.int_status  = SPSS_SIRC_IRQ_STATUS,
 		.cascade_irq = INT_SIRC_0,
-	}
+	},
 };
 
 /* Mask off the given interrupt. Keep the int_enable mask in sync with

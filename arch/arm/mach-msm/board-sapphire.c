@@ -72,8 +72,8 @@ static struct map_desc sapphire_io_desc[] __initdata = {
 		.virtual = SAPPHIRE_CPLD_BASE,
 		.pfn     = __phys_to_pfn(SAPPHIRE_CPLD_START),
 		.length  = SAPPHIRE_CPLD_SIZE,
-		.type    = MT_DEVICE_NONSHARED
-	}
+		.type    = MT_DEVICE_NONSHARED,
+	},
 };
 
 static void __init sapphire_fixup(struct tag *tags, char **cmdline,

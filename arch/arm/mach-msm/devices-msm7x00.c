@@ -39,7 +39,7 @@ static struct resource resources_uart1[] = {
 		.start	= MSM_UART1_PHYS,
 		.end	= MSM_UART1_PHYS + MSM_UART1_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-		.name  = "uart_resource"
+		.name  = "uart_resource",
 	},
 };
 
@@ -53,7 +53,7 @@ static struct resource resources_uart2[] = {
 		.start	= MSM_UART2_PHYS,
 		.end	= MSM_UART2_PHYS + MSM_UART2_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-		.name  = "uart_resource"
+		.name  = "uart_resource",
 	},
 };
 
@@ -67,7 +67,7 @@ static struct resource resources_uart3[] = {
 		.start	= MSM_UART3_PHYS,
 		.end	= MSM_UART3_PHYS + MSM_UART3_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-		.name  = "uart_resource"
+		.name  = "uart_resource",
 	},
 };
 
@@ -177,7 +177,7 @@ static struct resource resources_sdc1[] = {
 	},
 	{
 		.flags	= IORESOURCE_IRQ | IORESOURCE_DISABLED,
-		.name	= "status_irq"
+		.name	= "status_irq",
 	},
 	{
 		.start	= 8,
@@ -200,7 +200,7 @@ static struct resource resources_sdc2[] = {
 	},
 	{
 		.flags	= IORESOURCE_IRQ | IORESOURCE_DISABLED,
-		.name	= "status_irq"
+		.name	= "status_irq",
 	},
 	{
 		.start	= 8,
@@ -223,7 +223,7 @@ static struct resource resources_sdc3[] = {
 	},
 	{
 		.flags	= IORESOURCE_IRQ | IORESOURCE_DISABLED,
-		.name	= "status_irq"
+		.name	= "status_irq",
 	},
 	{
 		.start	= 8,
@@ -246,7 +246,7 @@ static struct resource resources_sdc4[] = {
 	},
 	{
 		.flags	= IORESOURCE_IRQ | IORESOURCE_DISABLED,
-		.name	= "status_irq"
+		.name	= "status_irq",
 	},
 	{
 		.start	= 8,
@@ -378,7 +378,7 @@ static struct resource resources_mdp[] = {
 		.start	= MSM_MDP_PHYS,
 		.end	= MSM_MDP_PHYS + MSM_MDP_SIZE - 1,
 		.name	= "mdp",
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	{
 		.start	= INT_MDP,

@@ -70,12 +70,12 @@ static void __init msm8x60_init(void)
 
 #ifdef CONFIG_OF
 static struct of_dev_auxdata msm_auxdata_lookup[] __initdata = {
-	{}
+	{},
 };
 
 static struct of_device_id msm_dt_gic_match[] __initdata = {
 	{ .compatible = "qcom,msm-8660-qgic", },
-	{}
+	{},
 };
 
 static void __init msm8x60_dt_init(void)
@@ -99,7 +99,7 @@ static void __init msm8x60_dt_init(void)
 static const char *msm8x60_fluid_match[] __initdata = {
 	"qcom,msm8660-fluid",
 	"qcom,msm8660-surf",
-	NULL
+	NULL,
 };
 #endif /* CONFIG_OF */
 
