@@ -72,7 +72,7 @@ static struct cpu_table cpu_ids[] __initdata = {
 		.init_clocks	= s3c2410_init_clocks,
 		.init_uarts	= s3c2410_init_uarts,
 		.init		= s3c2410_init,
-		.name		= name_s3c2410
+		.name		= name_s3c2410,
 	},
 	{
 		.idcode		= 0x32410002,
@@ -81,7 +81,7 @@ static struct cpu_table cpu_ids[] __initdata = {
 		.init_clocks	= s3c2410_init_clocks,
 		.init_uarts	= s3c2410_init_uarts,
 		.init		= s3c2410a_init,
-		.name		= name_s3c2410a
+		.name		= name_s3c2410a,
 	},
 	{
 		.idcode		= 0x32440000,
@@ -90,7 +90,7 @@ static struct cpu_table cpu_ids[] __initdata = {
 		.init_clocks	= s3c244x_init_clocks,
 		.init_uarts	= s3c244x_init_uarts,
 		.init		= s3c2440_init,
-		.name		= name_s3c2440
+		.name		= name_s3c2440,
 	},
 	{
 		.idcode		= 0x32440001,
@@ -99,7 +99,7 @@ static struct cpu_table cpu_ids[] __initdata = {
 		.init_clocks	= s3c244x_init_clocks,
 		.init_uarts	= s3c244x_init_uarts,
 		.init		= s3c2440_init,
-		.name		= name_s3c2440a
+		.name		= name_s3c2440a,
 	},
 	{
 		.idcode		= 0x32440aaa,
@@ -108,7 +108,7 @@ static struct cpu_table cpu_ids[] __initdata = {
 		.init_clocks	= s3c244x_init_clocks,
 		.init_uarts	= s3c244x_init_uarts,
 		.init		= s3c2442_init,
-		.name		= name_s3c2442
+		.name		= name_s3c2442,
 	},
 	{
 		.idcode		= 0x32440aab,
@@ -117,7 +117,7 @@ static struct cpu_table cpu_ids[] __initdata = {
 		.init_clocks	= s3c244x_init_clocks,
 		.init_uarts	= s3c244x_init_uarts,
 		.init		= s3c2442_init,
-		.name		= name_s3c2442b
+		.name		= name_s3c2442b,
 	},
 	{
 		.idcode		= 0x32412001,
@@ -163,7 +163,7 @@ static struct map_desc s3c_iodesc[] __initdata = {
 	IODESC_ENT(GPIO),
 	IODESC_ENT(IRQ),
 	IODESC_ENT(MEMCTRL),
-	IODESC_ENT(UART)
+	IODESC_ENT(UART),
 };
 
 /* read cpu identificaiton code */

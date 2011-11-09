@@ -89,7 +89,7 @@ struct irq_chip s3c_irq_level_chip = {
 	.irq_ack	= s3c_irq_maskack,
 	.irq_mask	= s3c_irq_mask,
 	.irq_unmask	= s3c_irq_unmask,
-	.irq_set_wake	= s3c_irq_wake
+	.irq_set_wake	= s3c_irq_wake,
 };
 
 struct irq_chip s3c_irq_chip = {
@@ -97,7 +97,7 @@ struct irq_chip s3c_irq_chip = {
 	.irq_ack	= s3c_irq_ack,
 	.irq_mask	= s3c_irq_mask,
 	.irq_unmask	= s3c_irq_unmask,
-	.irq_set_wake	= s3c_irq_wake
+	.irq_set_wake	= s3c_irq_wake,
 };
 
 static void
@@ -231,7 +231,7 @@ static struct irq_chip s3c_irqext_chip = {
 	.irq_unmask	= s3c_irqext_unmask,
 	.irq_ack	= s3c_irqext_ack,
 	.irq_set_type	= s3c_irqext_type,
-	.irq_set_wake	= s3c_irqext_wake
+	.irq_set_wake	= s3c_irqext_wake,
 };
 
 static struct irq_chip s3c_irq_eint0t4 = {

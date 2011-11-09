@@ -38,7 +38,7 @@ static struct resource s3c2410_uart0_resource[] = {
 		.start = IRQ_S3CUART_RX0,
 		.end   = IRQ_S3CUART_ERR0,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource s3c2410_uart1_resource[] = {
@@ -51,7 +51,7 @@ static struct resource s3c2410_uart1_resource[] = {
 		.start = IRQ_S3CUART_RX1,
 		.end   = IRQ_S3CUART_ERR1,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource s3c2410_uart2_resource[] = {
@@ -64,7 +64,7 @@ static struct resource s3c2410_uart2_resource[] = {
 		.start = IRQ_S3CUART_RX2,
 		.end   = IRQ_S3CUART_ERR2,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource s3c2410_uart3_resource[] = {

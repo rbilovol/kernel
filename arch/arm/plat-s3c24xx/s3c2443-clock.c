@@ -390,7 +390,7 @@ static struct clk init_clocks_off[] = {
 		.parent		= &clk_p,
 		.enable		= s3c2443_clkcon_enable_p,
 		.ctrlbit	= S3C2443_PCLKCON_IIC,
-	}
+	},
 };
 
 static struct clk init_clocks[] = {
@@ -509,7 +509,7 @@ static struct clk init_clocks[] = {
 	}, {
 		.name		= "usb-bus-host",
 		.parent		= &clk_usb_bus_host.clk,
-	}
+	},
 };
 
 static inline unsigned long s3c2443_get_hdiv(unsigned long clkcon0)

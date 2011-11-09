@@ -118,7 +118,7 @@ static struct clk init_clocks_off[] = {
 		.parent		= &clk_p,
 		.enable		= s3c2410_clkcon_enable,
 		.ctrlbit	= S3C2410_CLKCON_SPI,
-	}
+	},
 };
 
 static struct clk init_clocks[] = {

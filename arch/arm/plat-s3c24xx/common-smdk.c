@@ -148,7 +148,7 @@ static struct mtd_partition smdk_default_nand_part[] = {
 		.name	= "S3C2410 flash partition 7",
 		.offset = SZ_1M * 48,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct s3c2410_nand_set smdk_nand_sets[] = {
