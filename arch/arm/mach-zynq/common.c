@@ -36,7 +36,7 @@
 
 static struct of_device_id zynq_of_bus_ids[] __initdata = {
 	{ .compatible = "simple-bus", },
-	{}
+	{},
 };
 
 /**
@@ -106,7 +106,7 @@ static void __init xilinx_map_io(void)
 
 static const char *xilinx_dt_match[] = {
 	"xlnx,zynq-ep107",
-	NULL
+	NULL,
 };
 
 MACHINE_START(XILINX_EP107, "Xilinx Zynq Platform")
