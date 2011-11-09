@@ -85,7 +85,7 @@ static struct resource mbox0_resources[] = {
 		.start = MBOX_PAIR0_VIRT_IRQ,
 		.end = MBOX_PAIR0_VIRT_IRQ,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource mbox1_resources[] = {
@@ -106,7 +106,7 @@ static struct resource mbox1_resources[] = {
 		.start = MBOX_PAIR1_VIRT_IRQ,
 		.end = MBOX_PAIR1_VIRT_IRQ,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource mbox2_resources[] = {
@@ -127,7 +127,7 @@ static struct resource mbox2_resources[] = {
 		.start = MBOX_PAIR2_VIRT_IRQ,
 		.end = MBOX_PAIR2_VIRT_IRQ,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device mbox0_device = {
@@ -201,7 +201,7 @@ static int usb_db5500_rx_dma_cfg[] = {
 	DB5500_DMA_DEV21_USB_OTG_IEP_5_13,
 	DB5500_DMA_DEV22_USB_OTG_IEP_6_14,
 	DB5500_DMA_DEV23_USB_OTG_IEP_7_15,
-	DB5500_DMA_DEV38_USB_OTG_IEP_8
+	DB5500_DMA_DEV38_USB_OTG_IEP_8,
 };
 
 static int usb_db5500_tx_dma_cfg[] = {
@@ -212,7 +212,7 @@ static int usb_db5500_tx_dma_cfg[] = {
 	DB5500_DMA_DEV21_USB_OTG_OEP_5_13,
 	DB5500_DMA_DEV22_USB_OTG_OEP_6_14,
 	DB5500_DMA_DEV23_USB_OTG_OEP_7_15,
-	DB5500_DMA_DEV38_USB_OTG_OEP_8
+	DB5500_DMA_DEV38_USB_OTG_OEP_8,
 };
 
 void __init u5500_init_devices(void)

@@ -150,7 +150,7 @@ static struct platform_device snowball_key_dev = {
 	.id             = -1,
 	.dev            = {
 		.platform_data  = &snowball_key_data,
-	}
+	},
 };
 
 static struct smsc911x_platform_config snowball_sbnet_cfg = {
@@ -196,8 +196,8 @@ static struct resource ab8500_resources[] = {
 	[0] = {
 		.start	= IRQ_DB8500_AB8500,
 		.end	= IRQ_DB8500_AB8500,
-		.flags	= IORESOURCE_IRQ
-	}
+		.flags	= IORESOURCE_IRQ,
+	},
 };
 
 struct platform_device ab8500_device = {
@@ -367,7 +367,7 @@ static struct gpio_keys_button mop500_gpio_keys[] = {
 		.code			= SW_FRONT_PROXIMITY,
 		.active_low		= 0,
 		.can_disable		= 1,
-	}
+	},
 };
 
 static struct regulator *prox_regulator;

@@ -63,7 +63,7 @@ static void *ux500_dma_rx_param_array[UX500_MUSB_DMA_NUM_RX_CHANNELS] = {
 	&musb_dma_rx_ch[4],
 	&musb_dma_rx_ch[5],
 	&musb_dma_rx_ch[6],
-	&musb_dma_rx_ch[7]
+	&musb_dma_rx_ch[7],
 };
 
 static void *ux500_dma_tx_param_array[UX500_MUSB_DMA_NUM_TX_CHANNELS] = {
@@ -74,7 +74,7 @@ static void *ux500_dma_tx_param_array[UX500_MUSB_DMA_NUM_TX_CHANNELS] = {
 	&musb_dma_tx_ch[4],
 	&musb_dma_tx_ch[5],
 	&musb_dma_tx_ch[6],
-	&musb_dma_tx_ch[7]
+	&musb_dma_tx_ch[7],
 };
 
 static struct ux500_musb_board_data musb_board_data = {

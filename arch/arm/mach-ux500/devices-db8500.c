@@ -37,7 +37,7 @@ static struct resource dma40_resources[] = {
 		.start = IRQ_DB8500_DMA,
 		.end   = IRQ_DB8500_DMA,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 /* Default configuration for physcial memcpy */
@@ -163,7 +163,7 @@ struct platform_device u8500_dma40_device = {
 	.name = "dma40",
 	.id = 0,
 	.num_resources = ARRAY_SIZE(dma40_resources),
-	.resource = dma40_resources
+	.resource = dma40_resources,
 };
 
 void dma40_u8500ed_fixup(void)
