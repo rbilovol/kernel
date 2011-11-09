@@ -93,7 +93,7 @@ static struct mtd_partition amlm5900_mtd_partitions[] = {
 		.name		= "Settings",
 		.size		= MTDPART_SIZ_FULL,
 		.offset		= MTDPART_OFS_APPEND,
-	}
+	},
 };
 
 static struct physmap_flash_data amlm5900_flash_data = {
@@ -140,7 +140,7 @@ static struct s3c2410_uartcfg amlm5900_uartcfgs[] = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 

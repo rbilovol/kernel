@@ -93,10 +93,10 @@ static void usb_simtec_enableoc(struct s3c2410_hcd_info *info, int on)
 
 static struct s3c2410_hcd_info usb_simtec_info __initdata = {
 	.port[0]	= {
-		.flags	= S3C_HCDFLG_USED
+		.flags	= S3C_HCDFLG_USED,
 	},
 	.port[1]	= {
-		.flags	= S3C_HCDFLG_USED
+		.flags	= S3C_HCDFLG_USED,
 	},
 
 	.power_control	= usb_simtec_powercontrol,

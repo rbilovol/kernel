@@ -63,7 +63,7 @@
 #include <plat/pm.h>
 
 static struct map_desc qt2410_iodesc[] __initdata = {
-	{ 0xe0000000, __phys_to_pfn(S3C2410_CS3+0x01000000), SZ_1M, MT_DEVICE }
+	{ 0xe0000000, __phys_to_pfn(S3C2410_CS3+0x01000000), SZ_1M, MT_DEVICE },
 };
 
 #define UCON S3C2410_UCON_DEFAULT
@@ -91,7 +91,7 @@ static struct s3c2410_uartcfg smdk2410_uartcfgs[] = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 /* LCD driver info */

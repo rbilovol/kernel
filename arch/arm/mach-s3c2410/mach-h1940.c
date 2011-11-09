@@ -81,7 +81,7 @@ static struct map_desc h1940_iodesc[] __initdata = {
 		.virtual	= (unsigned long)H1940_LATCH,
 		.pfn		= __phys_to_pfn(H1940_PA_LATCH),
 		.length		= SZ_16K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
@@ -112,7 +112,7 @@ static struct s3c2410_uartcfg h1940_uartcfgs[] __initdata = {
 		.ucon	     = 0x3c5,
 		.ulcon	     = 0x43,
 		.ufcon	     = 0x51,
-	}
+	},
 };
 
 /* Board control latch control */
@@ -350,7 +350,7 @@ static struct s3c_adc_bat_pdata h1940_bat_cfg = {
 	/* TODO Check backup volt multiplier */
 	.backup_volt_mult = 4056,
 	.backup_volt_min = 0,
-	.backup_volt_max = 4149288
+	.backup_volt_max = 4149288,
 };
 
 static struct platform_device h1940_battery = {
@@ -625,7 +625,7 @@ static struct platform_device h1940_dev_buttons = {
 	.id		= -1,
 	.dev		= {
 		.platform_data  = &h1940_buttons_data,
-	}
+	},
 };
 
 static struct platform_device *h1940_devices[] __initdata = {

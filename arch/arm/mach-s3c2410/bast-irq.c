@@ -106,7 +106,7 @@ bast_pc104_unmask(struct irq_data *data)
 static struct irq_chip  bast_pc104_chip = {
 	.irq_mask	= bast_pc104_mask,
 	.irq_unmask	= bast_pc104_unmask,
-	.irq_ack	= bast_pc104_maskack
+	.irq_ack	= bast_pc104_maskack,
 };
 
 static void

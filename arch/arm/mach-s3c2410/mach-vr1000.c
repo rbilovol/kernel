@@ -122,8 +122,8 @@ static struct s3c24xx_uart_clksrc vr1000_serial_clocks[] = {
 		.name		= "pclk",
 		.divisor	= 1,
 		.min_baud	= 0,
-		.max_baud	= 0.
-	}
+		.max_baud	= 0.,
+	},
 };
 
 static struct s3c2410_uartcfg vr1000_uartcfgs[] __initdata = {
@@ -155,7 +155,7 @@ static struct s3c2410_uartcfg vr1000_uartcfgs[] __initdata = {
 		.clocks	     = vr1000_serial_clocks,
 		.clocks_size = ARRAY_SIZE(vr1000_serial_clocks),
 
-	}
+	},
 };
 
 /* definitions for the vr1000 extra 16550 serial ports */
@@ -214,12 +214,12 @@ static struct resource vr1000_dm9k0_resource[] = {
 	[0] = {
 		.start = S3C2410_CS5 + VR1000_PA_DM9000,
 		.end   = S3C2410_CS5 + VR1000_PA_DM9000 + 3,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = S3C2410_CS5 + VR1000_PA_DM9000 + 0x40,
 		.end   = S3C2410_CS5 + VR1000_PA_DM9000 + 0x7f,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[2] = {
 		.start = IRQ_VR1000_DM9000A,
@@ -233,18 +233,18 @@ static struct resource vr1000_dm9k1_resource[] = {
 	[0] = {
 		.start = S3C2410_CS5 + VR1000_PA_DM9000 + 0x80,
 		.end   = S3C2410_CS5 + VR1000_PA_DM9000 + 0x83,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[1] = {
 		.start = S3C2410_CS5 + VR1000_PA_DM9000 + 0xC0,
 		.end   = S3C2410_CS5 + VR1000_PA_DM9000 + 0xFF,
-		.flags = IORESOURCE_MEM
+		.flags = IORESOURCE_MEM,
 	},
 	[2] = {
 		.start = IRQ_VR1000_DM9000N,
 		.end   = IRQ_VR1000_DM9000N,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHLEVEL,
-	}
+	},
 };
 
 /* for the moment we limit ourselves to 16bit IO until some
@@ -262,7 +262,7 @@ static struct platform_device vr1000_dm9k0 = {
 	.resource	= vr1000_dm9k0_resource,
 	.dev		= {
 		.platform_data = &vr1000_dm9k_platdata,
-	}
+	},
 };
 
 static struct platform_device vr1000_dm9k1 = {
@@ -272,7 +272,7 @@ static struct platform_device vr1000_dm9k1 = {
 	.resource	= vr1000_dm9k1_resource,
 	.dev		= {
 		.platform_data = &vr1000_dm9k_platdata,
-	}
+	},
 };
 
 /* LEDS */

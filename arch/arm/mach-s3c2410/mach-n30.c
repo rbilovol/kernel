@@ -151,7 +151,7 @@ static struct platform_device n30_button_device = {
 	.id		= -1,
 	.dev		= {
 		.platform_data	= &n30_button_data,
-	}
+	},
 };
 
 static struct gpio_keys_button n35_buttons[] = {
@@ -242,7 +242,7 @@ static struct platform_device n35_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &n35_button_data,
-	}
+	},
 };
 
 /* This is the bluetooth LED on the device. */

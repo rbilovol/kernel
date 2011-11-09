@@ -62,7 +62,7 @@ static struct resource simtec_nor_resource[] = {
 		.start = S3C2410_CS1 + 0x4000000,
 		.end   = S3C2410_CS1 + 0x4000000 + SZ_8M - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device simtec_device_nor = {

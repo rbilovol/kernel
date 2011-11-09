@@ -92,7 +92,7 @@ static struct platform_device bast_device_ide1 = {
 	.dev		= {
 		.platform_data = &bast_ide_platdata,
 		.coherent_dma_mask = ~0,
-	}
+	},
 };
 
 static struct platform_device *bast_ide_devices[] __initdata = {

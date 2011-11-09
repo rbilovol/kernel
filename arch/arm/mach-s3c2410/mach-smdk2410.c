@@ -83,7 +83,7 @@ static struct s3c2410_uartcfg smdk2410_uartcfgs[] __initdata = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 static struct platform_device *smdk2410_devices[] __initdata = {

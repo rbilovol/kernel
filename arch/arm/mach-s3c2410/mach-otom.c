@@ -69,7 +69,7 @@ static struct s3c2410_uartcfg otom11_uartcfgs[] __initdata = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 /* NOR Flash on NexVision OTOM board */
@@ -79,7 +79,7 @@ static struct resource otom_nor_resource[] = {
 		.start = S3C2410_CS0,
 		.end   = S3C2410_CS0 + (4*1024*1024) - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device otom_device_nor = {

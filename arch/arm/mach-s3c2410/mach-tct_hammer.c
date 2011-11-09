@@ -70,7 +70,7 @@ static struct mtd_partition tct_hammer_mtd_partitions[] = {
 		.name		= "JFFS2",
 		.size		= MTDPART_SIZ_FULL,
 		.offset		= MTDPART_OFS_APPEND,
-	}
+	},
 };
 
 static struct physmap_flash_data tct_hammer_flash_data = {
@@ -117,7 +117,7 @@ static struct s3c2410_uartcfg tct_hammer_uartcfgs[] = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 

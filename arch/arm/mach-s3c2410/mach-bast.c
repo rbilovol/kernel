@@ -176,7 +176,7 @@ static struct s3c24xx_uart_clksrc bast_serial_clocks[] = {
 		.divisor	= 1,
 		.min_baud	= 0,
 		.max_baud	= 0,
-	}
+	},
 };
 
 
@@ -208,7 +208,7 @@ static struct s3c2410_uartcfg bast_uartcfgs[] __initdata = {
 		.ufcon	     = UFCON,
 		.clocks	     = bast_serial_clocks,
 		.clocks_size = ARRAY_SIZE(bast_serial_clocks),
-	}
+	},
 };
 
 /* NAND Flash on BAST board */
@@ -256,7 +256,7 @@ static struct mtd_partition __initdata bast_default_nand_part[] = {
 		.name	= "user",
 		.offset	= SZ_4M,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 /* the bast has 4 selectable slots for nand-flash, the three
@@ -298,7 +298,7 @@ static struct s3c2410_nand_set __initdata bast_nand_sets[] = {
 		.options        = NAND_SCAN_SILENT_NODEV,
 		.nr_partitions	= ARRAY_SIZE(bast_default_nand_part),
 		.partitions	= bast_default_nand_part,
-	}
+	},
 };
 
 static void bast_nand_select(struct s3c2410_nand_set *set, int slot)
@@ -365,7 +365,7 @@ static struct platform_device bast_device_dm9k = {
 	.resource	= bast_dm9k_resource,
 	.dev		= {
 		.platform_data = &bast_dm9k_platdata,
-	}
+	},
 };
 
 /* serial devices */
@@ -391,7 +391,7 @@ static struct plat_serial8250_port bast_sio_data[] = {
 		.regshift	= 0,
 		.uartclk	= SERIAL_CLK,
 	},
-	{ }
+	{ },
 };
 
 static struct platform_device bast_sio = {
@@ -435,8 +435,8 @@ static struct resource bast_asix_resource[] = {
 	[2] = {
 		.start = IRQ_ASIX,
 		.end   = IRQ_ASIX,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct platform_device bast_device_asix = {
@@ -445,8 +445,8 @@ static struct platform_device bast_device_asix = {
 	.num_resources	= ARRAY_SIZE(bast_asix_resource),
 	.resource	= bast_asix_resource,
 	.dev		= {
-		.platform_data = &bast_asix_platdata
-	}
+		.platform_data = &bast_asix_platdata,
+	},
 };
 
 /* Asix AX88796 10/100 ethernet controller parallel port */
@@ -456,7 +456,7 @@ static struct resource bast_asixpp_resource[] = {
 		.start = S3C2410_CS5 + BAST_PA_ASIXNET + (0x18 * 0x20),
 		.end   = S3C2410_CS5 + BAST_PA_ASIXNET + (0x1b * 0x20) - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device bast_device_axpp = {
