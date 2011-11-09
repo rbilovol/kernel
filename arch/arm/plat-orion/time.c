@@ -191,7 +191,7 @@ static irqreturn_t orion_timer_interrupt(int irq, void *dev_id)
 static struct irqaction orion_timer_irq = {
 	.name		= "orion_tick",
 	.flags		= IRQF_DISABLED | IRQF_TIMER,
-	.handler	= orion_timer_interrupt
+	.handler	= orion_timer_interrupt,
 };
 
 void __init
