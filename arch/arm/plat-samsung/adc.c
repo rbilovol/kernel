@@ -519,7 +519,7 @@ static struct platform_device_id s3c_adc_driver_ids[] = {
 		.name		= "samsung-adc-v3",
 		.driver_data	= TYPE_ADCV3,
 	},
-	{ }
+	{ },
 };
 MODULE_DEVICE_TABLE(platform, s3c_adc_driver_ids);
 

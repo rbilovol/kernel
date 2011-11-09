@@ -82,7 +82,7 @@ struct platform_device s3c_device_ac97 = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 #endif /* CONFIG_CPU_S3C2440 */
 
@@ -134,7 +134,7 @@ struct platform_device s3c_device_camif = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 #endif /* CONFIG_CPU_S3C2440 */
 
@@ -146,7 +146,7 @@ struct platform_device samsung_asoc_dma = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 struct platform_device samsung_asoc_idma = {
@@ -155,7 +155,7 @@ struct platform_device samsung_asoc_idma = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 /* FB */
@@ -736,7 +736,7 @@ struct platform_device s3c_device_iis = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 #endif /* CONFIG_PLAT_S3C24XX */
 
@@ -747,7 +747,7 @@ struct platform_device s3c2412_device_iis = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 #endif /* CONFIG_CPU_S3C2440 */
 
@@ -815,7 +815,7 @@ struct platform_device s3c_device_lcd = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 void __init s3c24xx_fb_set_platdata(struct s3c2410fb_mach_info *pd)
@@ -1071,7 +1071,7 @@ struct platform_device s5p_device_onenand = {
 
 #ifdef CONFIG_PLAT_S5P
 static struct resource s5p_pmu_resource[] = {
-	DEFINE_RES_IRQ(IRQ_PMU)
+	DEFINE_RES_IRQ(IRQ_PMU),
 };
 
 struct platform_device s5p_device_pmu = {
@@ -1194,7 +1194,7 @@ struct platform_device s3c_device_spi0 = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 static struct resource s3c_spi1_resource[] = {
@@ -1210,7 +1210,7 @@ struct platform_device s3c_device_spi1 = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 #endif /* CONFIG_PLAT_S3C24XX */
 
@@ -1308,7 +1308,7 @@ struct platform_device s5p_device_mixer = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 #endif /* CONFIG_S5P_DEV_TV */
 
@@ -1328,7 +1328,7 @@ struct platform_device s3c_device_ohci = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 /*
@@ -1384,7 +1384,7 @@ struct platform_device s5p_device_ehci = {
 	.dev		= {
 		.dma_mask		= &samsung_device_dma_mask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 void __init s5p_ehci_set_platdata(struct s5p_ehci_platdata *pd)

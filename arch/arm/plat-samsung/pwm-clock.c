@@ -279,7 +279,7 @@ static struct pwm_tdiv_clk clk_timer_tdiv[] = {
 			.devname	= "s3c24xx-pwm.1",
 			.ops	= &clk_tdiv_ops,
 			.parent	= &clk_timer_scaler[0],
-		}
+		},
 	},
 	[2]	= {
 		.clk	= {

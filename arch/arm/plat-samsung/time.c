@@ -283,5 +283,5 @@ static void __init s3c2410_timer_init(void)
 struct sys_timer s3c24xx_timer = {
 	.init		= s3c2410_timer_init,
 	.offset		= s3c2410_gettimeoffset,
-	.resume		= s3c2410_timer_setup
+	.resume		= s3c2410_timer_setup,
 };
