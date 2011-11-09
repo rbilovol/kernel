@@ -89,7 +89,7 @@ static struct map_desc s5pc100_iodesc[] __initdata = {
 		.pfn		= __phys_to_pfn(S5PC100_PA_OTHERS),
 		.length		= SZ_4K,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 static void s5pc100_idle(void)

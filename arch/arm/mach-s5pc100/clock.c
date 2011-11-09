@@ -275,7 +275,7 @@ static u32 epll_div[][4] = {
 	{ 84000000,	168, 3, 3 },
 	{ 96000000,	96,  3, 2 },
 	{ 144000000,	144, 3, 2 },
-	{ 192000000,	96,  3, 1 }
+	{ 192000000,	96,  3, 1 },
 };
 
 static int s5pc100_epll_set_rate(struct clk *clk, unsigned long rate)
