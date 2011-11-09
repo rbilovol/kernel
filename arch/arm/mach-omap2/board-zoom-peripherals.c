@@ -90,7 +90,7 @@ static uint32_t board_keymap[] = {
 	KEY(7, 2, KEY_PROG3),	/*MACRO 3 <User defined> */
 	KEY(7, 3, KEY_PROG4),	/*MACRO 4 <User defined> */
 	KEY(7, 6, KEY_SELECT),
-	KEY(7, 7, KEY_DOWN)
+	KEY(7, 7, KEY_DOWN),
 };
 
 static struct matrix_keymap_data board_map_data = {
@@ -223,7 +223,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.gpio_cd	= -EINVAL,
 		.nonremovable	= true,
 	},
-	{}      /* Terminator */
+	{},      /* Terminator */
 };
 
 static int zoom_twl_gpio_setup(struct device *dev,

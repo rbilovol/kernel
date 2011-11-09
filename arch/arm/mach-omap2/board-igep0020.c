@@ -127,7 +127,7 @@ static struct mtd_partition igep_onenand_partitions[] = {
 	{
 		.name           = "X-Loader",
 		.offset         = 0,
-		.size           = 2 * (64*(2*2048))
+		.size           = 2 * (64*(2*2048)),
 	},
 	{
 		.name           = "U-Boot",
@@ -304,7 +304,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.gpio_wp	= -EINVAL,
 	},
 #endif
-	{}      /* Terminator */
+	{},      /* Terminator */
 };
 
 #if defined(CONFIG_LEDS_GPIO) || defined(CONFIG_LEDS_GPIO_MODULE)
@@ -313,7 +313,7 @@ static struct omap2_hsmmc_info mmc[] = {
 static struct gpio_led igep_gpio_leds[] = {
 	[0] = {
 		.name			= "gpio-led:red:d0",
-		.default_trigger	= "default-off"
+		.default_trigger	= "default-off",
 	},
 	[1] = {
 		.name			= "gpio-led:green:d0",
@@ -470,7 +470,7 @@ static struct omap_dss_device igep2_dvi_device = {
 };
 
 static struct omap_dss_device *igep2_dss_devices[] = {
-	&igep2_dvi_device
+	&igep2_dvi_device,
 };
 
 static struct omap_dss_board_info igep2_dss_data = {
@@ -507,7 +507,7 @@ static int igep2_keymap[] = {
 	KEY(3, 0, KEY_M),
 	KEY(3, 1, KEY_N),
 	KEY(3, 2, KEY_O),
-	KEY(3, 3, KEY_P)
+	KEY(3, 3, KEY_P),
 };
 
 static struct matrix_keymap_data igep2_keymap_data = {

@@ -252,7 +252,7 @@ static struct gpio_keys_button sdp4430_gpio_keys[] = {
 		.code			= SW_FRONT_PROXIMITY,
 		.gpio			= OMAP4_SFH7741_SENSOR_OUTPUT_GPIO,
 		.active_low		= 0,
-	}
+	},
 };
 
 static struct gpio_led_platform_data sdp4430_led_data = {
@@ -409,7 +409,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.ocr_mask	= MMC_VDD_165_195,
 		.nonremovable	= true,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct regulator_consumer_supply sdp4430_vaux_supply[] = {

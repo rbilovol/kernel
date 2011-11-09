@@ -55,7 +55,7 @@ static struct usbhs_omap_board_data usbhs_bdata __initdata = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = GPIO_USB_NRESET,
 	.reset_gpio_port[1]  = -EINVAL,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 static void __init am3517_crane_init(void)

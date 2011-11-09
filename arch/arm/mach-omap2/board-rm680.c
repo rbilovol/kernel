@@ -98,7 +98,7 @@ static struct omap_onenand_platform_data board_onenand_data[] = {
 	{
 		.gpio_irq	= 65,
 		.flags		= ONENAND_SYNC_READWRITE,
-	}
+	},
 };
 #endif
 
@@ -111,7 +111,7 @@ static struct omap2_hsmmc_info mmc[] __initdata = {
 		.gpio_cd	= -EINVAL,
 		.gpio_wp	= -EINVAL,
 	},
-	{ /* Terminator */ }
+	{ /* Terminator */ },
 };
 
 static void __init rm680_peripherals_init(void)

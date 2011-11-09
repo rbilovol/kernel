@@ -69,15 +69,15 @@ static struct mtd_partition sdp2430_partitions[] = {
 		.name		= "kernel",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_2M,
-		.mask_flags	= 0
+		.mask_flags	= 0,
 	},
 	/* file system */
 	{
 		.name		= "filesystem",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data sdp2430_flash_data = {
@@ -251,7 +251,7 @@ static struct omap2_hsmmc_info mmc[] __initdata = {
 		.gpio_wp	= -EINVAL,
 		.ext_clock	= 1,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct omap_usb_config sdp2430_usb_config __initdata = {

@@ -142,7 +142,7 @@ static struct platform_device cm_t3517_rtc_device = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &cm_t3517_v3020_pdata,
-	}
+	},
 };
 
 static void __init cm_t3517_init_rtc(void)
@@ -209,7 +209,7 @@ static struct mtd_partition cm_t3517_nand_partitions[] = {
 		.name           = "xloader",
 		.offset         = 0,			/* Offset = 0x00000 */
 		.size           = 4 * NAND_BLOCK_SIZE,
-		.mask_flags     = MTD_WRITEABLE
+		.mask_flags     = MTD_WRITEABLE,
 	},
 	{
 		.name           = "uboot",

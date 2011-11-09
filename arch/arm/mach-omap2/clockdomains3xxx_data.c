@@ -338,7 +338,7 @@ static struct clkdm_autodep clkdm_autodeps[] = {
 	},
 	{
 		.clkdm = { .name = NULL },
-	}
+	},
 };
 
 /*
@@ -363,7 +363,7 @@ static struct clockdomain *clockdomains_omap3430_common[] __initdata = {
 	&dpll2_clkdm,
 	&dpll3_clkdm,
 	&dpll4_clkdm,
-	NULL
+	NULL,
 };
 
 static struct clockdomain *clockdomains_omap3430es1[] __initdata = {

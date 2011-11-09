@@ -57,7 +57,7 @@ static const char pwrdm_state_names[][PWRDM_MAX_PWRSTS] = {
 	"OFF",
 	"RET",
 	"INA",
-	"ON"
+	"ON",
 };
 
 void pm_dbg_update_time(struct powerdomain *pwrdm, int prev)

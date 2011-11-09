@@ -102,7 +102,7 @@ static struct lp5523_led_config rx51_lp5523_led_config[] = {
 	}, {
 		.chan_nr	= 8,
 		.led_current	= 50,
-	}
+	},
 };
 
 static int rx51_lp5523_setup(void)
@@ -252,7 +252,7 @@ static struct gpio_keys_button rx51_gpio_keys[] = {
 		.gpio			= RX51_GPIO_PROXIMITY,
 		.active_low		= 0,
 		.debounce_interval	= RX51_GPIO_DEBOUNCE_TIMEOUT,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data rx51_gpio_keys_data = {
@@ -411,7 +411,7 @@ static struct omap2_hsmmc_info mmc[] __initdata = {
 		.power_saving	= true,
 		.remux		= rx51_mmc2_remux,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct regulator_consumer_supply rx51_vmmc1_supply[] = {
@@ -788,78 +788,78 @@ static struct twl4030_script *twl4030_scripts[] __initdata = {
 static struct twl4030_resconfig twl4030_rconfig[] __initdata = {
 	{ .resource = RES_VDD1, .devgroup = -1,
 	  .type = 1, .type2 = -1, .remap_off = RES_STATE_OFF,
-	  .remap_sleep = RES_STATE_OFF
+	  .remap_sleep = RES_STATE_OFF,
 	},
 	{ .resource = RES_VDD2, .devgroup = -1,
 	  .type = 1, .type2 = -1, .remap_off = RES_STATE_OFF,
-	  .remap_sleep = RES_STATE_OFF
+	  .remap_sleep = RES_STATE_OFF,
 	},
 	{ .resource = RES_VPLL1, .devgroup = -1,
 	  .type = 1, .type2 = -1, .remap_off = RES_STATE_OFF,
-	  .remap_sleep = RES_STATE_OFF
+	  .remap_sleep = RES_STATE_OFF,
 	},
 	{ .resource = RES_VPLL2, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VAUX1, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VAUX2, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VAUX3, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VAUX4, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VMMC1, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VMMC2, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VDAC, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VSIM, .devgroup = -1,
-	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = 3, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VINTANA1, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = -1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VINTANA2, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VINTDIG, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = -1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = -1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_VIO, .devgroup = DEV_GRP_P3,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_CLKEN, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = 1, .type2 = -1 , .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1 , .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_REGEN, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_NRES_PWRON, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_SYSEN, .devgroup = DEV_GRP_P1 | DEV_GRP_P3,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_HFCLKOUT, .devgroup = DEV_GRP_P3,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_32KCLKOUT, .devgroup = -1,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_RESET, .devgroup = -1,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ .resource = RES_MAIN_REF, .devgroup = -1,
-	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1
+	  .type = 1, .type2 = -1, .remap_off = -1, .remap_sleep = -1,
 	},
 	{ 0, 0},
 };
@@ -942,7 +942,7 @@ static struct i2c_board_info __initdata rx51_peripherals_i2c_board_info_2[] = {
 	{
 		I2C_BOARD_INFO("tpa6130a2", 0x60),
 		.platform_data = &rx51_tpa6130a2_data,
-	}
+	},
 };
 
 static int __init rx51_i2c_init(void)
@@ -1014,7 +1014,7 @@ static struct omap_onenand_platform_data board_onenand_data[] = {
 		.parts		= onenand_partitions,
 		.nr_parts	= ARRAY_SIZE(onenand_partitions),
 		.flags		= ONENAND_SYNC_READWRITE,
-	}
+	},
 };
 #endif
 

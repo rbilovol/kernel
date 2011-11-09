@@ -101,7 +101,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.caps		= MMC_CAP_4_BIT_DATA | MMC_CAP_8_BIT_DATA,
 		.gpio_wp	= 29,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct regulator_consumer_supply touchbook_vmmc1_supply[] = {
@@ -325,7 +325,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = -EINVAL,
 	.reset_gpio_port[1]  = 147,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 static void omap3_touchbook_poweroff(void)

@@ -90,7 +90,7 @@ static uint32_t board_keymap[] = {
 	KEY(5, 2, KEY_L),
 	KEY(5, 3, KEY_S),
 	KEY(5, 4, KEY_H),
-	0
+	0,
 };
 
 static struct matrix_keymap_data board_map_data = {
@@ -238,7 +238,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.caps		= MMC_CAP_4_BIT_DATA | MMC_CAP_8_BIT_DATA,
 		.gpio_wp	= 7,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static int sdp3430_twl_gpio_setup(struct device *dev,
@@ -468,7 +468,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = 57,
 	.reset_gpio_port[1]  = 61,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 #ifdef CONFIG_OMAP_MUX
@@ -609,15 +609,15 @@ static struct mtd_partition sdp_nor_partitions[] = {
 		.name		= "Kernel-NOR",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_2M,
-		.mask_flags	= 0
+		.mask_flags	= 0,
 	},
 	/* file system */
 	{
 		.name		= "Filesystem-NOR",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct mtd_partition sdp_onenand_partitions[] = {
@@ -625,13 +625,13 @@ static struct mtd_partition sdp_onenand_partitions[] = {
 		.name		= "X-Loader-OneNAND",
 		.offset		= 0,
 		.size		= 4 * (64 * 2048),
-		.mask_flags	= MTD_WRITEABLE  /* force read-only */
+		.mask_flags	= MTD_WRITEABLE,  /* force read-only */
 	},
 	{
 		.name		= "U-Boot-OneNAND",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= 2 * (64 * 2048),
-		.mask_flags	= MTD_WRITEABLE  /* force read-only */
+		.mask_flags	= MTD_WRITEABLE,  /* force read-only */
 	},
 	{
 		.name		= "U-Boot Environment-OneNAND",

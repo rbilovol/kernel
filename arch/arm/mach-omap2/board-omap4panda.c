@@ -102,7 +102,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = false,
 	.reset_gpio_port[0]  = -EINVAL,
 	.reset_gpio_port[1]  = -EINVAL,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 static struct gpio panda_ehci_gpios[] __initdata = {
@@ -164,7 +164,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.ocr_mask	= MMC_VDD_165_195,
 		.nonremovable	= true,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct regulator_consumer_supply omap4_panda_vmmc5_supply[] = {

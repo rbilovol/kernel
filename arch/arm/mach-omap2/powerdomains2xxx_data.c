@@ -105,12 +105,12 @@ static struct powerdomain *powerdomains_omap24xx[] __initdata = {
 	&dsp_pwrdm,
 	&mpu_24xx_pwrdm,
 	&core_24xx_pwrdm,
-	NULL
+	NULL,
 };
 
 static struct powerdomain *powerdomains_omap2430[] __initdata = {
 	&mdm_pwrdm,
-	NULL
+	NULL,
 };
 
 void __init omap242x_powerdomains_init(void)

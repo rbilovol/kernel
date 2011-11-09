@@ -50,8 +50,8 @@ static struct plat_serial8250_port serial_platform_data[] = {
 		.regshift	= 1,
 		.uartclk	= QUART_CLK,
 	}, {
-		.flags		= 0
-	}
+		.flags		= 0,
+	},
 };
 
 static struct platform_device zoom_debugboard_serial_device = {

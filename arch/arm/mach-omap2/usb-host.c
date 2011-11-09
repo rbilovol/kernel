@@ -59,7 +59,7 @@ static struct resource usbhs_resources[] = {
 	{
 		.name	= "ohci-irq",
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device usbhs_device = {

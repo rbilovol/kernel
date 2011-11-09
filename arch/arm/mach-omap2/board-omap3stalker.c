@@ -214,7 +214,7 @@ static struct omap2_hsmmc_info mmc[] = {
 	 .gpio_cd	= -EINVAL,
 	 .gpio_wp	= 23,
 	 },
-	{}			/* Terminator */
+	{},			/* Terminator */
 };
 
 static struct gpio_keys_button gpio_buttons[] = {
@@ -334,7 +334,7 @@ static uint32_t board_keymap[] = {
 	KEY(3, 0, KEY_B),
 	KEY(3, 1, KEY_F),
 	KEY(3, 2, KEY_K),
-	KEY(3, 3, KEY_P)
+	KEY(3, 3, KEY_P),
 };
 
 static struct matrix_keymap_data board_map_data = {

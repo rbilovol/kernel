@@ -107,7 +107,7 @@ static struct omap2_hsmmc_info __initdata board_mmc_info[] = {
 		.gpio_cd	= -EINVAL,
 		.gpio_wp	= -EINVAL,
 	},
-	{}      /* Terminator */
+	{},      /* Terminator */
 };
 
 static void __init board_mmc_init(void)

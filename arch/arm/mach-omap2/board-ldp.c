@@ -76,7 +76,7 @@ static uint32_t board_keymap[] = {
 	PERSISTENT_KEY(4, 5),
 	KEY(4, 4, KEY_VOLUMEUP),
 	KEY(5, 5, KEY_VOLUMEDOWN),
-	0
+	0,
 };
 
 static struct matrix_keymap_data board_map_data = {
@@ -366,7 +366,7 @@ static struct omap2_hsmmc_info mmc[] __initdata = {
 		.gpio_cd	= -EINVAL,
 		.gpio_wp	= -EINVAL,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct platform_device *ldp_devices[] __initdata = {

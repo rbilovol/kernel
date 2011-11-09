@@ -265,13 +265,13 @@ static struct powerdomain *powerdomains_omap3430_common[] __initdata = {
 	&dpll2_pwrdm,
 	&dpll3_pwrdm,
 	&dpll4_pwrdm,
-	NULL
+	NULL,
 };
 
 static struct powerdomain *powerdomains_omap3430es1[] __initdata = {
 	&gfx_omap2_pwrdm,
 	&core_3xxx_pre_es3_1_pwrdm,
-	NULL
+	NULL,
 };
 
 /* also includes 3630ES1.0 */
@@ -280,7 +280,7 @@ static struct powerdomain *powerdomains_omap3430es2_es3_0[] __initdata = {
 	&sgx_pwrdm,
 	&usbhost_pwrdm,
 	&dpll5_pwrdm,
-	NULL
+	NULL,
 };
 
 /* also includes 3630ES1.1+ */
@@ -289,7 +289,7 @@ static struct powerdomain *powerdomains_omap3430es3_1plus[] __initdata = {
 	&sgx_pwrdm,
 	&usbhost_pwrdm,
 	&dpll5_pwrdm,
-	NULL
+	NULL,
 };
 
 void __init omap3xxx_powerdomains_init(void)

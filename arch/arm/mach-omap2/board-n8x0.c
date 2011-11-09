@@ -189,7 +189,7 @@ static struct omap_onenand_platform_data board_onenand_data[] = {
 		.parts		= onenand_partitions,
 		.nr_parts	= ARRAY_SIZE(onenand_partitions),
 		.flags		= ONENAND_SYNC_READ,
-	}
+	},
 };
 #endif
 
@@ -631,7 +631,7 @@ static struct omap_device_pad serial2_pads[] __initdata = {
 		.name	= "uart3_rx_irrx.uart3_rx_irrx",
 		.flags	= OMAP_DEVICE_PAD_REMUX | OMAP_DEVICE_PAD_WAKEUP,
 		.enable	= OMAP_MUX_MODE0,
-		.idle	= OMAP_MUX_MODE3	/* Mux as GPIO for idle */
+		.idle	= OMAP_MUX_MODE3,	/* Mux as GPIO for idle */
 	},
 };
 

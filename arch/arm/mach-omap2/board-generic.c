@@ -55,13 +55,13 @@ static void __init omap3_i2c_init(void)
 static struct of_device_id omap_dt_match_table[] __initdata = {
 	{ .compatible = "simple-bus", },
 	{ .compatible = "ti,omap-infra", },
-	{ }
+	{ },
 };
 
 static struct of_device_id intc_match[] __initdata = {
 	{ .compatible = "ti,omap3-intc", },
 	{ .compatible = "arm,cortex-a9-gic", },
-	{ }
+	{ },
 };
 
 static void __init omap_generic_init(void)

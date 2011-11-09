@@ -347,7 +347,7 @@ static struct powerdomain *powerdomains_omap44xx[] __initdata = {
 	&l4per_44xx_pwrdm,
 	&always_on_core_44xx_pwrdm,
 	&cefuse_44xx_pwrdm,
-	NULL
+	NULL,
 };
 
 void __init omap44xx_powerdomains_init(void)

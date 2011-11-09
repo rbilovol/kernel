@@ -101,7 +101,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.caps		= MMC_CAP_4_BIT_DATA | MMC_CAP_8_BIT_DATA,
 		.gpio_wp	= 29,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static int devkit8000_panel_enable_lcd(struct omap_dss_device *dssdev)
@@ -204,7 +204,7 @@ static uint32_t board_keymap[] = {
 	PERSISTENT_KEY(4, 5),
 	KEY(4, 4, KEY_VOLUMEUP),
 	KEY(5, 5, KEY_VOLUMEDOWN),
-	0
+	0,
 };
 
 static struct matrix_keymap_data board_map_data = {
@@ -468,7 +468,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = -EINVAL,
 	.reset_gpio_port[1]  = -EINVAL,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 #ifdef CONFIG_OMAP_MUX

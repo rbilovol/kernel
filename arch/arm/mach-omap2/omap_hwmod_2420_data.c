@@ -82,7 +82,7 @@ static struct omap_hwmod_ocp_if omap2420_dss__l3 = {
 		.omap2 = {
 			.l3_perm_bit  = OMAP2_L3_CORE_FW_CONNID_DSS,
 			.flags	= OMAP_FIREWALL_L3,
-		}
+		},
 	},
 	.user		= OCP_USER_MPU | OCP_USER_SDMA,
 };
@@ -194,7 +194,7 @@ static struct omap_hwmod_ocp_if *omap2420_l4_core_masters[] = {
 	&omap2_l4_core__uart2,
 	&omap2_l4_core__uart3,
 	&omap2420_l4_core__i2c1,
-	&omap2420_l4_core__i2c2
+	&omap2420_l4_core__i2c2,
 };
 
 /* L4 CORE */
@@ -286,9 +286,9 @@ static struct omap_hwmod_addr_space omap2420_timer1_addrs[] = {
 	{
 		.pa_start	= 0x48028000,
 		.pa_end		= 0x48028000 + SZ_1K - 1,
-		.flags		= ADDR_TYPE_RT
+		.flags		= ADDR_TYPE_RT,
 	},
-	{ }
+	{ },
 };
 
 /* l4_wkup -> timer1 */
@@ -738,9 +738,9 @@ static struct omap_hwmod_addr_space omap2420_wd_timer2_addrs[] = {
 	{
 		.pa_start	= 0x48022000,
 		.pa_end		= 0x4802207f,
-		.flags		= ADDR_TYPE_RT
+		.flags		= ADDR_TYPE_RT,
 	},
-	{ }
+	{ },
 };
 
 static struct omap_hwmod_ocp_if omap2420_l4_wkup__wd_timer2 = {
@@ -864,7 +864,7 @@ static struct omap_hwmod_ocp_if omap2420_l4_core__dss = {
 		.omap2 = {
 			.l4_fw_region  = OMAP2420_L4_CORE_FW_DSS_CORE_REGION,
 			.flags	= OMAP_FIREWALL_L4,
-		}
+		},
 	},
 	.user		= OCP_USER_MPU | OCP_USER_SDMA,
 };
@@ -912,7 +912,7 @@ static struct omap_hwmod_ocp_if omap2420_l4_core__dss_dispc = {
 		.omap2 = {
 			.l4_fw_region  = OMAP2420_L4_CORE_FW_DSS_DISPC_REGION,
 			.flags	= OMAP_FIREWALL_L4,
-		}
+		},
 	},
 	.user		= OCP_USER_MPU | OCP_USER_SDMA,
 };
@@ -951,7 +951,7 @@ static struct omap_hwmod_ocp_if omap2420_l4_core__dss_rfbi = {
 		.omap2 = {
 			.l4_fw_region  = OMAP2420_L4_CORE_FW_DSS_CORE_REGION,
 			.flags	= OMAP_FIREWALL_L4,
-		}
+		},
 	},
 	.user		= OCP_USER_MPU | OCP_USER_SDMA,
 };
@@ -987,7 +987,7 @@ static struct omap_hwmod_ocp_if omap2420_l4_core__dss_venc = {
 		.omap2 = {
 			.l4_fw_region  = OMAP2420_L4_CORE_FW_DSS_VENC_REGION,
 			.flags	= OMAP_FIREWALL_L4,
-		}
+		},
 	},
 	.flags		= OCPIF_SWSUP_IDLE,
 	.user		= OCP_USER_MPU | OCP_USER_SDMA,
@@ -1096,9 +1096,9 @@ static struct omap_hwmod_addr_space omap2420_gpio1_addr_space[] = {
 	{
 		.pa_start	= 0x48018000,
 		.pa_end		= 0x480181ff,
-		.flags		= ADDR_TYPE_RT
+		.flags		= ADDR_TYPE_RT,
 	},
-	{ }
+	{ },
 };
 
 static struct omap_hwmod_ocp_if omap2420_l4_wkup__gpio1 = {
@@ -1114,9 +1114,9 @@ static struct omap_hwmod_addr_space omap2420_gpio2_addr_space[] = {
 	{
 		.pa_start	= 0x4801a000,
 		.pa_end		= 0x4801a1ff,
-		.flags		= ADDR_TYPE_RT
+		.flags		= ADDR_TYPE_RT,
 	},
-	{ }
+	{ },
 };
 
 static struct omap_hwmod_ocp_if omap2420_l4_wkup__gpio2 = {
@@ -1132,9 +1132,9 @@ static struct omap_hwmod_addr_space omap2420_gpio3_addr_space[] = {
 	{
 		.pa_start	= 0x4801c000,
 		.pa_end		= 0x4801c1ff,
-		.flags		= ADDR_TYPE_RT
+		.flags		= ADDR_TYPE_RT,
 	},
-	{ }
+	{ },
 };
 
 static struct omap_hwmod_ocp_if omap2420_l4_wkup__gpio3 = {
@@ -1150,9 +1150,9 @@ static struct omap_hwmod_addr_space omap2420_gpio4_addr_space[] = {
 	{
 		.pa_start	= 0x4801e000,
 		.pa_end		= 0x4801e1ff,
-		.flags		= ADDR_TYPE_RT
+		.flags		= ADDR_TYPE_RT,
 	},
-	{ }
+	{ },
 };
 
 static struct omap_hwmod_ocp_if omap2420_l4_wkup__gpio4 = {
@@ -1321,7 +1321,7 @@ static struct omap_hwmod omap2420_mailbox_hwmod;
 static struct omap_hwmod_irq_info omap2420_mailbox_irqs[] = {
 	{ .name = "dsp", .irq = 26 },
 	{ .name = "iva", .irq = 34 },
-	{ .irq = -1 }
+	{ .irq = -1 },
 };
 
 /* l4_core -> mailbox */
@@ -1426,7 +1426,7 @@ static struct omap_hwmod_class omap2420_mcbsp_hwmod_class = {
 static struct omap_hwmod_irq_info omap2420_mcbsp1_irqs[] = {
 	{ .name = "tx", .irq = 59 },
 	{ .name = "rx", .irq = 60 },
-	{ .irq = -1 }
+	{ .irq = -1 },
 };
 
 /* l4_core -> mcbsp1 */
@@ -1466,7 +1466,7 @@ static struct omap_hwmod omap2420_mcbsp1_hwmod = {
 static struct omap_hwmod_irq_info omap2420_mcbsp2_irqs[] = {
 	{ .name = "tx", .irq = 62 },
 	{ .name = "rx", .irq = 63 },
-	{ .irq = -1 }
+	{ .irq = -1 },
 };
 
 /* l4_core -> mcbsp2 */

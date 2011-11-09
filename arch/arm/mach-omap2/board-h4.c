@@ -90,11 +90,11 @@ static const struct matrix_keymap_data board_keymap_data = {
 };
 
 static unsigned int board_keypad_row_gpios[] = {
-	88, 89, 124, 11, 6, 96
+	88, 89, 124, 11, 6, 96,
 };
 
 static unsigned int board_keypad_col_gpios[] = {
-	90, 91, 100, 36, 12, 97, 98
+	90, 91, 100, 36, 12, 97, 98,
 };
 
 static struct matrix_keypad_platform_data board_keypad_platform_data = {
@@ -169,15 +169,15 @@ static struct mtd_partition h4_partitions[] = {
 	      .name		= "kernel",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= SZ_2M,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	},
 	/* file system */
 	{
 	      .name		= "filesystem",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= MTDPART_SIZ_FULL,
-	      .mask_flags	= 0
-	}
+	      .mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data h4_flash_data = {

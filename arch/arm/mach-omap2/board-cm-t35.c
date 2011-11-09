@@ -132,7 +132,7 @@ static struct mtd_partition cm_t35_nand_partitions[] = {
 		.name           = "xloader",
 		.offset         = 0,			/* Offset = 0x00000 */
 		.size           = 4 * NAND_BLOCK_SIZE,
-		.mask_flags     = MTD_WRITEABLE
+		.mask_flags     = MTD_WRITEABLE,
 	},
 	{
 		.name           = "uboot",
@@ -407,7 +407,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.gpio_wp	= -EINVAL,
 		.ocr_mask	= 0x00100000,	/* 3.3V */
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct usbhs_omap_board_data usbhs_bdata __initdata = {
@@ -418,7 +418,7 @@ static struct usbhs_omap_board_data usbhs_bdata __initdata = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = OMAP_MAX_GPIO_LINES + 6,
 	.reset_gpio_port[1]  = OMAP_MAX_GPIO_LINES + 7,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 static int cm_t35_twl_gpio_setup(struct device *dev, unsigned gpio,

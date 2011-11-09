@@ -62,7 +62,7 @@ static struct mtd_partition omap3pandora_nand_partitions[] = {
 		.name           = "xloader",
 		.offset         = 0,
 		.size           = 4 * NAND_BLOCK_SIZE,
-		.mask_flags     = MTD_WRITEABLE
+		.mask_flags     = MTD_WRITEABLE,
 	}, {
 		.name           = "uboot",
 		.offset         = MTDPART_OFS_APPEND,
@@ -289,7 +289,7 @@ static struct omap2_hsmmc_info omap3pandora_mmc[] = {
 		.gpio_wp	= -EINVAL,
 		.init_card	= pandora_wl1251_init_card,
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static int omap3pandora_twl_gpio_setup(struct device *dev,
@@ -325,7 +325,7 @@ static struct regulator_consumer_supply pandora_vmmc1_supply[] = {
 };
 
 static struct regulator_consumer_supply pandora_vmmc2_supply[] = {
-	REGULATOR_SUPPLY("vmmc", "omap_hsmmc.1")
+	REGULATOR_SUPPLY("vmmc", "omap_hsmmc.1"),
 };
 
 static struct regulator_consumer_supply pandora_vmmc3_supply[] = {
@@ -522,7 +522,7 @@ static struct spi_board_info omap3pandora_spi_board_info[] __initdata = {
 		.chip_select		= 1,
 		.max_speed_hz		= 375000,
 		.platform_data		= &pandora_lcd_device,
-	}
+	},
 };
 
 static void __init pandora_wl1251_init(void)
@@ -568,7 +568,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = 16,
 	.reset_gpio_port[1]  = -EINVAL,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 #ifdef CONFIG_OMAP_MUX

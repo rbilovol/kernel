@@ -116,7 +116,7 @@ static struct resource omap2cam_resources[] = {
 	{
 		.start		= INT_24XX_CAM_IRQ,
 		.flags		= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device omap2cam_device = {
@@ -201,7 +201,7 @@ static struct resource omap3isp_resources[] = {
 	{
 		.start		= INT_34XX_CAM_IRQ,
 		.flags		= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device omap3isp_device = {
@@ -429,7 +429,7 @@ static struct resource omap2_sham_resources[] = {
 	{
 		.start	= INT_24XX_SHA1MD5,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 static int omap2_sham_resources_sz = ARRAY_SIZE(omap2_sham_resources);
 #else
@@ -451,7 +451,7 @@ static struct resource omap3_sham_resources[] = {
 	{
 		.start	= OMAP34XX_DMA_SHA1MD5_RX,
 		.flags	= IORESOURCE_DMA,
-	}
+	},
 };
 static int omap3_sham_resources_sz = ARRAY_SIZE(omap3_sham_resources);
 #else
@@ -498,7 +498,7 @@ static struct resource omap2_aes_resources[] = {
 	{
 		.start	= OMAP24XX_DMA_AES_RX,
 		.flags	= IORESOURCE_DMA,
-	}
+	},
 };
 static int omap2_aes_resources_sz = ARRAY_SIZE(omap2_aes_resources);
 #else
@@ -520,7 +520,7 @@ static struct resource omap3_aes_resources[] = {
 	{
 		.start	= OMAP34XX_DMA_AES2_RX,
 		.flags	= IORESOURCE_DMA,
-	}
+	},
 };
 static int omap3_aes_resources_sz = ARRAY_SIZE(omap3_aes_resources);
 #else

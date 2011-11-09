@@ -328,7 +328,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.nonremovable	= true,
 	},
 #endif
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct gpio_led gpio_leds[] = {
@@ -415,7 +415,7 @@ static uint32_t board_keymap[] = {
 	KEY(3, 0, KEY_B),
 	KEY(3, 1, KEY_F),
 	KEY(3, 2, KEY_K),
-	KEY(3, 3, KEY_P)
+	KEY(3, 3, KEY_P),
 };
 
 static struct matrix_keymap_data board_map_data = {
@@ -530,7 +530,7 @@ static struct usbhs_omap_board_data usbhs_bdata __initdata = {
 	/* PHY reset GPIO will be runtime programmed based on EVM version */
 	.reset_gpio_port[0]  = -EINVAL,
 	.reset_gpio_port[1]  = -EINVAL,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 #ifdef CONFIG_OMAP_MUX

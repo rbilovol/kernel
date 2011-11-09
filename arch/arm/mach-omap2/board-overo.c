@@ -271,7 +271,7 @@ static struct mtd_partition overo_nand_partitions[] = {
 		.name           = "xloader",
 		.offset         = 0,			/* Offset = 0x00000 */
 		.size           = 4 * NAND_BLOCK_SIZE,
-		.mask_flags     = MTD_WRITEABLE
+		.mask_flags     = MTD_WRITEABLE,
 	},
 	{
 		.name           = "uboot",
@@ -310,7 +310,7 @@ static struct omap2_hsmmc_info mmc[] = {
 		.transceiver	= true,
 		.ocr_mask	= 0x00100000,	/* 3.3V */
 	},
-	{}	/* Terminator */
+	{},	/* Terminator */
 };
 
 static struct regulator_consumer_supply overo_vmmc1_supply[] = {
@@ -486,7 +486,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = -EINVAL,
 	.reset_gpio_port[1]  = OVERO_GPIO_USBH_NRESET,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 #ifdef CONFIG_OMAP_MUX

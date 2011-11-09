@@ -21,12 +21,12 @@
 
 struct omap_hwmod_irq_info omap2xxx_timer12_mpu_irqs[] = {
 	{ .irq = 48, },
-	{ .irq = -1 }
+	{ .irq = -1 },
 };
 
 struct omap_hwmod_dma_info omap2xxx_dss_sdma_chs[] = {
 	{ .name = "dispc", .dma_req = 5 },
-	{ .dma_req = -1 }
+	{ .dma_req = -1 },
 };
 /* OMAP2xxx Timer Common */
 static struct omap_hwmod_class_sysconfig omap2xxx_timer_sysc = {
@@ -64,7 +64,7 @@ static struct omap_hwmod_class_sysconfig omap2xxx_wd_timer_sysc = {
 struct omap_hwmod_class omap2xxx_wd_timer_hwmod_class = {
 	.name		= "wd_timer",
 	.sysc		= &omap2xxx_wd_timer_sysc,
-	.pre_shutdown	= &omap2_wd_timer_disable
+	.pre_shutdown	= &omap2_wd_timer_disable,
 };
 
 /*

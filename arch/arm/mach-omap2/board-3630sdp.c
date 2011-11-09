@@ -64,7 +64,7 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
 	.phy_reset  = true,
 	.reset_gpio_port[0]  = 126,
 	.reset_gpio_port[1]  = 61,
-	.reset_gpio_port[2]  = -EINVAL
+	.reset_gpio_port[2]  = -EINVAL,
 };
 
 static struct omap_board_config_kernel sdp_config[] __initdata = {
@@ -106,15 +106,15 @@ static struct mtd_partition sdp_nor_partitions[] = {
 		.name		= "Kernel-NOR",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_2M,
-		.mask_flags	= 0
+		.mask_flags	= 0,
 	},
 	/* file system */
 	{
 		.name		= "Filesystem-NOR",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct mtd_partition sdp_onenand_partitions[] = {
@@ -122,13 +122,13 @@ static struct mtd_partition sdp_onenand_partitions[] = {
 		.name		= "X-Loader-OneNAND",
 		.offset		= 0,
 		.size		= 4 * (64 * 2048),
-		.mask_flags	= MTD_WRITEABLE  /* force read-only */
+		.mask_flags	= MTD_WRITEABLE,  /* force read-only */
 	},
 	{
 		.name		= "U-Boot-OneNAND",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= 2 * (64 * 2048),
-		.mask_flags	= MTD_WRITEABLE  /* force read-only */
+		.mask_flags	= MTD_WRITEABLE,  /* force read-only */
 	},
 	{
 		.name		= "U-Boot Environment-OneNAND",

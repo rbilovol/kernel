@@ -82,7 +82,7 @@ static const struct sdram_timings nokia_166mhz_timings[] = {
 
 		.tXP = 2,
 		.tCKE = 2,
-		.tWTR = 2
+		.tWTR = 2,
 	},
 };
 
