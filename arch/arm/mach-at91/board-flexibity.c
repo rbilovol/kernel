@@ -127,7 +127,7 @@ static struct gpio_led flexibity_leds[] = {
 		.gpio			= AT91_PIN_PB5,
 		.active_low		= 1,
 		.default_trigger	= "default-on",
-	}
+	},
 };
 
 static void __init flexibity_board_init(void)

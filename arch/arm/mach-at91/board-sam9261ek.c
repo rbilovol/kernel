@@ -77,19 +77,19 @@ static struct resource dm9000_resource[] = {
 	[0] = {
 		.start	= AT91_CHIPSELECT_2,
 		.end	= AT91_CHIPSELECT_2 + 3,
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	[1] = {
 		.start	= AT91_CHIPSELECT_2 + 0x44,
 		.end	= AT91_CHIPSELECT_2 + 0xFF,
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	[2] = {
 		.start	= AT91_PIN_PC11,
 		.end	= AT91_PIN_PC11,
 		.flags	= IORESOURCE_IRQ
 			| IORESOURCE_IRQ_LOWEDGE | IORESOURCE_IRQ_HIGHEDGE,
-	}
+	},
 };
 
 static struct dm9000_plat_data dm9000_platdata = {
@@ -103,7 +103,7 @@ static struct platform_device dm9000_device = {
 	.resource	= dm9000_resource,
 	.dev		= {
 		.platform_data	= &dm9000_platdata,
-	}
+	},
 };
 
 /*
@@ -510,7 +510,7 @@ static struct gpio_keys_button ek_buttons[] = {
 		.desc		= "Button 3",
 		.active_low	= 1,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data ek_button_data = {
@@ -524,7 +524,7 @@ static struct platform_device ek_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &ek_button_data,
-	}
+	},
 };
 
 static void __init ek_add_device_buttons(void)
@@ -564,7 +564,7 @@ static struct gpio_led ek_leds[] = {
 		.name			= "ds1",
 		.gpio			= AT91_PIN_PA23,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 static void __init ek_board_init(void)

@@ -91,7 +91,7 @@ static struct i2c_board_info rsi_ews_i2c_devices[] __initdata = {
 	},
 	{
 		I2C_BOARD_INFO("24c01", 0x50),
-	}
+	},
 };
 
 /*
@@ -144,29 +144,29 @@ static struct mtd_partition rsiews_nor_partitions[] = {
 		.name		= "boot",
 		.offset		= 0,
 		.size		= 3 * SZ_128K,
-		.mask_flags	= MTD_WRITEABLE
+		.mask_flags	= MTD_WRITEABLE,
 	},
 	{
 		.name		= "kernel",
 		.offset		= MTDPART_OFS_NXTBLK,
-		.size		= SZ_2M - (3 * SZ_128K)
+		.size		= SZ_2M - (3 * SZ_128K),
 	},
 	{
 		.name		= "root",
 		.offset		= MTDPART_OFS_NXTBLK,
-		.size		= SZ_8M
+		.size		= SZ_8M,
 	},
 	{
 		.name		= "kernelupd",
 		.offset		= MTDPART_OFS_NXTBLK,
 		.size		= 3 * SZ_512K,
-		.mask_flags	= MTD_WRITEABLE
+		.mask_flags	= MTD_WRITEABLE,
 	},
 	{
 		.name		= "rootupd",
 		.offset		= MTDPART_OFS_NXTBLK,
 		.size		= 9 * SZ_512K,
-		.mask_flags	= MTD_WRITEABLE
+		.mask_flags	= MTD_WRITEABLE,
 	},
 };
 
@@ -184,7 +184,7 @@ static struct resource nor_flash_resources[] = {
 		.start	= NOR_BASE,
 		.end	= NOR_BASE + NOR_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device rsiews_nor_flash = {

@@ -127,7 +127,7 @@ static struct i2c_board_info __initdata dk_i2c_devices[] = {
 	},
 	{
 		I2C_BOARD_INFO("24c1024", 0x50),
-	}
+	},
 };
 
 static struct mtd_partition __initdata dk_nand_partition[] = {
@@ -177,7 +177,7 @@ static struct gpio_led dk_leds[] = {
 		.gpio			= AT91_PIN_PB2,
 		.active_low		= 1,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 static void __init dk_board_init(void)

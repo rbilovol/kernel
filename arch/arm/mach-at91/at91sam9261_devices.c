@@ -216,7 +216,7 @@ static struct resource nand_resources[] = {
 		.start	= NAND_BASE,
 		.end	= NAND_BASE + SZ_256M - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device atmel_nand_device = {
@@ -603,7 +603,7 @@ static struct resource rtt_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_RTT,
 		.end	= AT91_BASE_SYS + AT91_RTT + SZ_16 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91sam9261_rtt_device = {

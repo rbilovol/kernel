@@ -243,7 +243,7 @@ static struct resource nor_flash_resources[] = {
 		.start	= NOR_BASE,
 		.end	= NOR_BASE + NOR_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device cap9adk_nor_flash = {

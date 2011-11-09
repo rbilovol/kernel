@@ -188,7 +188,7 @@ static struct platform_device foxg20_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &foxg20_button_data,
-	}
+	},
 };
 
 static void __init foxg20_add_device_buttons(void)

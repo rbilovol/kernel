@@ -50,7 +50,7 @@ static irqreturn_t at91x40_timer_interrupt(int irq, void *dev_id)
 static struct irqaction at91x40_timer_irq = {
 	.name		= "at91_tick",
 	.flags		= IRQF_DISABLED | IRQF_TIMER,
-	.handler	= at91x40_timer_interrupt
+	.handler	= at91x40_timer_interrupt,
 };
 
 void __init at91x40_timer_init(void)

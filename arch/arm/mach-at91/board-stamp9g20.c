@@ -179,7 +179,7 @@ static struct gpio_led portuxg20_leds[] = {
 		.name			= "LED4",
 		.gpio			= AT91_PIN_PC10,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 static struct gpio_led stamp9g20evb_leds[] = {
@@ -198,7 +198,7 @@ static struct gpio_led stamp9g20evb_leds[] = {
 		.gpio			= AT91_PIN_PB20,
 		.active_low		= 1,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 

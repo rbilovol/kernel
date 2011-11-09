@@ -317,7 +317,7 @@ static struct gpio_keys_button ek_buttons[] = {
 		.active_low	= 1,
 		.desc		= "right_click",
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data ek_button_data = {
@@ -331,7 +331,7 @@ static struct platform_device ek_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &ek_button_data,
-	}
+	},
 };
 
 static void __init ek_add_device_buttons(void)
@@ -370,7 +370,7 @@ static struct gpio_led ek_leds[] = {
 		.name			= "ds3",
 		.gpio			= AT91_PIN_PB7,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 /*
@@ -383,7 +383,7 @@ static struct gpio_led ek_pwm_led[] = {
 		.gpio			= 1,	/* is PWM channel number */
 		.active_low		= 1,
 		.default_trigger	= "none",
-	}
+	},
 };
 
 /*

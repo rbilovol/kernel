@@ -123,7 +123,7 @@ static irqreturn_t at91sam926x_pit_interrupt(int irq, void *dev_id)
 static struct irqaction at91sam926x_pit_irq = {
 	.name		= "at91_tick",
 	.flags		= IRQF_SHARED | IRQF_DISABLED | IRQF_TIMER | IRQF_IRQPOLL,
-	.handler	= at91sam926x_pit_interrupt
+	.handler	= at91sam926x_pit_interrupt,
 };
 
 static void at91sam926x_pit_reset(void)

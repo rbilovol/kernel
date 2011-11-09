@@ -75,7 +75,7 @@ static struct mtd_partition csb_flash_partitions[] = {
 		.offset		= 0,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= MTD_WRITEABLE,	/* read only */
-	}
+	},
 };
 
 static struct physmap_flash_data csb_flash_data = {
@@ -89,7 +89,7 @@ static struct resource csb_flash_resources[] = {
 		.start	= CSB_FLASH_BASE,
 		.end	= CSB_FLASH_BASE + CSB_FLASH_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device csb_flash = {

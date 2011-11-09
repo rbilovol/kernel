@@ -109,7 +109,7 @@ static void __init at91_dt_device_init(void)
 static const char *at91_dt_board_compat[] __initdata = {
 	"atmel,at91sam9m10g45ek",
 	"calao,usb-a9g20",
-	NULL
+	NULL,
 };
 
 DT_MACHINE_START(at91sam_dt, "Atmel AT91SAM (Device Tree)")

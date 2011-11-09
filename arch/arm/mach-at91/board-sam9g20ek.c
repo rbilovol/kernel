@@ -248,7 +248,7 @@ static struct gpio_led ek_leds[] = {
 		.name			= "ds1",
 		.gpio			= AT91_PIN_PA9,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 static void __init ek_add_device_gpio_leds(void)
@@ -279,7 +279,7 @@ static struct gpio_keys_button ek_buttons[] = {
 		.desc		= "Button 4",
 		.active_low	= 1,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data ek_button_data = {
@@ -293,7 +293,7 @@ static struct platform_device ek_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &ek_button_data,
-	}
+	},
 };
 
 static void __init ek_add_device_buttons(void)
@@ -352,10 +352,10 @@ static void __init ek_add_regulators(void) {}
 
 static struct i2c_board_info __initdata ek_i2c_devices[] = {
         {
-                I2C_BOARD_INFO("24c512", 0x50)
+                I2C_BOARD_INFO("24c512", 0x50),
         },
         {
-                I2C_BOARD_INFO("wm8731", 0x1b)
+                I2C_BOARD_INFO("wm8731", 0x1b),
         },
 };
 

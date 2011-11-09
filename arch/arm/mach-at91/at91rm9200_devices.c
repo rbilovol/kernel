@@ -386,7 +386,7 @@ static struct resource nand_resources[] = {
 		.start	= NAND_BASE,
 		.end	= NAND_BASE + SZ_256M - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91rm9200_nand_device = {

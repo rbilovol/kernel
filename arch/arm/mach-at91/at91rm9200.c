@@ -285,7 +285,7 @@ static struct at91_gpio_bank at91rm9200_gpio[] = {
 		.id		= AT91RM9200_ID_PIOD,
 		.offset		= AT91_PIOD,
 		.clock		= &pioD_clk,
-	}
+	},
 };
 
 static void at91rm9200_reset(void)
@@ -360,7 +360,7 @@ static unsigned int at91rm9200_default_irq_priority[NR_AIC_IRQS] __initdata = {
 	0,	/* Advanced Interrupt Controller (IRQ3) */
 	0,	/* Advanced Interrupt Controller (IRQ4) */
 	0,	/* Advanced Interrupt Controller (IRQ5) */
-	0	/* Advanced Interrupt Controller (IRQ6) */
+	0,	/* Advanced Interrupt Controller (IRQ6) */
 };
 
 struct at91_init_soc __initdata at91rm9200_soc = {

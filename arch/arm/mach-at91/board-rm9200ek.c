@@ -109,7 +109,7 @@ static struct i2c_board_info __initdata ek_i2c_devices[] = {
 	},
 	{
 		I2C_BOARD_INFO("dac3550", 0x4d),
-	}
+	},
 };
 
 #define EK_FLASH_BASE	AT91_CHIPSELECT_0
@@ -152,7 +152,7 @@ static struct gpio_led ek_leds[] = {
 		.name			= "red",
 		.gpio			= AT91_PIN_PB2,
 		.active_low		= 1,
-	}
+	},
 };
 
 static void __init ek_board_init(void)

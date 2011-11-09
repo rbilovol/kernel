@@ -112,7 +112,7 @@ static struct mtd_partition __initdata my_flash0_partitions[] =
 static struct flash_platform_data __initdata my_flash0_platform = {
 	.name		= "Removable flash card",
 	.parts		= my_flash0_partitions,
-	.nr_parts	= ARRAY_SIZE(my_flash0_partitions)
+	.nr_parts	= ARRAY_SIZE(my_flash0_partitions),
 };
 
 #endif

@@ -577,7 +577,7 @@ static struct clk *const standard_pmc_clocks[] __initdata = {
 	&plla,
 
 	/* MCK */
-	&mck
+	&mck,
 };
 
 /* PLLB generated USB full speed clock init */

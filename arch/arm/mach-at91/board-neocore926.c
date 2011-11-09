@@ -309,7 +309,7 @@ static struct platform_device neocore926_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &neocore926_button_data,
-	}
+	},
 };
 
 static void __init neocore926_add_device_buttons(void)

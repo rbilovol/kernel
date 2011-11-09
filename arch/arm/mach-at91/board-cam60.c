@@ -95,7 +95,7 @@ static struct mtd_partition cam60_spi_partitions[] = {
 static struct flash_platform_data cam60_spi_flash_platform_data = {
 	.name		= "spi_flash",
 	.parts		= cam60_spi_partitions,
-	.nr_parts	= ARRAY_SIZE(cam60_spi_partitions)
+	.nr_parts	= ARRAY_SIZE(cam60_spi_partitions),
 };
 #endif
 
@@ -106,7 +106,7 @@ static struct spi_board_info cam60_spi_devices[] __initdata = {
 		.chip_select	= 0,
 		.max_speed_hz	= 15 * 1000 * 1000,
 		.bus_num	= 0,
-		.platform_data	= &cam60_spi_flash_platform_data
+		.platform_data	= &cam60_spi_flash_platform_data,
 	},
 #endif
 };

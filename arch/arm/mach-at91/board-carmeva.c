@@ -130,7 +130,7 @@ static struct gpio_led carmeva_leds[] = {
 		.name			= "led12",
 		.gpio			= AT91_PIN_PA18,
 		.active_low		= 1,
-	}
+	},
 };
 
 static void __init carmeva_board_init(void)

@@ -365,7 +365,7 @@ static struct resource cf0_resources[] = {
 		.start	= AT91_CHIPSELECT_4,
 		.end	= AT91_CHIPSELECT_4 + SZ_256M - 1,
 		.flags	= IORESOURCE_MEM | IORESOURCE_MEM_8AND16BIT,
-	}
+	},
 };
 
 static struct platform_device cf0_device = {
@@ -384,7 +384,7 @@ static struct resource cf1_resources[] = {
 		.start	= AT91_CHIPSELECT_5,
 		.end	= AT91_CHIPSELECT_5 + SZ_256M - 1,
 		.flags	= IORESOURCE_MEM | IORESOURCE_MEM_8AND16BIT,
-	}
+	},
 };
 
 static struct platform_device cf1_device = {
@@ -476,7 +476,7 @@ static struct resource nand_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_ECC0,
 		.end	= AT91_BASE_SYS + AT91_ECC0 + SZ_512 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91sam9263_nand_device = {
@@ -959,7 +959,7 @@ static struct resource rtt0_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_RTT0,
 		.end	= AT91_BASE_SYS + AT91_RTT0 + SZ_16 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91sam9263_rtt0_device = {
@@ -974,7 +974,7 @@ static struct resource rtt1_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_RTT1,
 		.end	= AT91_BASE_SYS + AT91_RTT1 + SZ_16 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91sam9263_rtt1_device = {

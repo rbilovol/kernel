@@ -314,7 +314,7 @@ static struct at91_gpio_bank at91sam9g45_gpio[] = {
 		.id		= AT91SAM9G45_ID_PIODE,
 		.offset		= AT91_PIOE,
 		.clock		= &pioDE_clk,
-	}
+	},
 };
 
 static void at91sam9g45_reset(void)

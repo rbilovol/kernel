@@ -104,7 +104,7 @@ static struct gpio_led yl9200_leds[] = {
 		.name			= "led5",
 		.gpio			= AT91_PIN_PB8,
 		.active_low		= 1,
-	}
+	},
 };
 
 /*
@@ -148,28 +148,28 @@ static struct mtd_partition __initdata yl9200_nand_partition[] = {
 	{
 		.name	= "AT91 NAND partition 1, boot",
 		.offset	= 0,
-		.size	= SZ_256K
+		.size	= SZ_256K,
 	},
 	{
 		.name	= "AT91 NAND partition 2, kernel",
 		.offset	= MTDPART_OFS_NXTBLK,
-		.size	= (2 * SZ_1M) - SZ_256K
+		.size	= (2 * SZ_1M) - SZ_256K,
 	},
 	{
 		.name	= "AT91 NAND partition 3, filesystem",
 		.offset	= MTDPART_OFS_NXTBLK,
-		.size	= 14 * SZ_1M
+		.size	= 14 * SZ_1M,
 	},
 	{
 		.name	= "AT91 NAND partition 4, storage",
 		.offset	= MTDPART_OFS_NXTBLK,
-		.size	= SZ_16M
+		.size	= SZ_16M,
 	},
 	{
 		.name	= "AT91 NAND partition 5, ext-fs",
 		.offset	= MTDPART_OFS_NXTBLK,
-		.size	= SZ_32M
-	}
+		.size	= SZ_32M,
+	},
 };
 
 static struct atmel_nand_data __initdata yl9200_nand_data = {
@@ -198,13 +198,13 @@ static struct mtd_partition yl9200_flash_partitions[] = {
 	{
 		.name		= "Kernel",
 		.offset		= MTDPART_OFS_NXTBLK,
-		.size		= (2 * SZ_1M) - SZ_256K
+		.size		= (2 * SZ_1M) - SZ_256K,
 	},
 	{
 		.name		= "Filesystem",
 		.offset		= MTDPART_OFS_NXTBLK,
-		.size		= MTDPART_SIZ_FULL
-	}
+		.size		= MTDPART_SIZ_FULL,
+	},
 };
 
 static struct physmap_flash_data yl9200_flash_data = {
@@ -218,7 +218,7 @@ static struct resource yl9200_flash_resources[] = {
 		.start	= YL9200_FLASH_BASE,
 		.end	= YL9200_FLASH_BASE + YL9200_FLASH_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device yl9200_flash = {
@@ -237,7 +237,7 @@ static struct platform_device yl9200_flash = {
 static struct i2c_board_info __initdata yl9200_i2c_devices[] = {
 	{	/* EEPROM */
 		I2C_BOARD_INFO("24c128", 0x50),
-	}
+	},
 };
 
 /*
@@ -272,7 +272,7 @@ static struct gpio_keys_button yl9200_buttons[] = {
 		.desc		= "SW5",
 		.active_low	= 1,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data yl9200_button_data = {
@@ -286,7 +286,7 @@ static struct platform_device yl9200_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &yl9200_button_data,
-	}
+	},
 };
 
 static void __init yl9200_add_device_buttons(void)
@@ -371,7 +371,7 @@ static struct spi_board_info yl9200_spi_devices[] = {
 		.chip_select	= 1,
 		.max_speed_hz	= 25000 * 26,
 		.irq		= AT91_PIN_PC0,
-	}
+	},
 };
 
 /*

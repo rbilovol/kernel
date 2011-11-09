@@ -150,7 +150,7 @@ static struct gpio_led gpio_leds[] = {
 		.active_low		= 1,
 		.default_trigger	= "none",
 		.default_state		= LEDS_GPIO_DEFSTATE_ON,
-	}
+	},
 };
 
 static struct gpio_led_platform_data gpio_led_info = {
@@ -163,7 +163,7 @@ static struct platform_device leds = {
 	.id	= 0,
 	.dev	= {
 		.platform_data	= &gpio_led_info,
-	}
+	},
 };
 
 static void __init gsia18s_leds_init(void)
@@ -222,7 +222,7 @@ static struct gpio_led pcf_gpio_leds1[] = {
 		.active_low		= 0,
 		.default_trigger	= "none",
 		.default_state		= LEDS_GPIO_DEFSTATE_OFF,
-	}
+	},
 };
 
 static struct gpio_led_platform_data pcf_gpio_led_info1 = {
@@ -235,7 +235,7 @@ static struct platform_device pcf_leds1 = {
 	.id	= 1,
 	.dev	= {
 		.platform_data	= &pcf_gpio_led_info1,
-	}
+	},
 };
 
 /* PCF8574 0x22 GPIO - U1 on the GS_2G_OPT1-A_V0 board (Alarm) */
@@ -288,7 +288,7 @@ static struct platform_device pcf_leds2 = {
 	.id	= 2,
 	.dev	= {
 		.platform_data	= &pcf_gpio_led_info2,
-	}
+	},
 };
 
 /* PCF8574 0x24 GPIO U1 on the GS_2G-OPT23-A_V0 board (Modem) */
@@ -315,7 +315,7 @@ static struct gpio_led pcf_gpio_leds3[] = {
 		.active_low		= 1,
 		.default_trigger	= "none",
 		.default_state		= LEDS_GPIO_DEFSTATE_ON,
-	}
+	},
 };
 
 static struct gpio_led_platform_data pcf_gpio_led_info3 = {
@@ -328,7 +328,7 @@ static struct platform_device pcf_leds3 = {
 	.id	= 3,
 	.dev	= {
 		.platform_data	= &pcf_gpio_led_info3,
-	}
+	},
 };
 
 static void __init gsia18s_pcf_leds_init(void)
@@ -376,7 +376,7 @@ static struct spi_board_info gsia18s_spi_devices[] = {
 		.chip_select	= 3,
 		.max_speed_hz	= 5600000,
 		.mode		= SPI_MODE_0,
-	}
+	},
 };
 
 /*
@@ -414,7 +414,7 @@ static struct gpio_keys_button buttons[] = {
 		.type		= EV_KEY,
 		.active_low	= 0,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data button_data = {
@@ -428,7 +428,7 @@ static struct platform_device button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &button_data,
-	}
+	},
 };
 
 static void __init gsia18s_add_device_buttons(void)

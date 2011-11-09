@@ -117,7 +117,7 @@ static struct mtd_partition csb_flash_partitions[] = {
 		.offset		= 0,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= MTD_WRITEABLE,	/* read only */
-	}
+	},
 };
 
 static struct physmap_flash_data csb_flash_data = {
@@ -131,7 +131,7 @@ static struct resource csb_flash_resources[] = {
 		.start	= CSB_FLASH_BASE,
 		.end	= CSB_FLASH_BASE + CSB_FLASH_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device csb_flash = {
@@ -169,7 +169,7 @@ static struct gpio_keys_button csb300_buttons[] = {
 		.desc		= "sw2",
 		.active_low	= 1,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data csb300_button_data = {
@@ -183,7 +183,7 @@ static struct platform_device csb300_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &csb300_button_data,
-	}
+	},
 };
 
 static void __init csb300_add_device_buttons(void)
@@ -219,7 +219,7 @@ static struct gpio_led csb_leds[] = {
 		.gpio			= AT91_PIN_PB0,
 		.active_low		= 1,
 		.default_trigger	= "ide-disk",
-	}
+	},
 };
 
 

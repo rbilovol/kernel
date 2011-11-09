@@ -243,7 +243,7 @@ static struct gpio_led ek_leds[] = {
 		.name			= "ds1",
 		.gpio			= AT91_PIN_PA9,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 /*
@@ -282,7 +282,7 @@ static struct gpio_keys_button ek_buttons[] = {
 		.desc		= "Button 4",
 		.active_low	= 1,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data ek_button_data = {
@@ -296,7 +296,7 @@ static struct platform_device ek_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &ek_button_data,
-	}
+	},
 };
 
 static void __init ek_add_device_buttons(void)

@@ -225,7 +225,7 @@ static const char *soc_name[] = {
 	[AT91_SOC_SAM9G45]	= "at91sam9g45",
 	[AT91_SOC_SAM9RL]	= "at91sam9rl",
 	[AT91_SOC_SAM9X5]	= "at91sam9x5",
-	[AT91_SOC_NONE]		= "Unknown"
+	[AT91_SOC_NONE]		= "Unknown",
 };
 
 const char *at91_get_soc_type(struct at91_socinfo *c)
@@ -249,7 +249,7 @@ static const char *soc_subtype_name[] = {
 	[AT91_SOC_SAM9X35]	= "at91sam9x35",
 	[AT91_SOC_SAM9G25]	= "at91sam9g25",
 	[AT91_SOC_SAM9X25]	= "at91sam9x25",
-	[AT91_SOC_SUBTYPE_NONE]	= "Unknown"
+	[AT91_SOC_SUBTYPE_NONE]	= "Unknown",
 };
 
 const char *at91_get_soc_subtype(struct at91_socinfo *c)

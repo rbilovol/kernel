@@ -187,7 +187,7 @@ static struct mtd_partition __initdata ek_nand_partition[] = {
 		.name	= "data",
 		.offset	= MTDPART_OFS_NXTBLK,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct atmel_nand_data __initdata ek_nand_data = {
@@ -264,7 +264,7 @@ static struct gpio_keys_button ek_buttons[] = {
 		.active_low	= 1,
 		.desc		= "user_pb",
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data ek_button_data = {
@@ -278,7 +278,7 @@ static struct platform_device ek_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &ek_button_data,
-	}
+	},
 };
 
 static void __init ek_add_device_buttons(void)
@@ -301,7 +301,7 @@ static struct gpio_led ek_leds[] = {
 		.gpio			= AT91_PIN_PB21,
 		.active_low		= 1,
 		.default_trigger	= "heartbeat",
-	}
+	},
 };
 
 static struct i2c_board_info __initdata ek_i2c_devices[] = {

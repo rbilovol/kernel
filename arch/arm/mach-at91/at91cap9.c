@@ -310,7 +310,7 @@ static struct at91_gpio_bank at91cap9_gpio[] = {
 		.id		= AT91CAP9_ID_PIOABCD,
 		.offset		= AT91_PIOD,
 		.clock		= &pioABCD_clk,
-	}
+	},
 };
 
 static void at91cap9_reset(void)

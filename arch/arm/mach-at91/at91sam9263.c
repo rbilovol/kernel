@@ -284,7 +284,7 @@ static struct at91_gpio_bank at91sam9263_gpio[] = {
 		.id		= AT91SAM9263_ID_PIOCDE,
 		.offset		= AT91_PIOE,
 		.clock		= &pioCDE_clk,
-	}
+	},
 };
 
 static void at91sam9263_poweroff(void)

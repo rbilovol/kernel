@@ -175,7 +175,7 @@ static struct resource nor_flash_resources[] = {
 		.start	= NOR_BASE,
 		.end	= NOR_BASE + NOR_SIZE - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device cpu9krea_nor_flash = {
@@ -270,7 +270,7 @@ static struct gpio_led cpu9krea_leds[] = {
 		.gpio			= AT91_PIN_PC9,
 		.active_low		= 1,
 		.default_trigger	= "none",
-	}
+	},
 };
 
 static struct i2c_board_info __initdata cpu9krea_i2c_devices[] = {
@@ -298,7 +298,7 @@ static struct gpio_keys_button cpu9krea_buttons[] = {
 		.desc		= "BP2",
 		.active_low	= 1,
 		.wakeup		= 1,
-	}
+	},
 };
 
 static struct gpio_keys_platform_data cpu9krea_button_data = {
@@ -312,7 +312,7 @@ static struct platform_device cpu9krea_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &cpu9krea_button_data,
-	}
+	},
 };
 
 static void __init cpu9krea_add_device_buttons(void)

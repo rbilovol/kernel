@@ -401,7 +401,7 @@ static struct resource nand_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_ECC,
 		.end	= AT91_BASE_SYS + AT91_ECC + SZ_512 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91cap9_nand_device = {
@@ -673,7 +673,7 @@ static struct resource rtt_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_RTT,
 		.end	= AT91_BASE_SYS + AT91_RTT + SZ_16 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91cap9_rtt_device = {

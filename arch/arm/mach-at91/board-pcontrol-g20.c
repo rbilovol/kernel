@@ -133,9 +133,9 @@ static struct at91_eth_data __initdata macb_data = {
  */
 static struct i2c_board_info __initdata pcontrol_g20_i2c_devices[] = {
 {		/* D7  address width=2, 8KiB */
-	I2C_BOARD_INFO("24c64", 0x50)
+	I2C_BOARD_INFO("24c64", 0x50),
 }, {		/* D8  address width=1, 1 byte has 32 bits! */
-	I2C_BOARD_INFO("lan9303", 0x0a)
+	I2C_BOARD_INFO("lan9303", 0x0a),
 }, };
 
 
@@ -173,7 +173,7 @@ static struct gpio_led pcontrol_g20_leds[] = {
 		.gpio			= AT91_PIN_PC9,
 		.active_low		= 1,
 		.default_trigger	= "none",	/* snafu */
-	}
+	},
 };
 
 

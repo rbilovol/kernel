@@ -251,7 +251,7 @@ static struct resource nand_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_ECC,
 		.end	= AT91_BASE_SYS + AT91_ECC + SZ_512 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device atmel_nand_device = {
@@ -626,7 +626,7 @@ static struct resource tsadcc_resources[] = {
 		.start	= AT91SAM9RL_ID_TSC,
 		.end	= AT91SAM9RL_ID_TSC,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device at91sam9rl_tsadcc_device = {
@@ -688,7 +688,7 @@ static struct resource rtt_resources[] = {
 		.start	= AT91_BASE_SYS + AT91_RTT,
 		.end	= AT91_BASE_SYS + AT91_RTT + SZ_16 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device at91sam9rl_rtt_device = {
