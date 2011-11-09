@@ -127,7 +127,7 @@ int ixp2000_pci_write_config(struct pci_bus *bus, unsigned int devfn, int where,
 
 static struct pci_ops ixp2000_pci_ops = {
 	.read	= ixp2000_pci_read_config,
-	.write	= ixp2000_pci_write_config
+	.write	= ixp2000_pci_write_config,
 };
 
 struct pci_bus *ixp2000_pci_scan_bus(int nr, struct pci_sys_data *sysdata)
@@ -227,14 +227,14 @@ static struct resource ixp2000_pci_mem_space = {
 	.start	= 0xe0000000,
 	.end	= 0xffffffff,
 	.flags	= IORESOURCE_MEM,
-	.name	= "PCI Mem Space"
+	.name	= "PCI Mem Space",
 };
 
 static struct resource ixp2000_pci_io_space = {
 	.start	= 0x00010000,
 	.end	= 0x0001ffff,
 	.flags	= IORESOURCE_IO,
-	.name	= "PCI I/O Space"
+	.name	= "PCI I/O Space",
 };
 
 int ixp2000_pci_setup(int nr, struct pci_sys_data *sys)

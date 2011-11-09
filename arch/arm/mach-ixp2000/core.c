@@ -131,7 +131,7 @@ static struct map_desc ixp2000_io_desc[] __initdata = {
 		.pfn		= __phys_to_pfn(IXP2000_PCI_CFG1_PHYS_BASE),
 		.length		= IXP2000_PCI_CFG1_SIZE,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 void __init ixp2000_map_io(void)
@@ -423,13 +423,13 @@ static void ixp2000_err_irq_unmask(struct irq_data *d)
 static struct irq_chip ixp2000_err_irq_chip = {
 	.irq_ack	= ixp2000_err_irq_mask,
 	.irq_mask	= ixp2000_err_irq_mask,
-	.irq_unmask	= ixp2000_err_irq_unmask
+	.irq_unmask	= ixp2000_err_irq_unmask,
 };
 
 static struct irq_chip ixp2000_pci_irq_chip = {
 	.irq_ack	= ixp2000_pci_irq_mask,
 	.irq_mask	= ixp2000_pci_irq_mask,
-	.irq_unmask	= ixp2000_pci_irq_unmask
+	.irq_unmask	= ixp2000_pci_irq_unmask,
 };
 
 static void ixp2000_irq_mask(struct irq_data *d)
@@ -445,7 +445,7 @@ static void ixp2000_irq_unmask(struct irq_data *d)
 static struct irq_chip ixp2000_irq_chip = {
 	.irq_ack	= ixp2000_irq_mask,
 	.irq_mask	= ixp2000_irq_mask,
-	.irq_unmask	= ixp2000_irq_unmask
+	.irq_unmask	= ixp2000_irq_unmask,
 };
 
 void __init ixp2000_init_irq(void)

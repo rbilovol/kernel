@@ -89,7 +89,7 @@ static void ixdp2x01_irq_handler(unsigned int irq, struct irq_desc *desc)
 static struct irq_chip ixdp2x01_irq_chip = {
 	.irq_mask	= ixdp2x01_irq_mask,
 	.irq_ack	= ixdp2x01_irq_mask,
-	.irq_unmask	= ixdp2x01_irq_unmask
+	.irq_unmask	= ixdp2x01_irq_unmask,
 };
 
 /*
@@ -135,7 +135,7 @@ static struct map_desc ixdp2x01_io_desc __initdata = {
 	.virtual	= IXDP2X01_VIRT_CPLD_BASE, 
 	.pfn		= __phys_to_pfn(IXDP2X01_PHYS_CPLD_BASE),
 	.length		= IXDP2X01_CPLD_REGION_SIZE,
-	.type		= MT_DEVICE
+	.type		= MT_DEVICE,
 };
 
 static void __init ixdp2x01_map_io(void)
@@ -158,7 +158,7 @@ static struct plat_serial8250_port ixdp2x01_serial_port1[] = {
 		.regshift	= 2,
 		.uartclk	= IXDP2X01_UART_CLK,
 	},
-	{ }
+	{ },
 };
 
 static struct resource ixdp2x01_uart_resource1 = {
@@ -187,7 +187,7 @@ static struct plat_serial8250_port ixdp2x01_serial_port2[] = {
 		.regshift	= 2,
 		.uartclk	= IXDP2X01_UART_CLK,
 	}, 
-	{ }
+	{ },
 };
 
 static struct resource ixdp2x01_uart_resource2 = {
@@ -362,7 +362,7 @@ static unsigned long ixdp2x01_flash_bank_setup(unsigned long ofs)
 
 static struct ixp2000_flash_data ixdp2x01_flash_data = {
 	.platform_data	= &ixdp2x01_flash_platform_data,
-	.bank_setup	= ixdp2x01_flash_bank_setup
+	.bank_setup	= ixdp2x01_flash_bank_setup,
 };
 
 static struct resource ixdp2x01_flash_resource = {
@@ -392,12 +392,12 @@ static struct platform_device ixdp2x01_i2c_controller = {
 	.dev		= {
 		.platform_data = &ixdp2x01_i2c_gpio_pins,
 	},
-	.num_resources	= 0
+	.num_resources	= 0,
 };
 
 static struct platform_device *ixdp2x01_devices[] __initdata = {
 	&ixdp2x01_flash,
-	&ixdp2x01_i2c_controller
+	&ixdp2x01_i2c_controller,
 };
 
 static void __init ixdp2x01_init_machine(void)

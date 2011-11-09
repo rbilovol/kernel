@@ -80,7 +80,7 @@ static struct map_desc enp2611_io_desc[] __initdata = {
 		.pfn		= __phys_to_pfn(ENP2611_PM3386_1_PHYS_BASE),
 		.length		= ENP2611_PM3386_1_SIZE,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 void __init enp2611_map_io(void)
@@ -139,7 +139,7 @@ static int enp2611_pci_write_config(struct pci_bus *bus, unsigned int devfn,
 
 static struct pci_ops enp2611_pci_ops = {
 	.read   = enp2611_pci_read_config,
-	.write  = enp2611_pci_write_config
+	.write  = enp2611_pci_write_config,
 };
 
 static struct pci_bus * __init enp2611_pci_scan_bus(int nr,
@@ -207,7 +207,7 @@ static struct flash_platform_data enp2611_flash_platform_data = {
 
 static struct ixp2000_flash_data enp2611_flash_data = {
 	.platform_data	= &enp2611_flash_platform_data,
-	.nr_banks	= 1
+	.nr_banks	= 1,
 };
 
 static struct resource enp2611_flash_resource = {
@@ -235,14 +235,14 @@ static struct platform_device enp2611_i2c_controller = {
 	.name		= "IXP2000-I2C",
 	.id		= 0,
 	.dev		= {
-		.platform_data = &enp2611_i2c_gpio_pins
+		.platform_data = &enp2611_i2c_gpio_pins,
 	},
-	.num_resources	= 0
+	.num_resources	= 0,
 };
 
 static struct platform_device *enp2611_devices[] __initdata = {
 	&enp2611_flash,
-	&enp2611_i2c_controller
+	&enp2611_i2c_controller,
 };
 
 static void __init enp2611_init_machine(void)

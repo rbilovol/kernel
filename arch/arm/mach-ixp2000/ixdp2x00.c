@@ -59,7 +59,7 @@ static struct slowport_cfg slowport_cpld_cfg = {
 	.WTC = 0x00000070,
 	.RTC = 0x00000070,
 	.PCR = SLOWPORT_MODE_FLASH,
-	.ADC = SLOWPORT_ADDR_WIDTH_24 | SLOWPORT_DATA_WIDTH_8
+	.ADC = SLOWPORT_ADDR_WIDTH_24 | SLOWPORT_DATA_WIDTH_8,
 };
 #endif
 
@@ -139,7 +139,7 @@ static void ixdp2x00_irq_handler(unsigned int irq, struct irq_desc *desc)
 static struct irq_chip ixdp2x00_cpld_irq_chip = {
 	.irq_ack	= ixdp2x00_irq_mask,
 	.irq_mask	= ixdp2x00_irq_mask,
-	.irq_unmask	= ixdp2x00_irq_unmask
+	.irq_unmask	= ixdp2x00_irq_unmask,
 };
 
 void __init ixdp2x00_init_irq(volatile unsigned long *stat_reg, volatile unsigned long *mask_reg, unsigned long nr_of_irqs)
@@ -174,7 +174,7 @@ static struct map_desc ixdp2x00_io_desc __initdata = {
 	.virtual	= IXDP2X00_VIRT_CPLD_BASE, 
 	.pfn		= __phys_to_pfn(IXDP2X00_PHYS_CPLD_BASE),
 	.length		= IXDP2X00_CPLD_SIZE,
-	.type		= MT_DEVICE
+	.type		= MT_DEVICE,
 };
 
 void __init ixdp2x00_map_io(void)
@@ -258,7 +258,7 @@ static struct flash_platform_data ixdp2x00_platform_data = {
 
 static struct ixp2000_flash_data ixdp2x00_flash_data = {
 	.platform_data	= &ixdp2x00_platform_data,
-	.nr_banks	= 1
+	.nr_banks	= 1,
 };
 
 static struct resource ixdp2x00_flash_resource = {
@@ -288,12 +288,12 @@ static struct platform_device ixdp2x00_i2c_controller = {
 	.dev		= {
 		.platform_data = &ixdp2x00_i2c_gpio_pins,
 	},
-	.num_resources	= 0
+	.num_resources	= 0,
 };
 
 static struct platform_device *ixdp2x00_devices[] __initdata = {
 	&ixdp2x00_flash,
-	&ixdp2x00_i2c_controller
+	&ixdp2x00_i2c_controller,
 };
 
 void __init ixdp2x00_init_machine(void)
