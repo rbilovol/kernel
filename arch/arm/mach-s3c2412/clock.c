@@ -480,7 +480,7 @@ static struct clk init_clocks_disable[] = {
 		.parent		= &clk_p,
 		.enable		= s3c2412_clkcon_enable,
 		.ctrlbit	= S3C2412_CLKCON_SPI,
-	}
+	},
 };
 
 static struct clk init_clocks[] = {
@@ -566,7 +566,7 @@ static struct clk init_clocks[] = {
 		.parent		= &clk_usb_bus,
 		.enable		= s3c2412_clkcon_enable,
 		.ctrlbit	= S3C2412_CLKCON_USB_HOST48,
-	}
+	},
 };
 
 /* clocks to add where we need to check their parentage */

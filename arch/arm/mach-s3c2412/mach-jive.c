@@ -83,7 +83,7 @@ static struct s3c2410_uartcfg jive_uartcfgs[] = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 /* Jive flash assignment

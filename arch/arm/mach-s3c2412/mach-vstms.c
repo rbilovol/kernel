@@ -73,7 +73,7 @@ static struct s3c2410_uartcfg vstms_uartcfgs[] __initdata = {
 		.ucon	     = 0x3c5,
 		.ulcon	     = 0x03,
 		.ufcon	     = 0x51,
-	}
+	},
 };
 
 static struct mtd_partition __initdata vstms_nand_part[] = {
