@@ -76,7 +76,7 @@ static struct resource rtc_resources[] = {
 		.start	= IRQ_ISA_RTC_ALARM,
 		.end	= IRQ_ISA_RTC_ALARM,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device rtc_device = {
@@ -109,8 +109,8 @@ static struct map_desc shark_io_desc[] __initdata = {
 		.virtual	= IO_BASE,
 		.pfn		= __phys_to_pfn(IO_START),
 		.length		= IO_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init shark_map_io(void)
