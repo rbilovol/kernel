@@ -106,15 +106,15 @@
 #define NV_DMA_MAX_TRASFER_SIZE 0x10000
 
 static const unsigned int ahb_addr_wrap_table[8] = {
-	0, 32, 64, 128, 256, 512, 1024, 2048
+	0, 32, 64, 128, 256, 512, 1024, 2048,
 };
 
 static const unsigned int apb_addr_wrap_table[8] = {
-	0, 1, 2, 4, 8, 16, 32, 64
+	0, 1, 2, 4, 8, 16, 32, 64,
 };
 
 static const unsigned int bus_width_table[5] = {
-	8, 16, 32, 64, 128
+	8, 16, 32, 64, 128,
 };
 
 #define TEGRA_DMA_NAME_SIZE 16

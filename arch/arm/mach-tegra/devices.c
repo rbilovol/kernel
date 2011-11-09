@@ -639,36 +639,36 @@ static struct resource i2s_resource1[] = {
 	[0] = {
 		.start	= INT_I2S1,
 		.end	= INT_I2S1,
-		.flags	= IORESOURCE_IRQ
+		.flags	= IORESOURCE_IRQ,
 	},
 	[1] = {
 		.start	= TEGRA_DMA_REQ_SEL_I2S_1,
 		.end	= TEGRA_DMA_REQ_SEL_I2S_1,
-		.flags	= IORESOURCE_DMA
+		.flags	= IORESOURCE_DMA,
 	},
 	[2] = {
 		.start	= TEGRA_I2S1_BASE,
 		.end	= TEGRA_I2S1_BASE + TEGRA_I2S1_SIZE - 1,
-		.flags	= IORESOURCE_MEM
-	}
+		.flags	= IORESOURCE_MEM,
+	},
 };
 
 static struct resource i2s_resource2[] = {
 	[0] = {
 		.start	= INT_I2S2,
 		.end	= INT_I2S2,
-		.flags	= IORESOURCE_IRQ
+		.flags	= IORESOURCE_IRQ,
 	},
 	[1] = {
 		.start	= TEGRA_DMA_REQ_SEL_I2S2_1,
 		.end	= TEGRA_DMA_REQ_SEL_I2S2_1,
-		.flags	= IORESOURCE_DMA
+		.flags	= IORESOURCE_DMA,
 	},
 	[2] = {
 		.start	= TEGRA_I2S2_BASE,
 		.end	= TEGRA_I2S2_BASE + TEGRA_I2S2_SIZE - 1,
-		.flags	= IORESOURCE_MEM
-	}
+		.flags	= IORESOURCE_MEM,
+	},
 };
 
 struct platform_device tegra_i2s_device1 = {

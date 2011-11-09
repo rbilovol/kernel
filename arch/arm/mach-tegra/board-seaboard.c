@@ -51,7 +51,7 @@ static struct plat_serial8250_port debug_uart_platform_data[] = {
 		.uartclk	= 216000000,
 	}, {
 		.flags		= 0,
-	}
+	},
 };
 
 static struct platform_device debug_uart = {
@@ -105,7 +105,7 @@ static struct platform_device seaboard_gpio_keys_device = {
 	.id		= -1,
 	.dev		= {
 		.platform_data = &seaboard_gpio_keys,
-	}
+	},
 };
 
 static struct tegra_sdhci_platform_data sdhci_pdata1 = {

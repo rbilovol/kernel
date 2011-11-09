@@ -1861,7 +1861,7 @@ static const struct audio_sources {
 	{ .name = "ext_audio_clk1", .value = 6 },
 	{ .name = "ext_vimclk", .value = 7 },
 #endif
-	{ NULL, 0 }
+	{ NULL, 0 },
 };
 
 static struct clk tegra_clk_audio = {
@@ -1869,7 +1869,7 @@ static struct clk tegra_clk_audio = {
 	.inputs    = mux_audio_sync_clk,
 	.reg       = 0x38,
 	.max_rate  = 73728000,
-	.ops       = &tegra_audio_sync_clk_ops
+	.ops       = &tegra_audio_sync_clk_ops,
 };
 
 static struct clk tegra_clk_audio_2x = {
@@ -1887,7 +1887,7 @@ static struct clk tegra_clk_audio_2x = {
 
 static struct clk_lookup tegra_audio_clk_lookups[] = {
 	{ .con_id = "audio", .clk = &tegra_clk_audio },
-	{ .con_id = "audio_2x", .clk = &tegra_clk_audio_2x }
+	{ .con_id = "audio_2x", .clk = &tegra_clk_audio_2x },
 };
 
 /* This is called after peripheral clocks are initialized, as the

@@ -66,8 +66,8 @@ static struct plat_serial8250_port debug_uart_platform_data[] = {
 		.regshift	= 2,
 		.uartclk	= 216000000,
 	}, {
-		.flags		= 0
-	}
+		.flags		= 0,
+	},
 };
 
 static struct platform_device debug_uart = {

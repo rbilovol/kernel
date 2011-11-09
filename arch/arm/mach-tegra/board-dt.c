@@ -61,7 +61,7 @@ struct of_dev_auxdata tegra20_auxdata_lookup[] __initdata = {
 	OF_DEV_AUXDATA("nvidia,tegra20-i2s", TEGRA_I2S1_BASE, "tegra-i2s.0", NULL),
 	OF_DEV_AUXDATA("nvidia,tegra20-i2s", TEGRA_I2S1_BASE, "tegra-i2s.1", NULL),
 	OF_DEV_AUXDATA("nvidia,tegra20-das", TEGRA_APB_MISC_DAS_BASE, "tegra-das", NULL),
-	{}
+	{},
 };
 
 static __initdata struct tegra_clk_init_table tegra_dt_clk_init_table[] = {
@@ -72,12 +72,12 @@ static __initdata struct tegra_clk_init_table tegra_dt_clk_init_table[] = {
 
 static struct of_device_id tegra_dt_match_table[] __initdata = {
 	{ .compatible = "simple-bus", },
-	{}
+	{},
 };
 
 static struct of_device_id tegra_dt_gic_match[] __initdata = {
 	{ .compatible = "nvidia,tegra20-gic", },
-	{}
+	{},
 };
 
 static struct {
@@ -122,7 +122,7 @@ static const char * tegra_dt_board_compat[] = {
 	"nvidia,harmony",
 	"nvidia,seaboard",
 	"nvidia,ventana",
-	NULL
+	NULL,
 };
 
 DT_MACHINE_START(TEGRA_DT, "nVidia Tegra (Flattened Device Tree)")
