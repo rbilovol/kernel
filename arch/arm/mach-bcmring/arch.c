@@ -60,7 +60,7 @@ static struct ctl_table bcmring_sysctl_warm_reboot[] = {
 	 .maxlen = sizeof(int),
 	 .mode = 0644,
 	 .proc_handler = proc_dointvec},
-	{}
+	{},
 };
 
 static struct ctl_table bcmring_sysctl_reboot[] = {
@@ -68,7 +68,7 @@ static struct ctl_table bcmring_sysctl_reboot[] = {
 	 .procname = "reboot",
 	 .mode = 0555,
 	 .child = bcmring_sysctl_warm_reboot},
-	{}
+	{},
 };
 
 static struct resource nand_resource[] = {

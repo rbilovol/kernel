@@ -147,7 +147,7 @@ static struct clk_lookup lookups[] = {
 		.dev_id = "sp804",
 		.con_id = "timer3",
 		.clk = &sp804_timer3_clk,
-	}
+	},
 };
 
 static struct amba_device *amba_devs[] __initdata = {
