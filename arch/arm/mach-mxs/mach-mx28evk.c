@@ -331,7 +331,7 @@ static const struct flexcan_platform_data
 		.transceiver_switch = mx28evk_flexcan0_switch,
 	}, {
 		.transceiver_switch = mx28evk_flexcan1_switch,
-	}
+	},
 };
 
 /* mxsfb (lcdif) */
