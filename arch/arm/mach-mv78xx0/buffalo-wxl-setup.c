@@ -97,7 +97,7 @@ static unsigned int wxl_mpp_config[] __initdata = {
 	MPP47_UNUSED,
 	MPP48_SATA1_ACTn,
 	MPP49_SATA0_ACTn,
-	0
+	0,
 };
 
 
