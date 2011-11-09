@@ -89,12 +89,12 @@ static struct fpga_irq_data sic_irq = {
 /* Lookup table for finding a DT node that represents the vic instance */
 static const struct of_device_id vic_of_match[] __initconst = {
 	{ .compatible = "arm,versatile-vic", },
-	{}
+	{},
 };
 
 static const struct of_device_id sic_of_match[] __initconst = {
 	{ .compatible = "arm,versatile-sic", },
-	{}
+	{},
 };
 
 void __init versatile_init_irq(void)
@@ -122,34 +122,34 @@ static struct map_desc versatile_io_desc[] __initdata = {
 		.virtual	=  IO_ADDRESS(VERSATILE_SYS_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_SYS_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  IO_ADDRESS(VERSATILE_SIC_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_SIC_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  IO_ADDRESS(VERSATILE_VIC_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_VIC_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  IO_ADDRESS(VERSATILE_SCTL_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_SCTL_BASE),
 		.length		= SZ_4K * 9,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 #ifdef CONFIG_MACH_VERSATILE_AB
  	{
 		.virtual	=  IO_ADDRESS(VERSATILE_GPIO0_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_GPIO0_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  IO_ADDRESS(VERSATILE_IB2_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_IB2_BASE),
 		.length		= SZ_64M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 #endif
 #ifdef CONFIG_DEBUG_LL
@@ -157,7 +157,7 @@ static struct map_desc versatile_io_desc[] __initdata = {
 		.virtual	=  IO_ADDRESS(VERSATILE_UART0_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_UART0_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 #endif
 #ifdef CONFIG_PCI
@@ -165,34 +165,34 @@ static struct map_desc versatile_io_desc[] __initdata = {
 		.virtual	=  IO_ADDRESS(VERSATILE_PCI_CORE_BASE),
 		.pfn		= __phys_to_pfn(VERSATILE_PCI_CORE_BASE),
 		.length		= SZ_4K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  (unsigned long)VERSATILE_PCI_VIRT_BASE,
 		.pfn		= __phys_to_pfn(VERSATILE_PCI_BASE),
 		.length		= VERSATILE_PCI_BASE_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  (unsigned long)VERSATILE_PCI_CFG_VIRT_BASE,
 		.pfn		= __phys_to_pfn(VERSATILE_PCI_CFG_BASE),
 		.length		= VERSATILE_PCI_CFG_BASE_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 #if 0
  	{
 		.virtual	=  VERSATILE_PCI_VIRT_MEM_BASE0,
 		.pfn		= __phys_to_pfn(VERSATILE_PCI_MEM_BASE0),
 		.length		= SZ_16M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  VERSATILE_PCI_VIRT_MEM_BASE1,
 		.pfn		= __phys_to_pfn(VERSATILE_PCI_MEM_BASE1),
 		.length		= SZ_16M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	=  VERSATILE_PCI_VIRT_MEM_BASE2,
 		.pfn		= __phys_to_pfn(VERSATILE_PCI_MEM_BASE2),
 		.length		= SZ_16M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 #endif
 #endif
@@ -704,7 +704,7 @@ struct of_dev_auxdata versatile_auxdata_lookup[] __initdata = {
 	OF_DEV_AUXDATA("arm,primecell", VERSATILE_RTC_BASE, "dev:e8", NULL),
 	OF_DEV_AUXDATA("arm,primecell", VERSATILE_SCI_BASE, "dev:f0", NULL),
 #endif
-	{}
+	{},
 };
 #endif
 
