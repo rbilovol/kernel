@@ -233,7 +233,7 @@ static struct map_desc h720x_io_desc[] __initdata = {
 		.virtual	= IO_VIRT,
 		.pfn		= __phys_to_pfn(IO_PHYS),
 		.length		= IO_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
