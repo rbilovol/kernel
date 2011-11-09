@@ -71,7 +71,7 @@ struct platform_device tcc8k_mmc0_device = {
 	.dev		= {
 		.dma_mask		= &tcc8k_dmamask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 struct platform_device tcc8k_mmc1_device = {
@@ -82,7 +82,7 @@ struct platform_device tcc8k_mmc1_device = {
 	.dev		= {
 		.dma_mask		= &tcc8k_dmamask,
 		.coherent_dma_mask	= DMA_BIT_MASK(32),
-	}
+	},
 };
 
 static inline void tcc8k_init_mmc(void)
@@ -133,7 +133,7 @@ static struct resource tcc8k_ohci0_resources[] = {
 		.start = INT_USBH0,
 		.end   = INT_USBH0,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct resource tcc8k_ohci1_resources[] = {
@@ -146,7 +146,7 @@ static struct resource tcc8k_ohci1_resources[] = {
 		.start = INT_USBH1,
 		.end   = INT_USBH1,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct tccohci_platform_data tcc8k_ohci0_platform_data = {

@@ -525,7 +525,7 @@ static struct clk_lookup lookups[] = {
 	_REGISTER_CLOCK(NULL, "gdma2", gdma2)
 	_REGISTER_CLOCK(NULL, "gdma3", gdma3)
 	_REGISTER_CLOCK(NULL, "ddrc", ddrc)
-	_REGISTER_CLOCK("tcc-usbh.1", "usb", usbh1)
+	_REGISTER_CLOCK("tcc-usbh.1", "usb", usbh1),
 };
 
 static struct clk *root_clk_by_index(enum root_clks src)
