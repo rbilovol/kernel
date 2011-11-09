@@ -103,7 +103,7 @@ static struct platform_device smartq5_buttons_device  = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &smartq5_buttons_data,
-	}
+	},
 };
 
 static struct s3c_fb_pd_win smartq5_fb_win0 = {

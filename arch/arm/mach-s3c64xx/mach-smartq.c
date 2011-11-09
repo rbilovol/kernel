@@ -115,10 +115,10 @@ static void smartq_usb_host_enableoc(struct s3c2410_hcd_info *info, int on)
 
 static struct s3c2410_hcd_info smartq_usb_host_info = {
 	.port[0]	= {
-		.flags	= S3C_HCDFLG_USED
+		.flags	= S3C_HCDFLG_USED,
 	},
 	.port[1]	= {
-		.flags	= 0
+		.flags	= 0,
 	},
 
 	.power_control	= smartq_usb_host_powercontrol,

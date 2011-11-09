@@ -86,18 +86,18 @@ static struct resource mini6410_dm9k_resource[] = {
 	[0] = {
 		.start	= S3C64XX_PA_XM0CSN1,
 		.end	= S3C64XX_PA_XM0CSN1 + 1,
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	[1] = {
 		.start	= S3C64XX_PA_XM0CSN1 + 4,
 		.end	= S3C64XX_PA_XM0CSN1 + 5,
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	[2] = {
 		.start	= S3C_EINT(7),
 		.end	= S3C_EINT(7),
-		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHLEVEL
-	}
+		.flags	= IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHLEVEL,
+	},
 };
 
 static struct dm9000_plat_data mini6410_dm9k_pdata = {

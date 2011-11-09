@@ -307,7 +307,7 @@ static struct clk init_clocks[] = {
 		.parent		= &clk_h,
 		.enable		= s3c64xx_hclk_ctrl,
 		.ctrlbit	= S3C_CLKCON_HCLK_IHOST,
-	}
+	},
 };
 
 
@@ -479,7 +479,7 @@ static struct clk *clkset_uart_list[] = {
 	&clk_mout_epll.clk,
 	&clk_dout_mpll,
 	NULL,
-	NULL
+	NULL,
 };
 
 static struct clksrc_sources clkset_uart = {
