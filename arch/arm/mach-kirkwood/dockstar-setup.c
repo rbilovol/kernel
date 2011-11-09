@@ -27,15 +27,15 @@ static struct mtd_partition dockstar_nand_parts[] = {
 	{
 		.name = "u-boot",
 		.offset = 0,
-		.size = SZ_1M
+		.size = SZ_1M,
 	}, {
 		.name = "uImage",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = SZ_4M
+		.size = SZ_4M,
 	}, {
 		.name = "root",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = MTDPART_SIZ_FULL
+		.size = MTDPART_SIZ_FULL,
 	},
 };
 
@@ -68,14 +68,14 @@ static struct platform_device dockstar_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &dockstar_led_data,
-	}
+	},
 };
 
 static unsigned int dockstar_mpp_config[] __initdata = {
 	MPP29_GPIO,	/* USB Power Enable */
 	MPP46_GPIO,	/* LED green */
 	MPP47_GPIO,	/* LED orange */
-	0
+	0,
 };
 
 static void __init dockstar_init(void)

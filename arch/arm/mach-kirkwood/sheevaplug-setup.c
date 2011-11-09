@@ -27,15 +27,15 @@ static struct mtd_partition sheevaplug_nand_parts[] = {
 	{
 		.name = "u-boot",
 		.offset = 0,
-		.size = SZ_1M
+		.size = SZ_1M,
 	}, {
 		.name = "uImage",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = SZ_4M
+		.size = SZ_4M,
 	}, {
 		.name = "root",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = MTDPART_SIZ_FULL
+		.size = MTDPART_SIZ_FULL,
 	},
 };
 
@@ -81,14 +81,14 @@ static struct platform_device sheevaplug_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &sheevaplug_led_data,
-	}
+	},
 };
 
 static unsigned int sheevaplug_mpp_config[] __initdata = {
 	MPP29_GPIO,	/* USB Power Enable */
 	MPP46_GPIO,	/* LED Red */
 	MPP49_GPIO,	/* LED */
-	0
+	0,
 };
 
 static unsigned int sheeva_esata_mpp_config[] __initdata = {
@@ -96,7 +96,7 @@ static unsigned int sheeva_esata_mpp_config[] __initdata = {
 	MPP44_GPIO,	/* SD Write Protect */
 	MPP47_GPIO,	/* SD Card Detect */
 	MPP49_GPIO,	/* LED Green */
-	0
+	0,
 };
 
 static void __init sheevaplug_init(void)

@@ -182,7 +182,7 @@ static unsigned int d2net_v2_mpp_config[] __initdata = {
 	MPP30_GPIO,		/* Blue led (command register) */
 	MPP34_GPIO,		/* Power button (1 = Released, 0 = Pushed) */
 	MPP35_GPIO,		/* Inhibit power-off */
-	0
+	0,
 };
 
 #define D2NET_V2_GPIO_POWER_OFF		7

@@ -301,7 +301,7 @@ static unsigned int net2big_v2_mpp_config[] __initdata = {
 	MPP47_GPIO,		/* GPIO extension (addr 0) */
 	MPP48_GPIO,		/* GPIO extension (addr 1) */
 	MPP49_GPIO,		/* GPIO extension (addr 2) */
-	0
+	0,
 };
 
 static unsigned int net5big_v2_mpp_config[] __initdata = {
@@ -350,7 +350,7 @@ static unsigned int net5big_v2_mpp_config[] __initdata = {
 	MPP47_GPIO,		/* GPIO extension (addr 0) */
 	MPP48_GPIO,		/* GPIO extension (addr 1) */
 	MPP49_GPIO,		/* GPIO extension (addr 2) */
-	0
+	0,
 };
 
 #define NETXBIG_V2_GPIO_POWER_OFF		7

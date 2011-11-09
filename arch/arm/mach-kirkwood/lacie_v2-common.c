@@ -76,7 +76,7 @@ static struct i2c_board_info __initdata lacie_v2_i2c_info[] = {
 	{
 		I2C_BOARD_INFO("24c04", 0x50),
 		.platform_data  = &at24c04,
-	}
+	},
 };
 
 void __init lacie_v2_register_i2c_devices(void)

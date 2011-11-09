@@ -25,15 +25,15 @@ static struct mtd_partition db88f6281_nand_parts[] = {
 	{
 		.name = "u-boot",
 		.offset = 0,
-		.size = SZ_1M
+		.size = SZ_1M,
 	}, {
 		.name = "uImage",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = SZ_4M
+		.size = SZ_4M,
 	}, {
 		.name = "root",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = MTDPART_SIZ_FULL
+		.size = MTDPART_SIZ_FULL,
 	},
 };
 
@@ -61,7 +61,7 @@ static unsigned int db88f6281_mpp_config[] __initdata = {
 	MPP19_NF_IO1,
 	MPP37_GPIO,
 	MPP38_GPIO,
-	0
+	0,
 };
 
 static void __init db88f6281_init(void)

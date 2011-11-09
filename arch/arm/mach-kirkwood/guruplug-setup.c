@@ -27,15 +27,15 @@ static struct mtd_partition guruplug_nand_parts[] = {
 	{
 		.name = "u-boot",
 		.offset = 0,
-		.size = SZ_1M
+		.size = SZ_1M,
 	}, {
 		.name = "uImage",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = SZ_4M
+		.size = SZ_4M,
 	}, {
 		.name = "root",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = MTDPART_SIZ_FULL
+		.size = MTDPART_SIZ_FULL,
 	},
 };
 
@@ -88,7 +88,7 @@ static struct platform_device guruplug_leds = {
 	.id	= -1,
 	.dev	= {
 		.platform_data	= &guruplug_led_data,
-	}
+	},
 };
 
 static unsigned int guruplug_mpp_config[] __initdata = {
@@ -96,7 +96,7 @@ static unsigned int guruplug_mpp_config[] __initdata = {
 	MPP47_GPIO,	/* M_GLED */
 	MPP48_GPIO,	/* B_RLED */
 	MPP49_GPIO,	/* B_GLED */
-	0
+	0,
 };
 
 static void __init guruplug_init(void)

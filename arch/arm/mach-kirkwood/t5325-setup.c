@@ -103,7 +103,7 @@ static struct platform_device hp_t5325_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &hp_t5325_button_data,
-	}
+	},
 };
 
 static unsigned int hp_t5325_mpp_config[] __initdata = {
@@ -140,7 +140,7 @@ static unsigned int hp_t5325_mpp_config[] __initdata = {
 	MPP42_AU_I2SMCLK,
 	MPP45_GPIO,		/* Power button */
 	MPP48_GPIO,		/* Board power off */
-	0
+	0,
 };
 
 static struct alc5623_platform_data alc5621_data = {

@@ -213,7 +213,7 @@ static unsigned int netspace_v2_mpp_config[] __initdata = {
 	MPP31_GPIO,		/* Board power off */
 	MPP32_GPIO, 		/* Power button (0 = Released, 1 = Pushed) */
 	MPP33_GPO,		/* Fan speed (bit 2) */
-	0
+	0,
 };
 
 #define NETSPACE_V2_GPIO_POWER_OFF	31

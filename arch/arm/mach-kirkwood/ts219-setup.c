@@ -64,7 +64,7 @@ static struct platform_device qnap_ts219_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &qnap_ts219_button_data,
-	}
+	},
 };
 
 static unsigned int qnap_ts219_mpp_config[] __initdata = {
@@ -86,7 +86,7 @@ static unsigned int qnap_ts219_mpp_config[] __initdata = {
 	MPP37_GPIO,		/* Reset button (on devices with 88F6282) */
 	MPP43_GPIO,		/* USB Copy button (on devices with 88F6282) */
 	MPP44_GPIO,		/* Board ID: 0: TS-11x, 1: TS-21x */
-	0
+	0,
 };
 
 static void __init qnap_ts219_init(void)

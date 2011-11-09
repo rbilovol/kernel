@@ -28,15 +28,15 @@ static struct mtd_partition rd88f6281_nand_parts[] = {
 	{
 		.name = "u-boot",
 		.offset = 0,
-		.size = SZ_1M
+		.size = SZ_1M,
 	}, {
 		.name = "uImage",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = SZ_2M
+		.size = SZ_2M,
 	}, {
 		.name = "root",
 		.offset = MTDPART_OFS_NXTBLK,
-		.size = MTDPART_SIZ_FULL
+		.size = MTDPART_SIZ_FULL,
 	},
 };
 
@@ -73,7 +73,7 @@ static struct mvsdio_platform_data rd88f6281_mvsdio_data = {
 
 static unsigned int rd88f6281_mpp_config[] __initdata = {
 	MPP28_GPIO,
-	0
+	0,
 };
 
 static void __init rd88f6281_init(void)

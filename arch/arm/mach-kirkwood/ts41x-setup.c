@@ -75,7 +75,7 @@ static struct platform_device qnap_ts41x_button_device = {
 	.num_resources	= 0,
 	.dev		= {
 		.platform_data	= &qnap_ts41x_button_data,
-	}
+	},
 };
 
 static unsigned int qnap_ts41x_mpp_config[] __initdata = {
@@ -114,7 +114,7 @@ static unsigned int qnap_ts41x_mpp_config[] __initdata = {
 	MPP47_GPIO,		/* External SATA HDD2 error indicator */
 	MPP48_GPIO,		/* External SATA HDD3 error indicator */
 	MPP49_GPIO,		/* External SATA HDD4 error indicator */
-	0
+	0,
 };
 
 static void __init qnap_ts41x_init(void)

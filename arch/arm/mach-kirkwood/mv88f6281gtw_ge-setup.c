@@ -130,7 +130,7 @@ static unsigned int mv88f6281gtw_ge_mpp_config[] __initdata = {
 	MPP21_GPIO,	/* Status#_RLED pin */
 	MPP46_GPIO,	/* WPS_Switch pin   */
 	MPP47_GPIO,	/* SW_Init pin      */
-	0
+	0,
 };
 
 static void __init mv88f6281gtw_ge_init(void)

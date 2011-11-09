@@ -29,15 +29,15 @@ static struct mtd_partition openrd_nand_parts[] = {
 		.name		= "u-boot",
 		.offset		= 0,
 		.size		= SZ_1M,
-		.mask_flags	= MTD_WRITEABLE
+		.mask_flags	= MTD_WRITEABLE,
 	}, {
 		.name		= "uImage",
 		.offset		= MTDPART_OFS_NXTBLK,
-		.size		= SZ_4M
+		.size		= SZ_4M,
 	}, {
 		.name		= "root",
 		.offset		= MTDPART_OFS_NXTBLK,
-		.size		= MTDPART_SIZ_FULL
+		.size		= MTDPART_SIZ_FULL,
 	},
 };
 
@@ -67,14 +67,14 @@ static unsigned int openrd_mpp_config[] __initdata = {
 	MPP28_GPIO,
 	MPP29_GPIO,
 	MPP34_GPIO,
-	0
+	0,
 };
 
 /* Configure MPP for UART1 */
 static unsigned int openrd_uart1_mpp_config[] __initdata = {
 	MPP13_UART1_TXD,
 	MPP14_UART1_RXD,
-	0
+	0,
 };
 
 static struct i2c_board_info i2c_board_info[] __initdata = {
