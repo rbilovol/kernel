@@ -61,7 +61,7 @@ static struct map_desc hackkit_io_desc[] __initdata = {
 		.virtual	=  0xe8000000,
 		.pfn		= __phys_to_pfn(0x00000000),
 		.length		= 0x01000000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
@@ -170,7 +170,7 @@ static struct mtd_partition hackkit_partitions[] = {
 		.name		= "data",
 		.size		= MTDPART_SIZ_FULL,
 		.offset		= MTDPART_OFS_APPEND,
-	}
+	},
 };
 
 static struct flash_platform_data hackkit_flash_data = {

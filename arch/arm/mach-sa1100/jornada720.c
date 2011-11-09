@@ -170,7 +170,7 @@ static struct s1d13xxxfb_regval s1d13xxxfb_initregs[] = {
 static struct s1d13xxxfb_pdata s1d13xxxfb_data = {
 	.initregs		= s1d13xxxfb_initregs,
 	.initregssize		= ARRAY_SIZE(s1d13xxxfb_initregs),
-	.platform_init_video	= NULL
+	.platform_init_video	= NULL,
 };
 
 static struct resource s1d13xxxfb_resources[] = {
@@ -183,7 +183,7 @@ static struct resource s1d13xxxfb_resources[] = {
 		.start	= EPSONREGSTART,
 		.end	= EPSONREGSTART + EPSONREGLEN,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device s1d13xxxfb_device = {
@@ -278,18 +278,18 @@ static struct map_desc jornada720_io_desc[] __initdata = {
 		.virtual	= 0xf0000000,
 		.pfn		= __phys_to_pfn(EPSONREGSTART),
 		.length		= EPSONREGLEN,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* Epson frame buffer */
 		.virtual	= 0xf1000000,
 		.pfn		= __phys_to_pfn(EPSONFBSTART),
 		.length		= EPSONFBLEN,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* SA-1111 */
 		.virtual	= 0xf4000000,
 		.pfn		= __phys_to_pfn(SA1111REGSTART),
 		.length		= SA1111REGLEN,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init jornada720_map_io(void)
@@ -331,7 +331,7 @@ static struct mtd_partition jornada720_partitions[] = {
 		.name		= "JORNADA720 usr local",
 		.size		= 0, /* will expand to the end of the flash */
 		.offset		= 0x00d00000,
-	}
+	},
 };
 
 static void jornada720_set_vpp(int vpp)

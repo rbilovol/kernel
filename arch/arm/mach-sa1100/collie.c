@@ -260,7 +260,7 @@ static struct mtd_partition collie_partitions[] = {
 		.name		= "bootloader",
 		.offset 	= 0,
 		.size		= 0x000C0000,
-		.mask_flags	= MTD_WRITEABLE
+		.mask_flags	= MTD_WRITEABLE,
 	}, {
 		.name		= "kernel",
 		.offset 	= MTDPART_OFS_APPEND,
@@ -269,7 +269,7 @@ static struct mtd_partition collie_partitions[] = {
 		.name		= "rootfs",
 		.offset 	= MTDPART_OFS_APPEND,
 		.size		= 0x00e20000,
-	}
+	},
 };
 
 static int collie_flash_init(void)
@@ -309,7 +309,7 @@ static struct resource collie_flash_resources[] = {
 		.start	= SA1100_CS0_PHYS,
 		.end	= SA1100_CS0_PHYS + SZ_32M - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static void __init collie_init(void)
@@ -361,13 +361,13 @@ static struct map_desc collie_io_desc[] __initdata = {
 		.virtual	= 0xe8000000,
 		.pfn		= __phys_to_pfn(0x00000000),
 		.length		= 0x02000000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* 32M boot flash (cs1) */
 		.virtual	= 0xea000000,
 		.pfn		= __phys_to_pfn(0x08000000),
 		.length		= 0x02000000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init collie_map_io(void)

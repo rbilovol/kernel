@@ -103,16 +103,16 @@ static struct mtd_partition badge4_partitions[] = {
 	{
 		.name	= "BLOB boot loader",
 		.offset	= 0,
-		.size	= 0x0000A000
+		.size	= 0x0000A000,
 	}, {
 		.name	= "params",
 		.offset	= MTDPART_OFS_APPEND,
-		.size	= 0x00006000
+		.size	= 0x00006000,
 	}, {
 		.name	= "root",
 		.offset	= MTDPART_OFS_APPEND,
-		.size	= MTDPART_SIZ_FULL
-	}
+		.size	= MTDPART_SIZ_FULL,
+	},
 };
 
 static struct flash_platform_data badge4_flash_data = {
@@ -263,18 +263,18 @@ static struct map_desc badge4_io_desc[] __initdata = {
 		.virtual	= 0xf1000000,
 		.pfn		= __phys_to_pfn(0x08000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* SRAM  bank 2 */
 		.virtual	= 0xf2000000,
 		.pfn		= __phys_to_pfn(0x10000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* SA-1111      */
 		.virtual	= 0xf4000000,
 		.pfn		= __phys_to_pfn(0x48000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void

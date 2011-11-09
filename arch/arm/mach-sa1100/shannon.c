@@ -26,18 +26,18 @@ static struct mtd_partition shannon_partitions[] = {
 	{
 		.name		= "BLOB boot loader",
 		.offset		= 0,
-		.size		= 0x20000
+		.size		= 0x20000,
 	},
 	{
 		.name		= "kernel",
 		.offset		= MTDPART_OFS_APPEND,
-		.size		= 0xe0000
+		.size		= 0xe0000,
 	},
 	{
 		.name		= "initrd",
 		.offset		= MTDPART_OFS_APPEND,	
-		.size		= MTDPART_SIZ_FULL
-	}
+		.size		= MTDPART_SIZ_FULL,
+	},
 };
 
 static struct flash_platform_data shannon_flash_data = {

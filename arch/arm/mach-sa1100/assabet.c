@@ -120,7 +120,7 @@ static struct mtd_partition assabet_partitions[] = {
 		.name		= "jffs",
 		.size		= MTDPART_SIZ_FULL,
 		.offset		= MTDPART_OFS_APPEND,
-	}
+	},
 };
 #else
 /*
@@ -141,7 +141,7 @@ static struct mtd_partition assabet_partitions[] = {
 		.name		= "jffs",
 		.size		= MTDPART_SIZ_FULL,
 		.offset		= MTDPART_OFS_APPEND,
-	}
+	},
 };
 #endif
 
@@ -160,7 +160,7 @@ static struct resource assabet_flash_resources[] = {
 		.start	= SA1100_CS1_PHYS,
 		.end	= SA1100_CS1_PHYS + SZ_32M - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 
@@ -392,13 +392,13 @@ static struct map_desc assabet_io_desc[] __initdata = {
 		.virtual	=  0xf1000000,
 		.pfn		= __phys_to_pfn(0x12000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* MQ200 */
 		.virtual	=  0xf2800000,
 		.pfn		= __phys_to_pfn(0x4b800000),
 		.length		= 0x00800000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init assabet_map_io(void)

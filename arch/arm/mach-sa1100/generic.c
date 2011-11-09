@@ -52,7 +52,7 @@ static const unsigned short cclk_frequency_100khz[NR_FREQS] = {
 	2359,	/* 235.9 MHz */
 	2507,	/* 250.7 MHz */
 	2654,	/* 265.4 MHz */
-	2802	/* 280.2 MHz */
+	2802,	/* 280.2 MHz */
 };
 
 /* rounds up(!)  */
@@ -319,7 +319,7 @@ static struct resource sa11x0ir_resources[] = {
 		.start	= IRQ_Ser2ICP,
 		.end	= IRQ_Ser2ICP,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device sa11x0ir_device = {
@@ -387,22 +387,22 @@ static struct map_desc standard_io_desc[] __initdata = {
 		.virtual	=  0xf8000000,
 		.pfn		= __phys_to_pfn(0x80000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* SCM */
 		.virtual	=  0xfa000000,
 		.pfn		= __phys_to_pfn(0x90000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* MER */
 		.virtual	=  0xfc000000,
 		.pfn		= __phys_to_pfn(0xa0000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* LCD + DMA */
 		.virtual	=  0xfe000000,
 		.pfn		= __phys_to_pfn(0xb0000000),
 		.length		= 0x00200000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

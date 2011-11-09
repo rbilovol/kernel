@@ -79,7 +79,7 @@ static struct resource pleb_flash_resources[] = {
 		.start = SA1100_CS1_PHYS,
 		.end   = SA1100_CS1_PHYS + SZ_8M - 1,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 
@@ -96,7 +96,7 @@ static struct mtd_partition pleb_partitions[] = {
 		.name		= "rootfs",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= 0x00300000,
-	}
+	},
 };
 
 

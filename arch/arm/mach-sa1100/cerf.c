@@ -78,7 +78,7 @@ static struct mtd_partition cerf_partitions[] = {
 		.name		= "Filesystem",
 		.size		= CERF_FLASH_SIZE-0x00160000,
 		.offset		= 0x00160000,
-	}
+	},
 };
 
 static struct flash_platform_data cerf_flash_data = {
@@ -104,8 +104,8 @@ static struct map_desc cerf_io_desc[] __initdata = {
 		.virtual	=  0xf0000000,
 		.pfn		= __phys_to_pfn(0x08000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init cerf_map_io(void)

@@ -121,12 +121,12 @@ static struct map_desc simpad_io_desc[] __initdata = {
 		.virtual	=  0xf2800000,
 		.pfn		= __phys_to_pfn(0x4b800000),
 		.length		= 0x00800000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* Simpad CS3 */
 		.virtual	= CS3_BASE,
 		.pfn		= __phys_to_pfn(SA1100_CS3_PHYS),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
@@ -165,7 +165,7 @@ static struct mtd_partition simpad_partitions[] = {
 		.name       = "SIMpad root jffs2",
 		.size       = MTDPART_SIZ_FULL,
 		.offset     = MTDPART_OFS_APPEND,
-	}
+	},
 };
 
 static struct flash_platform_data simpad_flash_data = {
@@ -184,7 +184,7 @@ static struct resource simpad_flash_resources [] = {
 		.start     = SA1100_CS1_PHYS,
 		.end       = SA1100_CS1_PHYS + SZ_16M -1,
 		.flags     = IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct mcp_plat_data simpad_mcp_data = {

@@ -123,7 +123,7 @@ static struct sa1100_dram_regs sa1100_dram_settings[] = {
 	{250700, 0x03bf3aa3, 0xc3c3c07f, 0xc3c3c3c3, 0xffffffc3},/* 250.7 MHz */
 	{265400, 0x03f7c2a3, 0xc3c3c07f, 0xc3c3c3c3, 0xffffffc3},/* 265.4 MHz */
 	{280200, 0x0431c2a3, 0x878780ff, 0x87878787, 0xffffff87},/* 280.2 MHz */
-	{ 0, 0, 0, 0, 0 } /* last entry */
+	{ 0, 0, 0, 0, 0 }, /* last entry */
 };
 
 static void sa1100_update_dram_timings(int current_speed, int new_speed)

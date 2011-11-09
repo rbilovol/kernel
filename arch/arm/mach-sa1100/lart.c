@@ -36,13 +36,13 @@ static struct map_desc lart_io_desc[] __initdata = {
 		.virtual	=  0xe8000000,
 		.pfn		= __phys_to_pfn(0x00000000),
 		.length		= 0x00400000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* main flash, alternative location */
 		.virtual	=  0xec000000,
 		.pfn		= __phys_to_pfn(0x08000000),
 		.length		= 0x00400000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init lart_map_io(void)

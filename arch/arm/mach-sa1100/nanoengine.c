@@ -47,7 +47,7 @@ static struct mtd_partition nanoengine_partitions[] = {
 		.size		= 0x00100000,
 		.offset		= 0x00300000,
 		.mask_flags	= MTD_WRITEABLE,
-	}
+	},
 };
 
 static struct flash_platform_data nanoengine_flash_data = {
@@ -65,7 +65,7 @@ static struct resource nanoengine_flash_resources[] = {
 		.start	= SA1100_CS1_PHYS,
 		.end	= SA1100_CS1_PHYS + SZ_32M - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct map_desc nanoengine_io_desc[] __initdata = {
@@ -74,20 +74,20 @@ static struct map_desc nanoengine_io_desc[] __initdata = {
 		.virtual	= 0xf0000000,
 		.pfn		= __phys_to_pfn(0x10000000),
 		.length		= 0x00100000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		/* Internal PCI Memory Read/Write */
 		.virtual	= NANO_PCI_MEM_RW_VIRT,
 		.pfn		= __phys_to_pfn(NANO_PCI_MEM_RW_PHYS),
 		.length		= NANO_PCI_MEM_RW_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		/* Internal PCI Config Space */
 		.virtual	= NANO_PCI_CONFIG_SPACE_VIRT,
 		.pfn		= __phys_to_pfn(NANO_PCI_CONFIG_SPACE_PHYS),
 		.length		= NANO_PCI_CONFIG_SPACE_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init nanoengine_map_io(void)
