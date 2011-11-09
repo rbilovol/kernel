@@ -1495,7 +1495,7 @@ static struct clk_lookup mx51_lookups[] = {
 	_REGISTER_CLOCK("imx-ipuv3", "di0", ipu_di0_clk)
 	_REGISTER_CLOCK("imx-ipuv3", "di1", ipu_di1_clk)
 	_REGISTER_CLOCK(NULL, "gpc_dvfs", gpc_dvfs_clk)
-	_REGISTER_CLOCK("pata_imx", NULL, pata_clk)
+	_REGISTER_CLOCK("pata_imx", NULL, pata_clk),
 };
 
 static struct clk_lookup mx53_lookups[] = {
@@ -1532,7 +1532,7 @@ static struct clk_lookup mx53_lookups[] = {
 	_REGISTER_CLOCK("pata_imx", NULL, pata_clk)
 	_REGISTER_CLOCK("imx53-ahci.0", "ahci", sata_clk)
 	_REGISTER_CLOCK("imx53-ahci.0", "ahci_phy", ahci_phy_clk)
-	_REGISTER_CLOCK("imx53-ahci.0", "ahci_dma", ahci_dma_clk)
+	_REGISTER_CLOCK("imx53-ahci.0", "ahci_dma", ahci_dma_clk),
 };
 
 static void clk_tree_init(void)

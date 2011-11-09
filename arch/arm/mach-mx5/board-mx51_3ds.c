@@ -102,7 +102,7 @@ static int mx51_3ds_board_keymap[] = {
 	KEY(3, 2, KEY_ESC),
 	KEY(3, 3, KEY_ENTER),
 	KEY(3, 4, KEY_MENU),
-	KEY(3, 5, KEY_BACK)
+	KEY(3, 5, KEY_BACK),
 };
 
 static const struct matrix_keymap_data mx51_3ds_map_data __initconst = {

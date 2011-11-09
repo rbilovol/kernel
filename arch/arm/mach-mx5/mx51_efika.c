@@ -243,7 +243,7 @@ static struct flash_platform_data mx51_efika_spi_flash_data = {
 static struct regulator_consumer_supply sw1_consumers[] = {
 	{
 		.supply = "cpu_vcc",
-	}
+	},
 };
 
 static struct regulator_consumer_supply vdig_consumers[] = {
@@ -265,19 +265,19 @@ static struct regulator_consumer_supply vsd_consumers[] = {
 static struct regulator_consumer_supply pwgt1_consumer[] = {
 	{
 		.supply = "pwgt1",
-	}
+	},
 };
 
 static struct regulator_consumer_supply pwgt2_consumer[] = {
 	{
 		.supply = "pwgt2",
-	}
+	},
 };
 
 static struct regulator_consumer_supply coincell_consumer[] = {
 	{
 		.supply = "coincell",
-	}
+	},
 };
 
 static struct regulator_init_data sw1_init = {
@@ -312,7 +312,7 @@ static struct regulator_init_data sw2_init = {
 			.mode = REGULATOR_MODE_NORMAL,
 			.enabled = 1,
 		},
-	}
+	},
 };
 
 static struct regulator_init_data sw3_init = {
@@ -323,7 +323,7 @@ static struct regulator_init_data sw3_init = {
 		.valid_ops_mask = REGULATOR_CHANGE_VOLTAGE,
 		.always_on = 1,
 		.boot_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data sw4_init = {
@@ -334,7 +334,7 @@ static struct regulator_init_data sw4_init = {
 		.valid_ops_mask = REGULATOR_CHANGE_VOLTAGE,
 		.always_on = 1,
 		.boot_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data viohi_init = {
@@ -342,7 +342,7 @@ static struct regulator_init_data viohi_init = {
 		.name = "VIOHI",
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vusb_init = {
@@ -350,13 +350,13 @@ static struct regulator_init_data vusb_init = {
 		.name = "VUSB",
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data swbst_init = {
 	.constraints = {
 		.name = "SWBST",
-	}
+	},
 };
 
 static struct regulator_init_data vdig_init = {
@@ -382,7 +382,7 @@ static struct regulator_init_data vpll_init = {
 			REGULATOR_CHANGE_VOLTAGE | REGULATOR_CHANGE_STATUS,
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vusb2_init = {
@@ -393,7 +393,7 @@ static struct regulator_init_data vusb2_init = {
 		.valid_ops_mask = REGULATOR_CHANGE_VOLTAGE,
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vvideo_init = {
@@ -418,7 +418,7 @@ static struct regulator_init_data vaudio_init = {
 		.valid_ops_mask =
 			REGULATOR_CHANGE_VOLTAGE | REGULATOR_CHANGE_STATUS,
 		.boot_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vsd_init = {
@@ -444,7 +444,7 @@ static struct regulator_init_data vcam_init = {
 			REGULATOR_CHANGE_MODE | REGULATOR_CHANGE_STATUS,
 		.valid_modes_mask = REGULATOR_MODE_FAST | REGULATOR_MODE_NORMAL,
 		.boot_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vgen1_init = {
@@ -456,7 +456,7 @@ static struct regulator_init_data vgen1_init = {
 			REGULATOR_CHANGE_VOLTAGE | REGULATOR_CHANGE_STATUS,
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vgen2_init = {
@@ -468,7 +468,7 @@ static struct regulator_init_data vgen2_init = {
 			REGULATOR_CHANGE_VOLTAGE | REGULATOR_CHANGE_STATUS,
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data vgen3_init = {
@@ -480,31 +480,31 @@ static struct regulator_init_data vgen3_init = {
 			REGULATOR_CHANGE_VOLTAGE | REGULATOR_CHANGE_STATUS,
 		.boot_on = 1,
 		.always_on = 1,
-	}
+	},
 };
 
 static struct regulator_init_data gpo1_init = {
 	.constraints = {
 		.name = "GPO1",
-	}
+	},
 };
 
 static struct regulator_init_data gpo2_init = {
 	.constraints = {
 		.name = "GPO2",
-	}
+	},
 };
 
 static struct regulator_init_data gpo3_init = {
 	.constraints = {
 		.name = "GPO3",
-	}
+	},
 };
 
 static struct regulator_init_data gpo4_init = {
 	.constraints = {
 		.name = "GPO4",
-	}
+	},
 };
 
 static struct regulator_init_data pwgt1_init = {

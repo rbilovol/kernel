@@ -242,7 +242,7 @@ static struct spi_board_info cpuimx51sd_spi_device[] = {
 		.mode		= SPI_MODE_0,
 		.chip_select     = 0,
 		.platform_data   = &mcp251x_info,
-		.irq             = IMX_GPIO_TO_IRQ(CAN_IRQGPIO)
+		.irq             = IMX_GPIO_TO_IRQ(CAN_IRQGPIO),
 	},
 };
 

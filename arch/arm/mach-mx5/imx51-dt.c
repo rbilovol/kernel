@@ -41,7 +41,7 @@ static const struct of_dev_auxdata imx51_auxdata_lookup[] __initconst = {
 	OF_DEV_AUXDATA("fsl,imx51-i2c", MX51_I2C2_BASE_ADDR, "imx-i2c.1", NULL),
 	OF_DEV_AUXDATA("fsl,imx51-sdma", MX51_SDMA_BASE_ADDR, "imx35-sdma", NULL),
 	OF_DEV_AUXDATA("fsl,imx51-wdt", MX51_WDOG1_BASE_ADDR, "imx2-wdt.0", NULL),
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static void __init imx51_tzic_add_irq_domain(struct device_node *np,
@@ -63,12 +63,12 @@ static void __init imx51_gpio_add_irq_domain(struct device_node *np,
 static const struct of_device_id imx51_irq_match[] __initconst = {
 	{ .compatible = "fsl,imx51-tzic", .data = imx51_tzic_add_irq_domain, },
 	{ .compatible = "fsl,imx51-gpio", .data = imx51_gpio_add_irq_domain, },
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static const struct of_device_id imx51_iomuxc_of_match[] __initconst = {
 	{ .compatible = "fsl,imx51-iomuxc-babbage", .data = imx51_babbage_common_init, },
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static void __init imx51_dt_init(void)
@@ -102,7 +102,7 @@ static struct sys_timer imx51_timer = {
 
 static const char *imx51_dt_board_compat[] __initdata = {
 	"fsl,imx51-babbage",
-	NULL
+	NULL,
 };
 
 DT_MACHINE_START(IMX51_DT, "Freescale i.MX51 (Device Tree Support)")

@@ -45,7 +45,7 @@ static const struct of_dev_auxdata imx53_auxdata_lookup[] __initconst = {
 	OF_DEV_AUXDATA("fsl,imx53-i2c", MX53_I2C3_BASE_ADDR, "imx-i2c.2", NULL),
 	OF_DEV_AUXDATA("fsl,imx53-sdma", MX53_SDMA_BASE_ADDR, "imx35-sdma", NULL),
 	OF_DEV_AUXDATA("fsl,imx53-wdt", MX53_WDOG1_BASE_ADDR, "imx2-wdt.0", NULL),
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static void __init imx53_tzic_add_irq_domain(struct device_node *np,
@@ -67,7 +67,7 @@ static void __init imx53_gpio_add_irq_domain(struct device_node *np,
 static const struct of_device_id imx53_irq_match[] __initconst = {
 	{ .compatible = "fsl,imx53-tzic", .data = imx53_tzic_add_irq_domain, },
 	{ .compatible = "fsl,imx53-gpio", .data = imx53_gpio_add_irq_domain, },
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static const struct of_device_id imx53_iomuxc_of_match[] __initconst = {
@@ -75,7 +75,7 @@ static const struct of_device_id imx53_iomuxc_of_match[] __initconst = {
 	{ .compatible = "fsl,imx53-iomuxc-evk", .data = imx53_evk_common_init, },
 	{ .compatible = "fsl,imx53-iomuxc-qsb", .data = imx53_qsb_common_init, },
 	{ .compatible = "fsl,imx53-iomuxc-smd", .data = imx53_smd_common_init, },
-	{ /* sentinel */ }
+	{ /* sentinel */ },
 };
 
 static void __init imx53_dt_init(void)
@@ -112,7 +112,7 @@ static const char *imx53_dt_board_compat[] __initdata = {
 	"fsl,imx53-evk",
 	"fsl,imx53-qsb",
 	"fsl,imx53-smd",
-	NULL
+	NULL,
 };
 
 DT_MACHINE_START(IMX53_DT, "Freescale i.MX53 (Device Tree Support)")
