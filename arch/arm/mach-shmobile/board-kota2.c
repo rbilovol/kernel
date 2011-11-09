@@ -297,7 +297,7 @@ static struct map_desc kota2_io_desc[] __initdata = {
 		.virtual	= 0xe6000000,
 		.pfn		= __phys_to_pfn(0xe6000000),
 		.length		= 256 << 20,
-		.type		= MT_DEVICE_NONSHARED
+		.type		= MT_DEVICE_NONSHARED,
 	},
 };
 

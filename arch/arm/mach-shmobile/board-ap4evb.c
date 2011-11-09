@@ -203,7 +203,7 @@ static struct resource nor_flash_resources[] = {
 		.start	= 0x20000000, /* CS0 shadow instead of regular CS0 */
 		.end	= 0x28000000 - 1, /* needed by USB MASK ROM boot */		
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device nor_flash_device = {
@@ -495,7 +495,7 @@ static struct sh_mobile_lcdc_info lcdc_info = {
 		.lcd_cfg = ap4evb_lcdc_modes,
 		.num_cfg = ARRAY_SIZE(ap4evb_lcdc_modes),
 		.meram_cfg = &lcd_meram_cfg,
-	}
+	},
 };
 
 static struct resource lcdc_resources[] = {
@@ -790,7 +790,7 @@ static struct sh_mobile_lcdc_info sh_mobile_lcdc1_info = {
 		.clock_divider = 1,
 		.flags = LCDC_FLAGS_DWPOL,
 		.meram_cfg = &hdmi_meram_cfg,
-	}
+	},
 };
 
 static struct resource lcdc1_resources[] = {
@@ -895,7 +895,7 @@ static struct gpio_led ap4evb_leds[] = {
 		.name			= "led1",
 		.gpio			= GPIO_PORT188,
 		.default_state	= LEDS_GPIO_DEFSTATE_ON,
-	}
+	},
 };
 
 static struct gpio_led_platform_data ap4evb_leds_pdata = {
@@ -1165,7 +1165,7 @@ static struct map_desc ap4evb_io_desc[] __initdata = {
 		.virtual	= 0xe6000000,
 		.pfn		= __phys_to_pfn(0xe6000000),
 		.length		= 256 << 20,
-		.type		= MT_DEVICE_NONSHARED
+		.type		= MT_DEVICE_NONSHARED,
 	},
 };
 

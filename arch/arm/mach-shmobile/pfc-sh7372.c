@@ -1435,7 +1435,7 @@ static struct pinmux_cfg_reg pinmux_config_regs[] = {
 			MSEL1CR_2_0,	MSEL1CR_2_1,
 			0, 0,
 			MSEL1CR_0_0,	MSEL1CR_0_1,
-		}
+		},
 	},
 	{ PINMUX_CFG_REG("MSEL3CR", 0xE6058020, 32, 1) {
 			0, 0, 0, 0,
@@ -1458,7 +1458,7 @@ static struct pinmux_cfg_reg pinmux_config_regs[] = {
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			0, 0, 0, 0,
-			}
+			},
 	},
 	{ PINMUX_CFG_REG("MSEL4CR", 0xE6058024, 32, 1) {
 			0, 0, 0, 0,
@@ -1484,7 +1484,7 @@ static struct pinmux_cfg_reg pinmux_config_regs[] = {
 			0, 0, 0, 0,
 			MSEL4CR_1_0,	MSEL4CR_1_1,
 			0, 0,
-		}
+		},
 	},
 	{ },
 };
@@ -1499,7 +1499,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			0, 0, 0, 0,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTL127_096DR", 0xE605400C, 32) {
 			PORT127_DATA, PORT126_DATA, PORT125_DATA, PORT124_DATA,
@@ -1510,7 +1510,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			PORT99_DATA,  PORT98_DATA,  PORT97_DATA,  PORT96_DATA,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTL159_128DR", 0xE6054010, 32) {
 			PORT159_DATA, PORT158_DATA, PORT157_DATA, PORT156_DATA,
@@ -1521,7 +1521,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			PORT139_DATA, PORT138_DATA, PORT137_DATA, PORT136_DATA,
 			PORT135_DATA, PORT134_DATA, PORT133_DATA, PORT132_DATA,
 			PORT131_DATA, PORT130_DATA, PORT129_DATA, PORT128_DATA,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTL191_160DR", 0xE6054014, 32) {
 			0, 0, 0, 0,
@@ -1532,7 +1532,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			0, 0, 0, 0,
 			0,	      PORT166_DATA, PORT165_DATA, PORT164_DATA,
 			PORT163_DATA, PORT162_DATA, PORT161_DATA, PORT160_DATA,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTD031_000DR", 0xE6055000, 32) {
 			PORT31_DATA, PORT30_DATA, PORT29_DATA, PORT28_DATA,
@@ -1543,7 +1543,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			PORT11_DATA, PORT10_DATA, PORT9_DATA,  PORT8_DATA,
 			PORT7_DATA,  PORT6_DATA,  PORT5_DATA,  PORT4_DATA,
 			PORT3_DATA,  PORT2_DATA,  PORT1_DATA,  PORT0_DATA,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTD063_032DR", 0xE6055004, 32) {
 			0, 0, 0, 0, 0, 0, 0, 0,
@@ -1552,7 +1552,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			PORT43_DATA, PORT42_DATA, PORT41_DATA, PORT40_DATA,
 			PORT39_DATA, PORT38_DATA, PORT37_DATA, PORT36_DATA,
 			PORT35_DATA, PORT34_DATA, PORT33_DATA, PORT32_DATA,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTR063_032DR", 0xE6056004, 32) {
 			PORT63_DATA, PORT62_DATA, PORT61_DATA, PORT60_DATA,
@@ -1563,7 +1563,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			0, 0, 0, 0,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTR095_064DR", 0xE6056008, 32) {
 			0, 0, 0, 0,
@@ -1574,7 +1574,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			PORT75_DATA, PORT74_DATA, PORT73_DATA, PORT72_DATA,
 			PORT71_DATA, PORT70_DATA, PORT69_DATA, PORT68_DATA,
 			PORT67_DATA, PORT66_DATA, PORT65_DATA, PORT64_DATA,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTR191_160DR", 0xE6056014, 32) {
 			0,	      PORT190_DATA, PORT189_DATA, PORT188_DATA,
@@ -1585,7 +1585,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			PORT171_DATA, PORT170_DATA, PORT169_DATA, PORT168_DATA,
 			PORT167_DATA, 0, 0, 0,
 			0, 0, 0, 0,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTU127_096DR", 0xE605700C, 32) {
 			0, 0, 0, 0,
@@ -1596,7 +1596,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			PORT107_DATA, PORT106_DATA, PORT105_DATA, PORT104_DATA,
 			PORT103_DATA, PORT102_DATA, PORT101_DATA, PORT100_DATA,
 			0, 0, 0, 0,
-		}
+		},
 	},
 	{ PINMUX_DATA_REG("PORTU159_128DR", 0xE6057010, 32) {
 			0, 0, 0, 0,
@@ -1607,7 +1607,7 @@ static struct pinmux_data_reg pinmux_data_regs[] = {
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			0, 0, 0, 0,
-		}
+		},
 	},
 	{ },
 };

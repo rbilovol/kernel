@@ -106,7 +106,7 @@ static struct resource nor_flash_resources[] = {
 		.start	= 0x00000000,
 		.end	= 0x08000000 - 1,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device nor_flash_device = {
@@ -268,7 +268,7 @@ static struct map_desc g4evm_io_desc[] __initdata = {
 		.virtual	= 0xe6000000,
 		.pfn		= __phys_to_pfn(0xe6000000),
 		.length		= 256 << 20,
-		.type		= MT_DEVICE_NONSHARED
+		.type		= MT_DEVICE_NONSHARED,
 	},
 };
 

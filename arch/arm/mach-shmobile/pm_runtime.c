@@ -35,7 +35,7 @@ static struct dev_pm_domain default_pm_domain = {
 		.runtime_suspend = pm_clk_suspend,
 		.runtime_resume = pm_clk_resume,
 		.runtime_idle = default_platform_runtime_idle,
-		USE_PLATFORM_PM_SLEEP_OPS
+		USE_PLATFORM_PM_SLEEP_OPS,
 	},
 };
 

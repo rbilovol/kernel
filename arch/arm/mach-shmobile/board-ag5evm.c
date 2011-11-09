@@ -278,7 +278,7 @@ static struct sh_mobile_lcdc_info lcdc0_info = {
 			.display_on = lcd_on,
 			.display_off = lcd_off,
 		},
-	}
+	},
 };
 
 static struct resource lcdc0_resources[] = {
@@ -459,7 +459,7 @@ static struct map_desc ag5evm_io_desc[] __initdata = {
 		.virtual	= 0xe6000000,
 		.pfn		= __phys_to_pfn(0xe6000000),
 		.length		= 256 << 20,
-		.type		= MT_DEVICE_NONSHARED
+		.type		= MT_DEVICE_NONSHARED,
 	},
 };
 

@@ -501,7 +501,7 @@ static struct intc_mask_reg intcs_mask_registers[] __initdata = {
 	    0, 0, 0, 0 } },
 	{ 0xFFD20104, 0, 16, /* INTAMASK */
 	  { 0, 0, 0, 0, 0, 0, 0, 0,
-	    0, 0, 0, 0, 0, 0, 0, INTCS } }
+	    0, 0, 0, 0, 0, 0, 0, INTCS } },
 };
 
 static struct intc_prio_reg intcs_prio_registers[] __initdata = {
@@ -556,7 +556,7 @@ static struct resource intcs_resources[] __initdata = {
 		.start	= 0xffd20000,
 		.end	= 0xffd500ff,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct intc_desc intcs_desc __initdata = {

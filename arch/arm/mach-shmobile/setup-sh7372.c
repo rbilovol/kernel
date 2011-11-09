@@ -470,7 +470,7 @@ static const struct sh_dmae_channel sh7372_dmae_channels[] = {
 		.offset = 0x60,
 		.dmars = 8,
 		.dmars_bit = 8,
-	}
+	},
 };
 
 static const unsigned int ts_shift[] = TS_SHIFT;

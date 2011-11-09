@@ -379,7 +379,7 @@ static struct resource intcs_resources[] __initdata = {
 		.start	= 0xffd20000,
 		.end	= 0xffd2ffff,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct intc_desc intcs_desc __initdata = {
