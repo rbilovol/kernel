@@ -29,12 +29,12 @@ static void __init picoxcell_init_machine(void)
 static const char *picoxcell_dt_match[] = {
 	"picochip,pc3x2",
 	"picochip,pc3x3",
-	NULL
+	NULL,
 };
 
 static const struct of_device_id vic_of_match[] __initconst = {
 	{ .compatible = "arm,pl192-vic" },
-	{ /* Sentinel */ }
+	{ /* Sentinel */ },
 };
 
 static void __init picoxcell_init_irq(void)
