@@ -236,7 +236,7 @@ static struct resource pb1176_rom_resources[] = {
 		.start		= REALVIEW_DC1176_ROM_BASE,
 		.end		= REALVIEW_DC1176_ROM_BASE + SZ_16K - 1,
 		.flags		= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device pb1176_rom_device = {

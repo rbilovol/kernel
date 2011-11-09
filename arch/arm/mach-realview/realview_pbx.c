@@ -112,7 +112,7 @@ static struct map_desc realview_local_io_desc[] __initdata = {
 		.pfn            = __phys_to_pfn(REALVIEW_PBX_TILE_L220_BASE),
 		.length         = SZ_8K,
 		.type           = MT_DEVICE,
-	}
+	},
 };
 
 static void __init realview_pbx_map_io(void)

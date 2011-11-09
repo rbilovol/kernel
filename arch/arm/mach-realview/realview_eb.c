@@ -105,7 +105,7 @@ static struct map_desc realview_eb11mp_io_desc[] __initdata = {
 		.pfn		= __phys_to_pfn(REALVIEW_EB11MP_L220_BASE),
 		.length		= SZ_8K,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 static void __init realview_eb_map_io(void)
