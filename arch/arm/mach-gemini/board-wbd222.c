@@ -113,7 +113,7 @@ static struct mtd_partition wbd222_partitions[] = {
 		.offset		= 0x7e0000,
 		.size		= 0x010000,
 		.mask_flags	= MTD_WRITEABLE,
-	}
+	},
 };
 #define wbd222_num_partitions  ARRAY_SIZE(wbd222_partitions)
 
