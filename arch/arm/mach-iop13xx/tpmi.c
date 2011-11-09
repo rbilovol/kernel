@@ -63,8 +63,8 @@ static struct resource iop13xx_tpmi_0_resources[] = {
 	[IOP13XX_TPMI_RESOURCE_IRQ] = {
 		.start = IRQ_IOP13XX_TPMI0_OUT,
 		.end = IRQ_IOP13XX_TPMI0_OUT,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_tpmi_1_resources[] = {
@@ -91,8 +91,8 @@ static struct resource iop13xx_tpmi_1_resources[] = {
 	[IOP13XX_TPMI_RESOURCE_IRQ] = {
 		.start = IRQ_IOP13XX_TPMI1_OUT,
 		.end = IRQ_IOP13XX_TPMI1_OUT,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_tpmi_2_resources[] = {
@@ -119,8 +119,8 @@ static struct resource iop13xx_tpmi_2_resources[] = {
 	[IOP13XX_TPMI_RESOURCE_IRQ] = {
 		.start = IRQ_IOP13XX_TPMI2_OUT,
 		.end = IRQ_IOP13XX_TPMI2_OUT,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_tpmi_3_resources[] = {
@@ -147,8 +147,8 @@ static struct resource iop13xx_tpmi_3_resources[] = {
 	[IOP13XX_TPMI_RESOURCE_IRQ] = {
 		.start = IRQ_IOP13XX_TPMI3_OUT,
 		.end = IRQ_IOP13XX_TPMI3_OUT,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 u64 iop13xx_tpmi_mask = DMA_BIT_MASK(64);

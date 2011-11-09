@@ -62,8 +62,8 @@ static struct resource iop13xx_uart0_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_UART0,
 		.end = IRQ_IOP13XX_UART0,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_uart1_resources[] = {
@@ -75,8 +75,8 @@ static struct resource iop13xx_uart1_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_UART1,
 		.end = IRQ_IOP13XX_UART1,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct plat_serial8250_port iop13xx_uart0_data[] = {
@@ -119,7 +119,7 @@ static struct platform_device iop13xx_uart1 = {
        .id = 0,
        .dev.platform_data = iop13xx_uart1_data,
        .num_resources = 2,
-       .resource = iop13xx_uart1_resources
+       .resource = iop13xx_uart1_resources,
 };
 
 static struct resource iop13xx_i2c_0_resources[] = {
@@ -131,8 +131,8 @@ static struct resource iop13xx_i2c_0_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_I2C_0,
 		.end = IRQ_IOP13XX_I2C_0,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_i2c_1_resources[] = {
@@ -144,8 +144,8 @@ static struct resource iop13xx_i2c_1_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_I2C_1,
 		.end = IRQ_IOP13XX_I2C_1,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_i2c_2_resources[] = {
@@ -157,8 +157,8 @@ static struct resource iop13xx_i2c_2_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_I2C_2,
 		.end = IRQ_IOP13XX_I2C_2,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 /* I2C controllers. The IOP13XX uses the same block as the IOP3xx, so
@@ -170,21 +170,21 @@ static struct platform_device iop13xx_i2c_0_controller = {
 	.name = "IOP3xx-I2C",
 	.id = 0,
 	.num_resources = 2,
-	.resource = iop13xx_i2c_0_resources
+	.resource = iop13xx_i2c_0_resources,
 };
 
 static struct platform_device iop13xx_i2c_1_controller = {
 	.name = "IOP3xx-I2C",
 	.id = 0,
 	.num_resources = 2,
-	.resource = iop13xx_i2c_1_resources
+	.resource = iop13xx_i2c_1_resources,
 };
 
 static struct platform_device iop13xx_i2c_2_controller = {
 	.name = "IOP3xx-I2C",
 	.id = 0,
 	.num_resources = 2,
-	.resource = iop13xx_i2c_2_resources
+	.resource = iop13xx_i2c_2_resources,
 };
 
 #ifdef CONFIG_MTD_PHYSMAP
@@ -248,18 +248,18 @@ static struct resource iop13xx_adma_0_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_ADMA0_EOT,
 		.end = IRQ_IOP13XX_ADMA0_EOT,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[2] = {
 		.start = IRQ_IOP13XX_ADMA0_EOC,
 		.end = IRQ_IOP13XX_ADMA0_EOC,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[3] = {
 		.start = IRQ_IOP13XX_ADMA0_ERR,
 		.end = IRQ_IOP13XX_ADMA0_ERR,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_adma_1_resources[] = {
@@ -271,18 +271,18 @@ static struct resource iop13xx_adma_1_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_ADMA1_EOT,
 		.end = IRQ_IOP13XX_ADMA1_EOT,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[2] = {
 		.start = IRQ_IOP13XX_ADMA1_EOC,
 		.end = IRQ_IOP13XX_ADMA1_EOC,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[3] = {
 		.start = IRQ_IOP13XX_ADMA1_ERR,
 		.end = IRQ_IOP13XX_ADMA1_ERR,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop13xx_adma_2_resources[] = {
@@ -294,18 +294,18 @@ static struct resource iop13xx_adma_2_resources[] = {
 	[1] = {
 		.start = IRQ_IOP13XX_ADMA2_EOT,
 		.end = IRQ_IOP13XX_ADMA2_EOT,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[2] = {
 		.start = IRQ_IOP13XX_ADMA2_EOC,
 		.end = IRQ_IOP13XX_ADMA2_EOC,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[3] = {
 		.start = IRQ_IOP13XX_ADMA2_ERR,
 		.end = IRQ_IOP13XX_ADMA2_ERR,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static u64 iop13xx_adma_dmamask = DMA_BIT_MASK(64);
