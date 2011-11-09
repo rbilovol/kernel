@@ -54,7 +54,7 @@ static struct dev_pm_domain default_pm_domain = {
 	.ops = {
 		.runtime_suspend = omap1_pm_runtime_suspend,
 		.runtime_resume = omap1_pm_runtime_resume,
-		USE_PLATFORM_PM_SLEEP_OPS
+		USE_PLATFORM_PM_SLEEP_OPS,
 	},
 };
 #define OMAP1_PM_DOMAIN (&default_pm_domain)

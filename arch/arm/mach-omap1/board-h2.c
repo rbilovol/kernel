@@ -109,15 +109,15 @@ static struct mtd_partition h2_nor_partitions[] = {
 	      .name		= "kernel",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= SZ_2M,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	},
 	/* file system */
 	{
 	      .name		= "filesystem",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= MTDPART_SIZ_FULL,
-	      .mask_flags	= 0
-	}
+	      .mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data h2_nor_data = {

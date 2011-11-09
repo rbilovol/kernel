@@ -31,8 +31,8 @@ static struct map_desc omap_io_desc[] __initdata = {
 		.virtual	= OMAP1_IO_VIRT,
 		.pfn		= __phys_to_pfn(OMAP1_IO_PHYS),
 		.length		= OMAP1_IO_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 #if defined (CONFIG_ARCH_OMAP730) || defined (CONFIG_ARCH_OMAP850)
@@ -41,13 +41,13 @@ static struct map_desc omap7xx_io_desc[] __initdata = {
 		.virtual	= OMAP7XX_DSP_BASE,
 		.pfn		= __phys_to_pfn(OMAP7XX_DSP_START),
 		.length		= OMAP7XX_DSP_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= OMAP7XX_DSPREG_BASE,
 		.pfn		= __phys_to_pfn(OMAP7XX_DSPREG_START),
 		.length		= OMAP7XX_DSPREG_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 #endif
 
@@ -57,13 +57,13 @@ static struct map_desc omap1510_io_desc[] __initdata = {
 		.virtual	= OMAP1510_DSP_BASE,
 		.pfn		= __phys_to_pfn(OMAP1510_DSP_START),
 		.length		= OMAP1510_DSP_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= OMAP1510_DSPREG_BASE,
 		.pfn		= __phys_to_pfn(OMAP1510_DSPREG_START),
 		.length		= OMAP1510_DSPREG_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 #endif
 
@@ -73,13 +73,13 @@ static struct map_desc omap16xx_io_desc[] __initdata = {
 		.virtual	= OMAP16XX_DSP_BASE,
 		.pfn		= __phys_to_pfn(OMAP16XX_DSP_START),
 		.length		= OMAP16XX_DSP_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= OMAP16XX_DSPREG_BASE,
 		.pfn		= __phys_to_pfn(OMAP16XX_DSPREG_START),
 		.length		= OMAP16XX_DSPREG_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 #endif
 

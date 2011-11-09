@@ -147,14 +147,14 @@ static struct mtd_partition nor_partitions[] = {
 	      .name		= "kernel",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= SZ_2M,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	},
 	/* rest of flash is a file system */
 	{
 	      .name		= "rootfs",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= MTDPART_SIZ_FULL,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	},
 };
 
@@ -364,14 +364,14 @@ static struct map_desc omap_fsample_io_desc[] __initdata = {
 		.virtual	= H2P2_DBG_FPGA_BASE,
 		.pfn		= __phys_to_pfn(H2P2_DBG_FPGA_START),
 		.length		= H2P2_DBG_FPGA_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= FSAMPLE_CPLD_BASE,
 		.pfn		= __phys_to_pfn(FSAMPLE_CPLD_START),
 		.length		= FSAMPLE_CPLD_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init omap_fsample_map_io(void)

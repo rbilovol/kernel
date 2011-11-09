@@ -73,7 +73,7 @@ MUX_CFG_7XX("SPI_7XX_6",           9,    5,    0,    4,   0, 0)
 
 /* UART pins */
 MUX_CFG_7XX("UART_7XX_1",          3,   21,    0,   20,   0, 0)
-MUX_CFG_7XX("UART_7XX_2",          8,    1,    6,    0,   0, 0)
+MUX_CFG_7XX("UART_7XX_2",          8,    1,    6,    0,   0, 0),
 };
 #define OMAP7XX_PINS_SZ		ARRAY_SIZE(omap7xx_pins)
 #else
@@ -335,7 +335,7 @@ MUX_CFG("H19_1610_CAM_EXCLK",	 4,   21,    0,   0,  17,   0,    0,     0,  0)
 MUX_CFG("Y12_1610_CCP_CLKP",	 8,   18,    6,   1,  24,   1,    1,     0,  0)
 MUX_CFG("W13_1610_CCP_CLKM",	 9,    0,    6,   1,  28,   1,    1,     0,  0)
 MUX_CFG("W14_1610_CCP_DATAP",	 9,   24,    6,   2,   4,   1,    2,     0,  0)
-MUX_CFG("Y14_1610_CCP_DATAM",	 9,   21,    6,   2,   3,   1,    2,     0,  0)
+MUX_CFG("Y14_1610_CCP_DATAM",	 9,   21,    6,   2,   3,   1,    2,     0,  0),
 };
 #define OMAP1XXX_PINS_SZ	ARRAY_SIZE(omap1xxx_pins)
 #else

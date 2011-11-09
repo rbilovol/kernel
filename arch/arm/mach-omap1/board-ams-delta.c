@@ -141,22 +141,22 @@ static struct map_desc ams_delta_io_desc[] __initdata = {
 		.virtual	= AMS_DELTA_LATCH1_VIRT,
 		.pfn		= __phys_to_pfn(AMS_DELTA_LATCH1_PHYS),
 		.length		= 0x01000000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	/* AMS_DELTA_LATCH2 */
 	{
 		.virtual	= AMS_DELTA_LATCH2_VIRT,
 		.pfn		= __phys_to_pfn(AMS_DELTA_LATCH2_PHYS),
 		.length		= 0x01000000,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	/* AMS_DELTA_MODEM */
 	{
 		.virtual	= AMS_DELTA_MODEM_VIRT,
 		.pfn		= __phys_to_pfn(AMS_DELTA_MODEM_PHYS),
 		.length		= 0x01000000,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static struct omap_lcd_config ams_delta_lcd_config = {
@@ -226,7 +226,7 @@ static struct platform_device ams_delta_lcd_device = {
 
 static struct platform_device ams_delta_led_device = {
 	.name	= "ams-delta-led",
-	.id	= -1
+	.id	= -1,
 };
 
 static struct i2c_board_info ams_delta_camera_board_info[] = {

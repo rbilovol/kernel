@@ -25,7 +25,7 @@
 #include <mach/ams-delta-fiq.h>
 
 static struct fiq_handler fh = {
-	.name	= "ams-delta-fiq"
+	.name	= "ams-delta-fiq",
 };
 
 /*

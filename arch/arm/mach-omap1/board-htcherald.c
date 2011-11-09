@@ -458,7 +458,7 @@ static struct spi_board_info __initdata htcherald_spi_board_info[] = {
 		.max_speed_hz		= 2500000,
 		.bus_num		= 2,
 		.chip_select		= 1,
-	}
+	},
 };
 
 /*

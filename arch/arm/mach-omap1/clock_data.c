@@ -530,7 +530,7 @@ static struct clk usb_hhc_ck16xx = {
 	/* OTG_SYSCON_2.OTG_PADEN == 0 (not 1510-compatible) */
 	.flags		= ENABLE_REG_32BIT,
 	.enable_reg	= OMAP1_IO_ADDRESS(OTG_BASE + 0x08), /* OTG_SYSCON_2 */
-	.enable_bit	= OTG_SYSCON_2_UHOST_EN_SHIFT
+	.enable_bit	= OTG_SYSCON_2_UHOST_EN_SHIFT,
 };
 
 static struct clk usb_dc_ck = {

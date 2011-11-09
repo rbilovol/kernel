@@ -94,14 +94,14 @@ static struct mtd_partition palmtt_partitions[] = {
 		.name		= "u-boot(rez)",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_128K,
-		.mask_flags	= 0
+		.mask_flags	= 0,
 	},
 	{
 		.name		= "empty",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data palmtt_flash_data = {
@@ -260,7 +260,7 @@ static struct spi_board_info __initdata palmtt_boardinfo[] = {
 					* 26	/* command + data + overhead */,
 		.bus_num	= 2,
 		.chip_select	= 0,
-	}
+	},
 };
 
 static struct omap_usb_config palmtt_usb_config __initdata = {

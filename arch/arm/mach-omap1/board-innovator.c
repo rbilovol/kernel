@@ -75,22 +75,22 @@ static struct mtd_partition innovator_partitions[] = {
 	      .name		= "kernel",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= SZ_2M,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	},
 	/* rest of flash1 is a file system */
 	{
 	      .name		= "rootfs",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= SZ_16M - SZ_2M - 2 * SZ_128K,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	},
 	/* file system */
 	{
 	      .name		= "filesystem",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= MTDPART_SIZ_FULL,
-	      .mask_flags	= 0
-	}
+	      .mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data innovator_flash_data = {
@@ -164,8 +164,8 @@ static struct map_desc innovator1510_io_desc[] __initdata = {
 		.virtual	= OMAP1510_FPGA_BASE,
 		.pfn		= __phys_to_pfn(OMAP1510_FPGA_START),
 		.length		= OMAP1510_FPGA_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static struct resource innovator1510_smc91x_resources[] = {

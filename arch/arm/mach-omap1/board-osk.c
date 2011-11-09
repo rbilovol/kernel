@@ -85,13 +85,13 @@ static struct mtd_partition osk_partitions[] = {
 	      .name		= "kernel",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= SZ_2M,
-	      .mask_flags	= 0
+	      .mask_flags	= 0,
 	}, {
 	      .name		= "filesystem",
 	      .offset		= MTDPART_OFS_APPEND,
 	      .size		= MTDPART_SIZ_FULL,
-	      .mask_flags	= 0
-	}
+	      .mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data osk_flash_data = {
