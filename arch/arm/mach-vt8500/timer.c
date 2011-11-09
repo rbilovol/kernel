@@ -151,5 +151,5 @@ static void __init vt8500_timer_init(void)
 }
 
 struct sys_timer vt8500_timer = {
-	.init = vt8500_timer_init
+	.init = vt8500_timer_init,
 };

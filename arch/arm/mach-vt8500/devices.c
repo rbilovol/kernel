@@ -240,14 +240,14 @@ struct map_desc wmt_io_desc[] __initdata = {
 		.virtual	= 0xf8000000,
 		.pfn		= __phys_to_pfn(0xd8000000),
 		.length		= 0x00390000, /* max of all chip variants */
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	/* PCI I/O space, numbers tied to those in <mach/io.h> */
 	[1] = {
 		.virtual	= 0xf0000000,
 		.pfn		= __phys_to_pfn(0xc0000000),
 		.length		= SZ_64K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 
