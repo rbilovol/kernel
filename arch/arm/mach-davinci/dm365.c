@@ -74,7 +74,7 @@ static struct clk pll1_sysclkbp = {
 	.name		= "pll1_sysclkbp",
 	.parent		= &pll1_clk,
 	.flags 		= CLK_PLL | PRE_PLL,
-	.div_reg	= BPDIV
+	.div_reg	= BPDIV,
 };
 
 static struct clk clkout0_clk = {
@@ -967,7 +967,7 @@ static struct map_desc dm365_io_desc[] = {
 		.virtual	= IO_VIRT,
 		.pfn		= __phys_to_pfn(IO_PHYS),
 		.length		= IO_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= SRAM_VIRT,
@@ -1045,7 +1045,7 @@ static struct plat_serial8250_port dm365_serial_platform_data[] = {
 		.regshift	= 2,
 	},
 	{
-		.flags		= 0
+		.flags		= 0,
 	},
 };
 

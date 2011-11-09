@@ -180,7 +180,7 @@ static struct timer_s timers[] = {
 		.irqaction = {
 			.flags   = IRQF_DISABLED | IRQF_TIMER,
 			.handler = timer_interrupt,
-		}
+		},
 	},
 	[TID_CLOCKSOURCE] = {
 		.name       = "free-run counter",
@@ -189,7 +189,7 @@ static struct timer_s timers[] = {
 		.irqaction = {
 			.flags   = IRQF_DISABLED | IRQF_TIMER,
 			.handler = freerun_interrupt,
-		}
+		},
 	},
 };
 

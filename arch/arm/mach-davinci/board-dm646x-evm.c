@@ -70,7 +70,7 @@ static struct mtd_partition davinci_nand_partitions[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= 0,
-	}
+	},
 };
 
 static struct davinci_aemif_timing dm6467tevm_nandflash_timing = {
@@ -365,7 +365,7 @@ static int __devexit cpld_video_remove(struct i2c_client *client)
 
 static const struct i2c_device_id cpld_video_id[] = {
 	{ "cpld_video", 0 },
-	{ }
+	{ },
 };
 
 static struct i2c_driver cpld_video_driver = {
@@ -593,7 +593,7 @@ static int setup_vpif_input_channel_mode(int mux_mode)
 static struct tvp514x_platform_data tvp5146_pdata = {
 	.clk_polarity = 0,
 	.hs_polarity = 1,
-	.vs_polarity = 1
+	.vs_polarity = 1,
 };
 
 #define TVP514X_STD_ALL (V4L2_STD_NTSC | V4L2_STD_PAL)
@@ -749,7 +749,7 @@ static const s16 dm646x_dma_rsv_chans[][2] = {
 	{24,  4},
 	{30,  2},
 	{54,  3},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 dm646x_dma_rsv_slots[][2] = {
@@ -760,7 +760,7 @@ static const s16 dm646x_dma_rsv_slots[][2] = {
 	{30,  2},
 	{54,  3},
 	{128, 384},
-	{-1, -1}
+	{-1, -1},
 };
 
 static struct edma_rsv_info dm646x_edma_rsv[] = {

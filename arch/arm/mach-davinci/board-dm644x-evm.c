@@ -64,15 +64,15 @@ static struct mtd_partition davinci_evm_norflash_partitions[] = {
 		.name		= "kernel",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= SZ_2M,
-		.mask_flags	= 0
+		.mask_flags	= 0,
 	},
 	/* file system */
 	{
 		.name		= "filesystem",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
-		.mask_flags	= 0
-	}
+		.mask_flags	= 0,
+	},
 };
 
 static struct physmap_flash_data davinci_evm_norflash_data = {
@@ -192,7 +192,7 @@ static struct platform_device davinci_fb_device = {
 static struct tvp514x_platform_data tvp5146_pdata = {
 	.clk_polarity = 0,
 	.hs_polarity = 1,
-	.vs_polarity = 1
+	.vs_polarity = 1,
 };
 
 #define TVP514X_STD_ALL	(V4L2_STD_NTSC | V4L2_STD_PAL)
@@ -567,7 +567,7 @@ static struct davinci_mmc_config dm6446evm_mmc_config = {
 	.get_cd		= dm6444evm_mmc_get_cd,
 	.get_ro		= dm6444evm_mmc_get_ro,
 	.wires		= 4,
-	.version	= MMC_CTLR_VERSION_1
+	.version	= MMC_CTLR_VERSION_1,
 };
 
 static struct i2c_board_info __initdata i2c_info[] =  {

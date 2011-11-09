@@ -64,12 +64,12 @@ static struct resource usb_resources[] = {
 	{
 		.start          = IRQ_USBINT,
 		.flags          = IORESOURCE_IRQ,
-		.name		= "mc"
+		.name		= "mc",
 	},
 	{
 		/* placeholder for the dedicated CPPI IRQ */
 		.flags          = IORESOURCE_IRQ,
-		.name		= "dma"
+		.name		= "dma",
 	},
 };
 

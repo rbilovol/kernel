@@ -195,7 +195,7 @@ static	int ntosd2_init_i2c(void)
 
 static struct davinci_mmc_config davinci_ntosd2_mmc_config = {
 	.wires		= 4,
-	.version	= MMC_CTLR_VERSION_1
+	.version	= MMC_CTLR_VERSION_1,
 };
 
 

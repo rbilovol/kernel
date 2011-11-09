@@ -444,7 +444,7 @@ static const short mityomap_mii_pins[] = {
 	DA850_MII_CRS, DA850_MII_RXCLK, DA850_MII_RXDV, DA850_MII_RXD_3,
 	DA850_MII_RXD_2, DA850_MII_RXD_1, DA850_MII_RXD_0, DA850_MDIO_CLK,
 	DA850_MDIO_D,
-	-1
+	-1,
 };
 
 static const short mityomap_rmii_pins[] = {
@@ -452,7 +452,7 @@ static const short mityomap_rmii_pins[] = {
 	DA850_RMII_CRS_DV, DA850_RMII_RXD_0, DA850_RMII_RXD_1,
 	DA850_RMII_RXER, DA850_RMII_MHZ_50_CLK, DA850_MDIO_CLK,
 	DA850_MDIO_D,
-	-1
+	-1,
 };
 
 static void __init mityomapl138_config_emac(void)

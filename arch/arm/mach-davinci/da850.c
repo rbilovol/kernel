@@ -610,12 +610,12 @@ static const struct mux_config da850_pins[] = {
 
 const short da850_i2c0_pins[] __initdata = {
 	DA850_I2C0_SDA, DA850_I2C0_SCL,
-	-1
+	-1,
 };
 
 const short da850_i2c1_pins[] __initdata = {
 	DA850_I2C1_SCL, DA850_I2C1_SDA,
-	-1
+	-1,
 };
 
 const short da850_lcdcntl_pins[] __initdata = {
@@ -624,7 +624,7 @@ const short da850_lcdcntl_pins[] __initdata = {
 	DA850_LCD_D_8, DA850_LCD_D_9, DA850_LCD_D_10, DA850_LCD_D_11,
 	DA850_LCD_D_12, DA850_LCD_D_13, DA850_LCD_D_14, DA850_LCD_D_15,
 	DA850_LCD_PCLK, DA850_LCD_HSYNC, DA850_LCD_VSYNC, DA850_NLCD_AC_ENB_CS,
-	-1
+	-1,
 };
 
 /* FIQ are pri 0-1; otherwise 2-7, with 7 lowest priority */
@@ -737,19 +737,19 @@ static struct map_desc da850_io_desc[] = {
 		.virtual	= IO_VIRT,
 		.pfn		= __phys_to_pfn(IO_PHYS),
 		.length		= IO_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= DA8XX_CP_INTC_VIRT,
 		.pfn		= __phys_to_pfn(DA8XX_CP_INTC_BASE),
 		.length		= DA8XX_CP_INTC_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= SRAM_VIRT,
 		.pfn		= __phys_to_pfn(DA8XX_ARM_RAM_BASE),
 		.length		= SZ_8K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

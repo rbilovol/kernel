@@ -101,7 +101,7 @@ static u32 bypass_mask[N_PLLS] = { BIT(0), BIT(2), BIT(1) };
 static u32 pll_ext_freq[] = {
 	OSC_FREQ_OFFCHIP_SYS,
 	OSC_FREQ_OFFCHIP_TDM,
-	OSC_FREQ_OFFCHIP_ETH
+	OSC_FREQ_OFFCHIP_ETH,
 };
 
 /* PSC control registers */
@@ -634,13 +634,13 @@ static struct map_desc io_desc[] = {
 		.virtual	= IO_VIRT,
 		.pfn		= __phys_to_pfn(TNETV107X_INTC_BASE),
 		.length		= SZ_16K,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{	/* Most of the rest */
 		.virtual	= TNETV107X_IO_VIRT,
 		.pfn		= __phys_to_pfn(TNETV107X_IO_BASE),
 		.length		= IO_SIZE - SZ_1M,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

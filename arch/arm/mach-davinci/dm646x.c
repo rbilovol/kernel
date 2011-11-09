@@ -681,7 +681,7 @@ static struct resource vpif_resource[] = {
 		.start	= DAVINCI_VPIF_BASE,
 		.end	= DAVINCI_VPIF_BASE + 0x03ff,
 		.flags	= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device vpif_dev = {
@@ -750,7 +750,7 @@ static struct map_desc dm646x_io_desc[] = {
 		.virtual	= IO_VIRT,
 		.pfn		= __phys_to_pfn(IO_PHYS),
 		.length		= IO_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= SRAM_VIRT,
@@ -818,7 +818,7 @@ static struct plat_serial8250_port dm646x_serial_platform_data[] = {
 		.regshift	= 2,
 	},
 	{
-		.flags		= 0
+		.flags		= 0,
 	},
 };
 

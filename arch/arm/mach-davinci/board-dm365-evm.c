@@ -214,7 +214,7 @@ static unsigned short dm365evm_keymap[] = {
 	KEY_FASTFORWARD,
 	KEY_KPPLUS,
 	KEY_PLAYPAUSE,
-	0
+	0,
 };
 
 static struct davinci_ks_platform_data dm365evm_ks_data = {
@@ -309,7 +309,7 @@ static void dm365evm_mmc_configure(void)
 static struct tvp514x_platform_data tvp5146_pdata = {
 	.clk_polarity = 0,
 	.hs_polarity = 1,
-	.vs_polarity = 1
+	.vs_polarity = 1,
 };
 
 #define TVP514X_STD_ALL        (V4L2_STD_NTSC | V4L2_STD_PAL)

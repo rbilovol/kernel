@@ -43,7 +43,7 @@
 
 static const short da830_evm_usb11_pins[] = {
 	DA830_GPIO1_15, DA830_GPIO2_4,
-	-1
+	-1,
 };
 
 static da8xx_ocic_handler_t da830_evm_usb_ocic_handler;
@@ -194,7 +194,7 @@ static const short da830_evm_mcasp1_pins[] = {
 	DA830_AMUTE1, DA830_AXR1_0, DA830_AXR1_1, DA830_AXR1_2, DA830_AXR1_5,
 	DA830_ACLKR1, DA830_AXR1_6, DA830_AXR1_7, DA830_AXR1_8, DA830_AXR1_10,
 	DA830_AXR1_11,
-	-1
+	-1,
 };
 
 static u8 da830_iis_serializer_direction[] = {
@@ -224,7 +224,7 @@ static const short da830_evm_mmc_sd_pins[] = {
 	DA830_MMCSD_DAT_3, DA830_MMCSD_DAT_4, DA830_MMCSD_DAT_5,
 	DA830_MMCSD_DAT_6, DA830_MMCSD_DAT_7, DA830_MMCSD_CLK,
 	DA830_MMCSD_CMD,   DA830_GPIO2_1,     DA830_GPIO2_2,
-	-1
+	-1,
 };
 
 #define DA830_MMCSD_WP_PIN		GPIO_TO_PIN(2, 1)
@@ -295,7 +295,7 @@ static const short da830_evm_emif25_pins[] = {
 	DA830_EMA_A_8, DA830_EMA_A_9, DA830_EMA_A_10, DA830_EMA_A_11,
 	DA830_EMA_A_12, DA830_EMA_BA_0, DA830_EMA_BA_1, DA830_NEMA_WE,
 	DA830_NEMA_CS_2, DA830_NEMA_CS_3, DA830_NEMA_OE, DA830_EMA_WAIT_0,
-	-1
+	-1,
 };
 
 #if defined(CONFIG_MMC_DAVINCI) || defined(CONFIG_MMC_DAVINCI_MODULE)
@@ -333,7 +333,7 @@ static struct mtd_partition da830_evm_nand_partitions[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= 0,
-	}
+	},
 };
 
 /* flash bbt decriptors */
@@ -348,7 +348,7 @@ static struct nand_bbt_descr da830_evm_nand_bbt_main_descr = {
 	.len		= 4,
 	.veroffs	= 16,
 	.maxblocks	= 4,
-	.pattern	= da830_evm_nand_bbt_pattern
+	.pattern	= da830_evm_nand_bbt_pattern,
 };
 
 static struct nand_bbt_descr da830_evm_nand_bbt_mirror_descr = {
@@ -359,7 +359,7 @@ static struct nand_bbt_descr da830_evm_nand_bbt_mirror_descr = {
 	.len		= 4,
 	.veroffs	= 16,
 	.maxblocks	= 4,
-	.pattern	= da830_evm_nand_mirror_pattern
+	.pattern	= da830_evm_nand_mirror_pattern,
 };
 
 static struct davinci_aemif_timing da830_evm_nandflash_timing = {
@@ -518,7 +518,7 @@ static const s16 da830_dma_rsv_chans[][2] = {
 	{12,  2},
 	{24,  4},
 	{30,  2},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da830_dma_rsv_slots[][2] = {
@@ -527,7 +527,7 @@ static const s16 da830_dma_rsv_slots[][2] = {
 	{12,  2},
 	{24,  4},
 	{30, 26},
-	{-1, -1}
+	{-1, -1},
 };
 
 static struct edma_rsv_info da830_edma_rsv[] = {

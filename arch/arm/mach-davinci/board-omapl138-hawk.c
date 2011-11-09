@@ -34,7 +34,7 @@ static short omapl138_hawk_mii_pins[] __initdata = {
 	DA850_MII_CRS, DA850_MII_RXCLK, DA850_MII_RXDV, DA850_MII_RXD_3,
 	DA850_MII_RXD_2, DA850_MII_RXD_1, DA850_MII_RXD_0, DA850_MDIO_CLK,
 	DA850_MDIO_D,
-	-1
+	-1,
 };
 
 static __init void omapl138_hawk_config_emac(void)
@@ -75,7 +75,7 @@ static const s16 da850_dma0_rsv_chans[][2] = {
 	{ 8,  6},
 	{24,  4},
 	{30,  2},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da850_dma0_rsv_slots[][2] = {
@@ -83,21 +83,21 @@ static const s16 da850_dma0_rsv_slots[][2] = {
 	{ 8,  6},
 	{24,  4},
 	{30, 50},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da850_dma1_rsv_chans[][2] = {
 	/* (offset, number) */
 	{ 0, 28},
 	{30,  2},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da850_dma1_rsv_slots[][2] = {
 	/* (offset, number) */
 	{ 0, 28},
 	{30, 90},
-	{-1, -1}
+	{-1, -1},
 };
 
 static struct edma_rsv_info da850_edma_cc0_rsv = {
@@ -119,7 +119,7 @@ static const short hawk_mmcsd0_pins[] = {
 	DA850_MMCSD0_DAT_0, DA850_MMCSD0_DAT_1, DA850_MMCSD0_DAT_2,
 	DA850_MMCSD0_DAT_3, DA850_MMCSD0_CLK, DA850_MMCSD0_CMD,
 	DA850_GPIO3_12, DA850_GPIO3_13,
-	-1
+	-1,
 };
 
 static int da850_hawk_mmc_get_ro(int index)
@@ -188,7 +188,7 @@ static da8xx_ocic_handler_t hawk_usb_ocic_handler;
 
 static const short da850_hawk_usb11_pins[] = {
 	DA850_GPIO2_4, DA850_GPIO6_13,
-	-1
+	-1,
 };
 
 static int hawk_usb_set_power(unsigned port, int on)

@@ -850,19 +850,19 @@ const short da830_emif25_pins[] __initdata = {
 	DA830_EMA_SDCKE, DA830_NEMA_CS_4, DA830_NEMA_CS_5, DA830_NEMA_WE,
 	DA830_NEMA_CS_0, DA830_NEMA_CS_2, DA830_NEMA_CS_3, DA830_NEMA_OE,
 	DA830_NEMA_WE_DQM_1, DA830_NEMA_WE_DQM_0, DA830_EMA_WAIT_0,
-	-1
+	-1,
 };
 
 const short da830_spi0_pins[] __initdata = {
 	DA830_SPI0_SOMI_0, DA830_SPI0_SIMO_0, DA830_SPI0_CLK, DA830_NSPI0_ENA,
 	DA830_NSPI0_SCS_0,
-	-1
+	-1,
 };
 
 const short da830_spi1_pins[] __initdata = {
 	DA830_SPI1_SOMI_0, DA830_SPI1_SIMO_0, DA830_SPI1_CLK, DA830_NSPI1_ENA,
 	DA830_NSPI1_SCS_0,
-	-1
+	-1,
 };
 
 const short da830_mmc_sd_pins[] __initdata = {
@@ -870,32 +870,32 @@ const short da830_mmc_sd_pins[] __initdata = {
 	DA830_MMCSD_DAT_3, DA830_MMCSD_DAT_4, DA830_MMCSD_DAT_5,
 	DA830_MMCSD_DAT_6, DA830_MMCSD_DAT_7, DA830_MMCSD_CLK,
 	DA830_MMCSD_CMD,
-	-1
+	-1,
 };
 
 const short da830_uart0_pins[] __initdata = {
 	DA830_NUART0_CTS, DA830_NUART0_RTS, DA830_UART0_RXD, DA830_UART0_TXD,
-	-1
+	-1,
 };
 
 const short da830_uart1_pins[] __initdata = {
 	DA830_UART1_RXD, DA830_UART1_TXD,
-	-1
+	-1,
 };
 
 const short da830_uart2_pins[] __initdata = {
 	DA830_UART2_RXD, DA830_UART2_TXD,
-	-1
+	-1,
 };
 
 const short da830_usb20_pins[] __initdata = {
 	DA830_USB0_DRVVBUS, DA830_USB_REFCLKIN,
-	-1
+	-1,
 };
 
 const short da830_usb11_pins[] __initdata = {
 	DA830_USB_REFCLKIN,
-	-1
+	-1,
 };
 
 const short da830_uhpi_pins[] __initdata = {
@@ -906,14 +906,14 @@ const short da830_uhpi_pins[] __initdata = {
 	DA830_UHPI_HCNTL0, DA830_UHPI_HCNTL1, DA830_UHPI_HHWIL, DA830_UHPI_HRNW,
 	DA830_NUHPI_HAS, DA830_NUHPI_HCS, DA830_NUHPI_HDS1, DA830_NUHPI_HDS2,
 	DA830_NUHPI_HINT, DA830_NUHPI_HRDY,
-	-1
+	-1,
 };
 
 const short da830_cpgmac_pins[] __initdata = {
 	DA830_RMII_TXD_0, DA830_RMII_TXD_1, DA830_RMII_TXEN, DA830_RMII_CRS_DV,
 	DA830_RMII_RXD_0, DA830_RMII_RXD_1, DA830_RMII_RXER, DA830_MDIO_CLK,
 	DA830_MDIO_D,
-	-1
+	-1,
 };
 
 const short da830_emif3c_pins[] __initdata = {
@@ -932,7 +932,7 @@ const short da830_emif3c_pins[] __initdata = {
 	DA830_EMB_D_23, DA830_EMB_D_24, DA830_EMB_D_25, DA830_EMB_D_26,
 	DA830_EMB_D_27, DA830_EMB_D_28, DA830_EMB_D_29, DA830_EMB_D_30,
 	DA830_EMB_D_31, DA830_NEMB_WE_DQM_1, DA830_NEMB_WE_DQM_0,
-	-1
+	-1,
 };
 
 const short da830_mcasp0_pins[] __initdata = {
@@ -942,7 +942,7 @@ const short da830_mcasp0_pins[] __initdata = {
 	DA830_AXR0_4, DA830_AXR0_5, DA830_AXR0_6, DA830_AXR0_7,
 	DA830_AXR0_8, DA830_AXR0_9, DA830_AXR0_10, DA830_AXR0_11,
 	DA830_AXR0_12, DA830_AXR0_13, DA830_AXR0_14, DA830_AXR0_15,
-	-1
+	-1,
 };
 
 const short da830_mcasp1_pins[] __initdata = {
@@ -951,24 +951,24 @@ const short da830_mcasp1_pins[] __initdata = {
 	DA830_AXR1_0, DA830_AXR1_1, DA830_AXR1_2, DA830_AXR1_3,
 	DA830_AXR1_4, DA830_AXR1_5, DA830_AXR1_6, DA830_AXR1_7,
 	DA830_AXR1_8, DA830_AXR1_9, DA830_AXR1_10, DA830_AXR1_11,
-	-1
+	-1,
 };
 
 const short da830_mcasp2_pins[] __initdata = {
 	DA830_AHCLKX2, DA830_ACLKX2, DA830_AFSX2,
 	DA830_AHCLKR2, DA830_ACLKR2, DA830_AFSR2, DA830_AMUTE2,
 	DA830_AXR2_0, DA830_AXR2_1, DA830_AXR2_2, DA830_AXR2_3,
-	-1
+	-1,
 };
 
 const short da830_i2c0_pins[] __initdata = {
 	DA830_I2C0_SDA, DA830_I2C0_SCL,
-	-1
+	-1,
 };
 
 const short da830_i2c1_pins[] __initdata = {
 	DA830_I2C1_SCL, DA830_I2C1_SDA,
-	-1
+	-1,
 };
 
 const short da830_lcdcntl_pins[] __initdata = {
@@ -978,39 +978,39 @@ const short da830_lcdcntl_pins[] __initdata = {
 	DA830_LCD_D_12, DA830_LCD_D_13, DA830_LCD_D_14, DA830_LCD_D_15,
 	DA830_LCD_PCLK, DA830_LCD_HSYNC, DA830_LCD_VSYNC, DA830_NLCD_AC_ENB_CS,
 	DA830_LCD_MCLK,
-	-1
+	-1,
 };
 
 const short da830_pwm_pins[] __initdata = {
 	DA830_ECAP0_APWM0, DA830_ECAP1_APWM1, DA830_EPWM0B, DA830_EPWM0A,
 	DA830_EPWMSYNCI, DA830_EPWMSYNC0, DA830_ECAP2_APWM2, DA830_EHRPWMGLUETZ,
 	DA830_EPWM2B, DA830_EPWM2A, DA830_EPWM1B, DA830_EPWM1A,
-	-1
+	-1,
 };
 
 const short da830_ecap0_pins[] __initdata = {
 	DA830_ECAP0_APWM0,
-	-1
+	-1,
 };
 
 const short da830_ecap1_pins[] __initdata = {
 	DA830_ECAP1_APWM1,
-	-1
+	-1,
 };
 
 const short da830_ecap2_pins[] __initdata = {
 	DA830_ECAP2_APWM2,
-	-1
+	-1,
 };
 
 const short da830_eqep0_pins[] __initdata = {
 	DA830_EQEP0I, DA830_EQEP0S, DA830_EQEP0A, DA830_EQEP0B,
-	-1
+	-1,
 };
 
 const short da830_eqep1_pins[] __initdata = {
 	DA830_EQEP1I, DA830_EQEP1S, DA830_EQEP1A, DA830_EQEP1B,
-	-1
+	-1,
 };
 
 /* FIQ are pri 0-1; otherwise 2-7, with 7 lowest priority */
@@ -1113,13 +1113,13 @@ static struct map_desc da830_io_desc[] = {
 		.virtual	= IO_VIRT,
 		.pfn		= __phys_to_pfn(IO_PHYS),
 		.length		= IO_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 	{
 		.virtual	= DA8XX_CP_INTC_VIRT,
 		.pfn		= __phys_to_pfn(DA8XX_CP_INTC_BASE),
 		.length		= DA8XX_CP_INTC_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 };
 

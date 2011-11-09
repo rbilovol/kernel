@@ -93,18 +93,18 @@ static const short sdio1_pins[] __initdata = {
 	TNETV107X_SDIO1_DATA0_1,	TNETV107X_SDIO1_DATA1_1,
 	TNETV107X_SDIO1_DATA2_1,	TNETV107X_SDIO1_DATA3_1,
 	TNETV107X_GPIO21,		TNETV107X_GPIO24,
-	-1
+	-1,
 };
 
 static const short uart1_pins[] __initdata = {
 	TNETV107X_UART1_RD,		TNETV107X_UART1_TD,
-	-1
+	-1,
 };
 
 static const short ssp_pins[] __initdata = {
 	TNETV107X_SSP0_0, TNETV107X_SSP0_1, TNETV107X_SSP0_2,
 	TNETV107X_SSP1_0, TNETV107X_SSP1_1, TNETV107X_SSP1_2,
-	TNETV107X_SSP1_3, -1
+	TNETV107X_SSP1_3, -1,
 };
 
 static struct mtd_partition nand_partitions[] = {
@@ -135,7 +135,7 @@ static struct mtd_partition nand_partitions[] = {
 		.offset		= MTDPART_OFS_NXTBLK,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= 0,
-	}
+	},
 };
 
 static struct davinci_nand_pdata nand_config = {

@@ -62,14 +62,14 @@ static const s8 edma_tc_mapping[][2] = {
 	/* event queue no	TC no	*/
 	{	 0,		 0	},
 	{	 1,		 1	},
-	{	-1,		-1	}
+	{	-1,		-1	},
 };
 
 static const s8 edma_priority_mapping[][2] = {
 	/* event queue no	Prio	*/
 	{	 0,		 3	},
 	{	 1,		 7	},
-	{	-1,		-1	}
+	{	-1,		-1	},
 };
 
 static struct edma_soc_info edma_cc0_info = {
@@ -169,23 +169,23 @@ static struct resource mmc0_resources[] = {
 	{ /* Memory mapped registers */
 		.start	= TNETV107X_SDIO0_BASE,
 		.end	= TNETV107X_SDIO0_BASE + 0x0ff,
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	{ /* MMC interrupt */
 		.start	= IRQ_TNETV107X_MMC0,
-		.flags	= IORESOURCE_IRQ
+		.flags	= IORESOURCE_IRQ,
 	},
 	{ /* SDIO interrupt */
 		.start	= IRQ_TNETV107X_SDIO0,
-		.flags	= IORESOURCE_IRQ
+		.flags	= IORESOURCE_IRQ,
 	},
 	{ /* DMA RX */
 		.start	= EDMA_CTLR_CHAN(0, TNETV107X_DMACH_SDIO0_RX),
-		.flags	= IORESOURCE_DMA
+		.flags	= IORESOURCE_DMA,
 	},
 	{ /* DMA TX */
 		.start	= EDMA_CTLR_CHAN(0, TNETV107X_DMACH_SDIO0_TX),
-		.flags	= IORESOURCE_DMA
+		.flags	= IORESOURCE_DMA,
 	},
 };
 
@@ -193,23 +193,23 @@ static struct resource mmc1_resources[] = {
 	{ /* Memory mapped registers */
 		.start	= TNETV107X_SDIO1_BASE,
 		.end	= TNETV107X_SDIO1_BASE + 0x0ff,
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	{ /* MMC interrupt */
 		.start	= IRQ_TNETV107X_MMC1,
-		.flags	= IORESOURCE_IRQ
+		.flags	= IORESOURCE_IRQ,
 	},
 	{ /* SDIO interrupt */
 		.start	= IRQ_TNETV107X_SDIO1,
-		.flags	= IORESOURCE_IRQ
+		.flags	= IORESOURCE_IRQ,
 	},
 	{ /* DMA RX */
 		.start	= EDMA_CTLR_CHAN(0, TNETV107X_DMACH_SDIO1_RX),
-		.flags	= IORESOURCE_DMA
+		.flags	= IORESOURCE_DMA,
 	},
 	{ /* DMA TX */
 		.start	= EDMA_CTLR_CHAN(0, TNETV107X_DMACH_SDIO1_TX),
-		.flags	= IORESOURCE_DMA
+		.flags	= IORESOURCE_DMA,
 	},
 };
 
@@ -225,7 +225,7 @@ static struct platform_device mmc_devices[2] = {
 			.coherent_dma_mask	= DMA_BIT_MASK(32),
 		},
 		.num_resources	= ARRAY_SIZE(mmc0_resources),
-		.resource	= mmc0_resources
+		.resource	= mmc0_resources,
 	},
 	{
 		.name		= "davinci_mmc",
@@ -235,7 +235,7 @@ static struct platform_device mmc_devices[2] = {
 			.coherent_dma_mask	= DMA_BIT_MASK(32),
 		},
 		.num_resources	= ARRAY_SIZE(mmc1_resources),
-		.resource	= mmc1_resources
+		.resource	= mmc1_resources,
 	},
 };
 

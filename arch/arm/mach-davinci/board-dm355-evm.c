@@ -177,7 +177,7 @@ static struct platform_device dm355evm_dm9000 = {
 static struct tvp514x_platform_data tvp5146_pdata = {
 	.clk_polarity = 0,
 	.hs_polarity = 1,
-	.vs_polarity = 1
+	.vs_polarity = 1,
 };
 
 #define TVP514X_STD_ALL	(V4L2_STD_NTSC | V4L2_STD_PAL)
@@ -230,7 +230,7 @@ static struct vpfe_subdev_info vpfe_sub_devs[] = {
 			I2C_BOARD_INFO("tvp5146", 0x5d),
 			.platform_data = &tvp5146_pdata,
 		},
-	}
+	},
 };
 
 static struct vpfe_config vpfe_cfg = {

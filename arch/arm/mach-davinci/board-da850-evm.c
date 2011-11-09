@@ -310,7 +310,7 @@ static const short da850_evm_nand_pins[] = {
 	DA850_EMA_D_4, DA850_EMA_D_5, DA850_EMA_D_6, DA850_EMA_D_7,
 	DA850_EMA_A_1, DA850_EMA_A_2, DA850_NEMA_CS_3, DA850_NEMA_CS_4,
 	DA850_NEMA_WE, DA850_NEMA_OE,
-	-1
+	-1,
 };
 
 static const short da850_evm_nor_pins[] = {
@@ -326,7 +326,7 @@ static const short da850_evm_nor_pins[] = {
 	DA850_EMA_A_14, DA850_EMA_A_15, DA850_EMA_A_16, DA850_EMA_A_17,
 	DA850_EMA_A_18, DA850_EMA_A_19, DA850_EMA_A_20, DA850_EMA_A_21,
 	DA850_EMA_A_22, DA850_EMA_A_23,
-	-1
+	-1,
 };
 
 #if defined(CONFIG_MMC_DAVINCI) || \
@@ -433,7 +433,7 @@ static struct platform_device da850_evm_ui_keys_device = {
 	.name = "gpio-keys-polled",
 	.id = 0,
 	.dev = {
-		.platform_data = &da850_evm_ui_keys_pdata
+		.platform_data = &da850_evm_ui_keys_pdata,
 	},
 };
 
@@ -600,7 +600,7 @@ static struct platform_device da850_evm_bb_keys_device = {
 	.name = "gpio-keys-polled",
 	.id = 1,
 	.dev = {
-		.platform_data = &da850_evm_bb_keys_pdata
+		.platform_data = &da850_evm_bb_keys_pdata,
 	},
 };
 
@@ -642,8 +642,8 @@ static struct platform_device da850_evm_bb_leds_device = {
 	.name		= "leds-gpio",
 	.id		= -1,
 	.dev = {
-		.platform_data = &da850_evm_bb_leds_pdata
-	}
+		.platform_data = &da850_evm_bb_leds_pdata,
+	},
 };
 
 static void da850_evm_bb_leds_init(unsigned gpio)
@@ -763,7 +763,7 @@ static const short da850_evm_mcasp_pins[] __initconst = {
 	DA850_AHCLKX, DA850_ACLKX, DA850_AFSX,
 	DA850_AHCLKR, DA850_ACLKR, DA850_AFSR, DA850_AMUTE,
 	DA850_AXR_11, DA850_AXR_12,
-	-1
+	-1,
 };
 
 static int da850_evm_mmc_get_ro(int index)
@@ -789,7 +789,7 @@ static const short da850_evm_mmcsd0_pins[] __initconst = {
 	DA850_MMCSD0_DAT_0, DA850_MMCSD0_DAT_1, DA850_MMCSD0_DAT_2,
 	DA850_MMCSD0_DAT_3, DA850_MMCSD0_CLK, DA850_MMCSD0_CMD,
 	DA850_GPIO4_0, DA850_GPIO4_1,
-	-1
+	-1,
 };
 
 static void da850_panel_power_ctrl(int val)
@@ -997,7 +997,7 @@ static int __init pmic_tps65070_init(void)
 
 static const short da850_evm_lcdc_pins[] = {
 	DA850_GPIO2_8, DA850_GPIO2_15,
-	-1
+	-1,
 };
 
 static const short da850_evm_mii_pins[] = {
@@ -1006,7 +1006,7 @@ static const short da850_evm_mii_pins[] = {
 	DA850_MII_CRS, DA850_MII_RXCLK, DA850_MII_RXDV, DA850_MII_RXD_3,
 	DA850_MII_RXD_2, DA850_MII_RXD_1, DA850_MII_RXD_0, DA850_MDIO_CLK,
 	DA850_MDIO_D,
-	-1
+	-1,
 };
 
 static const short da850_evm_rmii_pins[] = {
@@ -1014,7 +1014,7 @@ static const short da850_evm_rmii_pins[] = {
 	DA850_RMII_CRS_DV, DA850_RMII_RXD_0, DA850_RMII_RXD_1,
 	DA850_RMII_RXER, DA850_RMII_MHZ_50_CLK, DA850_MDIO_CLK,
 	DA850_MDIO_D,
-	-1
+	-1,
 };
 
 static int __init da850_evm_config_emac(void)
@@ -1087,7 +1087,7 @@ static const s16 da850_dma0_rsv_chans[][2] = {
 	{ 8,  6},
 	{24,  4},
 	{30,  2},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da850_dma0_rsv_slots[][2] = {
@@ -1095,21 +1095,21 @@ static const s16 da850_dma0_rsv_slots[][2] = {
 	{ 8,  6},
 	{24,  4},
 	{30, 50},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da850_dma1_rsv_chans[][2] = {
 	/* (offset, number) */
 	{ 0, 28},
 	{30,  2},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s16 da850_dma1_rsv_slots[][2] = {
 	/* (offset, number) */
 	{ 0, 28},
 	{30, 90},
-	{-1, -1}
+	{-1, -1},
 };
 
 static struct edma_rsv_info da850_edma_cc0_rsv = {
@@ -1186,7 +1186,7 @@ static const short da850_wl12xx_pins[] __initconst = {
 	DA850_MMCSD1_DAT_0, DA850_MMCSD1_DAT_1, DA850_MMCSD1_DAT_2,
 	DA850_MMCSD1_DAT_3, DA850_MMCSD1_CLK, DA850_MMCSD1_CMD,
 	DA850_GPIO6_9, DA850_GPIO6_10,
-	-1
+	-1,
 };
 
 static struct wl12xx_platform_data da850_wl12xx_wlan_data __initdata = {

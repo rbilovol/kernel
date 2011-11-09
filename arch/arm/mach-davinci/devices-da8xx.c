@@ -106,26 +106,26 @@ static const s8 da8xx_queue_tc_mapping[][2] = {
 	/* {event queue no, TC no} */
 	{0, 0},
 	{1, 1},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s8 da8xx_queue_priority_mapping[][2] = {
 	/* {event queue no, Priority} */
 	{0, 3},
 	{1, 7},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s8 da850_queue_tc_mapping[][2] = {
 	/* {event queue no, TC no} */
 	{0, 0},
-	{-1, -1}
+	{-1, -1},
 };
 
 static const s8 da850_queue_priority_mapping[][2] = {
 	/* {event queue no, Priority} */
 	{0, 3},
-	{-1, -1}
+	{-1, -1},
 };
 
 static struct edma_soc_info da830_edma_cc0_info = {
