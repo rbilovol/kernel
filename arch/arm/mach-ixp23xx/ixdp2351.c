@@ -80,7 +80,7 @@ static void ixdp2351_inta_handler(unsigned int irq, struct irq_desc *desc)
 static struct irq_chip ixdp2351_inta_chip = {
 	.irq_ack	= ixdp2351_inta_mask,
 	.irq_mask	= ixdp2351_inta_mask,
-	.irq_unmask	= ixdp2351_inta_unmask
+	.irq_unmask	= ixdp2351_inta_unmask,
 };
 
 static void ixdp2351_intb_mask(struct irq_data *d)
@@ -115,7 +115,7 @@ static void ixdp2351_intb_handler(unsigned int irq, struct irq_desc *desc)
 static struct irq_chip ixdp2351_intb_chip = {
 	.irq_ack	= ixdp2351_intb_mask,
 	.irq_mask	= ixdp2351_intb_mask,
-	.irq_unmask	= ixdp2351_intb_unmask
+	.irq_unmask	= ixdp2351_intb_unmask,
 };
 
 void __init ixdp2351_init_irq(void)
@@ -276,13 +276,13 @@ static struct map_desc ixdp2351_io_desc[] __initdata = {
 		.virtual	= IXDP2351_NP_VIRT_BASE,
 		.pfn		= __phys_to_pfn((u64)IXDP2351_NP_PHYS_BASE),
 		.length		= IXDP2351_NP_PHYS_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= IXDP2351_BB_BASE_VIRT,
 		.pfn		= __phys_to_pfn((u64)IXDP2351_BB_BASE_PHYS),
 		.length		= IXDP2351_BB_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init ixdp2351_map_io(void)

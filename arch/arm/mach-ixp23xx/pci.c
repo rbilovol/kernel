@@ -265,14 +265,14 @@ static struct resource ixp23xx_pci_mem_space = {
 	.start	= IXP23XX_PCI_MEM_START,
 	.end	= IXP23XX_PCI_MEM_START + IXP23XX_PCI_MEM_SIZE - 1,
 	.flags	= IORESOURCE_MEM,
-	.name	= "PCI Mem Space"
+	.name	= "PCI Mem Space",
 };
 
 static struct resource ixp23xx_pci_io_space = {
 	.start	= 0x00000100,
 	.end	= 0x01ffffff,
 	.flags	= IORESOURCE_IO,
-	.name	= "PCI I/O Space"
+	.name	= "PCI I/O Space",
 };
 
 int ixp23xx_pci_setup(int nr, struct pci_sys_data *sys)

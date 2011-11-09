@@ -93,7 +93,7 @@ static struct map_desc ixp23xx_io_desc[] __initdata = {
 	 	.pfn		= __phys_to_pfn(IXP23XX_PCI_MEM_PHYS),
 	 	.length		= IXP23XX_PCI_MEM_SIZE,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 void __init ixp23xx_map_io(void)
@@ -229,14 +229,14 @@ static struct irq_chip ixp23xx_irq_level_chip = {
 	.irq_ack	= ixp23xx_irq_mask,
 	.irq_mask	= ixp23xx_irq_mask,
 	.irq_unmask	= ixp23xx_irq_level_unmask,
-	.irq_set_type	= ixp23xx_irq_set_type
+	.irq_set_type	= ixp23xx_irq_set_type,
 };
 
 static struct irq_chip ixp23xx_irq_edge_chip = {
 	.irq_ack	= ixp23xx_irq_ack,
 	.irq_mask	= ixp23xx_irq_mask,
 	.irq_unmask	= ixp23xx_irq_edge_unmask,
-	.irq_set_type	= ixp23xx_irq_set_type
+	.irq_set_type	= ixp23xx_irq_set_type,
 };
 
 static void ixp23xx_pci_irq_mask(struct irq_data *d)
@@ -282,7 +282,7 @@ static void pci_handler(unsigned int irq, struct irq_desc *desc)
 static struct irq_chip ixp23xx_pci_irq_chip = {
 	.irq_ack	= ixp23xx_pci_irq_mask,
 	.irq_mask	= ixp23xx_pci_irq_mask,
-	.irq_unmask	= ixp23xx_pci_irq_unmask
+	.irq_unmask	= ixp23xx_pci_irq_unmask,
 };
 
 static void ixp23xx_config_irq(unsigned int irq, enum ixp23xx_irq_type type)
@@ -398,12 +398,12 @@ static struct resource ixp23xx_uart_resources[] = {
 	{
 		.start		= IXP23XX_UART1_PHYS,
 		.end		= IXP23XX_UART1_PHYS + 0x0fff,
-		.flags		= IORESOURCE_MEM
+		.flags		= IORESOURCE_MEM,
 	}, {
 		.start		= IXP23XX_UART2_PHYS,
 		.end		= IXP23XX_UART2_PHYS + 0x0fff,
-		.flags		= IORESOURCE_MEM
-	}
+		.flags		= IORESOURCE_MEM,
+	},
 };
 
 static struct plat_serial8250_port ixp23xx_uart_data[] = {
