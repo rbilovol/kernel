@@ -79,7 +79,7 @@ static struct map_desc smdk2416_iodesc[] __initdata = {
 		.pfn		= __phys_to_pfn(S3C2410_CS2 + (1<<24)),
 		.length		= SZ_4M,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 #define UCON (S3C2410_UCON_DEFAULT	| \
@@ -121,7 +121,7 @@ static struct s3c2410_uartcfg smdk2416_uartcfgs[] __initdata = {
 		.ucon	     = UCON,
 		.ulcon	     = ULCON,
 		.ufcon	     = UFCON,
-	}
+	},
 };
 
 void smdk2416_hsudc_gpio_init(void)
