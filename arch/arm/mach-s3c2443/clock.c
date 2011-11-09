@@ -165,7 +165,7 @@ static struct clk init_clocks_off[] = {
 		.parent		= &clk_p,
 		.enable		= s3c2443_clkcon_enable_p,
 		.ctrlbit	= S3C2443_PCLKCON_SPI1,
-	}
+	},
 };
 
 /* clocks to add straight away */

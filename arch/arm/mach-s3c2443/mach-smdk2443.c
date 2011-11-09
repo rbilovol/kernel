@@ -70,7 +70,7 @@ static struct map_desc smdk2443_iodesc[] __initdata = {
 		.pfn		= __phys_to_pfn(S3C2410_CS2 + (1<<24)),
 		.length		= SZ_4M,
 		.type		= MT_DEVICE,
-	}
+	},
 };
 
 #define UCON S3C2410_UCON_DEFAULT | S3C2410_UCON_UCLK
@@ -106,7 +106,7 @@ static struct s3c2410_uartcfg smdk2443_uartcfgs[] __initdata = {
 		.ucon	     = 0x3c5,
 		.ulcon	     = 0x03,
 		.ufcon	     = 0x51,
-	}
+	},
 };
 
 static struct platform_device *smdk2443_devices[] __initdata = {
