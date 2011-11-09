@@ -63,7 +63,7 @@ static struct mtd_partition nuc900_flash_partitions[] = {
 		.name	=	"NOR Partition 3 for user (2M)",
 		.size	=	0x200000,
 		.offset	=	0x00200000,
-	}
+	},
 };
 
 static struct physmap_flash_data nuc900_flash_data = {
@@ -77,7 +77,7 @@ static struct resource nuc900_flash_resources[] = {
 		.start	=	NUC900_FLASH_BASE,
 		.end	=	NUC900_FLASH_BASE + NUC900_FLASH_SIZE - 1,
 		.flags	=	IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct platform_device nuc900_flash_device = {
@@ -102,7 +102,7 @@ static struct resource nuc900_usb_ehci_resource[] = {
 		.start = IRQ_USBH,
 		.end   = IRQ_USBH,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static u64 nuc900_device_usb_ehci_dmamask = 0xffffffffUL;
@@ -114,8 +114,8 @@ static struct platform_device nuc900_device_usb_ehci = {
 	.resource	  = nuc900_usb_ehci_resource,
 	.dev              = {
 		.dma_mask = &nuc900_device_usb_ehci_dmamask,
-		.coherent_dma_mask = 0xffffffffUL
-	}
+		.coherent_dma_mask = 0xffffffffUL,
+	},
 };
 
 /* USB OHCI Host Controller */
@@ -130,7 +130,7 @@ static struct resource nuc900_usb_ohci_resource[] = {
 		.start = IRQ_USBH,
 		.end   = IRQ_USBH,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static u64 nuc900_device_usb_ohci_dmamask = 0xffffffffUL;
@@ -141,8 +141,8 @@ static struct platform_device nuc900_device_usb_ohci = {
 	.resource	  = nuc900_usb_ohci_resource,
 	.dev              = {
 		.dma_mask = &nuc900_device_usb_ohci_dmamask,
-		.coherent_dma_mask = 0xffffffffUL
-	}
+		.coherent_dma_mask = 0xffffffffUL,
+	},
 };
 
 /* USB Device (Gadget)*/
@@ -157,7 +157,7 @@ static struct resource nuc900_usbgadget_resource[] = {
 		.start = IRQ_USBD,
 		.end   = IRQ_USBD,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device nuc900_device_usbgadget = {
@@ -184,7 +184,7 @@ static struct resource nuc900_emc_resource[] = {
 		.start = IRQ_EMCRX,
 		.end   = IRQ_EMCRX,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static u64 nuc900_device_emc_dmamask = 0xffffffffUL;
@@ -195,8 +195,8 @@ static struct platform_device nuc900_device_emc = {
 	.resource	= nuc900_emc_resource,
 	.dev              = {
 		.dma_mask = &nuc900_device_emc_dmamask,
-		.coherent_dma_mask = 0xffffffffUL
-	}
+		.coherent_dma_mask = 0xffffffffUL,
+	},
 };
 
 /* SPI device */
@@ -223,7 +223,7 @@ static struct resource nuc900_spi_resource[] = {
 		.start = IRQ_SSP,
 		.end   = IRQ_SSP,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device nuc900_device_spi = {
@@ -233,7 +233,7 @@ static struct platform_device nuc900_device_spi = {
 	.resource	= nuc900_spi_resource,
 	.dev		= {
 				.platform_data = &nuc900_spiflash_data,
-			}
+			},
 };
 
 /* spi device, spi flash info */
@@ -276,7 +276,7 @@ static struct resource nuc900_wdt_resource[] = {
 		.start = IRQ_WDT,
 		.end   = IRQ_WDT,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static struct platform_device nuc900_device_wdt = {
@@ -351,7 +351,7 @@ static struct resource nuc900_fmi_resource[] = {
 		.start = IRQ_FMI,
 		.end   = IRQ_FMI,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 struct platform_device nuc900_device_fmi = {
@@ -417,7 +417,7 @@ struct platform_device nuc900_device_kpi = {
 	.resource	= nuc900_kpi_resource,
 	.dev		= {
 				.platform_data = &nuc900_keypad_info,
-			}
+			},
 };
 
 /* LCD controller*/
@@ -469,7 +469,7 @@ static struct resource nuc900_lcd_resource[] = {
 		.start = IRQ_LCD,
 		.end   = IRQ_LCD,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 };
 
 static u64 nuc900_device_lcd_dmamask = -1;
@@ -482,7 +482,7 @@ struct platform_device nuc900_device_lcd = {
 		.dma_mask               = &nuc900_device_lcd_dmamask,
 		.coherent_dma_mask      = -1,
 		.platform_data = &nuc900_fb_info,
-	}
+	},
 };
 
 /* AUDIO controller*/
@@ -509,7 +509,7 @@ struct platform_device nuc900_device_audio = {
 	.dev              = {
 		.dma_mask               = &nuc900_device_audio_dmamask,
 		.coherent_dma_mask      = -1,
-	}
+	},
 };
 
 /*Here should be your evb resourse,such as LCD*/
