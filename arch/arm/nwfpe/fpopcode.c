@@ -47,7 +47,7 @@ const float64 float64Constant[] = {
 	0x4010000000000000ULL,	/* double 4.0 */
 	0x4014000000000000ULL,	/* double 5.0 */
 	0x3fe0000000000000ULL,	/* double 0.5 */
-	0x4024000000000000ULL	/* double 10.0 */
+	0x4024000000000000ULL,	/* double 10.0 */
 };
 
 const float32 float32Constant[] = {
@@ -58,7 +58,7 @@ const float32 float32Constant[] = {
 	0x40800000,		/* single 4.0 */
 	0x40a00000,		/* single 5.0 */
 	0x3f000000,		/* single 0.5 */
-	0x41200000		/* single 10.0 */
+	0x41200000,		/* single 10.0 */
 };
 
 /* condition code lookup table
@@ -80,7 +80,7 @@ static const unsigned short aCC[16] = {
 	0x0A05,			// GT == (!Z && (N==V))
 	0xF5FA,			// LE == (Z || (N!=V))
 	0xFFFF,			// AL always
-	0			// NV
+	0,			// NV
 };
 
 unsigned int checkCondition(const unsigned int opcode, const unsigned int ccodes)
