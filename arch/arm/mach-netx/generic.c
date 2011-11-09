@@ -34,8 +34,8 @@ static struct map_desc netx_io_desc[] __initdata = {
 		.virtual        = NETX_IO_VIRT,
 		.pfn            = __phys_to_pfn(NETX_IO_PHYS),
 		.length         = NETX_IO_SIZE,
-		.type           = MT_DEVICE
-	}
+		.type           = MT_DEVICE,
+	},
 };
 
 void __init netx_map_io(void)

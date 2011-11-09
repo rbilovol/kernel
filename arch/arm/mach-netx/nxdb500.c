@@ -108,7 +108,7 @@ static struct platform_device netx_eth0_device = {
 	.resource	= NULL,
 	.dev = {
 		.platform_data = &eth0_platform_data,
-	}
+	},
 };
 
 static struct netxeth_platform_data eth1_platform_data = {
@@ -122,7 +122,7 @@ static struct platform_device netx_eth1_device = {
 	.resource	= NULL,
 	.dev = {
 		.platform_data = &eth1_platform_data,
-	}
+	},
 };
 
 static struct resource netx_uart0_resources[] = {
