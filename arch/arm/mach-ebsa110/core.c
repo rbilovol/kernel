@@ -80,22 +80,22 @@ static struct map_desc ebsa110_io_desc[] __initdata = {
 		.virtual	= IRQ_STAT,
 		.pfn		= __phys_to_pfn(TRICK4_PHYS),
 		.length		= PGDIR_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* IRQ_MASK/IRQ_MSET */
 		.virtual	= IRQ_MASK,
 		.pfn		= __phys_to_pfn(TRICK3_PHYS),
 		.length		= PGDIR_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* SOFT_BASE */
 		.virtual	= SOFT_BASE,
 		.pfn		= __phys_to_pfn(TRICK1_PHYS),
 		.length		= PGDIR_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* PIT_BASE */
 		.virtual	= PIT_BASE,
 		.pfn		= __phys_to_pfn(TRICK0_PHYS),
 		.length		= PGDIR_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 
 	/*
@@ -105,13 +105,13 @@ static struct map_desc ebsa110_io_desc[] __initdata = {
 		.virtual	= ISAIO_BASE,
 		.pfn		= __phys_to_pfn(ISAIO_PHYS),
 		.length		= ISAIO_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {
 		.virtual	= ISAMEM_BASE,
 		.pfn		= __phys_to_pfn(ISAMEM_PHYS),
 		.length		= ISAMEM_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init ebsa110_map_io(void)
