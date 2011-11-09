@@ -1928,7 +1928,7 @@ static irqreturn_t omap2_dma_irq_handler(int irq, void *dev_id)
 static struct irqaction omap24xx_dma_irq = {
 	.name = "DMA",
 	.handler = omap2_dma_irq_handler,
-	.flags = IRQF_DISABLED
+	.flags = IRQF_DISABLED,
 };
 
 #else
@@ -2107,7 +2107,7 @@ static struct platform_driver omap_system_dma_driver = {
 	.probe		= omap_system_dma_probe,
 	.remove		= omap_system_dma_remove,
 	.driver		= {
-		.name	= "omap_dma_system"
+		.name	= "omap_dma_system",
 	},
 };
 

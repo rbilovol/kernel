@@ -111,7 +111,7 @@ static struct omap_device_pm_latency omap_default_latency[] = {
 		.deactivate_func = omap_device_idle_hwmods,
 		.activate_func   = omap_device_enable_hwmods,
 		.flags = OMAP_DEVICE_LATENCY_AUTO_ADJUST,
-	}
+	},
 };
 
 /* Private functions */
@@ -806,7 +806,7 @@ static struct dev_pm_domain omap_device_pm_domain = {
 		USE_PLATFORM_PM_SLEEP_OPS
 		.suspend_noirq = _od_suspend_noirq,
 		.resume_noirq = _od_resume_noirq,
-	}
+	},
 };
 
 /**
