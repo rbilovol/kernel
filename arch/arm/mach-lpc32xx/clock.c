@@ -1082,7 +1082,7 @@ static struct clk_lookup lookups[] = {
 	_REGISTER_CLOCK("lpc-net.0", NULL, clk_net)
 	_REGISTER_CLOCK("dev:clcd", NULL, clk_lcd)
 	_REGISTER_CLOCK("lpc32xx_udc", "ck_usbd", clk_usbd)
-	_REGISTER_CLOCK("lpc32xx_rtc", NULL, clk_rtc)
+	_REGISTER_CLOCK("lpc32xx_rtc", NULL, clk_rtc),
 };
 
 static int __init clk_init(void)

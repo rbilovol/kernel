@@ -340,7 +340,7 @@ static struct irq_chip lpc32xx_irq_chip = {
 	.irq_mask = lpc32xx_mask_irq,
 	.irq_unmask = lpc32xx_unmask_irq,
 	.irq_set_type = lpc32xx_set_irq_type,
-	.irq_set_wake = lpc32xx_irq_wake
+	.irq_set_wake = lpc32xx_irq_wake,
 };
 
 static void lpc32xx_sic1_handler(unsigned int irq, struct irq_desc *desc)
