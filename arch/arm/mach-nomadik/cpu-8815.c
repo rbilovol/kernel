@@ -78,7 +78,7 @@ static struct nmk_gpio_platform_data cpu8815_gpio[] = {
 		.name = "GPIO-96-127", /* 124..127 not routed to pin */
 		.first_gpio = 96,
 		.first_irq = NOMADIK_GPIO_TO_IRQ(96),
-	}
+	},
 };
 
 static struct resource cpu8815_gpio_resources[] = {
@@ -110,7 +110,7 @@ static struct platform_device *platform_devs[] __initdata = {
 };
 
 static struct amba_device *amba_devs[] __initdata = {
-	&cpu8815_amba_rng
+	&cpu8815_amba_rng,
 };
 
 static int __init cpu8815_init(void)

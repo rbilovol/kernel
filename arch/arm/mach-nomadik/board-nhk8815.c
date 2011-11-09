@@ -55,7 +55,7 @@ static struct resource nhk8815_nand_resources[] = {
 		.start = NAND_IO_DATA,
 		.end = NAND_IO_DATA + 0xfff,
 		.flags = IORESOURCE_MEM,
-	}
+	},
 };
 
 static int nhk8815_nand_init(void)
@@ -101,7 +101,7 @@ static struct mtd_partition nhk8815_partitions[] = {
 		.name	= "User Filesystem(NAND)",
 		.offset	= MTDPART_OFS_APPEND,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct nomadik_nand_platform_data nhk8815_nand_data = {
@@ -147,7 +147,7 @@ static struct mtd_partition nhk8815_onenand_partitions[] = {
 		.name	= "User Filesystem(OneNAND)",
 		.offset	= MTDPART_OFS_APPEND,
 		.size	= MTDPART_SIZ_FULL,
-	}
+	},
 };
 
 static struct onenand_platform_data nhk8815_onenand_data = {
@@ -212,7 +212,7 @@ static struct resource nhk8815_eth_resources[] = {
 		.start = NOMADIK_GPIO_TO_IRQ(115),
 		.end = NOMADIK_GPIO_TO_IRQ(115),
 		.flags = IORESOURCE_IRQ | IRQF_TRIGGER_RISING,
-	}
+	},
 };
 
 static struct platform_device nhk8815_eth_device = {
