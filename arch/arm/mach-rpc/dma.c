@@ -250,7 +250,7 @@ static struct dma_ops iomd_dma_ops = {
 };
 
 static struct fiq_handler fh = {
-	.name	= "floppydma"
+	.name	= "floppydma",
 };
 
 struct floppy_dma {

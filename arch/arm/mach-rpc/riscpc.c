@@ -67,18 +67,18 @@ static struct map_desc rpc_io_desc[] __initdata = {
 		.virtual	=  SCREEN_BASE,
 		.pfn		= __phys_to_pfn(SCREEN_START),
 		.length		= 	2*1048576,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* IO space	*/
 		.virtual	=  (u32)IO_BASE,
 		.pfn		= __phys_to_pfn(IO_START),
 		.length		= 	IO_SIZE	 ,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* EASI space	*/
 		.virtual	= (unsigned long)EASI_BASE,
 		.pfn		= __phys_to_pfn(EASI_START),
 		.length		= EASI_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 };
 
 static void __init rpc_map_io(void)
@@ -203,7 +203,7 @@ static struct platform_device *devs[] __initdata = {
 };
 
 static struct i2c_board_info i2c_rtc = {
-	I2C_BOARD_INFO("pcf8583", 0x50)
+	I2C_BOARD_INFO("pcf8583", 0x50),
 };
 
 static int __init rpc_init(void)
