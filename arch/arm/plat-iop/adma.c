@@ -58,18 +58,18 @@ static struct resource iop3xx_dma_0_resources[] = {
 	[1] = {
 		.start = IRQ_DMA0_EOT,
 		.end = IRQ_DMA0_EOT,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[2] = {
 		.start = IRQ_DMA0_EOC,
 		.end = IRQ_DMA0_EOC,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[3] = {
 		.start = IRQ_DMA0_ERR,
 		.end = IRQ_DMA0_ERR,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static struct resource iop3xx_dma_1_resources[] = {
@@ -81,18 +81,18 @@ static struct resource iop3xx_dma_1_resources[] = {
 	[1] = {
 		.start = IRQ_DMA1_EOT,
 		.end = IRQ_DMA1_EOT,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[2] = {
 		.start = IRQ_DMA1_EOC,
 		.end = IRQ_DMA1_EOC,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[3] = {
 		.start = IRQ_DMA1_ERR,
 		.end = IRQ_DMA1_ERR,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 
@@ -105,18 +105,18 @@ static struct resource iop3xx_aau_resources[] = {
 	[1] = {
 		.start = IRQ_AA_EOT,
 		.end = IRQ_AA_EOT,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[2] = {
 		.start = IRQ_AA_EOC,
 		.end = IRQ_AA_EOC,
-		.flags = IORESOURCE_IRQ
+		.flags = IORESOURCE_IRQ,
 	},
 	[3] = {
 		.start = IRQ_AA_ERR,
 		.end = IRQ_AA_ERR,
-		.flags = IORESOURCE_IRQ
-	}
+		.flags = IORESOURCE_IRQ,
+	},
 };
 
 static u64 iop3xx_adma_dmamask = DMA_BIT_MASK(32);

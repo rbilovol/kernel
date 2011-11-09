@@ -69,7 +69,7 @@ static struct resource iop3xx_i2c1_resources[] = {
 		.start	= IRQ_IOP3XX_I2C_1,
 		.end	= IRQ_IOP3XX_I2C_1,
 		.flags	= IORESOURCE_IRQ,
-	}
+	},
 };
 
 struct platform_device iop3xx_i2c1_device = {
