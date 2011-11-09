@@ -141,7 +141,7 @@ static struct plat_serial8250_port omixp_uart_data[] = {
 		.uartclk	= IXP4XX_UART_XTAL,
 	}, {
 		/* list termination */
-	}
+	},
 };
 
 static struct platform_device omixp_uart = {

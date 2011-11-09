@@ -107,7 +107,7 @@ static struct plat_serial8250_port vulcan_uart_data[] = {
 		.iotype		= UPIO_MEM,
 		.uartclk	= 1843200,
 	},
-	{ }
+	{ },
 };
 
 static struct platform_device vulcan_uart = {

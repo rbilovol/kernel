@@ -66,11 +66,11 @@ static struct mtd_partition ixdp425_partitions[] = {
 	{
 		.name	= "ixp400 NAND FS 0",
 		.offset	= 0,
-		.size 	= SZ_8M
+		.size 	= SZ_8M,
 	}, {
 		.name	= "ixp400 NAND FS 1",
 		.offset	= MTDPART_OFS_APPEND,
-		.size	= MTDPART_SIZ_FULL
+		.size	= MTDPART_SIZ_FULL,
 	},
 };
 
@@ -106,8 +106,8 @@ static struct platform_nand_data ixdp425_flash_nand_data = {
 		.nr_partitions	 	= ARRAY_SIZE(ixdp425_partitions),
 	},
 	.ctrl = {
-		.cmd_ctrl 		= ixdp425_flash_nand_cmd_ctrl
-	}
+		.cmd_ctrl 		= ixdp425_flash_nand_cmd_ctrl,
+	},
 };
 
 static struct resource ixdp425_flash_nand_resource = {
@@ -142,13 +142,13 @@ static struct resource ixdp425_uart_resources[] = {
 	{
 		.start		= IXP4XX_UART1_BASE_PHYS,
 		.end		= IXP4XX_UART1_BASE_PHYS + 0x0fff,
-		.flags		= IORESOURCE_MEM
+		.flags		= IORESOURCE_MEM,
 	},
 	{
 		.start		= IXP4XX_UART2_BASE_PHYS,
 		.end		= IXP4XX_UART2_BASE_PHYS + 0x0fff,
-		.flags		= IORESOURCE_MEM
-	}
+		.flags		= IORESOURCE_MEM,
+	},
 };
 
 static struct plat_serial8250_port ixdp425_uart_data[] = {
@@ -178,7 +178,7 @@ static struct platform_device ixdp425_uart = {
 	.id			= PLAT8250_DEV_PLATFORM,
 	.dev.platform_data	= ixdp425_uart_data,
 	.num_resources		= 2,
-	.resource		= ixdp425_uart_resources
+	.resource		= ixdp425_uart_resources,
 };
 
 /* Built-in 10/100 Ethernet MAC interfaces */
@@ -191,7 +191,7 @@ static struct eth_plat_info ixdp425_plat_eth[] = {
 		.phy		= 1,
 		.rxq		= 4,
 		.txreadyq	= 21,
-	}
+	},
 };
 
 static struct platform_device ixdp425_eth[] = {
@@ -203,7 +203,7 @@ static struct platform_device ixdp425_eth[] = {
 		.name			= "ixp4xx_eth",
 		.id			= IXP4XX_ETH_NPEC,
 		.dev.platform_data	= ixdp425_plat_eth + 1,
-	}
+	},
 };
 
 static struct platform_device *ixdp425_devices[] __initdata = {

@@ -66,13 +66,13 @@ static struct resource avila_uart_resources[] = {
 	{
 		.start		= IXP4XX_UART1_BASE_PHYS,
 		.end		= IXP4XX_UART1_BASE_PHYS + 0x0fff,
-		.flags		= IORESOURCE_MEM
+		.flags		= IORESOURCE_MEM,
 	},
 	{
 		.start		= IXP4XX_UART2_BASE_PHYS,
 		.end		= IXP4XX_UART2_BASE_PHYS + 0x0fff,
-		.flags		= IORESOURCE_MEM
-	}
+		.flags		= IORESOURCE_MEM,
+	},
 };
 
 static struct plat_serial8250_port avila_uart_data[] = {
@@ -102,12 +102,12 @@ static struct platform_device avila_uart = {
 	.id			= PLAT8250_DEV_PLATFORM,
 	.dev.platform_data	= avila_uart_data,
 	.num_resources		= 2,
-	.resource		= avila_uart_resources
+	.resource		= avila_uart_resources,
 };
 
 static struct resource avila_pata_resources[] = {
 	{
-		.flags	= IORESOURCE_MEM
+		.flags	= IORESOURCE_MEM,
 	},
 	{
 		.flags	= IORESOURCE_MEM,
@@ -136,7 +136,7 @@ static struct platform_device avila_pata = {
 static struct platform_device *avila_devices[] __initdata = {
 	&avila_i2c_gpio,
 	&avila_flash,
-	&avila_uart
+	&avila_uart,
 };
 
 static void __init avila_init(void)

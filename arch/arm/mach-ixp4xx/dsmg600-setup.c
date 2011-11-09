@@ -118,7 +118,7 @@ static struct resource dsmg600_uart_resources[] = {
 		.start		= IXP4XX_UART2_BASE_PHYS,
 		.end		= IXP4XX_UART2_BASE_PHYS + 0x0fff,
 		.flags		= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct plat_serial8250_port dsmg600_uart_data[] = {
@@ -140,7 +140,7 @@ static struct plat_serial8250_port dsmg600_uart_data[] = {
 		.regshift	= 2,
 		.uartclk	= IXP4XX_UART_XTAL,
 	},
-	{ }
+	{ },
 };
 
 static struct platform_device dsmg600_uart = {

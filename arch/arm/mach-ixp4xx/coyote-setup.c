@@ -83,7 +83,7 @@ static struct platform_device coyote_uart = {
 
 static struct platform_device *coyote_devices[] __initdata = {
 	&coyote_flash,
-	&coyote_uart
+	&coyote_uart,
 };
 
 static void __init coyote_init(void)

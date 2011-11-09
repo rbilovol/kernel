@@ -123,7 +123,7 @@ static struct resource nas100d_uart_resources[] = {
 		.start		= IXP4XX_UART2_BASE_PHYS,
 		.end		= IXP4XX_UART2_BASE_PHYS + 0x0fff,
 		.flags		= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct plat_serial8250_port nas100d_uart_data[] = {
@@ -145,7 +145,7 @@ static struct plat_serial8250_port nas100d_uart_data[] = {
 		.regshift	= 2,
 		.uartclk	= IXP4XX_UART_XTAL,
 	},
-	{ }
+	{ },
 };
 
 static struct platform_device nas100d_uart = {
@@ -162,7 +162,7 @@ static struct eth_plat_info nas100d_plat_eth[] = {
 		.phy		= 0,
 		.rxq		= 3,
 		.txreadyq	= 20,
-	}
+	},
 };
 
 static struct platform_device nas100d_eth[] = {
@@ -170,7 +170,7 @@ static struct platform_device nas100d_eth[] = {
 		.name			= "ixp4xx_eth",
 		.id			= IXP4XX_ETH_NPEB,
 		.dev.platform_data	= nas100d_plat_eth,
-	}
+	},
 };
 
 static struct platform_device *nas100d_devices[] __initdata = {

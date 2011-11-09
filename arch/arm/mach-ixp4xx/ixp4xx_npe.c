@@ -159,7 +159,7 @@ static struct npe npe_tab[NPE_COUNT] = {
 		.id	= 2,
 		.regs	= (struct npe_regs __iomem *)IXP4XX_NPEC_BASE_VIRT,
 		.regs_phys = IXP4XX_NPEC_BASE_PHYS,
-	}
+	},
 };
 
 int npe_running(struct npe *npe)

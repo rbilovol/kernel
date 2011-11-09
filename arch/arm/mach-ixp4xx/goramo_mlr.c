@@ -240,7 +240,7 @@ static struct resource uart_resources[] = {
 		.start		= IXP4XX_UART2_BASE_PHYS,
 		.end		= IXP4XX_UART2_BASE_PHYS + 0x0fff,
 		.flags		= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct plat_serial8250_port uart_data[] = {
@@ -286,7 +286,7 @@ static struct eth_plat_info eth_plat[] = {
 		.phy		= 1,
 		.rxq		= 4,
 		.txreadyq	= 33,
-	}
+	},
 };
 
 static struct platform_device device_eth_tab[] = {
@@ -298,7 +298,7 @@ static struct platform_device device_eth_tab[] = {
 		.name			= "ixp4xx_eth",
 		.id			= IXP4XX_ETH_NPEC,
 		.dev.platform_data	= eth_plat + 1,
-	}
+	},
 };
 
 
@@ -314,7 +314,7 @@ static struct hss_plat_info hss_plat[] = {
 		.open		= hss_open,
 		.close		= hss_close,
 		.txreadyq	= 35,
-	}
+	},
 };
 
 static struct platform_device device_hss_tab[] = {
@@ -326,7 +326,7 @@ static struct platform_device device_hss_tab[] = {
 		.name			= "ixp4xx_hss",
 		.id			= 1,
 		.dev.platform_data	= hss_plat + 1,
-	}
+	},
 };
 
 

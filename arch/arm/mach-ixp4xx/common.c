@@ -54,17 +54,17 @@ static struct map_desc ixp4xx_io_desc[] __initdata = {
 		.virtual	= IXP4XX_PERIPHERAL_BASE_VIRT,
 		.pfn		= __phys_to_pfn(IXP4XX_PERIPHERAL_BASE_PHYS),
 		.length		= IXP4XX_PERIPHERAL_REGION_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* Expansion Bus Config Registers */
 		.virtual	= IXP4XX_EXP_CFG_BASE_VIRT,
 		.pfn		= __phys_to_pfn(IXP4XX_EXP_CFG_BASE_PHYS),
 		.length		= IXP4XX_EXP_CFG_REGION_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	}, {	/* PCI Registers */
 		.virtual	= IXP4XX_PCI_CFG_BASE_VIRT,
 		.pfn		= __phys_to_pfn(IXP4XX_PCI_CFG_BASE_PHYS),
 		.length		= IXP4XX_PCI_CFG_REGION_SIZE,
-		.type		= MT_DEVICE
+		.type		= MT_DEVICE,
 	},
 #ifdef CONFIG_DEBUG_LL
 	{	/* Debug UART mapping */
@@ -354,8 +354,8 @@ static struct resource ixp46x_i2c_resources[] = {
 	[1] = {
 		.start 	= IRQ_IXP4XX_I2C,
 		.end	= IRQ_IXP4XX_I2C,
-		.flags	= IORESOURCE_IRQ
-	}
+		.flags	= IORESOURCE_IRQ,
+	},
 };
 
 /*
@@ -366,11 +366,11 @@ static struct platform_device ixp46x_i2c_controller = {
 	.name		= "IOP3xx-I2C",
 	.id		= 0,
 	.num_resources	= 2,
-	.resource	= ixp46x_i2c_resources
+	.resource	= ixp46x_i2c_resources,
 };
 
 static struct platform_device *ixp46x_devices[] __initdata = {
-	&ixp46x_i2c_controller
+	&ixp46x_i2c_controller,
 };
 
 unsigned long ixp4xx_exp_bus_size;

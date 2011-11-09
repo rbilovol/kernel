@@ -83,7 +83,7 @@ static struct resource fsg_uart_resources[] = {
 		.start		= IXP4XX_UART2_BASE_PHYS,
 		.end		= IXP4XX_UART2_BASE_PHYS + 0x0fff,
 		.flags		= IORESOURCE_MEM,
-	}
+	},
 };
 
 static struct plat_serial8250_port fsg_uart_data[] = {
@@ -105,7 +105,7 @@ static struct plat_serial8250_port fsg_uart_data[] = {
 		.regshift	= 2,
 		.uartclk	= IXP4XX_UART_XTAL,
 	},
-	{ }
+	{ },
 };
 
 static struct platform_device fsg_uart = {
@@ -133,7 +133,7 @@ static struct eth_plat_info fsg_plat_eth[] = {
 		.phy		= 4,
 		.rxq		= 4,
 		.txreadyq	= 21,
-	}
+	},
 };
 
 static struct platform_device fsg_eth[] = {
@@ -149,7 +149,7 @@ static struct platform_device fsg_eth[] = {
 		.dev = {
 			.platform_data	= fsg_plat_eth + 1,
 		},
-	}
+	},
 };
 
 static struct platform_device *fsg_devices[] __initdata = {

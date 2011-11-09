@@ -77,7 +77,7 @@ static struct platform_device gateway7001_uart = {
 
 static struct platform_device *gateway7001_devices[] __initdata = {
 	&gateway7001_flash,
-	&gateway7001_uart
+	&gateway7001_uart,
 };
 
 static void __init gateway7001_init(void)
