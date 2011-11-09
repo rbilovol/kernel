@@ -80,7 +80,7 @@ void highbank_set_cpu_jump(int cpu, void *jump_addr)
 
 const static struct of_device_id irq_match[] = {
 	{ .compatible = "arm,cortex-a9-gic", .data = gic_of_init, },
-	{}
+	{},
 };
 
 static void __init highbank_init_irq(void)
