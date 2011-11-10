@@ -79,7 +79,7 @@ static struct mtd_partition davinci_ntosd2_nandflash_partition[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= 0,
-	}
+	},
 	/* A few blocks at end hold a flash Bad Block Table. */
 };
 

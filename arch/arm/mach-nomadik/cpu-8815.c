@@ -131,7 +131,7 @@ static struct map_desc nomadik_io_desc[] __initdata = {
 		.pfn =		__phys_to_pfn(NOMADIK_IO_PHYSICAL),
 		.length =	NOMADIK_IO_SIZE,
 		.type = 	MT_DEVICE,
-	}
+	},
 	/* static ram and secured ram may be added later */
 };
 

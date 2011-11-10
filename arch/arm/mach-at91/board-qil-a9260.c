@@ -97,7 +97,7 @@ static struct spi_board_info ek_spi_devices[] = {
 		.chip_select	= 0,
 		.max_speed_hz	= 1 * 1000 * 1000,
 		.bus_num	= 0,
-	}
+	},
 #endif
 };
 

@@ -468,13 +468,13 @@ static struct intc_mask_reg intcs_mask_registers[] __initdata = {
 	    RTDMAC1_1_DEI3, RTDMAC1_1_DEI2, RTDMAC1_1_DEI1, RTDMAC1_1_DEI0 } },
 	__IGNORE({ 0xE6940198, 0xE69401D8, 8, /* IMR6AS / IMCR6AS */
 	  { 0, 0, MSIOF, 0,
-	    SGX540, 0, TTI20, 0 } })
+	    SGX540, 0, TTI20, 0 } }),
 	{ 0xE694019C, 0xE69401DC, 8, /* IMR7AS / IMCR7AS */
 	  { 0, TMU_TUNI2, TMU_TUNI1, TMU_TUNI0,
 	    0, 0, 0, 0 } },
 	__IGNORE({ 0xE69401A0, 0xE69401E0, 8, /* IMR8AS / IMCR8AS */
 	  { 0, 0, 0, 0,
-	    0, MSU_MSU, MSU_MSU2, MSUG } })
+	    0, MSU_MSU, MSU_MSU2, MSUG } }),
 	{ 0xE69401A4, 0xE69401E4, 8, /* IMR9AS / IMCR9AS */
 	  { __IGNORE0(RWDT1), __IGNORE0(RWDT0), __IGNORE0(CMT2), CMT0,
 	    IIC2_DTEI2, IIC2_WAITI2, IIC2_TACKI2, IIC2_ALI2 } },
@@ -492,7 +492,7 @@ static struct intc_mask_reg intcs_mask_registers[] __initdata = {
 	    LCDC1, CSIRX, DSITX_DSITX0, DSITX_DSITX1 } },
 	__IGNORE({ 0xE6950194, 0xE69501D4, 8, /* IMR5AS3 / IMCR5AS3 */
 	  {SPU2_SPU0, SPU2_SPU1, FSI, FMSI,
-	   SCUV, 0, 0, 0 } })
+	   SCUV, 0, 0, 0 } }),
 	{ 0xE6950198, 0xE69501D8, 8, /* IMR6AS3 / IMCR6AS3 */
 	  { TMU1_TUNI10, TMU1_TUNI11, TMU1_TUNI12, TSIF2,
 	    CMT4, 0, 0, 0 } },
@@ -510,7 +510,7 @@ static struct intc_prio_reg intcs_prio_registers[] __initdata = {
 	/* IPRBS */
 	{ 0xFFD20004, 0, 16, 4, { JPU, LCDC0, 0, __IGNORE0(LCRC) } },
 	/* IPRCS */
-	__IGNORE({ 0xFFD20008, 0, 16, 4, { BBIF2, 0, 0, 0 } })
+	__IGNORE({ 0xFFD20008, 0, 16, 4, { BBIF2, 0, 0, 0 } }),
 	/* IPRES */
 	{ 0xFFD20010, 0, 16, 4, { RTDMAC1_1, CEU, __IGNORE0(MFI), VPU } },
 	/* IPRFS */
@@ -523,7 +523,7 @@ static struct intc_prio_reg intcs_prio_registers[] __initdata = {
 	/* IPRIS */
 	{ 0xFFD20020, 0, 16, 4, { 0, __IGNORE0(MSIOF), TSIF0, IIC0 } },
 	/* IPRJS */
-	__IGNORE({ 0xFFD20024, 0, 16, 4, { 0, SGX540, MSUG, MSU } })
+	__IGNORE({ 0xFFD20024, 0, 16, 4, { 0, SGX540, MSUG, MSU } }),
 	/* IPRKS */
 	{ 0xFFD20028, 0, 16, 4, { __IGNORE0(_2DG), ASA, LMB, PEP } },
 	/* IPRLS */
@@ -540,9 +540,9 @@ static struct intc_prio_reg intcs_prio_registers[] __initdata = {
 	/* IPRJS3 */
 	{ 0xFFD50024, 0, 16, 4, { LCDC1, CSIRX, DSITX, 0 } },
 	/* IPRKS3 */
-	__IGNORE({ 0xFFD50028, 0, 16, 4, { SPU2, 0, FSI, FMSI } })
+	__IGNORE({ 0xFFD50028, 0, 16, 4, { SPU2, 0, FSI, FMSI } }),
 	/* IPRLS3 */
-	__IGNORE({ 0xFFD5002C, 0, 16, 4, { SCUV, 0, 0, 0 } })
+	__IGNORE({ 0xFFD5002C, 0, 16, 4, { SCUV, 0, 0, 0 } }),
 	/* IPRMS3 */
 	{ 0xFFD50030, 0, 16, 4, { TMU1, 0, 0, TSIF2 } },
 	/* IPRNS3 */

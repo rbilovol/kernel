@@ -65,7 +65,7 @@ static struct mtd_partition davinci_nand_partitions[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= 0,
-	}
+	},
 	/* two blocks with bad block table (and mirror) at the end */
 };
 

@@ -114,7 +114,7 @@ static struct spi_board_info dk_spi_devices[] = {
 		.modalias	= "mtd_dataflash",
 		.chip_select	= 3,
 		.max_speed_hz	= 15 * 1000 * 1000,
-	}
+	},
 #endif
 };
 

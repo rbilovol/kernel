@@ -406,7 +406,7 @@ static struct resource nuc900_kpi_resource[] = {
 		.start = IRQ_KPI,
 		.end   = IRQ_KPI,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 
 };
 
@@ -497,7 +497,7 @@ static struct resource nuc900_ac97_resource[] = {
 		.start = IRQ_ACTL,
 		.end   = IRQ_ACTL,
 		.flags = IORESOURCE_IRQ,
-	}
+	},
 
 };
 

@@ -1443,7 +1443,7 @@ const struct coh_dma_channel chan_config[U300_DMA_CHANNELS] = {
 		.number = U300_DMA_UART1_RX,
 		.name = "UART1 RX",
 		.priority_high = 0,
-	}
+	},
 #else
 	{
 		.number = U300_DMA_GENERAL_PURPOSE_9,
@@ -1464,7 +1464,7 @@ const struct coh_dma_channel chan_config[U300_DMA_CHANNELS] = {
 		.param.ctrl_lli_chained = flags_memcpy_lli_chained,
 		.param.ctrl_lli = flags_memcpy_lli,
 		.param.ctrl_lli_last = flags_memcpy_lli_last,
-	}
+	},
 #endif
 };
 

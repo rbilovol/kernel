@@ -248,8 +248,8 @@ void kgdb_arch_exit(void)
  */
 struct kgdb_arch arch_kgdb_ops = {
 #ifndef __ARMEB__
-	.gdb_bpt_instr		= {0xfe, 0xde, 0xff, 0xe7}
+	.gdb_bpt_instr		= {0xfe, 0xde, 0xff, 0xe7},
 #else /* ! __ARMEB__ */
-	.gdb_bpt_instr		= {0xe7, 0xff, 0xde, 0xfe}
+	.gdb_bpt_instr		= {0xe7, 0xff, 0xde, 0xfe},
 #endif
 };

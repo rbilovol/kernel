@@ -346,7 +346,7 @@ static struct resource bast_dm9k_resource[] = {
 		.start = IRQ_DM9000,
 		.end   = IRQ_DM9000,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHLEVEL,
-	}
+	},
 
 };
 

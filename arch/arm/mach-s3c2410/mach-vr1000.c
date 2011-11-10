@@ -225,7 +225,7 @@ static struct resource vr1000_dm9k0_resource[] = {
 		.start = IRQ_VR1000_DM9000A,
 		.end   = IRQ_VR1000_DM9000A,
 		.flags = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHLEVEL,
-	}
+	},
 
 };
 

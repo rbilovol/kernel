@@ -130,7 +130,7 @@ static struct mtd_partition davinci_evm_nandflash_partition[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= MTDPART_SIZ_FULL,
 		.mask_flags	= 0,
-	}
+	},
 	/* A few blocks at end hold a flash BBT ... created by TI's CCS
 	 * using flashwriter_nand.out, but ignored by TI's versions of
 	 * Linux and u-boot.  We boot faster by using them.

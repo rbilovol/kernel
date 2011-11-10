@@ -62,7 +62,7 @@ static struct platform_device bast_device_ide0 = {
 	.dev		= {
 		.platform_data = &bast_ide_platdata,
 		.coherent_dma_mask = ~0,
-	}
+	},
 
 };
 

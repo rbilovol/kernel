@@ -246,7 +246,7 @@ static struct platform_device dm9000_device = {
 	.resource	= dm9000_resources,
 	.dev		= {
 		.platform_data = &cm_x300_dm9000_platdata,
-	}
+	},
 
 };
 

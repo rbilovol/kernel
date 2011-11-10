@@ -71,8 +71,8 @@ static struct map_desc ixp4xx_io_desc[] __initdata = {
 		.virtual	= IXP4XX_DEBUG_UART_BASE_VIRT,
 		.pfn		= __phys_to_pfn(IXP4XX_DEBUG_UART_BASE_PHYS),
 		.length		= IXP4XX_DEBUG_UART_REGION_SIZE,
-		.type		= MT_DEVICE
-	}
+		.type		= MT_DEVICE,
+	},
 #endif
 };
 

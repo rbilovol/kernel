@@ -564,7 +564,7 @@ static int kprobe_benchmark(void(*fn)(void), unsigned offset)
 	if (ret < 0) {
 		pr_err("FAIL: register_kprobe failed with %d\n", ret);
 		return ret;
-	}
+	},
 
 	ret = benchmark(fn);
 

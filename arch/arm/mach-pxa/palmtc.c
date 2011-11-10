@@ -395,7 +395,7 @@ struct gpio_led palmtc_gpio_leds[] = {
 	.default_trigger	= "none",
 	.gpio			= GPIO_NR_PALMTC_VIBRA_POWER,
 	.active_low		= 1,
-}
+},
 
 };
 
