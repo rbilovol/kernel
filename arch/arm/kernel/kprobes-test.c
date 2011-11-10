@@ -569,7 +569,7 @@ static int kprobe_benchmark(void(*fn)(void), unsigned offset)
 	ret = benchmark(fn);
 
 	unregister_kprobe(&k);
-	return ret;,
+	return ret;
 };
 
 struct benchmarks {
