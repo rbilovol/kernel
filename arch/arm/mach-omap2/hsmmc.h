@@ -22,8 +22,13 @@ struct omap2_hsmmc_info {
 	bool	no_off_init;	/* no power off when not in MMC sleep state */
 	bool	vcc_aux_disable_is_sleep; /* Regulator off remapped to sleep */
 	bool	deferred;	/* mmc needs a deferred probe */
+
+	char	*gpiochip_cd;	/* Optional gpiochip for gpio_cd */
 	int	gpio_cd;	/* or -EINVAL */
+
+	char	*gpiochip_wp;	/* Optional gpiochip for gpio_wp */
 	int	gpio_wp;	/* or -EINVAL */
+
 	char	*name;		/* or NULL for default */
 	struct platform_device *pdev;	/* mmc controller instance */
 	int	ocr_mask;	/* temporary HACK */

@@ -130,7 +130,10 @@ struct omap_mmc_platform_data {
 #define HSMMC_HAS_UPDATED_RESET	(1 << 1)
 		unsigned features;
 
+		char *gpiochip_cd;		/* optional gpiochip for card detect */
 		int switch_pin;			/* gpio (card detect) */
+
+		char *gpiochip_wp;		/* optional gpiochip for write protect */
 		int gpio_wp;			/* gpio (write protect) */
 
 		int (*set_bus_mode)(struct device *dev, int slot, int bus_mode);

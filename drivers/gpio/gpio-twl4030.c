@@ -391,6 +391,7 @@ static int __devinit gpio_twl4030_debounce(u32 debounce, u8 mmc_cd)
 }
 
 static int gpio_twl4030_remove(struct platform_device *pdev);
+static struct platform_driver gpio_twl4030_driver;
 
 static int __devinit gpio_twl4030_probe(struct platform_device *pdev)
 {
@@ -430,6 +431,7 @@ no_irqs:
 				pdata->debounce, pdata->mmc_cd,
 				ret);
 
+	twl_gpiochip.label = gpio_twl4030_driver.driver.name;
 	twl_gpiochip.base = pdata->gpio_base;
 	twl_gpiochip.ngpio = TWL4030_GPIO_MAX;
 	twl_gpiochip.dev = &pdev->dev;

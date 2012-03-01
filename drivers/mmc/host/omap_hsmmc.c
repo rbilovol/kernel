@@ -176,6 +176,8 @@ struct omap_hsmmc_host {
 	int			use_dma, dma_ch;
 	int			dma_line_tx, dma_line_rx;
 	int			slot_id;
+	int			gpio_cd;
+	int			gpio_wp;
 	int			got_dbclk;
 	int			response_busy;
 	int			context_loss;
@@ -192,26 +194,29 @@ struct omap_hsmmc_host {
 
 static int omap_hsmmc_card_detect(struct device *dev, int slot)
 {
-	struct omap_mmc_platform_data *mmc = dev->platform_data;
+	struct omap_hsmmc_host *host =
+		platform_get_drvdata(to_platform_device(dev));
 
 	/* NOTE: assumes card detect signal is active-low */
-	return !gpio_get_value_cansleep(mmc->slots[0].switch_pin);
+	return !gpio_get_value_cansleep(host->gpio_cd);
 }
 
 static int omap_hsmmc_get_wp(struct device *dev, int slot)
 {
-	struct omap_mmc_platform_data *mmc = dev->platform_data;
+	struct omap_hsmmc_host *host =
+		platform_get_drvdata(to_platform_device(dev));
 
 	/* NOTE: assumes write protect signal is active-high */
-	return gpio_get_value_cansleep(mmc->slots[0].gpio_wp);
+	return gpio_get_value_cansleep(host->gpio_wp);
 }
 
 static int omap_hsmmc_get_cover_state(struct device *dev, int slot)
 {
-	struct omap_mmc_platform_data *mmc = dev->platform_data;
+	struct omap_hsmmc_host *host =
+		platform_get_drvdata(to_platform_device(dev));
 
 	/* NOTE: assumes card detect signal is active-low */
-	return !gpio_get_value_cansleep(mmc->slots[0].switch_pin);
+	return !gpio_get_value_cansleep(host->gpio_cd);
 }
 
 #ifdef CONFIG_PM
@@ -497,55 +502,80 @@ static inline int omap_hsmmc_have_reg(void)
 
 #endif
 
-static int omap_hsmmc_gpio_init(struct omap_mmc_platform_data *pdata)
+static int omap_hsmmc_gpio_init(struct omap_hsmmc_host *host)
 {
-	int ret;
+	struct omap_mmc_platform_data *pdata = host->pdata;
+	struct omap_mmc_slot_data *slot = &pdata->slots[0];
+	int gpio, ret;
 
-	if (gpio_is_valid(pdata->slots[0].switch_pin)) {
-		if (pdata->slots[0].cover)
-			pdata->slots[0].get_cover_state =
+	gpio = slot->switch_pin;
+	if (slot->gpiochip_cd)
+		gpio = gpio_find_by_chip_name(slot->gpiochip_cd, gpio);
+	if (gpio_is_valid(gpio)) {
+		if (slot->cover)
+			slot->get_cover_state =
 					omap_hsmmc_get_cover_state;
 		else
-			pdata->slots[0].card_detect = omap_hsmmc_card_detect;
-		pdata->slots[0].card_detect_irq =
-				gpio_to_irq(pdata->slots[0].switch_pin);
-		ret = gpio_request(pdata->slots[0].switch_pin, "mmc_cd");
+			slot->card_detect = omap_hsmmc_card_detect;
+		slot->card_detect_irq =
+				gpio_to_irq(gpio);
+		ret = gpio_request(gpio, "mmc_cd");
 		if (ret)
 			return ret;
-		ret = gpio_direction_input(pdata->slots[0].switch_pin);
+		ret = gpio_direction_input(gpio);
 		if (ret)
 			goto err_free_sp;
-	} else
-		pdata->slots[0].switch_pin = -EINVAL;
+		host->gpio_cd = gpio;
+	} else {
+		if (slot->gpiochip_cd) {
+			pr_warning("MMC %s card detect GPIO chip %s unavailable\n",
+				slot->name, slot->gpiochip_cd);
+			ret = -ENODEV;
+			goto err_free_sp;
+		}
+		host->gpio_cd = -EINVAL;
+	}
 
-	if (gpio_is_valid(pdata->slots[0].gpio_wp)) {
-		pdata->slots[0].get_ro = omap_hsmmc_get_wp;
-		ret = gpio_request(pdata->slots[0].gpio_wp, "mmc_wp");
+	gpio = slot->gpio_wp;
+	if (slot->gpiochip_wp)
+		gpio = gpio_find_by_chip_name(slot->gpiochip_wp, gpio);
+	if (gpio_is_valid(gpio)) {
+		slot->get_ro = omap_hsmmc_get_wp;
+		ret = gpio_request(gpio, "mmc_wp");
 		if (ret)
 			goto err_free_cd;
-		ret = gpio_direction_input(pdata->slots[0].gpio_wp);
+		ret = gpio_direction_input(gpio);
 		if (ret)
 			goto err_free_wp;
-	} else
-		pdata->slots[0].gpio_wp = -EINVAL;
+		host->gpio_wp = gpio;
+	} else {
+		if (slot->gpiochip_wp) {
+			pr_warning("MMC %s write protect GPIO chip %s unavailable\n",
+				slot->name, slot->gpiochip_wp);
+			ret = -ENODEV;
+			goto err_free_wp;
+		}
+		host->gpio_wp = -EINVAL;
+	}
 
 	return 0;
 
 err_free_wp:
-	gpio_free(pdata->slots[0].gpio_wp);
+	if (gpio_is_valid(host->gpio_wp))
+		gpio_free(host->gpio_wp);
 err_free_cd:
-	if (gpio_is_valid(pdata->slots[0].switch_pin))
+	if (gpio_is_valid(host->gpio_cd))
 err_free_sp:
-		gpio_free(pdata->slots[0].switch_pin);
+		gpio_free(host->gpio_cd);
 	return ret;
 }
 
-static void omap_hsmmc_gpio_free(struct omap_mmc_platform_data *pdata)
+static void omap_hsmmc_gpio_free(struct omap_hsmmc_host *host)
 {
-	if (gpio_is_valid(pdata->slots[0].gpio_wp))
-		gpio_free(pdata->slots[0].gpio_wp);
-	if (gpio_is_valid(pdata->slots[0].switch_pin))
-		gpio_free(pdata->slots[0].switch_pin);
+	if (gpio_is_valid(host->gpio_wp))
+		gpio_free(host->gpio_wp);
+	if (gpio_is_valid(host->gpio_cd))
+		gpio_free(host->gpio_cd);
 }
 
 /*
@@ -1876,10 +1906,6 @@ static int __init omap_hsmmc_probe(struct platform_device *pdev)
 	if (res == NULL)
 		return -EBUSY;
 
-	ret = omap_hsmmc_gpio_init(pdata);
-	if (ret)
-		goto err;
-
 	mmc = mmc_alloc_host(sizeof(struct omap_hsmmc_host), &pdev->dev);
 	if (!mmc) {
 		ret = -ENOMEM;
@@ -1902,6 +1928,10 @@ static int __init omap_hsmmc_probe(struct platform_device *pdev)
 	host->next_data.cookie = 1;
 
 	platform_set_drvdata(pdev, host);
+
+	ret = omap_hsmmc_gpio_init(host);
+	if (ret)
+		goto err1;
 
 	mmc->ops	= &omap_hsmmc_ops;
 
@@ -2093,8 +2123,7 @@ err1:
 	platform_set_drvdata(pdev, NULL);
 	mmc_free_host(mmc);
 err_alloc:
-	omap_hsmmc_gpio_free(pdata);
-err:
+	omap_hsmmc_gpio_free(host);
 	release_mem_region(res->start, resource_size(res));
 	return ret;
 }
@@ -2125,7 +2154,7 @@ static int omap_hsmmc_remove(struct platform_device *pdev)
 
 		mmc_free_host(host->mmc);
 		iounmap(host->base);
-		omap_hsmmc_gpio_free(pdev->dev.platform_data);
+		omap_hsmmc_gpio_free(host);
 	}
 
 	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);

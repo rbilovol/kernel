@@ -323,7 +323,10 @@ static int __init omap_hsmmc_pdata_init(struct omap2_hsmmc_info *c,
 
 	mmc->get_context_loss_count = hsmmc_get_context_loss;
 
+	mmc->slots[0].gpiochip_cd = c->gpiochip_cd;
 	mmc->slots[0].switch_pin = c->gpio_cd;
+
+	mmc->slots[0].gpiochip_wp = c->gpiochip_wp;
 	mmc->slots[0].gpio_wp = c->gpio_wp;
 
 	mmc->slots[0].remux = c->remux;
