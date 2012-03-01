@@ -203,9 +203,10 @@ static struct omap2_hsmmc_info mmc[] = {
 		.name		= "external",
 		.mmc		= 1,
 		.caps		= MMC_CAP_4_BIT_DATA,
+		.gpiochip_cd	= "twl4030_gpio",
+		.gpio_cd	= 0,	/* mmc0_cd offset in twl4030 */
 		.gpio_wp	= -EINVAL,
 		.power_saving	= true,
-		.deferred	= true,
 	},
 	{
 		.name		= "internal",
@@ -231,10 +232,6 @@ static int zoom_twl_gpio_setup(struct device *dev,
 		unsigned gpio, unsigned ngpio)
 {
 	int ret;
-
-	/* gpio + 0 is "mmc0_cd" (input/IRQ) */
-	mmc[0].gpio_cd = gpio + 0;
-	omap_hsmmc_late_init(mmc);
 
 	ret = gpio_request_one(LCD_PANEL_ENABLE_GPIO, GPIOF_OUT_INIT_LOW,
 			       "lcd enable");

@@ -315,9 +315,9 @@ static struct omap2_hsmmc_info mmc[] = {
 	{
 		.mmc		= 1,
 		.caps		= MMC_CAP_4_BIT_DATA,
-		.gpio_cd	= -EINVAL,
+		.gpiochip_cd	= "twl4030_gpio",
+		.gpio_cd	= 0,	/* mmc0_cd offset in twl4030 */
 		.gpio_wp	= 63,
-		.deferred	= true,
 	},
 #ifdef CONFIG_WL12XX_PLATFORM_DATA
 	{
@@ -360,10 +360,6 @@ static int omap3evm_twl_gpio_setup(struct device *dev,
 		unsigned gpio, unsigned ngpio)
 {
 	int r, lcd_bl_en;
-
-	/* gpio + 0 is "mmc0_cd" (input/IRQ) */
-	mmc[0].gpio_cd = gpio + 0;
-	omap_hsmmc_late_init(mmc);
 
 	/*
 	 * Most GPIOs are for USB OTG.  Some are mostly sent to

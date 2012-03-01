@@ -411,9 +411,9 @@ static struct omap2_hsmmc_info mmc[] = {
 	{
 		.mmc		= 1,
 		.caps		= MMC_CAP_4_BIT_DATA,
-		.gpio_cd	= -EINVAL,
+		.gpiochip_cd	= "twl4030_gpio",
+		.gpio_cd	= 0,	/* mmc0_cd offset in twl4030 */
 		.gpio_wp	= -EINVAL,
-		.deferred	= true,
 	},
 	{
 		.mmc		= 2,
@@ -468,10 +468,6 @@ static int cm_t35_twl_gpio_setup(struct device *dev, unsigned gpio,
 	} else {
 		pr_err("CM-T35: could not obtain gpio for WiFi reset\n");
 	}
-
-	/* gpio + 0 is "mmc0_cd" (input/IRQ) */
-	mmc[0].gpio_cd = gpio + 0;
-	omap_hsmmc_late_init(mmc);
 
 	return 0;
 }

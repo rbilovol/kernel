@@ -231,14 +231,16 @@ static struct omap2_hsmmc_info mmc[] = {
 		 * so the SIM card isn't used; else 4 bits.
 		 */
 		.caps		= MMC_CAP_4_BIT_DATA | MMC_CAP_8_BIT_DATA,
+		.gpiochip_cd	= "twl4030_gpio",
+		.gpio_cd	= 0,	/* mmc0_cd offset in twl4030 */
 		.gpio_wp	= 4,
-		.deferred	= true,
 	},
 	{
 		.mmc		= 2,
 		.caps		= MMC_CAP_4_BIT_DATA | MMC_CAP_8_BIT_DATA,
+		.gpiochip_cd	= "twl4030_gpio",
+		.gpio_cd	= 1,	/* mmc1_cd offset in twl4030 */
 		.gpio_wp	= 7,
-		.deferred	= true,
 	},
 	{}	/* Terminator */
 };
@@ -246,13 +248,6 @@ static struct omap2_hsmmc_info mmc[] = {
 static int sdp3430_twl_gpio_setup(struct device *dev,
 		unsigned gpio, unsigned ngpio)
 {
-	/* gpio + 0 is "mmc0_cd" (input/IRQ),
-	 * gpio + 1 is "mmc1_cd" (input/IRQ)
-	 */
-	mmc[0].gpio_cd = gpio + 0;
-	mmc[1].gpio_cd = gpio + 1;
-	omap_hsmmc_late_init(mmc);
-
 	/* gpio + 7 is "sub_lcd_en_bkl" (output/PWM1) */
 	gpio_request_one(gpio + 7, GPIOF_OUT_INIT_LOW, "sub_lcd_en_bkl");
 

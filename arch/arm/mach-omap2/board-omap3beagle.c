@@ -252,8 +252,9 @@ static struct omap2_hsmmc_info mmc[] = {
 	{
 		.mmc		= 1,
 		.caps		= MMC_CAP_4_BIT_DATA | MMC_CAP_8_BIT_DATA,
+		.gpiochip_cd	= "twl4030_gpio",
+		.gpio_cd	= 0,	/* mmc0_cd offset in twl4030 */
 		.gpio_wp	= -EINVAL,
-		.deferred	= true,
 	},
 	{}	/* Terminator */
 };
@@ -272,11 +273,6 @@ static int beagle_twl_gpio_setup(struct device *dev,
 		unsigned gpio, unsigned ngpio)
 {
 	int r;
-
-	mmc[0].gpio_wp = beagle_config.mmc1_gpio_wp;
-	/* gpio + 0 is "mmc0_cd" (input/IRQ) */
-	mmc[0].gpio_cd = gpio + 0;
-	omap_hsmmc_late_init(mmc);
 
 	/*
 	 * TWL4030_GPIO_MAX + 0 == ledA, EHCI nEN_USB_PWR (out, XM active
@@ -523,6 +519,7 @@ static void __init omap3_beagle_init(void)
 
 	if (beagle_config.mmc1_gpio_wp != -EINVAL)
 		omap_mux_init_gpio(beagle_config.mmc1_gpio_wp, OMAP_PIN_INPUT);
+	mmc[0].gpio_wp = beagle_config.mmc1_gpio_wp;
 	omap_hsmmc_init(mmc);
 
 	omap3_beagle_i2c_init();
