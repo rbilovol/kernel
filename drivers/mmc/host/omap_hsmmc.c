@@ -34,6 +34,7 @@
 #include <linux/gpio.h>
 #include <linux/regulator/consumer.h>
 #include <linux/pm_runtime.h>
+#include <linux/i2c/twl.h>
 #include <plat/dma.h>
 #include <mach/hardware.h>
 #include <plat/board.h>
@@ -577,6 +578,32 @@ static void omap_hsmmc_gpio_free(struct omap_hsmmc_host *host)
 	if (gpio_is_valid(host->gpio_cd))
 		gpio_free(host->gpio_cd);
 }
+
+#ifdef CONFIG_TWL4030_CORE
+static int omap_hsmmc_init_twl6030(struct omap_hsmmc_host *host)
+{
+	struct omap_mmc_platform_data *pdata = host->pdata;
+	struct omap_mmc_slot_data *slot = &pdata->slots[0];
+	int irq;
+
+	if (gpio_is_valid(host->gpio_cd) || host->id)
+		return 0;
+
+	irq = twl6030_mmc_card_detect_config();
+	if (irq <= 0)
+		return irq;
+
+	slot->card_detect_irq = irq;
+	slot->card_detect = twl6030_mmc_card_detect;
+
+	return 0;
+}
+#else
+static inline int omap_hsmmc_init_twl6030(struct omap_hsmmc_host *host)
+{
+	return -ENODEV;
+}
+#endif
 
 /*
  * Start clock to the card
@@ -1930,6 +1957,10 @@ static int __init omap_hsmmc_probe(struct platform_device *pdev)
 	platform_set_drvdata(pdev, host);
 
 	ret = omap_hsmmc_gpio_init(host);
+	if (ret)
+		goto err1;
+
+	ret = omap_hsmmc_init_twl6030(host);
 	if (ret)
 		goto err1;
 

@@ -283,35 +283,30 @@ int twl6030_mmc_card_detect_config(void)
 	 * Card status on TWL6030 for MMC1
 	 */
 	ret = twl_i2c_read_u8(TWL6030_MODULE_ID0, &reg_val, TWL6030_MMCCTRL);
-	if (ret < 0) {
-		pr_err("twl6030: Failed to read MMCCTRL, error %d\n", ret);
-		return ret;
-	}
+	if (ret < 0)
+		goto err;
 	reg_val &= ~VMMC_AUTO_OFF;
 	reg_val |= SW_FC;
 	ret = twl_i2c_write_u8(TWL6030_MODULE_ID0, reg_val, TWL6030_MMCCTRL);
-	if (ret < 0) {
-		pr_err("twl6030: Failed to write MMCCTRL, error %d\n", ret);
-		return ret;
-	}
+	if (ret < 0)
+		goto err;
 
 	/* Configuring PullUp-PullDown register */
 	ret = twl_i2c_read_u8(TWL6030_MODULE_ID0, &reg_val,
 						TWL6030_CFG_INPUT_PUPD3);
-	if (ret < 0) {
-		pr_err("twl6030: Failed to read CFG_INPUT_PUPD3, error %d\n",
-									ret);
-		return ret;
-	}
+	if (ret < 0)
+		goto err;
 	reg_val &= ~(MMC_PU | MMC_PD);
 	ret = twl_i2c_write_u8(TWL6030_MODULE_ID0, reg_val,
 						TWL6030_CFG_INPUT_PUPD3);
-	if (ret < 0) {
-		pr_err("twl6030: Failed to write CFG_INPUT_PUPD3, error %d\n",
-									ret);
-		return ret;
-	}
-	return 0;
+	if (ret < 0)
+		goto err;
+
+	return twl6030_irq_base + MMCDETECT_INTR_OFFSET;
+
+err:
+	pr_err("twl6030: Failed to initialize MMC card detect: %d\n", ret);
+	return -ENODEV;
 }
 EXPORT_SYMBOL(twl6030_mmc_card_detect_config);
 
