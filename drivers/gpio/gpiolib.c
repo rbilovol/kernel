@@ -1173,6 +1173,53 @@ struct gpio_chip *gpiochip_find(void *data,
 }
 EXPORT_SYMBOL_GPL(gpiochip_find);
 
+static int match_name(struct gpio_chip *chip, void *data)
+{
+	const char *name = data;
+
+	return sysfs_streq(name, chip->label);
+}
+
+/**
+ * gpiochip_find_by_name() - iterator for locating a gpio_chip by name
+ * @name: name of the gpio_chip
+ *
+ * Similar to bus_find_device_by_name. It returns a reference to the
+ * first gpio_chip with matching name. It ignores NULL and empty names.
+ * If you need to do something more complex, then use gpiochip_find.
+ */
+struct gpio_chip *gpiochip_find_by_name(const char *name)
+{
+	if (!name || !strcmp(name, ""))
+		return NULL;
+
+	return gpiochip_find((void *)name, match_name);
+}
+EXPORT_SYMBOL_GPL(gpiochip_find_by_name);
+
+/**
+ * gpio_find_by_chip_name() - find a gpio on a specific gpio_chip
+ * @chip_name: name of the gpio_chip
+ * @gpio_offset: offset of the gpio on the gpio_chip
+ *
+ * Note that gpiochip_find_by_name returns the first matching
+ * gpio_chip name. For more complex matching, see gpio_find.
+ */
+int gpio_find_by_chip_name(const char *chip_name, unsigned gpio_offset)
+{
+	struct gpio_chip *chip;
+	int gpio, res;
+
+	chip = gpiochip_find_by_name(chip_name);
+	if (!chip)
+		return -ENODEV;
+
+	gpio = chip->base + gpio_offset;
+
+	return gpio;
+}
+EXPORT_SYMBOL_GPL(gpio_find_by_chip_name);
+
 /* These "optional" allocation calls help prevent drivers from stomping
  * on each other, and help provide better diagnostics in debugfs.
  * They're called even less than the "set direction" calls.

@@ -145,7 +145,8 @@ extern int __must_check gpiochip_remove(struct gpio_chip *chip);
 extern struct gpio_chip *gpiochip_find(void *data,
 					int (*match)(struct gpio_chip *chip,
 						     void *data));
-
+extern struct gpio_chip *gpiochip_find_by_name(const char *name);
+extern int gpio_find_by_chip_name(const char *chip_name, unsigned gpio_offset);
 
 /* Always use the library code for GPIO management calls,
  * or when sleeping may be involved.
