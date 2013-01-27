@@ -375,6 +375,15 @@ config MACH_OMAP4_PANDA
 	select OMAP_PACKAGE_CBS
 	select REGULATOR_FIXED_VOLTAGE if REGULATOR
 
+config MACH_OMAP4_BLAZETABLET_DTS
+	bool "OMAP4 BlazeTablet"
+	depends on MACH_OMAP_GENERIC
+	help
+	  Say Y here to enable OMAP4 BlazeTablet
+	  additional support for non-device-tree-enabled
+	  features. Should be removed once all of them
+	  got DT support
+
 config OMAP3_EMU
 	bool "OMAP3 debugging peripherals"
 	depends on ARCH_OMAP3

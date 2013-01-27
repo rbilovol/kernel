@@ -21,6 +21,7 @@
 
 #include "common.h"
 #include "common-board-devices.h"
+#include "board-omap4blazetablet-dts.h"
 #include "dss-common.h"
 
 #if !(defined(CONFIG_ARCH_OMAP2) || defined(CONFIG_ARCH_OMAP3))
@@ -50,6 +51,8 @@ static void __init omap_generic_init(void)
 		omap4_panda_display_init_of();
 	else if (of_machine_is_compatible("ti,omap4-sdp"))
 		omap_4430sdp_display_init_of();
+	else if (of_machine_is_compatible("ti,omap4-blazetablet"))
+		omap4_blazetablet_init();
 }
 
 #ifdef CONFIG_SOC_OMAP2420
