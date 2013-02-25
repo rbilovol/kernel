@@ -252,6 +252,19 @@
 	};
 };
 
+&omap4_pmx_wkup	{
+	pinctrl-names = "default";
+	pinctrl-0 = <
+			&dss_dsi_panel_pins
+	>;
+
+	dss_dsi_panel_pins: pinmux_dss_dsi_panel_pins {
+		pinctrl-single,pins = <
+			0x1C 0x118	/* fref_clk4_out.fref_clk4_out INPUT_PULLUP | MODE0 */
+		>;
+	};
+};
+
 &i2c1 {
 	clock-frequency = <400000>;
 
