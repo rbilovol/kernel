@@ -938,12 +938,16 @@ static int tc358765_i2c_probe(struct i2c_client *client,
 	mutex_init(&tc358765_i2c->xfer_lock);
 	dev_err(&client->dev, "D2L i2c initialized\n");
 
+	omap_dss_register_driver(&tc358765_driver);
+
 	return 0;
 }
 
 /* driver remove function */
 static int __exit tc358765_i2c_remove(struct i2c_client *client)
 {
+	omap_dss_unregister_driver(&tc358765_driver);
+
 	/* remove client data */
 	i2c_set_clientdata(client, NULL);
 
@@ -957,7 +961,7 @@ static int __exit tc358765_i2c_remove(struct i2c_client *client)
 }
 
 static const struct i2c_device_id tc358765_i2c_idtable[] = {
-	{"tc358765_i2c_driver", 0},
+	{"tc358765", 0},
 	{},
 };
 
@@ -971,29 +975,7 @@ static struct i2c_driver tc358765_i2c_driver = {
 	},
 };
 
-
-static int __init tc358765_init(void)
-{
-	int r;
-	tc358765_i2c = NULL;
-	r = i2c_add_driver(&tc358765_i2c_driver);
-	if (r < 0) {
-		printk(KERN_WARNING "d2l i2c driver registration failed\n");
-		return r;
-	}
-
-	omap_dss_register_driver(&tc358765_driver);
-	return 0;
-}
-
-static void __exit tc358765_exit(void)
-{
-	omap_dss_unregister_driver(&tc358765_driver);
-	i2c_del_driver(&tc358765_i2c_driver);
-}
-
-module_init(tc358765_init);
-module_exit(tc358765_exit);
+module_i2c_driver(tc358765_i2c_driver);
 
 MODULE_AUTHOR("Tomi Valkeinen <tomi.valkeinen@ti.com>");
 MODULE_DESCRIPTION("TC358765 DSI-2-LVDS Driver");
