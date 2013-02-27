@@ -308,6 +308,14 @@
 
 &i2c2 {
 	clock-frequency = <400000>;
+
+	/*
+	 * Toshiba TC358765 DSI-to-LVDS chip driver
+	 */
+	tc358765@0f {
+		compatible = "toshiba,tc358765";
+		reg = <0x0f>;
+	};
 };
 
 &i2c3 {
