@@ -152,4 +152,7 @@ void __init omap4_blazetablet_init(void)
 {
 	usb_musb_init(&musb_board_data);
 	tablet_display_init();
+
+	/* HACK: make omapconf happy by shifting i2c busses */
+	i2c_register_board_info(0, NULL, 0);
 }
