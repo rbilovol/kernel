@@ -392,7 +392,7 @@ void __init l2x0_init(void __iomem *base, u32 aux_val, u32 aux_mask)
 		/* Unmapped register. */
 		sync_reg_offset = L2X0_DUMMY_REG;
 #endif
-		if ((cache_id & L2X0_CACHE_ID_RTL_MASK) <= L2X0_CACHE_ID_RTL_R3P0)
+		if ((l2x0_cache_id & L2X0_CACHE_ID_RTL_MASK) <= L2X0_CACHE_ID_RTL_R3P0)
 			outer_cache.set_debug = pl310_set_debug;
 		break;
 	case L2X0_CACHE_ID_PART_L210:
@@ -402,8 +402,8 @@ void __init l2x0_init(void __iomem *base, u32 aux_val, u32 aux_mask)
 
 	case AURORA_CACHE_ID:
 		sync_reg_offset = AURORA_SYNC_REG;
-		ways = (aux >> 13) & 0xf;
-		ways = 2 << ((ways + 1) >> 2);
+		l2x0_ways = (aux >> 13) & 0xf;
+		l2x0_ways = 2 << ((l2x0_ways + 1) >> 2);
 		way_size_shift = AURORA_WAY_SIZE_SHIFT;
 		type = "Aurora";
 		break;
