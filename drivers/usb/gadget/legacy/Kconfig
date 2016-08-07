@@ -54,9 +54,10 @@ config USB_AUDIO
 	depends on SND
 	select USB_LIBCOMPOSITE
 	select SND_PCM
-	select USB_F_UAC1 if GADGET_UAC1
+	select USB_F_UAC1 if (GADGET_UAC1 && !GADGET_UAC1_ACARD)
+	select USB_F_UAC1_ACARD if (GADGET_UAC1 && GADGET_UAC1_ACARD)
 	select USB_F_UAC2 if !GADGET_UAC1
-	select USB_U_AUDIO if USB_F_UAC2
+	select USB_U_AUDIO if (USB_F_UAC2 || USB_F_UAC1_ACARD)
 	help
 	  This Gadget Audio driver is compatible with USB Audio Class
 	  specification 2.0. It implements 1 AudioControl interface,
@@ -80,6 +81,16 @@ config GADGET_UAC1
 	  If you instead want older UAC Spec-1.0 driver that also has audio
 	  paths hardwired to the Audio codec chip on-board and doesn't work
 	  without one.
+
+config GADGET_UAC1_ACARD
+	bool "Virtual ALSA Card for UAC 1.0 driver"
+	depends on GADGET_UAC1
+	help
+	  This is an alternative UAC Spec-1.0 driver implementation
+	  that uses new API (u_audio), and doesn't expect any real
+	  audio codec to be present on the device. The audio streams
+	  are simply sinked to and sourced from a virtual ALSA sound
+	  card created
 
 config USB_ETH
 	tristate "Ethernet Gadget (with CDC Ethernet support)"
